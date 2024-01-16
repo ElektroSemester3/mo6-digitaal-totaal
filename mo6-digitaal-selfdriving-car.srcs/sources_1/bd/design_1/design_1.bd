@@ -18,11 +18,12 @@
         "clk_divider_0": ""
       },
       "clk_wiz_0": "",
-      "scherm_breedte": "",
-      "scherm_hoogte": "",
+      "breedte_scherm": "",
+      "hoogte_scherm": "",
       "hoogte_peddels": "",
       "breedte_peddels": "",
-      "grootte_balletje": ""
+      "grootte_balletje": "",
+      "aanraking_herkennen_0": ""
     },
     "ports": {
       "reset": {
@@ -333,7 +334,7 @@
               }
             },
             "reference_info": {
-              "ref_type": "hdl",
+              "ref_type": "unknown",
               "ref_name": "clk_divider",
               "boundary_crc": "0x0"
             },
@@ -510,11 +511,11 @@
           }
         }
       },
-      "scherm_breedte": {
+      "breedte_scherm": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
         "xci_name": "design_1_xlconstant_0_0",
         "xci_path": "ip\\design_1_xlconstant_0_0\\design_1_xlconstant_0_0.xci",
-        "inst_hier_path": "scherm_breedte",
+        "inst_hier_path": "breedte_scherm",
         "parameters": {
           "CONST_VAL": {
             "value": "640"
@@ -524,11 +525,11 @@
           }
         }
       },
-      "scherm_hoogte": {
+      "hoogte_scherm": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
         "xci_name": "design_1_scherm_breedte_0",
         "xci_path": "ip\\design_1_scherm_breedte_0\\design_1_scherm_breedte_0.xci",
-        "inst_hier_path": "scherm_hoogte",
+        "inst_hier_path": "hoogte_scherm",
         "parameters": {
           "CONST_VAL": {
             "value": "480"
@@ -579,9 +580,93 @@
             "value": "10"
           }
         }
+      },
+      "aanraking_herkennen_0": {
+        "vlnv": "xilinx.com:module_ref:aanraking_herkennen:1.0",
+        "xci_name": "design_1_aanraking_herkennen_0_0",
+        "xci_path": "ip\\design_1_aanraking_herkennen_0_0\\design_1_aanraking_herkennen_0_0.xci",
+        "inst_hier_path": "aanraking_herkennen_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "aanraking_herkennen",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "hoogte_scherm": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "breedte_scherm": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "grootte_balletje": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "hoogte_peddels": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "breedte_peddels": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "x_positie_balletje": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "y_positie_balletje": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "positie_peddel_links": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "positie_peddel_rechts": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "aanraking_balletje_peddel": {
+            "direction": "O"
+          },
+          "aanraking_balletje_peddel_zone": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "aanraking_balletje_zijkant": {
+            "direction": "O"
+          },
+          "aanraking_balletje_bovenonder": {
+            "direction": "O"
+          }
+        }
       }
     },
     "nets": {
+      "breedte_peddels_dout": {
+        "ports": [
+          "breedte_peddels/dout",
+          "aanraking_herkennen_0/breedte_peddels"
+        ]
+      },
+      "breedte_scherm_dout": {
+        "ports": [
+          "breedte_scherm/dout",
+          "aanraking_herkennen_0/breedte_scherm"
+        ]
+      },
       "clk_wiz_0_clk_out1": {
         "ports": [
           "clk_wiz_0/clk_out1",
@@ -630,11 +715,29 @@
           "ontvangen_controllers/controllers_ultrasoon_in"
         ]
       },
+      "grootte_balletje_dout": {
+        "ports": [
+          "grootte_balletje/dout",
+          "aanraking_herkennen_0/grootte_balletje"
+        ]
+      },
+      "hoogte_peddels_dout": {
+        "ports": [
+          "hoogte_peddels/dout",
+          "aanraking_herkennen_0/hoogte_peddels"
+        ]
+      },
       "reset_0_1": {
         "ports": [
           "reset",
           "ontvangen_controllers/reset",
           "clk_wiz_0/reset"
+        ]
+      },
+      "scherm_hoogte_dout": {
+        "ports": [
+          "hoogte_scherm/dout",
+          "aanraking_herkennen_0/hoogte_scherm"
         ]
       },
       "sys_clock_1": {
