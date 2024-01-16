@@ -1,41 +1,40 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.14887",
-   "Default View_TopLeft":"-303,-189",
+   "Default View_ScaleFactor":"0.593645",
+   "Default View_TopLeft":"-275,-280",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port port-id_enable_0 -pg 1 -lvl 0 -x -130 -y -130 -defaultsOSRD
-preplace port port-id_active_0 -pg 1 -lvl 2 -x 410 -y 50 -defaultsOSRD
-preplace port port-id_freq_in_0 -pg 1 -lvl 0 -x -130 -y -40 -defaultsOSRD
-preplace port port-id_sensor_0 -pg 1 -lvl 0 -x -130 -y -10 -defaultsOSRD
-preplace port port-id_signal_connected_0 -pg 1 -lvl 0 -x -130 -y 20 -defaultsOSRD
-preplace port port-id_signal_up_0 -pg 1 -lvl 0 -x -130 -y 50 -defaultsOSRD
-preplace port port-id_signal_down_0 -pg 1 -lvl 0 -x -130 -y 80 -defaultsOSRD
-preplace port port-id_reset_0 -pg 1 -lvl 0 -x -130 -y 110 -defaultsOSRD
-preplace port port-id_trigger_0 -pg 1 -lvl 2 -x 410 -y 80 -defaultsOSRD
-preplace port port-id_clk_in_0 -pg 1 -lvl 0 -x -130 -y 140 -defaultsOSRD
-preplace portBus choice_1_0 -pg 1 -lvl 0 -x -130 -y -100 -defaultsOSRD
-preplace portBus choice_2_0 -pg 1 -lvl 0 -x -130 -y -70 -defaultsOSRD
-preplace portBus controller_output_1_0 -pg 1 -lvl 2 -x 410 -y -10 -defaultsOSRD
-preplace portBus controller_output_2_0 -pg 1 -lvl 2 -x 410 -y 20 -defaultsOSRD
-preplace inst ontvangen_controllers -pg 1 -lvl 1 -x 170 -y 50 -defaultsOSRD
-preplace netloc enable_0_1 1 0 1 -40 -130n
-preplace netloc choice_1_0_1 1 0 1 -50 -100n
-preplace netloc choice_2_0_1 1 0 1 -60 -70n
-preplace netloc ontvangen_controllers_controller_output_1_0 1 1 1 380 -10n
-preplace netloc ontvangen_controllers_controller_output_2_0 1 1 1 390 20n
-preplace netloc ontvangen_controllers_active_0 1 1 1 380 50n
-preplace netloc freq_in_0_1 1 0 1 -70 -40n
-preplace netloc sensor_0_1 1 0 1 -80 -10n
-preplace netloc signal_connected_0_1 1 0 1 -90 20n
-preplace netloc signal_up_0_1 1 0 1 -100 50n
-preplace netloc signal_down_0_1 1 0 1 -110 80n
-preplace netloc reset_0_1 1 0 1 -40 110n
-preplace netloc ontvangen_controllers_trigger_0 1 1 1 N 80
-preplace netloc clk_in_0_1 1 0 1 N 140
-levelinfo -pg 1 -130 170 410
-pagesize -pg 1 -db -bbox -sgen -310 -150 630 190
+preplace port port-id_reset -pg 1 -lvl 0 -x -20 -y 230 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x -20 -y 300 -defaultsOSRD
+preplace port port-id_controller_inductief_in -pg 1 -lvl 0 -x -20 -y 80 -defaultsOSRD
+preplace port port-id_controllers_ultrasoon_in -pg 1 -lvl 0 -x -20 -y 110 -defaultsOSRD
+preplace port port-id_controller_draadloos_verbonden -pg 1 -lvl 0 -x -20 -y 140 -defaultsOSRD
+preplace port port-id_controllers_draadloos_omhoog -pg 1 -lvl 0 -x -20 -y 170 -defaultsOSRD
+preplace port port-id_controllers_draadloos_omlaag -pg 1 -lvl 0 -x -20 -y 200 -defaultsOSRD
+preplace portBus controllers_keuze_1 -pg 1 -lvl 0 -x -20 -y 20 -defaultsOSRD
+preplace portBus controllers_keuze_2 -pg 1 -lvl 0 -x -20 -y 50 -defaultsOSRD
+preplace inst ontvangen_controllers -pg 1 -lvl 7 -x 1320 -y 150 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 6 -x 1020 -y 290 -defaultsOSRD
+preplace inst scherm_breedte -pg 1 -lvl 1 -x 110 -y -50 -defaultsOSRD
+preplace inst scherm_hoogte -pg 1 -lvl 5 -x 810 -y -50 -defaultsOSRD
+preplace inst hoogte_peddels -pg 1 -lvl 4 -x 650 -y -50 -defaultsOSRD
+preplace inst breedte_peddels -pg 1 -lvl 3 -x 490 -y -50 -defaultsOSRD
+preplace inst grootte_balletje -pg 1 -lvl 2 -x 300 -y -50 -defaultsOSRD
+preplace netloc reset_0_1 1 0 7 N 230 N 230 N 230 N 230 N 230 890 220 N
+preplace netloc clk_wiz_0_clk_out1 1 6 1 1110 240n
+preplace netloc sys_clock_1 1 0 6 NJ 300 N 300 N 300 N 300 N 300 N
+preplace netloc controllers_keuze_1_0_1 1 0 7 NJ 20 N 20 N 20 N 20 N 20 930 80 NJ
+preplace netloc controllers_keuze_2_0_1 1 0 7 NJ 50 N 50 N 50 N 50 N 50 920 100 NJ
+preplace netloc controller_inductief_in_0_1 1 0 7 NJ 80 N 80 N 80 N 80 N 80 910 120 NJ
+preplace netloc controllers_ultrasoon_in_0_1 1 0 7 NJ 110 N 110 N 110 N 110 N 110 900 140 NJ
+preplace netloc controller_draadloos_verbonden_0_1 1 0 7 NJ 140 N 140 N 140 N 140 N 140 890 160 NJ
+preplace netloc controllers_draadloos_omhoog_0_1 1 0 7 NJ 170 N 170 N 170 N 170 N 170 930 180 NJ
+preplace netloc controllers_draadloos_omlaag_0_1 1 0 7 NJ 200 N 200 N 200 N 200 N 200 N 200 NJ
+levelinfo -pg 1 -20 110 300 490 650 810 1020 1320 1530
+pagesize -pg 1 -db -bbox -sgen -280 -210 1530 360
 "
 }
-
+{
+   "da_board_cnt":"1"
+}

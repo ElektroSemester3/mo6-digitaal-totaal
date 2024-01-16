@@ -16,51 +16,16 @@
         "controller_ultrasoon_0": "",
         "controller_draadloos_0": "",
         "clk_divider_0": ""
-      }
+      },
+      "clk_wiz_0": "",
+      "scherm_breedte": "",
+      "scherm_hoogte": "",
+      "hoogte_peddels": "",
+      "breedte_peddels": "",
+      "grootte_balletje": ""
     },
     "ports": {
-      "enable_0": {
-        "direction": "I"
-      },
-      "choice_1_0": {
-        "direction": "I",
-        "left": "1",
-        "right": "0"
-      },
-      "choice_2_0": {
-        "direction": "I",
-        "left": "1",
-        "right": "0"
-      },
-      "controller_output_1_0": {
-        "direction": "O",
-        "left": "8",
-        "right": "0"
-      },
-      "controller_output_2_0": {
-        "direction": "O",
-        "left": "8",
-        "right": "0"
-      },
-      "active_0": {
-        "direction": "O"
-      },
-      "freq_in_0": {
-        "direction": "I"
-      },
-      "sensor_0": {
-        "direction": "I"
-      },
-      "signal_connected_0": {
-        "direction": "I"
-      },
-      "signal_up_0": {
-        "direction": "I"
-      },
-      "signal_down_0": {
-        "direction": "I"
-      },
-      "reset_0": {
+      "reset": {
         "type": "rst",
         "direction": "I",
         "parameters": {
@@ -69,10 +34,41 @@
           }
         }
       },
-      "trigger_0": {
-        "direction": "O"
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "PHASE": {
+            "value": "0.0"
+          }
+        }
       },
-      "clk_in_0": {
+      "controllers_keuze_1": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      },
+      "controllers_keuze_2": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      },
+      "controller_inductief_in": {
+        "direction": "I"
+      },
+      "controllers_ultrasoon_in": {
+        "direction": "I"
+      },
+      "controller_draadloos_verbonden": {
+        "direction": "I"
+      },
+      "controllers_draadloos_omhoog": {
+        "direction": "I"
+      },
+      "controllers_draadloos_omlaag": {
         "direction": "I"
       }
     },
@@ -331,6 +327,11 @@
             "xci_name": "design_1_clk_divider_0_0",
             "xci_path": "ip\\design_1_clk_divider_0_0\\design_1_clk_divider_0_0.xci",
             "inst_hier_path": "ontvangen_controllers/clk_divider_0",
+            "parameters": {
+              "division": {
+                "value": "100000"
+              }
+            },
             "reference_info": {
               "ref_type": "hdl",
               "ref_name": "clk_divider",
@@ -488,91 +489,158 @@
             ]
           }
         }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "xci_path": "ip\\design_1_clk_wiz_0_0\\design_1_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "true"
+          }
+        }
+      },
+      "scherm_breedte": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_0_0",
+        "xci_path": "ip\\design_1_xlconstant_0_0\\design_1_xlconstant_0_0.xci",
+        "inst_hier_path": "scherm_breedte",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "640"
+          },
+          "CONST_WIDTH": {
+            "value": "10"
+          }
+        }
+      },
+      "scherm_hoogte": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_scherm_breedte_0",
+        "xci_path": "ip\\design_1_scherm_breedte_0\\design_1_scherm_breedte_0.xci",
+        "inst_hier_path": "scherm_hoogte",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "480"
+          },
+          "CONST_WIDTH": {
+            "value": "10"
+          }
+        }
+      },
+      "hoogte_peddels": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_scherm_breedte_1",
+        "xci_path": "ip\\design_1_scherm_breedte_1\\design_1_scherm_breedte_1.xci",
+        "inst_hier_path": "hoogte_peddels",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "80"
+          },
+          "CONST_WIDTH": {
+            "value": "10"
+          }
+        }
+      },
+      "breedte_peddels": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_scherm_breedte_2",
+        "xci_path": "ip\\design_1_scherm_breedte_2\\design_1_scherm_breedte_2.xci",
+        "inst_hier_path": "breedte_peddels",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "640"
+          },
+          "CONST_WIDTH": {
+            "value": "10"
+          }
+        }
+      },
+      "grootte_balletje": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_scherm_breedte_3",
+        "xci_path": "ip\\design_1_scherm_breedte_3\\design_1_scherm_breedte_3.xci",
+        "inst_hier_path": "grootte_balletje",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "8"
+          },
+          "CONST_WIDTH": {
+            "value": "10"
+          }
+        }
       }
     },
     "nets": {
-      "choice_1_0_1": {
+      "clk_wiz_0_clk_out1": {
         "ports": [
-          "choice_1_0",
-          "ontvangen_controllers/controllers_keuze_1"
-        ]
-      },
-      "choice_2_0_1": {
-        "ports": [
-          "choice_2_0",
-          "ontvangen_controllers/controllers_keuze_2"
-        ]
-      },
-      "clk_in_0_1": {
-        "ports": [
-          "clk_in_0",
+          "clk_wiz_0/clk_out1",
           "ontvangen_controllers/clk"
         ]
       },
-      "enable_0_1": {
+      "controller_draadloos_verbonden_0_1": {
         "ports": [
-          "enable_0",
-          "ontvangen_controllers/controllers_enable"
+          "controller_draadloos_verbonden",
+          "ontvangen_controllers/controller_draadloos_verbonden"
         ]
       },
-      "freq_in_0_1": {
+      "controller_inductief_in_0_1": {
         "ports": [
-          "freq_in_0",
+          "controller_inductief_in",
           "ontvangen_controllers/controller_inductief_in"
         ]
       },
-      "ontvangen_controllers_active_0": {
+      "controllers_draadloos_omhoog_0_1": {
         "ports": [
-          "ontvangen_controllers/controllers_active",
-          "active_0"
+          "controllers_draadloos_omhoog",
+          "ontvangen_controllers/controllers_draadloos_omhoog"
         ]
       },
-      "ontvangen_controllers_controller_output_1_0": {
+      "controllers_draadloos_omlaag_0_1": {
         "ports": [
-          "ontvangen_controllers/controller_output_1",
-          "controller_output_1_0"
+          "controllers_draadloos_omlaag",
+          "ontvangen_controllers/controllers_draadloos_omlaag"
         ]
       },
-      "ontvangen_controllers_controller_output_2_0": {
+      "controllers_keuze_1_0_1": {
         "ports": [
-          "ontvangen_controllers/controller_output_2",
-          "controller_output_2_0"
+          "controllers_keuze_1",
+          "ontvangen_controllers/controllers_keuze_1"
         ]
       },
-      "ontvangen_controllers_trigger_0": {
+      "controllers_keuze_2_0_1": {
         "ports": [
-          "ontvangen_controllers/controller_ultrasoon_trigger",
-          "trigger_0"
+          "controllers_keuze_2",
+          "ontvangen_controllers/controllers_keuze_2"
+        ]
+      },
+      "controllers_ultrasoon_in_0_1": {
+        "ports": [
+          "controllers_ultrasoon_in",
+          "ontvangen_controllers/controllers_ultrasoon_in"
         ]
       },
       "reset_0_1": {
         "ports": [
-          "reset_0",
-          "ontvangen_controllers/reset"
+          "reset",
+          "ontvangen_controllers/reset",
+          "clk_wiz_0/reset"
         ]
       },
-      "sensor_0_1": {
+      "sys_clock_1": {
         "ports": [
-          "sensor_0",
-          "ontvangen_controllers/controllers_ultrasoon_in"
-        ]
-      },
-      "signal_connected_0_1": {
-        "ports": [
-          "signal_connected_0",
-          "ontvangen_controllers/controller_draadloos_verbonden"
-        ]
-      },
-      "signal_down_0_1": {
-        "ports": [
-          "signal_down_0",
-          "ontvangen_controllers/controllers_draadloos_omlaag"
-        ]
-      },
-      "signal_up_0_1": {
-        "ports": [
-          "signal_up_0",
-          "ontvangen_controllers/controllers_draadloos_omhoog"
+          "sys_clock",
+          "clk_wiz_0/clk_in1"
         ]
       }
     }
