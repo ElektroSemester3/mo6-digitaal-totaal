@@ -1,0 +1,41 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.14887",
+   "Default View_TopLeft":"-303,-189",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_enable_0 -pg 1 -lvl 0 -x -130 -y -130 -defaultsOSRD
+preplace port port-id_active_0 -pg 1 -lvl 2 -x 410 -y 50 -defaultsOSRD
+preplace port port-id_freq_in_0 -pg 1 -lvl 0 -x -130 -y -40 -defaultsOSRD
+preplace port port-id_sensor_0 -pg 1 -lvl 0 -x -130 -y -10 -defaultsOSRD
+preplace port port-id_signal_connected_0 -pg 1 -lvl 0 -x -130 -y 20 -defaultsOSRD
+preplace port port-id_signal_up_0 -pg 1 -lvl 0 -x -130 -y 50 -defaultsOSRD
+preplace port port-id_signal_down_0 -pg 1 -lvl 0 -x -130 -y 80 -defaultsOSRD
+preplace port port-id_reset_0 -pg 1 -lvl 0 -x -130 -y 110 -defaultsOSRD
+preplace port port-id_trigger_0 -pg 1 -lvl 2 -x 410 -y 80 -defaultsOSRD
+preplace port port-id_clk_in_0 -pg 1 -lvl 0 -x -130 -y 140 -defaultsOSRD
+preplace portBus choice_1_0 -pg 1 -lvl 0 -x -130 -y -100 -defaultsOSRD
+preplace portBus choice_2_0 -pg 1 -lvl 0 -x -130 -y -70 -defaultsOSRD
+preplace portBus controller_output_1_0 -pg 1 -lvl 2 -x 410 -y -10 -defaultsOSRD
+preplace portBus controller_output_2_0 -pg 1 -lvl 2 -x 410 -y 20 -defaultsOSRD
+preplace inst ontvangen_controllers -pg 1 -lvl 1 -x 170 -y 50 -defaultsOSRD
+preplace netloc enable_0_1 1 0 1 -40 -130n
+preplace netloc choice_1_0_1 1 0 1 -50 -100n
+preplace netloc choice_2_0_1 1 0 1 -60 -70n
+preplace netloc ontvangen_controllers_controller_output_1_0 1 1 1 380 -10n
+preplace netloc ontvangen_controllers_controller_output_2_0 1 1 1 390 20n
+preplace netloc ontvangen_controllers_active_0 1 1 1 380 50n
+preplace netloc freq_in_0_1 1 0 1 -70 -40n
+preplace netloc sensor_0_1 1 0 1 -80 -10n
+preplace netloc signal_connected_0_1 1 0 1 -90 20n
+preplace netloc signal_up_0_1 1 0 1 -100 50n
+preplace netloc signal_down_0_1 1 0 1 -110 80n
+preplace netloc reset_0_1 1 0 1 -40 110n
+preplace netloc ontvangen_controllers_trigger_0 1 1 1 N 80
+preplace netloc clk_in_0_1 1 0 1 N 140
+levelinfo -pg 1 -130 170 410
+pagesize -pg 1 -db -bbox -sgen -310 -150 630 190
+"
+}
+

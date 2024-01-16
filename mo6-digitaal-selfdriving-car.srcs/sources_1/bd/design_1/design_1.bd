@@ -2,12 +2,579 @@
   "design": {
     "design_info": {
       "boundary_crc": "0x0",
+      "device": "xc7z020clg400-1",
       "gen_directory": "../../../../mo6-digitaal-selfdriving-car.gen/sources_1/bd/design_1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
       "tool_version": "2023.1"
     },
-    "design_tree": {}
+    "design_tree": {
+      "ontvangen_controllers": {
+        "controller_interconn_0": "",
+        "controller_inductief_0": "",
+        "controller_ultrasoon_0": "",
+        "controller_draadloos_0": "",
+        "clk_divider_0": ""
+      }
+    },
+    "ports": {
+      "enable_0": {
+        "direction": "I"
+      },
+      "choice_1_0": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      },
+      "choice_2_0": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      },
+      "controller_output_1_0": {
+        "direction": "O",
+        "left": "8",
+        "right": "0"
+      },
+      "controller_output_2_0": {
+        "direction": "O",
+        "left": "8",
+        "right": "0"
+      },
+      "active_0": {
+        "direction": "O"
+      },
+      "freq_in_0": {
+        "direction": "I"
+      },
+      "sensor_0": {
+        "direction": "I"
+      },
+      "signal_connected_0": {
+        "direction": "I"
+      },
+      "signal_up_0": {
+        "direction": "I"
+      },
+      "signal_down_0": {
+        "direction": "I"
+      },
+      "reset_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "trigger_0": {
+        "direction": "O"
+      },
+      "clk_in_0": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "ontvangen_controllers": {
+        "ports": {
+          "controllers_enable": {
+            "direction": "I"
+          },
+          "controllers_keuze_1": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "controllers_keuze_2": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "controller_output_1": {
+            "direction": "O",
+            "left": "8",
+            "right": "0"
+          },
+          "controller_output_2": {
+            "direction": "O",
+            "left": "8",
+            "right": "0"
+          },
+          "controllers_active": {
+            "direction": "O"
+          },
+          "controller_inductief_in": {
+            "direction": "I"
+          },
+          "controllers_ultrasoon_in": {
+            "direction": "I"
+          },
+          "controller_draadloos_verbonden": {
+            "direction": "I"
+          },
+          "controllers_draadloos_omhoog": {
+            "direction": "I"
+          },
+          "controllers_draadloos_omlaag": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "controller_ultrasoon_trigger": {
+            "direction": "O"
+          },
+          "clk": {
+            "direction": "I"
+          }
+        },
+        "components": {
+          "controller_interconn_0": {
+            "vlnv": "xilinx.com:module_ref:controller_interconnect:1.0",
+            "xci_name": "design_1_controller_interconn_0_0",
+            "xci_path": "ip\\design_1_controller_interconn_0_0\\design_1_controller_interconn_0_0.xci",
+            "inst_hier_path": "ontvangen_controllers/controller_interconn_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "controller_interconnect",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "enable": {
+                "direction": "I"
+              },
+              "choice_1": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "choice_2": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "controller_input_1": {
+                "direction": "I",
+                "left": "8",
+                "right": "0"
+              },
+              "controller_input_2": {
+                "direction": "I",
+                "left": "8",
+                "right": "0"
+              },
+              "controller_input_3": {
+                "direction": "I",
+                "left": "8",
+                "right": "0"
+              },
+              "controller_enable_1": {
+                "direction": "O"
+              },
+              "controller_enable_2": {
+                "direction": "O"
+              },
+              "controller_enable_3": {
+                "direction": "O"
+              },
+              "controller_output_1": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              },
+              "controller_output_2": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              },
+              "active": {
+                "direction": "O"
+              }
+            }
+          },
+          "controller_inductief_0": {
+            "vlnv": "xilinx.com:module_ref:controller_inductief:1.0",
+            "xci_name": "design_1_controller_inductief_0_0",
+            "xci_path": "ip\\design_1_controller_inductief_0_0\\design_1_controller_inductief_0_0.xci",
+            "inst_hier_path": "ontvangen_controllers/controller_inductief_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "controller_inductief",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_RESET": {
+                    "value": "reset",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "reset": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "enable": {
+                "direction": "I"
+              },
+              "freq_in": {
+                "direction": "I"
+              },
+              "value_out": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              }
+            }
+          },
+          "controller_ultrasoon_0": {
+            "vlnv": "xilinx.com:module_ref:controller_ultrasoon:1.0",
+            "xci_name": "design_1_controller_ultrasoon_0_0",
+            "xci_path": "ip\\design_1_controller_ultrasoon_0_0\\design_1_controller_ultrasoon_0_0.xci",
+            "inst_hier_path": "ontvangen_controllers/controller_ultrasoon_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "controller_ultrasoon",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_RESET": {
+                    "value": "reset",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "sensor": {
+                "direction": "I"
+              },
+              "enable": {
+                "direction": "I"
+              },
+              "reset": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "value": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              },
+              "trigger": {
+                "direction": "O"
+              }
+            }
+          },
+          "controller_draadloos_0": {
+            "vlnv": "xilinx.com:module_ref:controller_draadloos:1.0",
+            "xci_name": "design_1_controller_draadloos_0_0",
+            "xci_path": "ip\\design_1_controller_draadloos_0_0\\design_1_controller_draadloos_0_0.xci",
+            "inst_hier_path": "ontvangen_controllers/controller_draadloos_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "controller_draadloos",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk_slow": {
+                "direction": "I"
+              },
+              "reset": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "enable": {
+                "direction": "I"
+              },
+              "signal_connected": {
+                "direction": "I"
+              },
+              "signal_up": {
+                "direction": "I"
+              },
+              "signal_down": {
+                "direction": "I"
+              },
+              "value_out": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              }
+            }
+          },
+          "clk_divider_0": {
+            "vlnv": "xilinx.com:module_ref:clk_divider:1.0",
+            "xci_name": "design_1_clk_divider_0_0",
+            "xci_path": "ip\\design_1_clk_divider_0_0\\design_1_clk_divider_0_0.xci",
+            "inst_hier_path": "ontvangen_controllers/clk_divider_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "clk_divider",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk_in": {
+                "direction": "I"
+              },
+              "reset": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "clk_out": {
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "nets": {
+          "choice_1_0_1": {
+            "ports": [
+              "controllers_keuze_1",
+              "controller_interconn_0/choice_1"
+            ]
+          },
+          "choice_2_0_1": {
+            "ports": [
+              "controllers_keuze_2",
+              "controller_interconn_0/choice_2"
+            ]
+          },
+          "clk_divider_0_clk_out": {
+            "ports": [
+              "clk_divider_0/clk_out",
+              "controller_draadloos_0/clk_slow"
+            ]
+          },
+          "clk_in_0_1": {
+            "ports": [
+              "clk",
+              "clk_divider_0/clk_in",
+              "controller_ultrasoon_0/clk",
+              "controller_inductief_0/clk"
+            ]
+          },
+          "controller_draadloos_0_value_out": {
+            "ports": [
+              "controller_draadloos_0/value_out",
+              "controller_interconn_0/controller_input_3"
+            ]
+          },
+          "controller_inductief_0_value_out": {
+            "ports": [
+              "controller_inductief_0/value_out",
+              "controller_interconn_0/controller_input_1"
+            ]
+          },
+          "controller_interconn_0_active": {
+            "ports": [
+              "controller_interconn_0/active",
+              "controllers_active"
+            ]
+          },
+          "controller_interconn_0_controller_enable_1": {
+            "ports": [
+              "controller_interconn_0/controller_enable_1",
+              "controller_inductief_0/enable"
+            ]
+          },
+          "controller_interconn_0_controller_enable_2": {
+            "ports": [
+              "controller_interconn_0/controller_enable_2",
+              "controller_ultrasoon_0/enable"
+            ]
+          },
+          "controller_interconn_0_controller_enable_3": {
+            "ports": [
+              "controller_interconn_0/controller_enable_3",
+              "controller_draadloos_0/enable"
+            ]
+          },
+          "controller_interconn_0_controller_output_1": {
+            "ports": [
+              "controller_interconn_0/controller_output_1",
+              "controller_output_1"
+            ]
+          },
+          "controller_interconn_0_controller_output_2": {
+            "ports": [
+              "controller_interconn_0/controller_output_2",
+              "controller_output_2"
+            ]
+          },
+          "controller_ultrasoon_0_trigger": {
+            "ports": [
+              "controller_ultrasoon_0/trigger",
+              "controller_ultrasoon_trigger"
+            ]
+          },
+          "controller_ultrasoon_0_value": {
+            "ports": [
+              "controller_ultrasoon_0/value",
+              "controller_interconn_0/controller_input_2"
+            ]
+          },
+          "enable_0_1": {
+            "ports": [
+              "controllers_enable",
+              "controller_interconn_0/enable"
+            ]
+          },
+          "freq_in_0_1": {
+            "ports": [
+              "controller_inductief_in",
+              "controller_inductief_0/freq_in"
+            ]
+          },
+          "reset_0_1": {
+            "ports": [
+              "reset",
+              "clk_divider_0/reset",
+              "controller_inductief_0/reset",
+              "controller_ultrasoon_0/reset",
+              "controller_draadloos_0/reset"
+            ]
+          },
+          "sensor_0_1": {
+            "ports": [
+              "controllers_ultrasoon_in",
+              "controller_ultrasoon_0/sensor"
+            ]
+          },
+          "signal_connected_0_1": {
+            "ports": [
+              "controller_draadloos_verbonden",
+              "controller_draadloos_0/signal_connected"
+            ]
+          },
+          "signal_down_0_1": {
+            "ports": [
+              "controllers_draadloos_omlaag",
+              "controller_draadloos_0/signal_down"
+            ]
+          },
+          "signal_up_0_1": {
+            "ports": [
+              "controllers_draadloos_omhoog",
+              "controller_draadloos_0/signal_up"
+            ]
+          }
+        }
+      }
+    },
+    "nets": {
+      "choice_1_0_1": {
+        "ports": [
+          "choice_1_0",
+          "ontvangen_controllers/controllers_keuze_1"
+        ]
+      },
+      "choice_2_0_1": {
+        "ports": [
+          "choice_2_0",
+          "ontvangen_controllers/controllers_keuze_2"
+        ]
+      },
+      "clk_in_0_1": {
+        "ports": [
+          "clk_in_0",
+          "ontvangen_controllers/clk"
+        ]
+      },
+      "enable_0_1": {
+        "ports": [
+          "enable_0",
+          "ontvangen_controllers/controllers_enable"
+        ]
+      },
+      "freq_in_0_1": {
+        "ports": [
+          "freq_in_0",
+          "ontvangen_controllers/controller_inductief_in"
+        ]
+      },
+      "ontvangen_controllers_active_0": {
+        "ports": [
+          "ontvangen_controllers/controllers_active",
+          "active_0"
+        ]
+      },
+      "ontvangen_controllers_controller_output_1_0": {
+        "ports": [
+          "ontvangen_controllers/controller_output_1",
+          "controller_output_1_0"
+        ]
+      },
+      "ontvangen_controllers_controller_output_2_0": {
+        "ports": [
+          "ontvangen_controllers/controller_output_2",
+          "controller_output_2_0"
+        ]
+      },
+      "ontvangen_controllers_trigger_0": {
+        "ports": [
+          "ontvangen_controllers/controller_ultrasoon_trigger",
+          "trigger_0"
+        ]
+      },
+      "reset_0_1": {
+        "ports": [
+          "reset_0",
+          "ontvangen_controllers/reset"
+        ]
+      },
+      "sensor_0_1": {
+        "ports": [
+          "sensor_0",
+          "ontvangen_controllers/controllers_ultrasoon_in"
+        ]
+      },
+      "signal_connected_0_1": {
+        "ports": [
+          "signal_connected_0",
+          "ontvangen_controllers/controller_draadloos_verbonden"
+        ]
+      },
+      "signal_down_0_1": {
+        "ports": [
+          "signal_down_0",
+          "ontvangen_controllers/controllers_draadloos_omlaag"
+        ]
+      },
+      "signal_up_0_1": {
+        "ports": [
+          "signal_up_0",
+          "ontvangen_controllers/controllers_draadloos_omhoog"
+        ]
+      }
+    }
   }
 }
