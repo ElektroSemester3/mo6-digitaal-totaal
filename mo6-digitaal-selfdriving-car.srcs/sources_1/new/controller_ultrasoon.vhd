@@ -204,8 +204,12 @@ begin
     end process output_decoder;
 
     -- Output
-    value <= std_logic_vector(to_unsigned(0, 9)) when distance_mm < min_distance_mm_u OR enable = '0' else
-             std_logic_vector(value_max) when distance_mm > max_distance_mm_u else
-             std_logic_vector(to_unsigned(to_integer((distance_mm - min_distance_mm_u) * value_max) / to_integer(max_distance_mm_u - min_distance_mm_u), 9));
+--    value <= std_logic_vector(to_unsigned(0, 9)) when distance_mm < min_distance_mm_u OR enable = '0' else
+--             std_logic_vector(value_max) when distance_mm > max_distance_mm_u else
+--             std_logic_vector(to_unsigned(to_integer((distance_mm - min_distance_mm_u) * value_max) / to_integer(max_distance_mm_u - min_distance_mm_u), 9));
+
+    value <= std_logic_vector(value_max) when distance_mm < min_distance_mm_u OR enable = '0' else
+             std_logic_vector(to_unsigned(0, 9)) when distance_mm > max_distance_mm_u else
+             std_logic_vector(value_max - to_unsigned(to_integer((distance_mm - min_distance_mm_u) * value_max) / to_integer(max_distance_mm_u - min_distance_mm_u), 9));
 end architecture Behavioral;
 

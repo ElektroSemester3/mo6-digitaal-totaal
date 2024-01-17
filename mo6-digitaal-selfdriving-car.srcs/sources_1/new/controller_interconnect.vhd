@@ -72,10 +72,10 @@ begin
                 controller_output_2 <= controller_input_2;
                 active <= '1';
             when s2 =>
-                controller_enable_1 <= '0';
-                controller_enable_2 <= '1';
+                controller_enable_1 <= '1';
+                controller_enable_2 <= '0';
                 controller_enable_3 <= '1';
-                controller_output_1 <= controller_input_2;
+                controller_output_1 <= controller_input_1;
                 controller_output_2 <= controller_input_3;
                 active <= '1';
             when s3 =>

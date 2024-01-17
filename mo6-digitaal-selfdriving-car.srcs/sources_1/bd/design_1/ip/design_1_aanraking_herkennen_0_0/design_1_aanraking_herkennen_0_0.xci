@@ -31,7 +31,7 @@
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2023.1" } ],
-        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
       }
     },
     "boundary": {
@@ -41,10 +41,10 @@
         "grootte_balletje": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
         "hoogte_peddels": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
         "breedte_peddels": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
-        "x_positie_balletje": [ { "direction": "in", "size_left": "8", "size_right": "0" } ],
-        "y_positie_balletje": [ { "direction": "in", "size_left": "8", "size_right": "0" } ],
-        "positie_peddel_links": [ { "direction": "in", "size_left": "8", "size_right": "0" } ],
-        "positie_peddel_rechts": [ { "direction": "in", "size_left": "8", "size_right": "0" } ],
+        "x_positie_balletje": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "y_positie_balletje": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "positie_peddel_links": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "positie_peddel_rechts": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
         "aanraking_balletje_peddel": [ { "direction": "out" } ],
         "aanraking_balletje_peddel_zone": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
         "aanraking_balletje_zijkant": [ { "direction": "out" } ],

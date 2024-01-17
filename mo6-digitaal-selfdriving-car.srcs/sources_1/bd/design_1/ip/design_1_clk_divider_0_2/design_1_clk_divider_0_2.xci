@@ -8,11 +8,11 @@
     "gen_directory": "../../../../../../mo6-digitaal-selfdriving-car.gen/sources_1/bd/design_1/ip/design_1_clk_divider_0_2",
     "parameters": {
       "component_parameters": {
-        "division": [ { "value": "1000000", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "division": [ { "value": "750000", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Component_Name": [ { "value": "design_1_clk_divider_0_2", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
-        "division": [ { "value": "1000000", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+        "division": [ { "value": "750000", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],
@@ -35,7 +35,7 @@
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2023.1" } ],
-        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
       }
     },
     "boundary": {

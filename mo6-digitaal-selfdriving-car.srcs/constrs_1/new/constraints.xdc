@@ -1,5 +1,5 @@
-set_property PACKAGE_PIN L19 [get_ports rst]
-set_property IOSTANDARD LVCMOS33 [get_ports rst]
+set_property PACKAGE_PIN L19 [get_ports reset]
+set_property IOSTANDARD LVCMOS33 [get_ports reset]
 
 set_property IOSTANDARD LVCMOS33 [get_ports enable]
 set_property PACKAGE_PIN M19 [get_ports enable]
@@ -39,3 +39,8 @@ set_property PACKAGE_PIN W18 [get_ports controller_ultrasoon_trigger]
 set_property PACKAGE_PIN T11 [get_ports controller_draadloos_verbonden]
 set_property PACKAGE_PIN T10 [get_ports controller_draadloos_omhoog]
 set_property PACKAGE_PIN W13 [get_ports controller_draadloos_omlaag]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {leds[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {leds[1]}]
+set_property PACKAGE_PIN R14 [get_ports {leds[0]}]
+set_property PACKAGE_PIN P14 [get_ports {leds[1]}]

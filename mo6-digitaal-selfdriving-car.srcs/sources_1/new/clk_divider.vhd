@@ -4,6 +4,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity clk_divider is
     generic (
@@ -16,7 +17,7 @@ end clk_divider;
 
 architecture Behavioral of clk_divider is
 
-    signal count : integer := 0;
+    signal count : unsigned(31 downto 0) := (others => '0');
 
 begin
 
@@ -24,11 +25,11 @@ begin
     begin
         if rising_edge(clk_in) then
             if reset = '1' then
-                count <= 0;
+                count <= (others => '0');
             else
-                if count = division then
+                if count = to_unsigned(division, 32) then
                     clk_out <= '1';
-                    count <= 0;
+                    count <= (others => '0');
                 else
                     clk_out <= '0';
                     count <= count + 1;
