@@ -6,20 +6,19 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity positie_balletje is
     generic ( 
-        -- size        : integer := 8;
-        step        : integer := 1;
-        x_value     : integer := 640;
-        y_value     : integer := 480
+        step        : integer := 1
     );
     Port ( 
+        screen_width        : in STD_LOGIC_VECTOR (8 downto 0);
+        screen_heigth       : in STD_LOGIC_VECTOR (8 downto 0);
         clk_slow            : in STD_LOGIC;
         angle_index         : in STD_LOGIC_VECTOR (1 downto 0);
         running             : in STD_LOGIC;
         peddel_touch        : in STD_LOGIC;
         side_touch          : in STD_LOGIC;
         top_bottom_touch    : in STD_LOGIC;
-        pos_x_out           : out STD_LOGIC_VECTOR (9 downto 0);
-        pos_y_out           : out STD_LOGIC_VECTOR (9 downto 0)
+        pos_x_out           : out STD_LOGIC_VECTOR (8 downto 0);
+        pos_y_out           : out STD_LOGIC_VECTOR (8 downto 0)
     );
 end positie_balletje;
 
@@ -31,19 +30,19 @@ architecture Behavioral of positie_balletje is
     signal y_dir : y_direction := down;
     
     -- Start position
-    signal x_start : unsigned(9 downto 0) := to_unsigned(x_value, 10) / to_unsigned(2, 10);
-    signal y_start : unsigned(9 downto 0) := to_unsigned(y_value, 10) / to_unsigned(3, 10);
+    signal x_start : unsigned(8 downto 0) := unsigned(screen_width) / to_unsigned(2, 10);
+    signal y_start : unsigned(8 downto 0) := unsigned(screen_heigth) / to_unsigned(3, 10);
     
     -- Position of the ball storage
-    signal x_pos : unsigned(9 downto 0) := x_start;
-    signal y_pos : unsigned(9 downto 0) := y_start;
+    signal x_pos : unsigned(8 downto 0) := x_start;
+    signal y_pos : unsigned(8 downto 0) := y_start;
     
     -- Size of the ball
---    signal ball_size : unsigned(3 downto 0) := to_unsigned(size, 4) / to_unsigned(2, 4);
+   --signal ball_size : unsigned(3 downto 0) := to_unsigned(size, 4) / to_unsigned(2, 4);
 
     -- Angle of the ball
-    signal angle            : unsigned(9 downto 0) := (others => '0');
-    signal angle_counter    : unsigned(9 downto 0) := (others => '0');
+    signal angle            : unsigned(8 downto 0) := (others => '0');
+    signal angle_counter    : unsigned(8 downto 0) := (others => '0');
 
 begin
     -- Angle of the ball

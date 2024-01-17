@@ -9,14 +9,10 @@
     "parameters": {
       "component_parameters": {
         "step": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "x_value": [ { "value": "640", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "y_value": [ { "value": "480", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Component_Name": [ { "value": "design_1_positie_balletje_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
-        "step": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "x_value": [ { "value": "640", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "y_value": [ { "value": "480", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+        "step": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],
@@ -44,14 +40,16 @@
     },
     "boundary": {
       "ports": {
+        "screen_width": [ { "direction": "in", "size_left": "8", "size_right": "0" } ],
+        "screen_heigth": [ { "direction": "in", "size_left": "8", "size_right": "0" } ],
         "clk_slow": [ { "direction": "in" } ],
         "angle_index": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
         "running": [ { "direction": "in" } ],
         "peddel_touch": [ { "direction": "in" } ],
         "side_touch": [ { "direction": "in" } ],
         "top_bottom_touch": [ { "direction": "in" } ],
-        "pos_x_out": [ { "direction": "out", "size_left": "9", "size_right": "0" } ],
-        "pos_y_out": [ { "direction": "out", "size_left": "9", "size_right": "0" } ]
+        "pos_x_out": [ { "direction": "out", "size_left": "8", "size_right": "0" } ],
+        "pos_y_out": [ { "direction": "out", "size_left": "8", "size_right": "0" } ]
       }
     }
   }

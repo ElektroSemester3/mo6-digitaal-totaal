@@ -4,8 +4,6 @@ proc init_gui { IPINST } {
   #Adding Page
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
   ipgui::add_param $IPINST -name "step" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "x_value" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "y_value" -parent ${Page_0}
 
 
 }
@@ -19,37 +17,9 @@ proc validate_PARAM_VALUE.step { PARAM_VALUE.step } {
 	return true
 }
 
-proc update_PARAM_VALUE.x_value { PARAM_VALUE.x_value } {
-	# Procedure called to update x_value when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.x_value { PARAM_VALUE.x_value } {
-	# Procedure called to validate x_value
-	return true
-}
-
-proc update_PARAM_VALUE.y_value { PARAM_VALUE.y_value } {
-	# Procedure called to update y_value when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.y_value { PARAM_VALUE.y_value } {
-	# Procedure called to validate y_value
-	return true
-}
-
 
 proc update_MODELPARAM_VALUE.step { MODELPARAM_VALUE.step PARAM_VALUE.step } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.step}] ${MODELPARAM_VALUE.step}
-}
-
-proc update_MODELPARAM_VALUE.x_value { MODELPARAM_VALUE.x_value PARAM_VALUE.x_value } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.x_value}] ${MODELPARAM_VALUE.x_value}
-}
-
-proc update_MODELPARAM_VALUE.y_value { MODELPARAM_VALUE.y_value PARAM_VALUE.y_value } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.y_value}] ${MODELPARAM_VALUE.y_value}
 }
 

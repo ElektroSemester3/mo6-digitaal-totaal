@@ -1,53 +1,286 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.408859",
-   "Default View_TopLeft":"-778,2",
+   "Addressing View_Layers":"/reset_0_1:false|/sys_clock_1:false|/clk_wiz_0_clk_out1:false|",
+   "Addressing View_ScaleFactor":"0.8",
+   "Addressing View_TopLeft":"-915,-273",
+   "Color Coded_ExpandedHierarchyInLayout":"",
+   "Color Coded_Layers":"/reset_0_1:true|/sys_clock_1:true|/clk_wiz_0_clk_out1:true|",
+   "Color Coded_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 680 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 740 -defaultsOSRD
+preplace port port-id_controller_inductief_in -pg 1 -lvl 0 -x 0 -y 530 -defaultsOSRD
+preplace port port-id_controllers_ultrasoon_in -pg 1 -lvl 0 -x 0 -y 560 -defaultsOSRD
+preplace port port-id_controller_draadloos_verbonden -pg 1 -lvl 0 -x 0 -y 590 -defaultsOSRD
+preplace port port-id_controllers_draadloos_omhoog -pg 1 -lvl 0 -x 0 -y 620 -defaultsOSRD
+preplace port port-id_controllers_draadloos_omlaag -pg 1 -lvl 0 -x 0 -y 650 -defaultsOSRD
+preplace portBus controllers_keuze_1 -pg 1 -lvl 0 -x 0 -y 470 -defaultsOSRD
+preplace portBus controllers_keuze_2 -pg 1 -lvl 0 -x 0 -y 500 -defaultsOSRD
+preplace inst ontvangen_controllers -pg 1 -lvl 2 -x 620 -y 570 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 200 -y 730 -defaultsOSRD
+preplace inst breedte_scherm -pg 1 -lvl 3 -x 1010 -y 160 -defaultsOSRD
+preplace inst hoogte_scherm -pg 1 -lvl 3 -x 1010 -y 60 -defaultsOSRD
+preplace inst hoogte_peddels -pg 1 -lvl 3 -x 1010 -y 660 -defaultsOSRD
+preplace inst breedte_peddels -pg 1 -lvl 3 -x 1010 -y 360 -defaultsOSRD
+preplace inst grootte_balletje -pg 1 -lvl 3 -x 1010 -y 260 -defaultsOSRD
+preplace inst aanraking_herkennen_0 -pg 1 -lvl 4 -x 1500 -y 300 -defaultsOSRD
+preplace inst clk_divider_0 -pg 1 -lvl 4 -x 1500 -y 730 -swap {1 0 2} -defaultsOSRD
+preplace inst positie_balletje_0 -pg 1 -lvl 5 -x 1920 -y 300 -defaultsOSRD
+preplace inst object_positie_0 -pg 1 -lvl 1 -x 200 -y 890 -defaultsOSRD
+preplace inst object_positie_1 -pg 1 -lvl 3 -x 1010 -y 510 -defaultsOSRD
+preplace inst tekenen_balletje -pg 1 -lvl 6 -x 2230 -y 360 -defaultsOSRD
+preplace inst tekenen_object_1 -pg 1 -lvl 7 -x 2520 -y 420 -defaultsOSRD
+preplace inst tekenen_object_0 -pg 1 -lvl 8 -x 2800 -y 520 -defaultsOSRD
+preplace netloc aanraking_herkennen_0_aanraking_balletje_bovenonder 1 4 1 1730 330n
+preplace netloc aanraking_herkennen_0_aanraking_balletje_peddel 1 4 1 1760 270n
+preplace netloc aanraking_herkennen_0_aanraking_balletje_peddel_zone 1 4 1 N 290
+preplace netloc aanraking_herkennen_0_aanraking_balletje_zijkant 1 4 1 1740 310n
+preplace netloc breedte_peddels_dout 1 3 5 1210 500 NJ 500 NJ 500 2380 560 NJ
+preplace netloc breedte_scherm_dout 1 3 2 1240 160 1770
+preplace netloc clk_divider_0_clk_out 1 4 1 1770 270n
+preplace netloc clk_wiz_0_clk_out1 1 1 3 410 740 NJ 740 NJ
+preplace netloc controller_draadloos_verbonden_0_1 1 0 2 NJ 590 380J
+preplace netloc controller_inductief_in_0_1 1 0 2 NJ 530 390J
+preplace netloc controllers_draadloos_omhoog_0_1 1 0 2 NJ 620 380J
+preplace netloc controllers_draadloos_omlaag_0_1 1 0 2 NJ 650 390J
+preplace netloc controllers_keuze_1_0_1 1 0 2 NJ 470 390J
+preplace netloc controllers_keuze_2_0_1 1 0 2 NJ 500 380J
+preplace netloc controllers_ultrasoon_in_0_1 1 0 2 NJ 560 NJ
+preplace netloc grootte_balletje_dout 1 3 3 1240 470 NJ 470 2100
+preplace netloc hoogte_peddels_dout 1 3 5 1200 530 NJ 530 NJ 530 2390 580 NJ
+preplace netloc positie_balletje_0_pos_x_out 1 3 3 1270 450 NJ 450 2080
+preplace netloc positie_balletje_0_pos_y_out 1 3 3 1260 460 NJ 460 2070
+preplace netloc reset_0_1 1 0 4 20 660 400 720 NJ 720 NJ
+preplace netloc scherm_hoogte_dout 1 3 2 1230 440 1750J
+preplace netloc sys_clock_1 1 0 1 NJ 740
+preplace netloc ontvangen_controllers_controller_output_1 1 2 1 N 540
+preplace netloc ontvangen_controllers_controller_output_2 1 2 1 N 560
+preplace netloc object_positie_1_position_y_1 1 3 4 1220 490 NJ 490 NJ 490 2370J
+preplace netloc object_positie_1_position_y_2 1 3 5 1250 540 NJ 540 NJ 540 NJ 540 NJ
+preplace netloc Net 1 5 3 2090 230 2390 290 2670
+preplace netloc Net1 1 5 3 2100 240 2360 300 2650
+preplace netloc object_positie_1_position_x_1 1 3 4 N 480 NJ 480 NJ 480 2360J
+preplace netloc object_positie_1_position_x_2 1 3 5 1190J 590 NJ 590 NJ 590 NJ 590 2670
+preplace netloc tekenen_object_1_pixel_value_o 1 7 1 2660 420n
+preplace netloc tekenen_balletje_pixel_value_o 1 6 1 N 360
+levelinfo -pg 1 0 200 620 1010 1500 1920 2230 2520 2800 2930
+pagesize -pg 1 -db -bbox -sgen -260 0 2930 1000
+",
+   "Color Coded_ScaleFactor":"1.02268",
+   "Color Coded_TopLeft":"-254,-426",
+   "Default View_Layers":"/clk_wiz_0_clk_out1:true|/reset_0_1:true|/sys_clock_1:true|",
+   "Default View_ScaleFactor":"3.0277",
+   "Default View_TopLeft":"1576,72",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeOthers":"true",
+   "Display-PortTypeReset":"true",
    "ExpandedHierarchyInLayout":"",
+   "Grouping and No Loops_ScaleFactor":"1.18597",
+   "Grouping and No Loops_TopLeft":"-107,-273",
+   "Interfaces View_ExpandedHierarchyInLayout":"",
+   "Interfaces View_Layers":"/reset_0_1:false|/sys_clock_1:false|/clk_wiz_0_clk_out1:false|",
+   "Interfaces View_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+levelinfo -pg 1 0 10
+pagesize -pg 1 -db -bbox -sgen 0 0 10 10
+",
+   "Interfaces View_ScaleFactor":"1.28084",
+   "Interfaces View_TopLeft":"-20,-2",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 740 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 810 -defaultsOSRD
+preplace port port-id_controller_inductief_in -pg 1 -lvl 0 -x 0 -y 560 -defaultsOSRD
+preplace port port-id_controllers_ultrasoon_in -pg 1 -lvl 0 -x 0 -y 620 -defaultsOSRD
+preplace port port-id_controller_draadloos_verbonden -pg 1 -lvl 0 -x 0 -y 650 -defaultsOSRD
+preplace port port-id_controllers_draadloos_omhoog -pg 1 -lvl 0 -x 0 -y 680 -defaultsOSRD
+preplace port port-id_controllers_draadloos_omlaag -pg 1 -lvl 0 -x 0 -y 710 -defaultsOSRD
+preplace portBus controllers_keuze_1 -pg 1 -lvl 0 -x 0 -y 500 -defaultsOSRD
+preplace portBus controllers_keuze_2 -pg 1 -lvl 0 -x 0 -y 530 -defaultsOSRD
+preplace inst ontvangen_controllers -pg 1 -lvl 2 -x 610 -y 480 -swap {6 0 1 5 12 3 2 7 8 9 10 11 4 13} -defaultsOSRD -pinDir controllers_enable left -pinY controllers_enable 100L -pinBusDir controllers_keuze_1 left -pinBusY controllers_keuze_1 20L -pinBusDir controllers_keuze_2 left -pinBusY controllers_keuze_2 50L -pinBusDir controller_output_1 right -pinBusY controller_output_1 60R -pinBusDir controller_output_2 right -pinBusY controller_output_2 80R -pinDir controllers_active right -pinY controllers_active 20R -pinDir controller_inductief_in left -pinY controller_inductief_in 80L -pinDir controllers_ultrasoon_in left -pinY controllers_ultrasoon_in 140L -pinDir controller_draadloos_verbonden left -pinY controller_draadloos_verbonden 170L -pinDir controllers_draadloos_omhoog left -pinY controllers_draadloos_omhoog 200L -pinDir controllers_draadloos_omlaag left -pinY controllers_draadloos_omlaag 230L -pinDir reset left -pinY reset 250L -pinDir controller_ultrasoon_trigger right -pinY controller_ultrasoon_trigger 40R -pinDir clk left -pinY clk 270L
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 200 -y 770 -defaultsOSRD -pinDir reset left -pinY reset 20L -pinDir clk_in1 left -pinY clk_in1 40L -pinDir clk_out1 right -pinY clk_out1 20R
+preplace inst breedte_scherm -pg 1 -lvl 3 -x 1000 -y 140 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
+preplace inst hoogte_scherm -pg 1 -lvl 3 -x 1000 -y 40 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
+preplace inst hoogte_peddels -pg 1 -lvl 3 -x 1000 -y 720 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
+preplace inst breedte_peddels -pg 1 -lvl 3 -x 1000 -y 340 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
+preplace inst grootte_balletje -pg 1 -lvl 3 -x 1000 -y 240 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
+preplace inst aanraking_herkennen_0 -pg 1 -lvl 4 -x 1490 -y 120 -swap {0 1 2 8 3 5 6 4 7 10 9 11 12} -defaultsOSRD -pinBusDir hoogte_scherm left -pinBusY hoogte_scherm 20L -pinBusDir breedte_scherm left -pinBusY breedte_scherm 40L -pinBusDir grootte_balletje left -pinBusY grootte_balletje 140L -pinBusDir hoogte_peddels left -pinBusY hoogte_peddels 260L -pinBusDir breedte_peddels left -pinBusY breedte_peddels 200L -pinBusDir x_positie_balletje right -pinBusY x_positie_balletje 20R -pinBusDir y_positie_balletje right -pinBusY y_positie_balletje 40R -pinBusDir positie_peddel_links left -pinBusY positie_peddel_links 220L -pinBusDir positie_peddel_rechts left -pinBusY positie_peddel_rechts 240L -pinDir aanraking_balletje_peddel right -pinY aanraking_balletje_peddel 160R -pinBusDir aanraking_balletje_peddel_zone right -pinBusY aanraking_balletje_peddel_zone 140R -pinDir aanraking_balletje_zijkant right -pinY aanraking_balletje_zijkant 180R -pinDir aanraking_balletje_bovenonder right -pinY aanraking_balletje_bovenonder 220R
+preplace inst clk_divider_0 -pg 1 -lvl 4 -x 1490 -y 680 -defaultsOSRD -pinDir clk_in left -pinY clk_in 120L -pinDir reset left -pinY reset 140L -pinDir clk_out right -pinY clk_out 20R
+preplace inst positie_balletje_0 -pg 1 -lvl 5 -x 1890 -y 200 -swap {1 0 7 2 5 3 4 6 8 9} -defaultsOSRD -pinBusDir screen_width left -pinBusY screen_width 40L -pinBusDir screen_heigth left -pinBusY screen_heigth 20L -pinDir clk_slow left -pinY clk_slow 180L -pinBusDir angle_index left -pinBusY angle_index 60L -pinDir running left -pinY running 120L -pinDir peddel_touch left -pinY peddel_touch 80L -pinDir side_touch left -pinY side_touch 100L -pinDir top_bottom_touch left -pinY top_bottom_touch 140L -pinBusDir pos_x_out right -pinBusY pos_x_out 20R -pinBusDir pos_y_out right -pinBusY pos_y_out 40R
+preplace inst object_positie_0 -pg 1 -lvl 1 -x 200 -y 890 -defaultsOSRD -pinBusDir object_width left -pinBusY object_width 20L -pinBusDir object_height left -pinBusY object_height 40L -pinBusDir size_window_width left -pinBusY size_window_width 60L -pinBusDir size_window_height left -pinBusY size_window_height 80L -pinBusDir value_1 left -pinBusY value_1 100L -pinBusDir value_2 left -pinBusY value_2 120L -pinBusDir position_x_1 right -pinBusY position_x_1 20R -pinBusDir position_y_1 right -pinBusY position_y_1 40R -pinBusDir position_x_2 right -pinBusY position_x_2 60R -pinBusDir position_y_2 right -pinBusY position_y_2 80R
+preplace inst object_positie_1 -pg 1 -lvl 3 -x 1000 -y 440 -swap {2 3 4 5 0 1 6 7 8 9} -defaultsOSRD -pinBusDir object_width left -pinBusY object_width 140L -pinBusDir object_height left -pinBusY object_height 160L -pinBusDir size_window_width left -pinBusY size_window_width 180L -pinBusDir size_window_height left -pinBusY size_window_height 200L -pinBusDir value_1 left -pinBusY value_1 100L -pinBusDir value_2 left -pinBusY value_2 120L -pinBusDir position_x_1 right -pinBusY position_x_1 20R -pinBusDir position_y_1 right -pinBusY position_y_1 40R -pinBusDir position_x_2 right -pinBusY position_x_2 180R -pinBusDir position_y_2 right -pinBusY position_y_2 200R
+preplace inst tekenen_balletje -pg 1 -lvl 6 -x 2190 -y 180 -swap {3 1 2 0 4 5 6 7} -defaultsOSRD -pinDir pixel_value_i left -pinY pixel_value_i 40L -pinBusDir pixel_x right -pinBusY pixel_x 100R -pinBusDir pixel_y right -pinBusY pixel_y 120R -pinBusDir pos_x left -pinBusY pos_x 20L -pinBusDir pos_y left -pinBusY pos_y 60L -pinBusDir size_x left -pinBusY size_x 200L -pinBusDir size_y left -pinBusY size_y 220L -pinDir pixel_value_o right -pinY pixel_value_o 220R
+preplace inst tekenen_object_1 -pg 1 -lvl 7 -x 2470 -y 340 -swap {2 0 1 3 4 5 6 7} -defaultsOSRD -pinDir pixel_value_i left -pinY pixel_value_i 60L -pinBusDir pixel_x left -pinBusY pixel_x 20L -pinBusDir pixel_y left -pinBusY pixel_y 40L -pinBusDir pos_x left -pinBusY pos_x 120L -pinBusDir pos_y left -pinBusY pos_y 140L -pinBusDir size_x left -pinBusY size_x 160L -pinBusDir size_y left -pinBusY size_y 180L -pinDir pixel_value_o right -pinY pixel_value_o 20R
+preplace inst tekenen_object_0 -pg 1 -lvl 8 -x 2730 -y 260 -swap {2 0 1 5 6 3 4 7} -defaultsOSRD -pinDir pixel_value_i left -pinY pixel_value_i 100L -pinBusDir pixel_x left -pinBusY pixel_x 20L -pinBusDir pixel_y left -pinBusY pixel_y 40L -pinBusDir pos_x left -pinBusY pos_x 360L -pinBusDir pos_y left -pinBusY pos_y 380L -pinBusDir size_x left -pinBusY size_x 320L -pinBusDir size_y left -pinBusY size_y 340L -pinDir pixel_value_o right -pinY pixel_value_o 20R
+preplace netloc aanraking_herkennen_0_aanraking_balletje_bovenonder 1 4 1 N 340
+preplace netloc aanraking_herkennen_0_aanraking_balletje_peddel 1 4 1 N 280
+preplace netloc aanraking_herkennen_0_aanraking_balletje_peddel_zone 1 4 1 N 260
+preplace netloc aanraking_herkennen_0_aanraking_balletje_zijkant 1 4 1 N 300
+preplace netloc breedte_peddels_dout 1 3 5 1240 500 NJ 500 NJ 500 2320 580 NJ
+preplace netloc breedte_scherm_dout 1 3 2 1180 80 1720
+preplace netloc clk_divider_0_clk_out 1 4 1 1740 380n
+preplace netloc clk_wiz_0_clk_out1 1 1 3 400 800 NJ 800 NJ
+preplace netloc controller_draadloos_verbonden_0_1 1 0 2 NJ 650 NJ
+preplace netloc controller_inductief_in_0_1 1 0 2 NJ 560 NJ
+preplace netloc controllers_draadloos_omhoog_0_1 1 0 2 NJ 680 NJ
+preplace netloc controllers_draadloos_omlaag_0_1 1 0 2 NJ 710 NJ
+preplace netloc controllers_keuze_1_0_1 1 0 2 NJ 500 NJ
+preplace netloc controllers_keuze_2_0_1 1 0 2 NJ 530 NJ
+preplace netloc controllers_ultrasoon_in_0_1 1 0 2 NJ 620 NJ
+preplace netloc grootte_balletje_dout 1 3 3 1180 440 NJ 440 2040
+preplace netloc hoogte_peddels_dout 1 3 5 1220 600 NJ 600 NJ 600 2340 600 NJ
+preplace netloc positie_balletje_0_pos_x_out 1 4 2 NJ 140 2040
+preplace netloc positie_balletje_0_pos_y_out 1 4 2 NJ 160 2060
+preplace netloc reset_0_1 1 0 4 20 730 380 820 NJ 820 NJ
+preplace netloc scherm_hoogte_dout 1 3 2 1260 60 1740
+preplace netloc sys_clock_1 1 0 1 NJ 810
+preplace netloc ontvangen_controllers_controller_output_1 1 2 1 N 540
+preplace netloc ontvangen_controllers_controller_output_2 1 2 1 N 560
+preplace netloc object_positie_1_position_y_1 1 3 4 1200 480 NJ 480 NJ 480 NJ
+preplace netloc object_positie_1_position_y_2 1 3 5 1260 640 NJ 640 NJ 640 NJ 640 N
+preplace netloc Net 1 6 2 2340 280 N
+preplace netloc Net1 1 6 2 2320 300 N
+preplace netloc object_positie_1_position_x_1 1 3 4 N 460 NJ 460 NJ 460 NJ
+preplace netloc object_positie_1_position_x_2 1 3 5 NJ 620 NJ 620 NJ 620 NJ 620 N
+preplace netloc tekenen_object_1_pixel_value_o 1 7 1 N 360
+preplace netloc tekenen_balletje_pixel_value_o 1 6 1 N 400
+levelinfo -pg 1 0 200 610 1000 1490 1890 2190 2470 2730 2850
+pagesize -pg 1 -db -bbox -sgen -260 0 2850 1070
+",
+   "No Loops_ScaleFactor":"1.04575",
+   "No Loops_TopLeft":"-254,-371",
+   "Reduced Jogs_ExpandedHierarchyInLayout":"",
+   "Reduced Jogs_Layers":"/reset_0_1:true|/sys_clock_1:true|/clk_wiz_0_clk_out1:true|",
+   "Reduced Jogs_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 760 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 830 -defaultsOSRD
+preplace port port-id_controller_inductief_in -pg 1 -lvl 0 -x 0 -y 580 -defaultsOSRD
+preplace port port-id_controllers_ultrasoon_in -pg 1 -lvl 0 -x 0 -y 640 -defaultsOSRD
+preplace port port-id_controller_draadloos_verbonden -pg 1 -lvl 0 -x 0 -y 670 -defaultsOSRD
+preplace port port-id_controllers_draadloos_omhoog -pg 1 -lvl 0 -x 0 -y 700 -defaultsOSRD
+preplace port port-id_controllers_draadloos_omlaag -pg 1 -lvl 0 -x 0 -y 730 -defaultsOSRD
+preplace portBus controllers_keuze_1 -pg 1 -lvl 0 -x 0 -y 520 -defaultsOSRD
+preplace portBus controllers_keuze_2 -pg 1 -lvl 0 -x 0 -y 550 -defaultsOSRD
+preplace inst ontvangen_controllers -pg 1 -lvl 2 -x 610 -y 500 -swap {6 0 1 5 12 3 2 7 8 9 10 11 4 13} -defaultsOSRD -pinY controllers_enable 100L -pinBusY controllers_keuze_1 20L -pinBusY controllers_keuze_2 50L -pinBusY controller_output_1 60R -pinBusY controller_output_2 80R -pinY controllers_active 20R -pinY controller_inductief_in 80L -pinY controllers_ultrasoon_in 140L -pinY controller_draadloos_verbonden 170L -pinY controllers_draadloos_omhoog 200L -pinY controllers_draadloos_omlaag 230L -pinY reset 250L -pinY controller_ultrasoon_trigger 40R -pinY clk 270L
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 200 -y 790 -defaultsOSRD -pinY reset 20L -pinY clk_in1 40L -pinY clk_out1 20R
+preplace inst breedte_scherm -pg 1 -lvl 3 -x 1000 -y 140 -defaultsOSRD -pinBusY dout 20R
+preplace inst hoogte_scherm -pg 1 -lvl 3 -x 1000 -y 40 -defaultsOSRD -pinBusY dout 20R
+preplace inst hoogte_peddels -pg 1 -lvl 3 -x 1000 -y 740 -defaultsOSRD -pinBusY dout 20R
+preplace inst breedte_peddels -pg 1 -lvl 3 -x 1000 -y 340 -defaultsOSRD -pinBusY dout 20R
+preplace inst grootte_balletje -pg 1 -lvl 3 -x 1000 -y 240 -defaultsOSRD -pinBusY dout 20R
+preplace inst aanraking_herkennen_0 -pg 1 -lvl 4 -x 1550 -y 100 -swap {0 1 2 6 3 8 7 4 5 10 9 11 12} -defaultsOSRD -pinBusY hoogte_scherm 20L -pinBusY breedte_scherm 40L -pinBusY grootte_balletje 60L -pinBusY hoogte_peddels 140L -pinBusY breedte_peddels 80L -pinBusY x_positie_balletje 180L -pinBusY y_positie_balletje 160L -pinBusY positie_peddel_links 100L -pinBusY positie_peddel_rechts 120L -pinY aanraking_balletje_peddel 40R -pinBusY aanraking_balletje_peddel_zone 20R -pinY aanraking_balletje_zijkant 60R -pinY aanraking_balletje_bovenonder 80R
+preplace inst clk_divider_0 -pg 1 -lvl 4 -x 1550 -y 700 -swap {1 0 2} -defaultsOSRD -pinY clk_in 140L -pinY reset 120L -pinY clk_out 20R
+preplace inst positie_balletje_0 -pg 1 -lvl 5 -x 1930 -y 40 -swap {0 6 7 1 5 2 3 4 8 9} -defaultsOSRD -pinBusY screen_width 20L -pinBusY screen_heigth 300L -pinY clk_slow 320L -pinBusY angle_index 80L -pinY running 160L -pinY peddel_touch 100L -pinY side_touch 120L -pinY top_bottom_touch 140L -pinBusY pos_x_out 300R -pinBusY pos_y_out 320R
+preplace inst object_positie_0 -pg 1 -lvl 1 -x 200 -y 910 -defaultsOSRD -pinBusY object_width 20L -pinBusY object_height 40L -pinBusY size_window_width 60L -pinBusY size_window_height 80L -pinBusY value_1 100L -pinBusY value_2 120L -pinBusY position_x_1 20R -pinBusY position_y_1 40R -pinBusY position_x_2 60R -pinBusY position_y_2 80R
+preplace inst object_positie_1 -pg 1 -lvl 3 -x 1000 -y 460 -swap {2 3 4 5 0 1 6 7 8 9} -defaultsOSRD -pinBusY object_width 140L -pinBusY object_height 160L -pinBusY size_window_width 180L -pinBusY size_window_height 200L -pinBusY value_1 100L -pinBusY value_2 120L -pinBusY position_x_1 20R -pinBusY position_y_1 40R -pinBusY position_x_2 180R -pinBusY position_y_2 200R
+preplace inst tekenen_balletje -pg 1 -lvl 6 -x 2250 -y 280 -swap {2 1 0 3 4 5 6 7} -defaultsOSRD -pinY pixel_value_i 60L -pinBusY pixel_x 40L -pinBusY pixel_y 20L -pinBusY pos_x 80L -pinBusY pos_y 100L -pinBusY size_x 120L -pinBusY size_y 140L -pinY pixel_value_o 60R
+preplace inst tekenen_object_1 -pg 1 -lvl 7 -x 2530 -y 280 -swap {2 0 1 3 4 5 6 7} -defaultsOSRD -pinY pixel_value_i 60L -pinBusY pixel_x 20L -pinBusY pixel_y 40L -pinBusY pos_x 200L -pinBusY pos_y 220L -pinBusY size_x 240L -pinBusY size_y 260L -pinY pixel_value_o 20R
+preplace inst tekenen_object_0 -pg 1 -lvl 8 -x 2790 -y 200 -swap {2 0 1 5 6 3 4 7} -defaultsOSRD -pinY pixel_value_i 100L -pinBusY pixel_x 20L -pinBusY pixel_y 40L -pinBusY pos_x 440L -pinBusY pos_y 460L -pinBusY size_x 400L -pinBusY size_y 420L -pinY pixel_value_o 20R
+preplace netloc aanraking_herkennen_0_aanraking_balletje_bovenonder 1 4 1 N 180
+preplace netloc aanraking_herkennen_0_aanraking_balletje_peddel 1 4 1 N 140
+preplace netloc aanraking_herkennen_0_aanraking_balletje_peddel_zone 1 4 1 N 120
+preplace netloc aanraking_herkennen_0_aanraking_balletje_zijkant 1 4 1 N 160
+preplace netloc breedte_peddels_dout 1 3 5 1240 520 NJ 520 NJ 520 2400 600 NJ
+preplace netloc breedte_scherm_dout 1 3 2 1200 60 NJ
+preplace netloc clk_divider_0_clk_out 1 4 1 1780 360n
+preplace netloc clk_wiz_0_clk_out1 1 1 3 380 840 NJ 840 N
+preplace netloc controller_draadloos_verbonden_0_1 1 0 2 NJ 670 NJ
+preplace netloc controller_inductief_in_0_1 1 0 2 NJ 580 NJ
+preplace netloc controllers_draadloos_omhoog_0_1 1 0 2 NJ 700 NJ
+preplace netloc controllers_draadloos_omlaag_0_1 1 0 2 NJ 730 NJ
+preplace netloc controllers_keuze_1_0_1 1 0 2 NJ 520 NJ
+preplace netloc controllers_keuze_2_0_1 1 0 2 NJ 550 NJ
+preplace netloc controllers_ultrasoon_in_0_1 1 0 2 NJ 640 NJ
+preplace netloc grootte_balletje_dout 1 3 3 1220 460 NJ 460 2120
+preplace netloc hoogte_peddels_dout 1 3 5 1260 540 NJ 540 NJ 540 2380 620 NJ
+preplace netloc positie_balletje_0_pos_x_out 1 3 3 1320 420 NJ 420 2100
+preplace netloc positie_balletje_0_pos_y_out 1 3 3 1300 440 NJ 440 2080
+preplace netloc reset_0_1 1 0 4 20 750 400 820 NJ 820 NJ
+preplace netloc scherm_hoogte_dout 1 3 2 1180 340 NJ
+preplace netloc sys_clock_1 1 0 1 NJ 830
+preplace netloc ontvangen_controllers_controller_output_1 1 2 1 N 560
+preplace netloc ontvangen_controllers_controller_output_2 1 2 1 N 580
+preplace netloc object_positie_1_position_y_1 1 3 4 1200 500 NJ 500 NJ 500 NJ
+preplace netloc object_positie_1_position_y_2 1 3 5 1280 660 NJ 660 NJ 660 NJ 660 N
+preplace netloc Net 1 5 3 2080 220 2400 220 N
+preplace netloc Net1 1 5 3 2120 240 2380 240 N
+preplace netloc object_positie_1_position_x_1 1 3 4 N 480 NJ 480 NJ 480 NJ
+preplace netloc object_positie_1_position_x_2 1 3 5 NJ 640 NJ 640 NJ 640 NJ 640 N
+preplace netloc tekenen_object_1_pixel_value_o 1 7 1 N 300
+preplace netloc tekenen_balletje_pixel_value_o 1 6 1 N 340
+levelinfo -pg 1 0 200 610 1000 1550 1930 2250 2530 2790 2910
+pagesize -pg 1 -db -bbox -sgen -260 0 2910 1090
+",
+   "Reduced Jogs_ScaleFactor":"1.02592",
+   "Reduced Jogs_TopLeft":"-254,-378",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 1080 -defaultsOSRD
-preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 1120 -defaultsOSRD
-preplace port port-id_controller_inductief_in -pg 1 -lvl 0 -x 0 -y 770 -defaultsOSRD
-preplace port port-id_controllers_ultrasoon_in -pg 1 -lvl 0 -x 0 -y 960 -defaultsOSRD
-preplace port port-id_controller_draadloos_verbonden -pg 1 -lvl 0 -x 0 -y 990 -defaultsOSRD
-preplace port port-id_controllers_draadloos_omhoog -pg 1 -lvl 0 -x 0 -y 1020 -defaultsOSRD
-preplace port port-id_controllers_draadloos_omlaag -pg 1 -lvl 0 -x 0 -y 1050 -defaultsOSRD
-preplace portBus controllers_keuze_1 -pg 1 -lvl 0 -x 0 -y 800 -defaultsOSRD
-preplace portBus controllers_keuze_2 -pg 1 -lvl 0 -x 0 -y 830 -defaultsOSRD
-preplace inst ontvangen_controllers -pg 1 -lvl 4 -x 1040 -y 980 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 120 -y 1110 -defaultsOSRD
-preplace inst breedte_scherm -pg 1 -lvl 3 -x 620 -y 390 -defaultsOSRD
-preplace inst hoogte_scherm -pg 1 -lvl 3 -x 620 -y 290 -defaultsOSRD
-preplace inst hoogte_peddels -pg 1 -lvl 3 -x 620 -y 590 -defaultsOSRD
-preplace inst breedte_peddels -pg 1 -lvl 3 -x 620 -y 690 -defaultsOSRD
-preplace inst grootte_balletje -pg 1 -lvl 3 -x 620 -y 490 -defaultsOSRD
-preplace inst aanraking_herkennen_0 -pg 1 -lvl 4 -x 1040 -y 530 -defaultsOSRD
-preplace inst positie_balletje_0 -pg 1 -lvl 3 -x 620 -y 110 -defaultsOSRD
-preplace inst clk_divider_0 -pg 1 -lvl 2 -x 330 -y 900 -defaultsOSRD
-preplace netloc reset_0_1 1 0 4 30 1040 230 1050 NJ 1050 NJ
-preplace netloc clk_wiz_0_clk_out1 1 1 3 210 1070 NJ 1070 NJ
-preplace netloc sys_clock_1 1 0 1 NJ 1120
-preplace netloc controllers_keuze_1_0_1 1 0 4 NJ 800 NJ 800 NJ 800 810J
-preplace netloc controllers_keuze_2_0_1 1 0 4 NJ 830 NJ 830 NJ 830 770J
-preplace netloc controller_inductief_in_0_1 1 0 4 NJ 770 NJ 770 NJ 770 790J
-preplace netloc controllers_ultrasoon_in_0_1 1 0 4 NJ 960 220J 970 NJ 970 NJ
-preplace netloc controller_draadloos_verbonden_0_1 1 0 4 NJ 990 NJ 990 NJ 990 NJ
-preplace netloc controllers_draadloos_omhoog_0_1 1 0 4 NJ 1020 NJ 1020 NJ 1020 810J
-preplace netloc controllers_draadloos_omlaag_0_1 1 0 4 20J 1030 NJ 1030 NJ 1030 NJ
-preplace netloc scherm_hoogte_dout 1 3 1 800J 290n
-preplace netloc hoogte_peddels_dout 1 3 1 770J 510n
-preplace netloc grootte_balletje_dout 1 3 1 NJ 490
-preplace netloc breedte_scherm_dout 1 3 1 770J 390n
-preplace netloc breedte_peddels_dout 1 3 1 780J 530n
-preplace netloc aanraking_herkennen_0_aanraking_balletje_bovenonder 1 2 3 470 220 NJ 220 1280
-preplace netloc aanraking_herkennen_0_aanraking_balletje_zijkant 1 2 3 440 760 NJ 760 1270
-preplace netloc aanraking_herkennen_0_aanraking_balletje_peddel 1 2 3 460 230 NJ 230 1270
-preplace netloc aanraking_herkennen_0_aanraking_balletje_peddel_zone 1 2 3 450 750 NJ 750 1290
-preplace netloc positie_balletje_0_pos_x_out 1 3 1 810 100n
-preplace netloc positie_balletje_0_pos_y_out 1 3 1 790 120n
-preplace netloc clk_divider_0_clk_out 1 2 1 430 60n
-levelinfo -pg 1 0 120 330 620 1040 1310
-pagesize -pg 1 -db -bbox -sgen -260 0 1310 1180
+preplace port port-id_reset -pg 1 -lvl 0 -x -10 -y 920 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x -10 -y 980 -defaultsOSRD
+preplace port port-id_controller_inductief_in -pg 1 -lvl 0 -x -10 -y 770 -defaultsOSRD
+preplace port port-id_controllers_ultrasoon_in -pg 1 -lvl 0 -x -10 -y 800 -defaultsOSRD
+preplace port port-id_controller_draadloos_verbonden -pg 1 -lvl 0 -x -10 -y 830 -defaultsOSRD
+preplace port port-id_controllers_draadloos_omhoog -pg 1 -lvl 0 -x -10 -y 860 -defaultsOSRD
+preplace port port-id_controllers_draadloos_omlaag -pg 1 -lvl 0 -x -10 -y 890 -defaultsOSRD
+preplace port port-id_controller_ultrasoon_trigger -pg 1 -lvl 9 -x 2860 -y 840 -defaultsOSRD
+preplace port port-id_enable -pg 1 -lvl 0 -x -10 -y 660 -defaultsOSRD
+preplace portBus controllers_keuze_1 -pg 1 -lvl 0 -x -10 -y 710 -defaultsOSRD
+preplace portBus controllers_keuze_2 -pg 1 -lvl 0 -x -10 -y 740 -defaultsOSRD
+preplace inst ontvangen_controllers -pg 1 -lvl 2 -x 440 -y 810 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 970 -defaultsOSRD
+preplace inst breedte_scherm -pg 1 -lvl 2 -x 440 -y 490 -defaultsOSRD
+preplace inst hoogte_scherm -pg 1 -lvl 2 -x 440 -y 590 -defaultsOSRD
+preplace inst hoogte_peddels -pg 1 -lvl 2 -x 440 -y 390 -defaultsOSRD
+preplace inst breedte_peddels -pg 1 -lvl 2 -x 440 -y 290 -defaultsOSRD
+preplace inst grootte_balletje -pg 1 -lvl 3 -x 860 -y 330 -defaultsOSRD
+preplace inst aanraking_herkennen_0 -pg 1 -lvl 4 -x 1350 -y 140 -defaultsOSRD
+preplace inst clk_divider_0 -pg 1 -lvl 4 -x 1350 -y 960 -defaultsOSRD
+preplace inst positie_balletje_0 -pg 1 -lvl 5 -x 1800 -y 140 -defaultsOSRD
+preplace inst object_positie_1 -pg 1 -lvl 3 -x 860 -y 510 -defaultsOSRD
+preplace inst tekenen_balletje -pg 1 -lvl 6 -x 2120 -y 190 -defaultsOSRD
+preplace inst tekenen_object_1 -pg 1 -lvl 7 -x 2430 -y 480 -defaultsOSRD
+preplace inst tekenen_object_0 -pg 1 -lvl 8 -x 2710 -y 310 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 4 -x 1350 -y 670 -defaultsOSRD
+preplace netloc aanraking_herkennen_0_aanraking_balletje_bovenonder 1 4 1 1590 170n
+preplace netloc aanraking_herkennen_0_aanraking_balletje_peddel 1 4 1 1630 110n
+preplace netloc aanraking_herkennen_0_aanraking_balletje_peddel_zone 1 4 1 N 130
+preplace netloc aanraking_herkennen_0_aanraking_balletje_zijkant 1 4 1 1620 150n
+preplace netloc breedte_peddels_dout 1 2 6 670 260 1090 340 NJ 340 NJ 340 2250 350 NJ
+preplace netloc breedte_scherm_dout 1 2 3 680 400 1050 320 1610J
+preplace netloc clk_divider_0_clk_out 1 4 1 1640 110n
+preplace netloc clk_wiz_0_clk_out1 1 1 3 230 950 NJ 950 N
+preplace netloc controller_draadloos_verbonden_0_1 1 0 2 10J 820 NJ
+preplace netloc controller_inductief_in_0_1 1 0 2 NJ 770 220J
+preplace netloc controllers_draadloos_omhoog_0_1 1 0 2 10J 840 NJ
+preplace netloc controllers_draadloos_omlaag_0_1 1 0 2 20J 860 NJ
+preplace netloc controllers_keuze_1_0_1 1 0 2 NJ 710 210J
+preplace netloc controllers_keuze_2_0_1 1 0 2 NJ 740 200J
+preplace netloc controllers_ultrasoon_in_0_1 1 0 2 NJ 800 NJ
+preplace netloc grootte_balletje_dout 1 3 3 1040 310 1580J 10 1970
+preplace netloc hoogte_peddels_dout 1 2 6 660 390 1060 360 NJ 360 NJ 360 2270 360 2560J
+preplace netloc positie_balletje_0_pos_x_out 1 3 3 1110 300 NJ 300 1960
+preplace netloc positie_balletje_0_pos_y_out 1 3 3 1120 290 NJ 290 1950
+preplace netloc reset_0_1 1 0 4 10 900 210 970 NJ 970 NJ
+preplace netloc scherm_hoogte_dout 1 2 3 650 270 1070 280 1600J
+preplace netloc sys_clock_1 1 0 1 NJ 980
+preplace netloc ontvangen_controllers_controller_output_1 1 2 1 670 540n
+preplace netloc ontvangen_controllers_controller_output_2 1 2 1 680 560n
+preplace netloc object_positie_1_position_y_1 1 3 4 1100 500 NJ 500 NJ 500 NJ
+preplace netloc object_positie_1_position_y_2 1 3 5 1080 330 NJ 330 NJ 330 NJ 330 NJ
+preplace netloc Net 1 5 3 1990 310 2260 270 NJ
+preplace netloc Net1 1 5 3 1980 320 2300 320 2580J
+preplace netloc object_positie_1_position_x_1 1 3 4 N 480 NJ 480 NJ 480 NJ
+preplace netloc object_positie_1_position_x_2 1 3 5 1090J 470 NJ 470 NJ 470 2280J 310 N
+preplace netloc tekenen_object_1_pixel_value_o 1 7 1 2570 250n
+preplace netloc tekenen_balletje_pixel_value_o 1 6 1 2290 190n
+preplace netloc ontvangen_controllers_controller_ultrasoon_trigger 1 2 7 NJ 840 NJ 840 NJ 840 NJ 840 NJ 840 NJ 840 NJ
+preplace netloc controllers_enable_0_1 1 0 4 NJ 660 230 660 NJ 660 NJ
+preplace netloc ontvangen_controllers_controllers_active 1 2 2 NJ 820 1120
+preplace netloc util_vector_logic_0_Res 1 4 1 1650 150n
+levelinfo -pg 1 -10 110 440 860 1350 1800 2120 2430 2710 2860
+pagesize -pg 1 -db -bbox -sgen -270 0 3090 1040
 "
 }
 {
