@@ -11,6 +11,7 @@ entity aanraking_herkennen is
         grootte_balletje : in STD_LOGIC_VECTOR (9 downto 0);
         hoogte_peddels : in STD_LOGIC_VECTOR (9 downto 0);
         breedte_peddels : in STD_LOGIC_VECTOR (9 downto 0);
+        offset_peddels : in STD_LOGIC_VECTOR (9 downto 0);
         x_positie_balletje : in STD_LOGIC_VECTOR (9 downto 0);
         y_positie_balletje : in STD_LOGIC_VECTOR (9 downto 0);
         positie_peddel_links : in STD_LOGIC_VECTOR (9 downto 0);
@@ -52,16 +53,17 @@ begin
     grootte_balletje_uns <= unsigned(grootte_balletje);
     hoogte_peddels_uns <= unsigned(hoogte_peddels);
     breedte_peddels_uns <= unsigned(breedte_peddels);
+    offset_peddels_uns <= unsigned(offset_peddels);
     x_positie_balletje_uns <= unsigned(x_positie_balletje);
     y_positie_balletje_uns <= unsigned(y_positie_balletje);
     positie_peddel_links_uns <= unsigned(positie_peddel_links);
     positie_peddel_rechts_uns <= unsigned(positie_peddel_rechts);
 
-    aanraking_rand_links <= '1' when x_positie_balletje_uns = 0 else '0';
-    aanraking_rand_rechts <= '1' when x_positie_balletje_uns + grootte_balletje_uns = breedte_scherm_uns else '0';
+    aanraking_rand_links <= '1' when x_positie_balletje_uns = breedte_peddels_uns + offset_peddels_uns else '0';
+    aanraking_rand_rechts <= '1' when x_positie_balletje_uns + grootte_balletje_uns = breedte_scherm_uns - breedte_peddels_uns - offset_peddels_uns else '0';
 
-    aanraking_peddel_links <= '1' when (x_positie_balletje_uns <= breedte_peddels_uns) AND (y_positie_balletje_uns + grootte_balletje_uns > positie_peddel_links_uns) AND (y_positie_balletje_uns < positie_peddel_links_uns + hoogte_peddels_uns) else '0';
-    aanraking_peddel_rechts <= '1' when (x_positie_balletje_uns + grootte_balletje_uns >= breedte_scherm_uns - breedte_peddels_uns) AND (y_positie_balletje_uns + grootte_balletje_uns > positie_peddel_rechts_uns) AND (y_positie_balletje_uns < positie_peddel_rechts_uns + hoogte_peddels_uns) else '0';
+    aanraking_peddel_links <= '1' when (x_positie_balletje_uns <= breedte_peddels_uns + offset_peddels_uns) AND (y_positie_balletje_uns + grootte_balletje_uns > positie_peddel_links_uns) AND (y_positie_balletje_uns < positie_peddel_links_uns + hoogte_peddels_uns) else '0';
+    aanraking_peddel_rechts <= '1' when (x_positie_balletje_uns + grootte_balletje_uns >= breedte_scherm_uns - breedte_peddels_uns - offset_peddels_uns) AND (y_positie_balletje_uns + grootte_balletje_uns > positie_peddel_rechts_uns) AND (y_positie_balletje_uns < positie_peddel_rechts_uns + hoogte_peddels_uns) else '0';
 
     aanraking_peddel_zone_links <=  "00" when   (y_positie_balletje_uns > positie_peddel_links_uns + ((hoogte_peddels_uns * 3) / 8)) AND
                                                 (y_positie_balletje_uns < positie_peddel_links_uns + ((hoogte_peddels_uns * 5) / 8)) else
