@@ -105,6 +105,7 @@ read_vhdl -library xil_defaultlib {
   D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-selfdriving-car.srcs/sources_1/new/aanraking_herkennen.vhd
   D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-selfdriving-car.srcs/sources_1/new/positie_balletje.vhd
   D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-selfdriving-car.srcs/sources_1/new/tekenen_balletje.vhd
+  D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-selfdriving-car.srcs/sources_1/new/lijn_tekenen.vhd
   D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-selfdriving-car.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
 }
 add_files D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-selfdriving-car.srcs/sources_1/bd/design_1/design_1.bd

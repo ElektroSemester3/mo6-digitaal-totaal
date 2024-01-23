@@ -13,6 +13,7 @@ vhdl xil_defaultlib  \
 "../../../bd/design_1/ip/design_1_tekenen_object_0_1/sim/design_1_tekenen_object_0_1.vhd" \
 "../../../bd/design_1/ip/design_1_tekenen_object_1_0/sim/design_1_tekenen_object_1_0.vhd" \
 "../../../bd/design_1/sim/design_1.vhd" \
+"../../../bd/design_1/ip/design_1_lijn_tekenen_0_0/sim/design_1_lijn_tekenen_0_0.vhd" \
 
 # Do not sort compile order
 nosort

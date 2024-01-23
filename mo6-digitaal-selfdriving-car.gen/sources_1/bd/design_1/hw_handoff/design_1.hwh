@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan 23 12:20:46 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jan 23 14:22:29 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -67,29 +67,29 @@
         <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op1"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="HSYNC" SIGIS="undef" SIGNAME="tekenen_object_0_HSYNC_o">
+    <PORT DIR="O" NAME="HSYNC" SIGIS="undef" SIGNAME="lijn_tekenen_0_HSYNC_o">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="tekenen_object_0" PORT="HSYNC_o"/>
+        <CONNECTION INSTANCE="lijn_tekenen_0" PORT="HSYNC_o"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="VSYNC" SIGIS="undef" SIGNAME="tekenen_object_0_VSYNC_o">
+    <PORT DIR="O" NAME="VSYNC" SIGIS="undef" SIGNAME="lijn_tekenen_0_VSYNC_o">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="tekenen_object_0" PORT="VSYNC_o"/>
+        <CONNECTION INSTANCE="lijn_tekenen_0" PORT="VSYNC_o"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="B" SIGIS="undef" SIGNAME="tekenen_object_0_pixel_value_o">
+    <PORT DIR="O" NAME="B" SIGIS="undef" SIGNAME="lijn_tekenen_0_pixel_value_o">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="tekenen_object_0" PORT="pixel_value_o"/>
+        <CONNECTION INSTANCE="lijn_tekenen_0" PORT="pixel_value_o"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="R" SIGIS="undef" SIGNAME="tekenen_object_0_pixel_value_o">
+    <PORT DIR="O" NAME="R" SIGIS="undef" SIGNAME="lijn_tekenen_0_pixel_value_o">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="tekenen_object_0" PORT="pixel_value_o"/>
+        <CONNECTION INSTANCE="lijn_tekenen_0" PORT="pixel_value_o"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="G" SIGIS="undef" SIGNAME="tekenen_object_0_pixel_value_o">
+    <PORT DIR="O" NAME="G" SIGIS="undef" SIGNAME="lijn_tekenen_0_pixel_value_o">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="tekenen_object_0" PORT="pixel_value_o"/>
+        <CONNECTION INSTANCE="lijn_tekenen_0" PORT="pixel_value_o"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="0" NAME="running" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
@@ -199,6 +199,7 @@
             <CONNECTION INSTANCE="tekenen_balletje" PORT="pxlCLK_i"/>
             <CONNECTION INSTANCE="tekenen_object_1" PORT="pxlCLK_i"/>
             <CONNECTION INSTANCE="tekenen_object_0" PORT="pxlCLK_i"/>
+            <CONNECTION INSTANCE="lijn_tekenen_0" PORT="pxlCLK_i"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="HSYNC" SIGIS="undef" SIGNAME="beeld_generator_0_HSYNC">
@@ -243,9 +244,9 @@
         <PORT DIR="O" LEFT="9" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="breedte_peddels_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="object_positie_1" PORT="object_width"/>
-            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="breedte_peddels"/>
             <CONNECTION INSTANCE="tekenen_object_0" PORT="size_x"/>
             <CONNECTION INSTANCE="tekenen_object_1" PORT="size_x"/>
+            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="breedte_peddels"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -263,8 +264,9 @@
         <PORT DIR="O" LEFT="9" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="breedte_scherm_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="object_positie_1" PORT="size_window_width"/>
-            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="breedte_scherm"/>
             <CONNECTION INSTANCE="positie_balletje_0" PORT="screen_width"/>
+            <CONNECTION INSTANCE="lijn_tekenen_0" PORT="screen_x"/>
+            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="breedte_scherm"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -913,9 +915,9 @@
       <PORTS>
         <PORT DIR="O" LEFT="9" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="grootte_balletje_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="grootte_balletje"/>
             <CONNECTION INSTANCE="tekenen_balletje" PORT="size_x"/>
             <CONNECTION INSTANCE="tekenen_balletje" PORT="size_y"/>
+            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="grootte_balletje"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -933,9 +935,9 @@
         <PORT DIR="O" LEFT="9" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="hoogte_peddels_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="object_positie_1" PORT="object_height"/>
-            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="hoogte_peddels"/>
             <CONNECTION INSTANCE="tekenen_object_0" PORT="size_y"/>
             <CONNECTION INSTANCE="tekenen_object_1" PORT="size_y"/>
+            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="hoogte_peddels"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -953,10 +955,82 @@
         <PORT DIR="O" LEFT="9" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="hoogte_scherm_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="object_positie_1" PORT="size_window_height"/>
-            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="hoogte_scherm"/>
             <CONNECTION INSTANCE="positie_balletje_0" PORT="screen_heigth"/>
+            <CONNECTION INSTANCE="lijn_tekenen_0" PORT="screen_y"/>
+            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="hoogte_scherm"/>
           </CONNECTIONS>
         </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/lijn_tekenen_0" HWVERSION="1.0" INSTANCE="lijn_tekenen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="lijn_tekenen" VLNV="xilinx.com:module_ref:lijn_tekenen:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="width_line" VALUE="5"/>
+        <PARAMETER NAME="space_between_lines" VALUE="10"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_lijn_tekenen_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="pixel_value_i" SIGIS="undef" SIGNAME="tekenen_object_0_pixel_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="tekenen_object_0" PORT="pixel_value_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxlCLK_i" SIGIS="undef" SIGNAME="beeld_generator_0_pxlCLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="beeld_generator_0" PORT="pxlCLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="HSYNC_i" SIGIS="undef" SIGNAME="tekenen_object_0_HSYNC_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="tekenen_object_0" PORT="HSYNC_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="VSYNC_i" SIGIS="undef" SIGNAME="tekenen_object_0_VSYNC_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="tekenen_object_0" PORT="VSYNC_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="9" NAME="vpxl_i" RIGHT="0" SIGIS="undef" SIGNAME="tekenen_object_0_vpxl_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="tekenen_object_0" PORT="vpxl_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="9" NAME="hpxl_i" RIGHT="0" SIGIS="undef" SIGNAME="tekenen_object_0_hpxl_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="tekenen_object_0" PORT="hpxl_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="9" NAME="screen_x" RIGHT="0" SIGIS="undef" SIGNAME="breedte_scherm_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="breedte_scherm" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="9" NAME="screen_y" RIGHT="0" SIGIS="undef" SIGNAME="hoogte_scherm_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hoogte_scherm" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pixel_value_o" SIGIS="undef" SIGNAME="lijn_tekenen_0_pixel_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="B"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="R"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="G"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="HSYNC_o" SIGIS="undef" SIGNAME="lijn_tekenen_0_HSYNC_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="HSYNC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="VSYNC_o" SIGIS="undef" SIGNAME="lijn_tekenen_0_VSYNC_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="VSYNC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="9" NAME="vpxl_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="9" NAME="hpxl_o" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -1005,8 +1079,8 @@
         </PORT>
         <PORT DIR="O" LEFT="9" NAME="position_y_1" RIGHT="0" SIGIS="undef" SIGNAME="object_positie_1_position_y_1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="positie_peddel_links"/>
             <CONNECTION INSTANCE="tekenen_object_1" PORT="pos_y"/>
+            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="positie_peddel_links"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="9" NAME="position_x_2" RIGHT="0" SIGIS="undef" SIGNAME="object_positie_1_position_x_2">
@@ -1016,8 +1090,8 @@
         </PORT>
         <PORT DIR="O" LEFT="9" NAME="position_y_2" RIGHT="0" SIGIS="undef" SIGNAME="object_positie_1_position_y_2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="positie_peddel_rechts"/>
             <CONNECTION INSTANCE="tekenen_object_0" PORT="pos_y"/>
+            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="positie_peddel_rechts"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1303,14 +1377,14 @@
         </PORT>
         <PORT DIR="O" LEFT="9" NAME="pos_x_out" RIGHT="0" SIGIS="undef" SIGNAME="positie_balletje_0_pos_x_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="x_positie_balletje"/>
             <CONNECTION INSTANCE="tekenen_balletje" PORT="pos_x"/>
+            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="x_positie_balletje"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="9" NAME="pos_y_out" RIGHT="0" SIGIS="undef" SIGNAME="positie_balletje_0_pos_y_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="y_positie_balletje"/>
             <CONNECTION INSTANCE="tekenen_balletje" PORT="pos_y"/>
+            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="y_positie_balletje"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1460,23 +1534,29 @@
         </PORT>
         <PORT DIR="O" NAME="pixel_value_o" SIGIS="undef" SIGNAME="tekenen_object_0_pixel_value_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="B"/>
-            <CONNECTION INSTANCE="External_Ports" PORT="R"/>
-            <CONNECTION INSTANCE="External_Ports" PORT="G"/>
+            <CONNECTION INSTANCE="lijn_tekenen_0" PORT="pixel_value_i"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="HSYNC_o" SIGIS="undef" SIGNAME="tekenen_object_0_HSYNC_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="HSYNC"/>
+            <CONNECTION INSTANCE="lijn_tekenen_0" PORT="HSYNC_i"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="VSYNC_o" SIGIS="undef" SIGNAME="tekenen_object_0_VSYNC_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="VSYNC"/>
+            <CONNECTION INSTANCE="lijn_tekenen_0" PORT="VSYNC_i"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="9" NAME="vpxl_o" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="9" NAME="hpxl_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="9" NAME="vpxl_o" RIGHT="0" SIGIS="undef" SIGNAME="tekenen_object_0_vpxl_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="lijn_tekenen_0" PORT="vpxl_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="9" NAME="hpxl_o" RIGHT="0" SIGIS="undef" SIGNAME="tekenen_object_0_hpxl_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="lijn_tekenen_0" PORT="hpxl_i"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>

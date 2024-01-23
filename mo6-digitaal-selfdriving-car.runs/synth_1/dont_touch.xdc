@@ -66,6 +66,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_te
 # IP: bd/design_1/ip/design_1_tekenen_object_1_0/design_1_tekenen_object_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_tekenen_object_1_0 || ORIG_REF_NAME==design_1_tekenen_object_1_0} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_lijn_tekenen_0_0/design_1_lijn_tekenen_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_lijn_tekenen_0_0 || ORIG_REF_NAME==design_1_lijn_tekenen_0_0} -quiet] -quiet
+
 # XDC: d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-selfdriving-car.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_0_0 || ORIG_REF_NAME==design_1_clk_wiz_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
