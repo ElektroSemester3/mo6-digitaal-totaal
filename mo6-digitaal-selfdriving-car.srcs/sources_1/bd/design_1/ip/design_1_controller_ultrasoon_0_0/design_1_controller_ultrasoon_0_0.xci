@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "design_1_controller_ultrasoon_0_0",
-    "cell_name": "controller_ultrasoon_0",
+    "cell_name": "ontvangen_controllers/controller_ultrasoon_0",
     "component_reference": "xilinx.com:module_ref:controller_ultrasoon:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../mo6-digitaal-selfdriving-car.gen/sources_1/bd/design_1/ip/design_1_controller_ultrasoon_0_0",

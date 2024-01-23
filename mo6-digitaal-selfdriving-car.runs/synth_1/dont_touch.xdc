@@ -6,12 +6,6 @@
 # Block Designs: bd/design_1/design_1.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1 || ORIG_REF_NAME==design_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_controller_ultrasoon_0_0/design_1_controller_ultrasoon_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_controller_ultrasoon_0_0 || ORIG_REF_NAME==design_1_controller_ultrasoon_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_controller_interconn_0_0/design_1_controller_interconn_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_controller_interconn_0_0 || ORIG_REF_NAME==design_1_controller_interconn_0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_controller_inductief_0_0/design_1_controller_inductief_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_controller_inductief_0_0 || ORIG_REF_NAME==design_1_controller_inductief_0_0} -quiet] -quiet
 
@@ -20,6 +14,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_co
 
 # IP: bd/design_1/ip/design_1_clk_divider_0_0/design_1_clk_divider_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_clk_divider_0_0 || ORIG_REF_NAME==design_1_clk_divider_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_controller_interconn_0_0/design_1_controller_interconn_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_controller_interconn_0_0 || ORIG_REF_NAME==design_1_controller_interconn_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_controller_ultrasoon_0_0/design_1_controller_ultrasoon_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_controller_ultrasoon_0_0 || ORIG_REF_NAME==design_1_controller_ultrasoon_0_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_0_0 || ORIG_REF_NAME==design_1_clk_wiz_0_0} -quiet] -quiet
@@ -39,20 +39,23 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_sc
 # IP: bd/design_1/ip/design_1_scherm_breedte_3/design_1_scherm_breedte_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_scherm_breedte_3 || ORIG_REF_NAME==design_1_scherm_breedte_3} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_positie_balletje_0_0/design_1_positie_balletje_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_positie_balletje_0_0 || ORIG_REF_NAME==design_1_positie_balletje_0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_util_vector_logic_0_0 || ORIG_REF_NAME==design_1_util_vector_logic_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_aanraking_herkennen_0_0/design_1_aanraking_herkennen_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_aanraking_herkennen_0_0 || ORIG_REF_NAME==design_1_aanraking_herkennen_0_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_clk_divider_0_2/design_1_clk_divider_0_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_clk_divider_0_2 || ORIG_REF_NAME==design_1_clk_divider_0_2} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_object_positie_1_0/design_1_object_positie_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_object_positie_1_0 || ORIG_REF_NAME==design_1_object_positie_1_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_beeld_generator_0_0/design_1_beeld_generator_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_beeld_generator_0_0 || ORIG_REF_NAME==design_1_beeld_generator_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_aanraking_herkennen_0_0/design_1_aanraking_herkennen_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_aanraking_herkennen_0_0 || ORIG_REF_NAME==design_1_aanraking_herkennen_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_positie_balletje_0_0/design_1_positie_balletje_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_positie_balletje_0_0 || ORIG_REF_NAME==design_1_positie_balletje_0_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_tekenen_object_0_0/design_1_tekenen_object_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_tekenen_object_0_0 || ORIG_REF_NAME==design_1_tekenen_object_0_0} -quiet] -quiet
@@ -62,9 +65,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_te
 
 # IP: bd/design_1/ip/design_1_tekenen_object_1_0/design_1_tekenen_object_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_tekenen_object_1_0 || ORIG_REF_NAME==design_1_tekenen_object_1_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_beeld_generator_0_0/design_1_beeld_generator_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_beeld_generator_0_0 || ORIG_REF_NAME==design_1_beeld_generator_0_0} -quiet] -quiet
 
 # XDC: d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-selfdriving-car.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_0_0 || ORIG_REF_NAME==design_1_clk_wiz_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet

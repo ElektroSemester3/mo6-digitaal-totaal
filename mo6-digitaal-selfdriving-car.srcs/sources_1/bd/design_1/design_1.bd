@@ -28,11 +28,11 @@
       "clk_divider_0": "",
       "object_positie_1": "",
       "beeld_generator_0": "",
+      "aanraking_herkennen_0": "",
+      "positie_balletje_0": "",
       "tekenen_balletje": "",
       "tekenen_object_0": "",
-      "tekenen_object_1": "",
-      "aanraking_herkennen_0": "",
-      "positie_balletje_0": ""
+      "tekenen_object_1": ""
     },
     "ports": {
       "reset": {
@@ -927,153 +927,6 @@
           }
         }
       },
-      "tekenen_balletje": {
-        "vlnv": "xilinx.com:module_ref:tekenen_object:1.0",
-        "xci_name": "design_1_tekenen_object_0_0",
-        "xci_path": "ip\\design_1_tekenen_object_0_0\\design_1_tekenen_object_0_0.xci",
-        "inst_hier_path": "tekenen_balletje",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "tekenen_object",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "pixel_value_i": {
-            "direction": "I"
-          },
-          "pixel_x": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "pixel_y": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "pos_x": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "pos_y": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "size_x": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "size_y": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "pixel_value_o": {
-            "direction": "O"
-          }
-        }
-      },
-      "tekenen_object_0": {
-        "vlnv": "xilinx.com:module_ref:tekenen_object:1.0",
-        "xci_name": "design_1_tekenen_object_0_1",
-        "xci_path": "ip\\design_1_tekenen_object_0_1\\design_1_tekenen_object_0_1.xci",
-        "inst_hier_path": "tekenen_object_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "tekenen_object",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "pixel_value_i": {
-            "direction": "I"
-          },
-          "pixel_x": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "pixel_y": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "pos_x": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "pos_y": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "size_x": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "size_y": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "pixel_value_o": {
-            "direction": "O"
-          }
-        }
-      },
-      "tekenen_object_1": {
-        "vlnv": "xilinx.com:module_ref:tekenen_object:1.0",
-        "xci_name": "design_1_tekenen_object_1_0",
-        "xci_path": "ip\\design_1_tekenen_object_1_0\\design_1_tekenen_object_1_0.xci",
-        "inst_hier_path": "tekenen_object_1",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "tekenen_object",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "pixel_value_i": {
-            "direction": "I"
-          },
-          "pixel_x": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "pixel_y": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "pos_x": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "pos_y": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "size_x": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "size_y": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "pixel_value_o": {
-            "direction": "O"
-          }
-        }
-      },
       "aanraking_herkennen_0": {
         "vlnv": "xilinx.com:module_ref:aanraking_herkennen:1.0",
         "xci_name": "design_1_aanraking_herkennen_0_0",
@@ -1217,23 +1070,241 @@
             "right": "0"
           }
         }
+      },
+      "tekenen_balletje": {
+        "vlnv": "xilinx.com:module_ref:tekenen_object:1.0",
+        "xci_name": "design_1_tekenen_object_0_0",
+        "xci_path": "ip\\design_1_tekenen_object_0_0\\design_1_tekenen_object_0_0.xci",
+        "inst_hier_path": "tekenen_balletje",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "tekenen_object",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "pixel_value_i": {
+            "direction": "I"
+          },
+          "pxlCLK_i": {
+            "direction": "I"
+          },
+          "HSYNC_i": {
+            "direction": "I"
+          },
+          "VSYNC_i": {
+            "direction": "I"
+          },
+          "vpxl_i": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "hpxl_i": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "pos_x": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "pos_y": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "size_x": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "size_y": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "pixel_value_o": {
+            "direction": "O"
+          },
+          "HSYNC_o": {
+            "direction": "O"
+          },
+          "VSYNC_o": {
+            "direction": "O"
+          },
+          "vpxl_o": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "hpxl_o": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          }
+        }
+      },
+      "tekenen_object_0": {
+        "vlnv": "xilinx.com:module_ref:tekenen_object:1.0",
+        "xci_name": "design_1_tekenen_object_0_1",
+        "xci_path": "ip\\design_1_tekenen_object_0_1\\design_1_tekenen_object_0_1.xci",
+        "inst_hier_path": "tekenen_object_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "tekenen_object",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "pixel_value_i": {
+            "direction": "I"
+          },
+          "pxlCLK_i": {
+            "direction": "I"
+          },
+          "HSYNC_i": {
+            "direction": "I"
+          },
+          "VSYNC_i": {
+            "direction": "I"
+          },
+          "vpxl_i": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "hpxl_i": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "pos_x": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "pos_y": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "size_x": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "size_y": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "pixel_value_o": {
+            "direction": "O"
+          },
+          "HSYNC_o": {
+            "direction": "O"
+          },
+          "VSYNC_o": {
+            "direction": "O"
+          },
+          "vpxl_o": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "hpxl_o": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          }
+        }
+      },
+      "tekenen_object_1": {
+        "vlnv": "xilinx.com:module_ref:tekenen_object:1.0",
+        "xci_name": "design_1_tekenen_object_1_0",
+        "xci_path": "ip\\design_1_tekenen_object_1_0\\design_1_tekenen_object_1_0.xci",
+        "inst_hier_path": "tekenen_object_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "tekenen_object",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "pixel_value_i": {
+            "direction": "I"
+          },
+          "pxlCLK_i": {
+            "direction": "I"
+          },
+          "HSYNC_i": {
+            "direction": "I"
+          },
+          "VSYNC_i": {
+            "direction": "I"
+          },
+          "vpxl_i": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "hpxl_i": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "pos_x": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "pos_y": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "size_x": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "size_y": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "pixel_value_o": {
+            "direction": "O"
+          },
+          "HSYNC_o": {
+            "direction": "O"
+          },
+          "VSYNC_o": {
+            "direction": "O"
+          },
+          "vpxl_o": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "hpxl_o": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          }
+        }
       }
     },
     "nets": {
       "Net": {
         "ports": [
           "beeld_generator_0/hpxl",
-          "tekenen_balletje/pixel_x",
-          "tekenen_object_0/pixel_x",
-          "tekenen_object_1/pixel_x"
+          "tekenen_balletje/hpxl_i"
         ]
       },
       "Net1": {
         "ports": [
           "beeld_generator_0/vpxl",
-          "tekenen_balletje/pixel_y",
-          "tekenen_object_0/pixel_y",
-          "tekenen_object_1/pixel_y"
+          "tekenen_balletje/vpxl_i"
         ]
       },
       "aanraking_herkennen_0_aanraking_balletje_bovenonder": {
@@ -1266,37 +1337,33 @@
           "tekenen_balletje/pixel_value_i"
         ]
       },
-      "beeld_generator_0_G": {
-        "ports": [
-          "beeld_generator_0/G",
-          "G"
-        ]
-      },
       "beeld_generator_0_HSYNC": {
         "ports": [
           "beeld_generator_0/HSYNC",
-          "HSYNC"
-        ]
-      },
-      "beeld_generator_0_R": {
-        "ports": [
-          "beeld_generator_0/R",
-          "R"
+          "tekenen_balletje/HSYNC_i"
         ]
       },
       "beeld_generator_0_VSYNC": {
         "ports": [
           "beeld_generator_0/VSYNC",
-          "VSYNC"
+          "tekenen_balletje/VSYNC_i"
+        ]
+      },
+      "beeld_generator_0_pxlCLK": {
+        "ports": [
+          "beeld_generator_0/pxlCLK",
+          "tekenen_balletje/pxlCLK_i",
+          "tekenen_object_1/pxlCLK_i",
+          "tekenen_object_0/pxlCLK_i"
         ]
       },
       "breedte_peddels_dout": {
         "ports": [
           "breedte_peddels/dout",
           "object_positie_1/object_width",
+          "aanraking_herkennen_0/breedte_peddels",
           "tekenen_object_0/size_x",
-          "tekenen_object_1/size_x",
-          "aanraking_herkennen_0/breedte_peddels"
+          "tekenen_object_1/size_x"
         ]
       },
       "breedte_scherm_dout": {
@@ -1378,18 +1445,18 @@
       "grootte_balletje_dout": {
         "ports": [
           "grootte_balletje/dout",
+          "aanraking_herkennen_0/grootte_balletje",
           "tekenen_balletje/size_x",
-          "tekenen_balletje/size_y",
-          "aanraking_herkennen_0/grootte_balletje"
+          "tekenen_balletje/size_y"
         ]
       },
       "hoogte_peddels_dout": {
         "ports": [
           "hoogte_peddels/dout",
           "object_positie_1/object_height",
+          "aanraking_herkennen_0/hoogte_peddels",
           "tekenen_object_0/size_y",
-          "tekenen_object_1/size_y",
-          "aanraking_herkennen_0/hoogte_peddels"
+          "tekenen_object_1/size_y"
         ]
       },
       "object_positie_1_position_x_1": {
@@ -1407,15 +1474,15 @@
       "object_positie_1_position_y_1": {
         "ports": [
           "object_positie_1/position_y_1",
-          "tekenen_object_1/pos_y",
-          "aanraking_herkennen_0/positie_peddel_links"
+          "aanraking_herkennen_0/positie_peddel_links",
+          "tekenen_object_1/pos_y"
         ]
       },
       "object_positie_1_position_y_2": {
         "ports": [
           "object_positie_1/position_y_2",
-          "tekenen_object_0/pos_y",
-          "aanraking_herkennen_0/positie_peddel_rechts"
+          "aanraking_herkennen_0/positie_peddel_rechts",
+          "tekenen_object_0/pos_y"
         ]
       },
       "ontvangen_controllers_controller_output_1": {
@@ -1445,15 +1512,15 @@
       "positie_balletje_0_pos_x_out": {
         "ports": [
           "positie_balletje_0/pos_x_out",
-          "tekenen_balletje/pos_x",
-          "aanraking_herkennen_0/x_positie_balletje"
+          "aanraking_herkennen_0/x_positie_balletje",
+          "tekenen_balletje/pos_x"
         ]
       },
       "positie_balletje_0_pos_y_out": {
         "ports": [
           "positie_balletje_0/pos_y_out",
-          "tekenen_balletje/pos_y",
-          "aanraking_herkennen_0/y_positie_balletje"
+          "aanraking_herkennen_0/y_positie_balletje",
+          "tekenen_balletje/pos_y"
         ]
       },
       "reset_0_1": {
@@ -1480,22 +1547,84 @@
           "clk_wiz_0/clk_in1"
         ]
       },
+      "tekenen_balletje_HSYNC_o": {
+        "ports": [
+          "tekenen_balletje/HSYNC_o",
+          "tekenen_object_1/HSYNC_i"
+        ]
+      },
+      "tekenen_balletje_VSYNC_o": {
+        "ports": [
+          "tekenen_balletje/VSYNC_o",
+          "tekenen_object_1/VSYNC_i"
+        ]
+      },
+      "tekenen_balletje_hpxl_o": {
+        "ports": [
+          "tekenen_balletje/hpxl_o",
+          "tekenen_object_1/hpxl_i"
+        ]
+      },
       "tekenen_balletje_pixel_value_o": {
         "ports": [
           "tekenen_balletje/pixel_value_o",
           "tekenen_object_1/pixel_value_i"
         ]
       },
+      "tekenen_balletje_vpxl_o": {
+        "ports": [
+          "tekenen_balletje/vpxl_o",
+          "tekenen_object_1/vpxl_i"
+        ]
+      },
+      "tekenen_object_0_HSYNC_o": {
+        "ports": [
+          "tekenen_object_0/HSYNC_o",
+          "HSYNC"
+        ]
+      },
+      "tekenen_object_0_VSYNC_o": {
+        "ports": [
+          "tekenen_object_0/VSYNC_o",
+          "VSYNC"
+        ]
+      },
       "tekenen_object_0_pixel_value_o": {
         "ports": [
           "tekenen_object_0/pixel_value_o",
-          "B"
+          "B",
+          "R",
+          "G"
+        ]
+      },
+      "tekenen_object_1_HSYNC_o": {
+        "ports": [
+          "tekenen_object_1/HSYNC_o",
+          "tekenen_object_0/HSYNC_i"
+        ]
+      },
+      "tekenen_object_1_VSYNC_o": {
+        "ports": [
+          "tekenen_object_1/VSYNC_o",
+          "tekenen_object_0/VSYNC_i"
+        ]
+      },
+      "tekenen_object_1_hpxl_o": {
+        "ports": [
+          "tekenen_object_1/hpxl_o",
+          "tekenen_object_0/hpxl_i"
         ]
       },
       "tekenen_object_1_pixel_value_o": {
         "ports": [
           "tekenen_object_1/pixel_value_o",
           "tekenen_object_0/pixel_value_i"
+        ]
+      },
+      "tekenen_object_1_vpxl_o": {
+        "ports": [
+          "tekenen_object_1/vpxl_o",
+          "tekenen_object_0/vpxl_i"
         ]
       },
       "util_vector_logic_0_Res": {

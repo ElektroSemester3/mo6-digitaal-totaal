@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Wed Jan 17 15:39:21 2024
+--Date        : Tue Jan 23 12:20:46 2024
 --Host        : XPS-Tommy running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -276,42 +276,6 @@ architecture STRUCTURE of design_1 is
     hpxl : out STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   end component design_1_beeld_generator_0_0;
-  component design_1_tekenen_object_0_0 is
-  port (
-    pixel_value_i : in STD_LOGIC;
-    pixel_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    pixel_y : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    pos_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    pos_y : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    size_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    size_y : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    pixel_value_o : out STD_LOGIC
-  );
-  end component design_1_tekenen_object_0_0;
-  component design_1_tekenen_object_0_1 is
-  port (
-    pixel_value_i : in STD_LOGIC;
-    pixel_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    pixel_y : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    pos_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    pos_y : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    size_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    size_y : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    pixel_value_o : out STD_LOGIC
-  );
-  end component design_1_tekenen_object_0_1;
-  component design_1_tekenen_object_1_0 is
-  port (
-    pixel_value_i : in STD_LOGIC;
-    pixel_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    pixel_y : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    pos_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    pos_y : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    size_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    size_y : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    pixel_value_o : out STD_LOGIC
-  );
-  end component design_1_tekenen_object_1_0;
   component design_1_aanraking_herkennen_0_0 is
   port (
     hoogte_scherm : in STD_LOGIC_VECTOR ( 9 downto 0 );
@@ -344,6 +308,63 @@ architecture STRUCTURE of design_1 is
     pos_y_out : out STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   end component design_1_positie_balletje_0_0;
+  component design_1_tekenen_object_0_0 is
+  port (
+    pixel_value_i : in STD_LOGIC;
+    pxlCLK_i : in STD_LOGIC;
+    HSYNC_i : in STD_LOGIC;
+    VSYNC_i : in STD_LOGIC;
+    vpxl_i : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    hpxl_i : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    pos_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    pos_y : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    size_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    size_y : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    pixel_value_o : out STD_LOGIC;
+    HSYNC_o : out STD_LOGIC;
+    VSYNC_o : out STD_LOGIC;
+    vpxl_o : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    hpxl_o : out STD_LOGIC_VECTOR ( 9 downto 0 )
+  );
+  end component design_1_tekenen_object_0_0;
+  component design_1_tekenen_object_0_1 is
+  port (
+    pixel_value_i : in STD_LOGIC;
+    pxlCLK_i : in STD_LOGIC;
+    HSYNC_i : in STD_LOGIC;
+    VSYNC_i : in STD_LOGIC;
+    vpxl_i : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    hpxl_i : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    pos_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    pos_y : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    size_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    size_y : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    pixel_value_o : out STD_LOGIC;
+    HSYNC_o : out STD_LOGIC;
+    VSYNC_o : out STD_LOGIC;
+    vpxl_o : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    hpxl_o : out STD_LOGIC_VECTOR ( 9 downto 0 )
+  );
+  end component design_1_tekenen_object_0_1;
+  component design_1_tekenen_object_1_0 is
+  port (
+    pixel_value_i : in STD_LOGIC;
+    pxlCLK_i : in STD_LOGIC;
+    HSYNC_i : in STD_LOGIC;
+    VSYNC_i : in STD_LOGIC;
+    vpxl_i : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    hpxl_i : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    pos_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    pos_y : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    size_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    size_y : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    pixel_value_o : out STD_LOGIC;
+    HSYNC_o : out STD_LOGIC;
+    VSYNC_o : out STD_LOGIC;
+    vpxl_o : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    hpxl_o : out STD_LOGIC_VECTOR ( 9 downto 0 )
+  );
+  end component design_1_tekenen_object_1_0;
   signal Net : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal Net1 : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal aanraking_herkennen_0_aanraking_balletje_bovenonder : STD_LOGIC;
@@ -351,10 +372,9 @@ architecture STRUCTURE of design_1 is
   signal aanraking_herkennen_0_aanraking_balletje_peddel_zone : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal aanraking_herkennen_0_aanraking_balletje_zijkant : STD_LOGIC;
   signal beeld_generator_0_B : STD_LOGIC;
-  signal beeld_generator_0_G : STD_LOGIC;
   signal beeld_generator_0_HSYNC : STD_LOGIC;
-  signal beeld_generator_0_R : STD_LOGIC;
   signal beeld_generator_0_VSYNC : STD_LOGIC;
+  signal beeld_generator_0_pxlCLK : STD_LOGIC;
   signal breedte_peddels_dout : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal breedte_scherm_dout : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal clk_divider_0_clk_out : STD_LOGIC;
@@ -383,11 +403,24 @@ architecture STRUCTURE of design_1 is
   signal reset_0_1 : STD_LOGIC;
   signal scherm_hoogte_dout : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal sys_clock_1 : STD_LOGIC;
+  signal tekenen_balletje_HSYNC_o : STD_LOGIC;
+  signal tekenen_balletje_VSYNC_o : STD_LOGIC;
+  signal tekenen_balletje_hpxl_o : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal tekenen_balletje_pixel_value_o : STD_LOGIC;
+  signal tekenen_balletje_vpxl_o : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal tekenen_object_0_HSYNC_o : STD_LOGIC;
+  signal tekenen_object_0_VSYNC_o : STD_LOGIC;
   signal tekenen_object_0_pixel_value_o : STD_LOGIC;
+  signal tekenen_object_1_HSYNC_o : STD_LOGIC;
+  signal tekenen_object_1_VSYNC_o : STD_LOGIC;
+  signal tekenen_object_1_hpxl_o : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal tekenen_object_1_pixel_value_o : STD_LOGIC;
+  signal tekenen_object_1_vpxl_o : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal util_vector_logic_0_Res : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_beeld_generator_0_pxlCLK_UNCONNECTED : STD_LOGIC;
+  signal NLW_beeld_generator_0_G_UNCONNECTED : STD_LOGIC;
+  signal NLW_beeld_generator_0_R_UNCONNECTED : STD_LOGIC;
+  signal NLW_tekenen_object_0_hpxl_o_UNCONNECTED : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal NLW_tekenen_object_0_vpxl_o_UNCONNECTED : STD_LOGIC_VECTOR ( 9 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 RST.RESET RST";
   attribute X_INTERFACE_PARAMETER : string;
@@ -396,10 +429,10 @@ architecture STRUCTURE of design_1 is
   attribute X_INTERFACE_PARAMETER of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN design_1_sys_clock, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
 begin
   B <= tekenen_object_0_pixel_value_o;
-  G <= beeld_generator_0_G;
-  HSYNC <= beeld_generator_0_HSYNC;
-  R <= beeld_generator_0_R;
-  VSYNC <= beeld_generator_0_VSYNC;
+  G <= tekenen_object_0_pixel_value_o;
+  HSYNC <= tekenen_object_0_HSYNC_o;
+  R <= tekenen_object_0_pixel_value_o;
+  VSYNC <= tekenen_object_0_VSYNC_o;
   controller_draadloos_verbonden_0_1 <= controller_draadloos_verbonden;
   controller_inductief_in_0_1 <= controller_inductief_in;
   controller_ultrasoon_trigger <= ontvangen_controllers_controller_ultrasoon_trigger;
@@ -432,13 +465,13 @@ beeld_generator_0: component design_1_beeld_generator_0_0
      port map (
       B => beeld_generator_0_B,
       CLK => clk_wiz_0_clk_VGA,
-      G => beeld_generator_0_G,
+      G => NLW_beeld_generator_0_G_UNCONNECTED,
       HSYNC => beeld_generator_0_HSYNC,
-      R => beeld_generator_0_R,
+      R => NLW_beeld_generator_0_R_UNCONNECTED,
       RST => reset_0_1,
       VSYNC => beeld_generator_0_VSYNC,
       hpxl(9 downto 0) => Net(9 downto 0),
-      pxlCLK => NLW_beeld_generator_0_pxlCLK_UNCONNECTED,
+      pxlCLK => beeld_generator_0_pxlCLK,
       vpxl(9 downto 0) => Net1(9 downto 0)
     );
 breedte_peddels: component design_1_scherm_breedte_2
@@ -520,36 +553,57 @@ positie_balletje_0: component design_1_positie_balletje_0_0
     );
 tekenen_balletje: component design_1_tekenen_object_0_0
      port map (
+      HSYNC_i => beeld_generator_0_HSYNC,
+      HSYNC_o => tekenen_balletje_HSYNC_o,
+      VSYNC_i => beeld_generator_0_VSYNC,
+      VSYNC_o => tekenen_balletje_VSYNC_o,
+      hpxl_i(9 downto 0) => Net(9 downto 0),
+      hpxl_o(9 downto 0) => tekenen_balletje_hpxl_o(9 downto 0),
       pixel_value_i => beeld_generator_0_B,
       pixel_value_o => tekenen_balletje_pixel_value_o,
-      pixel_x(9 downto 0) => Net(9 downto 0),
-      pixel_y(9 downto 0) => Net1(9 downto 0),
       pos_x(9 downto 0) => positie_balletje_0_pos_x_out(9 downto 0),
       pos_y(9 downto 0) => positie_balletje_0_pos_y_out(9 downto 0),
+      pxlCLK_i => beeld_generator_0_pxlCLK,
       size_x(9 downto 0) => grootte_balletje_dout(9 downto 0),
-      size_y(9 downto 0) => grootte_balletje_dout(9 downto 0)
+      size_y(9 downto 0) => grootte_balletje_dout(9 downto 0),
+      vpxl_i(9 downto 0) => Net1(9 downto 0),
+      vpxl_o(9 downto 0) => tekenen_balletje_vpxl_o(9 downto 0)
     );
 tekenen_object_0: component design_1_tekenen_object_0_1
      port map (
+      HSYNC_i => tekenen_object_1_HSYNC_o,
+      HSYNC_o => tekenen_object_0_HSYNC_o,
+      VSYNC_i => tekenen_object_1_VSYNC_o,
+      VSYNC_o => tekenen_object_0_VSYNC_o,
+      hpxl_i(9 downto 0) => tekenen_object_1_hpxl_o(9 downto 0),
+      hpxl_o(9 downto 0) => NLW_tekenen_object_0_hpxl_o_UNCONNECTED(9 downto 0),
       pixel_value_i => tekenen_object_1_pixel_value_o,
       pixel_value_o => tekenen_object_0_pixel_value_o,
-      pixel_x(9 downto 0) => Net(9 downto 0),
-      pixel_y(9 downto 0) => Net1(9 downto 0),
       pos_x(9 downto 0) => object_positie_1_position_x_2(9 downto 0),
       pos_y(9 downto 0) => object_positie_1_position_y_2(9 downto 0),
+      pxlCLK_i => beeld_generator_0_pxlCLK,
       size_x(9 downto 0) => breedte_peddels_dout(9 downto 0),
-      size_y(9 downto 0) => hoogte_peddels_dout(9 downto 0)
+      size_y(9 downto 0) => hoogte_peddels_dout(9 downto 0),
+      vpxl_i(9 downto 0) => tekenen_object_1_vpxl_o(9 downto 0),
+      vpxl_o(9 downto 0) => NLW_tekenen_object_0_vpxl_o_UNCONNECTED(9 downto 0)
     );
 tekenen_object_1: component design_1_tekenen_object_1_0
      port map (
+      HSYNC_i => tekenen_balletje_HSYNC_o,
+      HSYNC_o => tekenen_object_1_HSYNC_o,
+      VSYNC_i => tekenen_balletje_VSYNC_o,
+      VSYNC_o => tekenen_object_1_VSYNC_o,
+      hpxl_i(9 downto 0) => tekenen_balletje_hpxl_o(9 downto 0),
+      hpxl_o(9 downto 0) => tekenen_object_1_hpxl_o(9 downto 0),
       pixel_value_i => tekenen_balletje_pixel_value_o,
       pixel_value_o => tekenen_object_1_pixel_value_o,
-      pixel_x(9 downto 0) => Net(9 downto 0),
-      pixel_y(9 downto 0) => Net1(9 downto 0),
       pos_x(9 downto 0) => object_positie_1_position_x_1(9 downto 0),
       pos_y(9 downto 0) => object_positie_1_position_y_1(9 downto 0),
+      pxlCLK_i => beeld_generator_0_pxlCLK,
       size_x(9 downto 0) => breedte_peddels_dout(9 downto 0),
-      size_y(9 downto 0) => hoogte_peddels_dout(9 downto 0)
+      size_y(9 downto 0) => hoogte_peddels_dout(9 downto 0),
+      vpxl_i(9 downto 0) => tekenen_balletje_vpxl_o(9 downto 0),
+      vpxl_o(9 downto 0) => tekenen_object_1_vpxl_o(9 downto 0)
     );
 util_vector_logic_0: component design_1_util_vector_logic_0_0
      port map (

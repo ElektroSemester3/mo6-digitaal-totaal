@@ -56,13 +56,20 @@ USE ieee.numeric_std.ALL;
 ENTITY design_1_tekenen_object_1_0 IS
   PORT (
     pixel_value_i : IN STD_LOGIC;
-    pixel_x : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    pixel_y : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    pxlCLK_i : IN STD_LOGIC;
+    HSYNC_i : IN STD_LOGIC;
+    VSYNC_i : IN STD_LOGIC;
+    vpxl_i : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    hpxl_i : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     pos_x : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     pos_y : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     size_x : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     size_y : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    pixel_value_o : OUT STD_LOGIC
+    pixel_value_o : OUT STD_LOGIC;
+    HSYNC_o : OUT STD_LOGIC;
+    VSYNC_o : OUT STD_LOGIC;
+    vpxl_o : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+    hpxl_o : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
   );
 END design_1_tekenen_object_1_0;
 
@@ -72,13 +79,20 @@ ARCHITECTURE design_1_tekenen_object_1_0_arch OF design_1_tekenen_object_1_0 IS
   COMPONENT tekenen_object IS
     PORT (
       pixel_value_i : IN STD_LOGIC;
-      pixel_x : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-      pixel_y : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+      pxlCLK_i : IN STD_LOGIC;
+      HSYNC_i : IN STD_LOGIC;
+      VSYNC_i : IN STD_LOGIC;
+      vpxl_i : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+      hpxl_i : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       pos_x : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       pos_y : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       size_x : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       size_y : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-      pixel_value_o : OUT STD_LOGIC
+      pixel_value_o : OUT STD_LOGIC;
+      HSYNC_o : OUT STD_LOGIC;
+      VSYNC_o : OUT STD_LOGIC;
+      vpxl_o : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+      hpxl_o : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
     );
   END COMPONENT tekenen_object;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -93,12 +107,19 @@ BEGIN
   U0 : tekenen_object
     PORT MAP (
       pixel_value_i => pixel_value_i,
-      pixel_x => pixel_x,
-      pixel_y => pixel_y,
+      pxlCLK_i => pxlCLK_i,
+      HSYNC_i => HSYNC_i,
+      VSYNC_i => VSYNC_i,
+      vpxl_i => vpxl_i,
+      hpxl_i => hpxl_i,
       pos_x => pos_x,
       pos_y => pos_y,
       size_x => size_x,
       size_y => size_y,
-      pixel_value_o => pixel_value_o
+      pixel_value_o => pixel_value_o,
+      HSYNC_o => HSYNC_o,
+      VSYNC_o => VSYNC_o,
+      vpxl_o => vpxl_o,
+      hpxl_o => hpxl_o
     );
 END design_1_tekenen_object_1_0_arch;

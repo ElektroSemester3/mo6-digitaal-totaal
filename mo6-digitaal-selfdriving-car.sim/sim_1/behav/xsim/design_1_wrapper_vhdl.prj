@@ -1,0 +1,30 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../mo6-digitaal-selfdriving-car.srcs/sources_1/new/controller_inductief.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.srcs/sources_1/new/controller_draadloos.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.srcs/sources_1/new/clk_divider.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.srcs/sources_1/new/controller_interconnect.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.srcs/sources_1/new/controller_ultrasoon.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.srcs/sources_1/new/positie_object.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.srcs/sources_1/new/beeld_generator.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.srcs/sources_1/new/aanraking_herkennen.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.srcs/sources_1/new/positie_balletje.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.srcs/sources_1/new/tekenen_balletje.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.ip_user_files/bd/design_1/ip/design_1_controller_inductief_0_0/sim/design_1_controller_inductief_0_0.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.ip_user_files/bd/design_1/ip/design_1_controller_draadloos_0_0/sim/design_1_controller_draadloos_0_0.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.ip_user_files/bd/design_1/ip/design_1_clk_divider_0_0/sim/design_1_clk_divider_0_0.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.ip_user_files/bd/design_1/ip/design_1_controller_interconn_0_0/sim/design_1_controller_interconn_0_0.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.ip_user_files/bd/design_1/ip/design_1_controller_ultrasoon_0_0/sim/design_1_controller_ultrasoon_0_0.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.ip_user_files/bd/design_1/ip/design_1_clk_divider_0_2/sim/design_1_clk_divider_0_2.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.ip_user_files/bd/design_1/ip/design_1_object_positie_1_0/sim/design_1_object_positie_1_0.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.ip_user_files/bd/design_1/ip/design_1_beeld_generator_0_0/sim/design_1_beeld_generator_0_0.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.ip_user_files/bd/design_1/ip/design_1_aanraking_herkennen_0_0/sim/design_1_aanraking_herkennen_0_0.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.ip_user_files/bd/design_1/ip/design_1_positie_balletje_0_0/sim/design_1_positie_balletje_0_0.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.ip_user_files/bd/design_1/ip/design_1_tekenen_object_0_0/sim/design_1_tekenen_object_0_0.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.ip_user_files/bd/design_1/ip/design_1_tekenen_object_0_1/sim/design_1_tekenen_object_0_1.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.ip_user_files/bd/design_1/ip/design_1_tekenen_object_1_0/sim/design_1_tekenen_object_1_0.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.ip_user_files/bd/design_1/sim/design_1.vhd" \
+"../../../../mo6-digitaal-selfdriving-car.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd" \
+
+# Do not sort compile order
+nosort

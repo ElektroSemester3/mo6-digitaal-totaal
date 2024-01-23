@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Wed Jan 17 15:41:25 2024
+| Date             : Tue Jan 23 12:23:36 2024
 | Host             : XPS-Tommy running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.004 |        6 |       --- |             --- |
-| Slice Logic    |     0.021 |     3537 |       --- |             --- |
-|   LUT as Logic |     0.019 |     1850 |     53200 |            3.48 |
+| Clocks         |     0.003 |        6 |       --- |             --- |
+| Slice Logic    |     0.021 |     3587 |       --- |             --- |
+|   LUT as Logic |     0.019 |     1848 |     53200 |            3.47 |
 |   CARRY4       |     0.002 |      503 |     13300 |            3.78 |
-|   Register     |    <0.001 |      344 |    106400 |            0.32 |
+|   Register     |    <0.001 |      395 |    106400 |            0.37 |
 |   BUFG         |    <0.001 |        2 |        32 |            6.25 |
-|   Others       |     0.000 |       32 |       --- |             --- |
-| Signals        |     0.016 |     2847 |       --- |             --- |
+|   Others       |     0.000 |       31 |       --- |             --- |
+| Signals        |     0.016 |     2897 |       --- |             --- |
 | MMCM           |     0.106 |        1 |         4 |           25.00 |
 | DSPs           |     0.003 |        6 |       220 |            2.73 |
-| I/O            |     0.002 |       19 |       125 |           15.20 |
+| I/O            |     0.003 |       19 |       125 |           15.20 |
 | Static Power   |     0.108 |          |           |                 |
 | Total          |     0.260 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
@@ -74,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.052 |       0.044 |      0.008 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.051 |       0.043 |      0.008 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.069 |       0.059 |      0.011 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -154,7 +154,7 @@ Table of Contents
 | Name                         | Power (W) |
 +------------------------------+-----------+
 | design_1_wrapper             |     0.152 |
-|   design_1_i                 |     0.150 |
+|   design_1_i                 |     0.149 |
 |     aanraking_herkennen_0    |     0.003 |
 |       U0                     |     0.003 |
 |     beeld_generator_0        |     0.001 |
@@ -163,7 +163,7 @@ Table of Contents
 |       inst                   |     0.107 |
 |     object_positie_1         |     0.005 |
 |       U0                     |     0.005 |
-|     ontvangen_controllers    |     0.032 |
+|     ontvangen_controllers    |     0.031 |
 |       controller_ultrasoon_0 |     0.030 |
 +------------------------------+-----------+
 
