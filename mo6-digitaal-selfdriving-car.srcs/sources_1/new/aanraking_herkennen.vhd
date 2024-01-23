@@ -45,6 +45,7 @@ architecture Behavioral of aanraking_herkennen is
     signal y_positie_balletje_uns : unsigned (9 downto 0);
     signal positie_peddel_links_uns : unsigned (9 downto 0);
     signal positie_peddel_rechts_uns : unsigned (9 downto 0);
+    signal offset_peddels_uns : unsigned (9 downto 0);
 
 begin
 
@@ -59,8 +60,8 @@ begin
     positie_peddel_links_uns <= unsigned(positie_peddel_links);
     positie_peddel_rechts_uns <= unsigned(positie_peddel_rechts);
 
-    aanraking_rand_links <= '1' when x_positie_balletje_uns = breedte_peddels_uns + offset_peddels_uns else '0';
-    aanraking_rand_rechts <= '1' when x_positie_balletje_uns + grootte_balletje_uns = breedte_scherm_uns - breedte_peddels_uns - offset_peddels_uns else '0';
+    aanraking_rand_links <= '1' when x_positie_balletje_uns = breedte_peddels_uns + offset_peddels_uns - 1 AND NOT aanraking_peddel_links = '1' else '0';
+    aanraking_rand_rechts <= '1' when x_positie_balletje_uns + grootte_balletje_uns = breedte_scherm_uns - breedte_peddels_uns - offset_peddels_uns + 1 AND NOT aanraking_peddel_rechts = '1' else '0';
 
     aanraking_peddel_links <= '1' when (x_positie_balletje_uns <= breedte_peddels_uns + offset_peddels_uns) AND (y_positie_balletje_uns + grootte_balletje_uns > positie_peddel_links_uns) AND (y_positie_balletje_uns < positie_peddel_links_uns + hoogte_peddels_uns) else '0';
     aanraking_peddel_rechts <= '1' when (x_positie_balletje_uns + grootte_balletje_uns >= breedte_scherm_uns - breedte_peddels_uns - offset_peddels_uns) AND (y_positie_balletje_uns + grootte_balletje_uns > positie_peddel_rechts_uns) AND (y_positie_balletje_uns < positie_peddel_rechts_uns + hoogte_peddels_uns) else '0';
@@ -92,7 +93,7 @@ begin
                                                 (y_positie_balletje_uns > positie_peddel_rechts_uns + ((hoogte_peddels_uns * 7) / 8))
                                     else "00";
 
-    aanraking_balletje_peddel_zone <= aanraking_peddel_zone_links when x_positie_balletje_uns < 320 else aanraking_peddel_zone_rechts;
+    aanraking_balletje_peddel_zone <= aanraking_peddel_zone_links when x_positie_balletje_uns < breedte_scherm_uns / 2 else aanraking_peddel_zone_rechts;
         
 
     aanraking_bovenkant <= '1' when y_positie_balletje_uns <= 1 else '0';

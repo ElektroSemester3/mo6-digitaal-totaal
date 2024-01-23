@@ -36,7 +36,7 @@ begin
     end process;
 
     -- Counter for the timing period
-    timing_counter: process(clk, reset)
+    timing_counter: process(clk)
     begin
         if (rising_edge(clk)) then
             if (reset = '1' or enable = '0') then

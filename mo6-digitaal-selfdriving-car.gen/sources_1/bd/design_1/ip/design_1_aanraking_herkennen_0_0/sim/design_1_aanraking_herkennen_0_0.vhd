@@ -60,6 +60,7 @@ ENTITY design_1_aanraking_herkennen_0_0 IS
     grootte_balletje : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     hoogte_peddels : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     breedte_peddels : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    offset_peddels : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     x_positie_balletje : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     y_positie_balletje : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     positie_peddel_links : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
@@ -81,6 +82,7 @@ ARCHITECTURE design_1_aanraking_herkennen_0_0_arch OF design_1_aanraking_herkenn
       grootte_balletje : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       hoogte_peddels : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       breedte_peddels : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+      offset_peddels : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       x_positie_balletje : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       y_positie_balletje : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       positie_peddel_links : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
@@ -99,6 +101,7 @@ BEGIN
       grootte_balletje => grootte_balletje,
       hoogte_peddels => hoogte_peddels,
       breedte_peddels => breedte_peddels,
+      offset_peddels => offset_peddels,
       x_positie_balletje => x_positie_balletje,
       y_positie_balletje => y_positie_balletje,
       positie_peddel_links => positie_peddel_links,
