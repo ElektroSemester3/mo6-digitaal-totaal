@@ -93,8 +93,8 @@ begin
     aanraking_balletje_peddel_zone <= aanraking_peddel_zone_links when x_positie_balletje_uns < 320 else aanraking_peddel_zone_rechts;
         
 
-    aanraking_bovenkant <= '1' when y_positie_balletje_uns = 0 else '0';
-    aanraking_onderkant <= '1' when y_positie_balletje_uns + grootte_balletje_uns = hoogte_scherm_uns else '0';
+    aanraking_bovenkant <= '1' when y_positie_balletje_uns <= 1 else '0';
+    aanraking_onderkant <= '1' when y_positie_balletje_uns + grootte_balletje_uns >= hoogte_scherm_uns - 1 else '0';
 
     aanraking_balletje_peddel <= aanraking_peddel_links OR aanraking_peddel_rechts;
     aanraking_balletje_zijkant <= aanraking_rand_links OR aanraking_rand_rechts;
