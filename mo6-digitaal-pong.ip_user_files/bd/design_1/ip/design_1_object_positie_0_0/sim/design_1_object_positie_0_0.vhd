@@ -91,7 +91,7 @@ ARCHITECTURE design_1_object_positie_0_0_arch OF design_1_object_positie_0_0 IS
 BEGIN
   U0 : object_positie
     GENERIC MAP (
-      offset => 10
+      offset => 0
     )
     PORT MAP (
       object_width => object_width,

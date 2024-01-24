@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
 // Date        : Wed Jan 24 10:41:59 2024
 // Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_Coor_PixelR_0_0/design_1_Coor_PixelR_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_Coor_PixelR_0_0 -prefix
+//               design_1_Coor_PixelR_0_0_ design_1_Coor_PixelR_0_0_sim_netlist.v
 // Design      : design_1_Coor_PixelR_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,80 +13,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_Coor_PixelR_0_0,Coor_PixelR,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "Coor_PixelR,Vivado 2023.1" *) 
-(* NotValidForBitStream *)
-module design_1_Coor_PixelR_0_0
-   (PixelClock,
-    HSYNC_i,
-    VSYNC_i,
-    PixelSig_in,
-    VPixel,
-    HPixel,
-    CR_in,
-    BreetePeddels,
-    HoogtePeddels,
-    Offcet,
-    CoorR_yboven_out,
-    PixelSig_out,
-    HSYNC_o,
-    VSYNC_o,
-    VPixel_out,
-    HPixel_out);
-  input PixelClock;
-  input HSYNC_i;
-  input VSYNC_i;
-  input PixelSig_in;
-  input [9:0]VPixel;
-  input [9:0]HPixel;
-  input [8:0]CR_in;
-  input [9:0]BreetePeddels;
-  input [8:0]HoogtePeddels;
-  input [8:0]Offcet;
-  output [8:0]CoorR_yboven_out;
-  output PixelSig_out;
-  output HSYNC_o;
-  output VSYNC_o;
-  output [9:0]VPixel_out;
-  output [9:0]HPixel_out;
-
-  wire [9:0]BreetePeddels;
-  wire [8:0]CR_in;
-  wire [8:0]CoorR_yboven_out;
-  wire [9:0]HPixel;
-  wire [9:0]HPixel_out;
-  wire HSYNC_i;
-  wire HSYNC_o;
-  wire [8:0]HoogtePeddels;
-  wire [8:0]Offcet;
-  wire PixelClock;
-  wire PixelSig_in;
-  wire PixelSig_out;
-  wire [9:0]VPixel;
-  wire [9:0]VPixel_out;
-  wire VSYNC_i;
-  wire VSYNC_o;
-
-  design_1_Coor_PixelR_0_0_Coor_PixelR U0
-       (.BreetePeddels(BreetePeddels),
-        .CR_in(CR_in),
-        .CoorR_yboven_out(CoorR_yboven_out),
-        .HPixel(HPixel),
-        .HPixel_out(HPixel_out),
-        .HSYNC_i(HSYNC_i),
-        .HSYNC_o(HSYNC_o),
-        .HoogtePeddels(HoogtePeddels),
-        .Offcet(Offcet),
-        .PixelClock(PixelClock),
-        .PixelSig_in(PixelSig_in),
-        .PixelSig_out(PixelSig_out),
-        .VPixel(VPixel),
-        .VPixel_out(VPixel_out),
-        .VSYNC_i(VSYNC_i),
-        .VSYNC_o(VSYNC_o));
-endmodule
-
-(* ORIG_REF_NAME = "Coor_PixelR" *) 
 module design_1_Coor_PixelR_0_0_Coor_PixelR
    (CoorR_yboven_out,
     HSYNC_o,
@@ -3416,6 +3342,79 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
         .I2(PixelSig_out4[0]),
         .I3(HPixel[0]),
         .O(i__carry_i_8_n_0));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "design_1_Coor_PixelR_0_0,Coor_PixelR,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "Coor_PixelR,Vivado 2023.1" *) 
+(* NotValidForBitStream *)
+module design_1_Coor_PixelR_0_0
+   (PixelClock,
+    HSYNC_i,
+    VSYNC_i,
+    PixelSig_in,
+    VPixel,
+    HPixel,
+    CR_in,
+    BreetePeddels,
+    HoogtePeddels,
+    Offcet,
+    CoorR_yboven_out,
+    PixelSig_out,
+    HSYNC_o,
+    VSYNC_o,
+    VPixel_out,
+    HPixel_out);
+  input PixelClock;
+  input HSYNC_i;
+  input VSYNC_i;
+  input PixelSig_in;
+  input [9:0]VPixel;
+  input [9:0]HPixel;
+  input [8:0]CR_in;
+  input [9:0]BreetePeddels;
+  input [8:0]HoogtePeddels;
+  input [8:0]Offcet;
+  output [8:0]CoorR_yboven_out;
+  output PixelSig_out;
+  output HSYNC_o;
+  output VSYNC_o;
+  output [9:0]VPixel_out;
+  output [9:0]HPixel_out;
+
+  wire [9:0]BreetePeddels;
+  wire [8:0]CR_in;
+  wire [8:0]CoorR_yboven_out;
+  wire [9:0]HPixel;
+  wire [9:0]HPixel_out;
+  wire HSYNC_i;
+  wire HSYNC_o;
+  wire [8:0]HoogtePeddels;
+  wire [8:0]Offcet;
+  wire PixelClock;
+  wire PixelSig_in;
+  wire PixelSig_out;
+  wire [9:0]VPixel;
+  wire [9:0]VPixel_out;
+  wire VSYNC_i;
+  wire VSYNC_o;
+
+  design_1_Coor_PixelR_0_0_Coor_PixelR U0
+       (.BreetePeddels(BreetePeddels),
+        .CR_in(CR_in),
+        .CoorR_yboven_out(CoorR_yboven_out),
+        .HPixel(HPixel),
+        .HPixel_out(HPixel_out),
+        .HSYNC_i(HSYNC_i),
+        .HSYNC_o(HSYNC_o),
+        .HoogtePeddels(HoogtePeddels),
+        .Offcet(Offcet),
+        .PixelClock(PixelClock),
+        .PixelSig_in(PixelSig_in),
+        .PixelSig_out(PixelSig_out),
+        .VPixel(VPixel),
+        .VPixel_out(VPixel_out),
+        .VSYNC_i(VSYNC_i),
+        .VSYNC_o(VSYNC_o));
 endmodule
 `ifndef GLBL
 `define GLBL

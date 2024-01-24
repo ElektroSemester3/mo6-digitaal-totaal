@@ -56,8 +56,8 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_out1__100.00000______0.000______50.0______124.615_____96.948
-// clk_out2__50.00000______0.000______50.0______143.688_____96.948
+// clk_system__100.00000______0.000______50.0______124.615_____96.948
+// _clk_VGA__50.00000______0.000______50.0______143.688_____96.948
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -70,8 +70,8 @@ module design_1_clk_wiz_0_0_clk_wiz
 
  (// Clock in ports
   // Clock out ports
-  output        clk_out1,
-  output        clk_out2,
+  output        clk_system,
+  output        clk_VGA,
   // Status and control signals
   input         reset,
   input         clk_in1
@@ -94,8 +94,8 @@ wire clk_in2_design_1_clk_wiz_0_0;
   //    * Unused inputs are tied off
   //    * Unused outputs are labeled unused
 
-  wire        clk_out1_design_1_clk_wiz_0_0;
-  wire        clk_out2_design_1_clk_wiz_0_0;
+  wire        clk_system_design_1_clk_wiz_0_0;
+  wire        clk_VGA_design_1_clk_wiz_0_0;
   wire        clk_out3_design_1_clk_wiz_0_0;
   wire        clk_out4_design_1_clk_wiz_0_0;
   wire        clk_out5_design_1_clk_wiz_0_0;
@@ -145,9 +145,9 @@ wire clk_in2_design_1_clk_wiz_0_0;
    (
     .CLKFBOUT            (clkfbout_design_1_clk_wiz_0_0),
     .CLKFBOUTB           (clkfboutb_unused),
-    .CLKOUT0             (clk_out1_design_1_clk_wiz_0_0),
+    .CLKOUT0             (clk_system_design_1_clk_wiz_0_0),
     .CLKOUT0B            (clkout0b_unused),
-    .CLKOUT1             (clk_out2_design_1_clk_wiz_0_0),
+    .CLKOUT1             (clk_VGA_design_1_clk_wiz_0_0),
     .CLKOUT1B            (clkout1b_unused),
     .CLKOUT2             (clkout2_unused),
     .CLKOUT2B            (clkout2b_unused),
@@ -198,13 +198,13 @@ wire clk_in2_design_1_clk_wiz_0_0;
 
 
   BUFG clkout1_buf
-   (.O   (clk_out1),
-    .I   (clk_out1_design_1_clk_wiz_0_0));
+   (.O   (clk_system),
+    .I   (clk_system_design_1_clk_wiz_0_0));
 
 
   BUFG clkout2_buf
-   (.O   (clk_out2),
-    .I   (clk_out2_design_1_clk_wiz_0_0));
+   (.O   (clk_VGA),
+    .I   (clk_VGA_design_1_clk_wiz_0_0));
 
 
 

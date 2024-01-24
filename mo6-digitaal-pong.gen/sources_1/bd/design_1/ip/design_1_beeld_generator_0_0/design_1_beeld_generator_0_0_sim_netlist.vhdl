@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
 -- Date        : Wed Jan 24 02:19:12 2024
 -- Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_beeld_generator_0_0/design_1_beeld_generator_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_beeld_generator_0_0 -prefix
+--               design_1_beeld_generator_0_0_ design_1_beeld_generator_0_0_sim_netlist.vhdl
 -- Design      : design_1_beeld_generator_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,8 +25,6 @@ entity design_1_beeld_generator_0_0_beeld_generator is
     CLK : in STD_LOGIC;
     RST : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_beeld_generator_0_0_beeld_generator : entity is "beeld_generator";
 end design_1_beeld_generator_0_0_beeld_generator;
 
 architecture STRUCTURE of design_1_beeld_generator_0_0_beeld_generator is

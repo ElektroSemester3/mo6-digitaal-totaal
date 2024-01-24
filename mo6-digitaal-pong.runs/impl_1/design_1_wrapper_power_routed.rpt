@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Wed Jan 24 12:10:43 2024
+| Date             : Wed Jan 24 13:33:12 2024
 | Host             : XPS-Tommy running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.266        |
+| Total On-Chip Power (W)  | 0.263        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.158        |
+| Dynamic (W)              | 0.155        |
 | Device Static (W)        | 0.108        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 81.9         |
-| Junction Temperature (C) | 28.1         |
+| Max Ambient (C)          | 82.0         |
+| Junction Temperature (C) | 28.0         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,19 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.004 |        6 |       --- |             --- |
-| Slice Logic    |     0.024 |     4257 |       --- |             --- |
-|   LUT as Logic |     0.021 |     2211 |     53200 |            4.16 |
-|   CARRY4       |     0.002 |      602 |     13300 |            4.53 |
-|   Register     |    <0.001 |      511 |    106400 |            0.48 |
+| Clocks         |     0.003 |        6 |       --- |             --- |
+| Slice Logic    |     0.022 |     4159 |       --- |             --- |
+|   LUT as Logic |     0.020 |     2147 |     53200 |            4.04 |
+|   CARRY4       |     0.002 |      582 |     13300 |            4.38 |
+|   Register     |    <0.001 |      512 |    106400 |            0.48 |
 |   BUFG         |    <0.001 |        2 |        32 |            6.25 |
-|   Others       |     0.000 |       67 |       --- |             --- |
-| Signals        |     0.020 |     3345 |       --- |             --- |
+|   Others       |     0.000 |       65 |       --- |             --- |
+| Signals        |     0.018 |     3260 |       --- |             --- |
 | MMCM           |     0.106 |        1 |         4 |           25.00 |
 | DSPs           |     0.002 |        4 |       220 |            1.82 |
 | I/O            |     0.003 |       19 |       125 |           15.20 |
 | Static Power   |     0.108 |          |           |                 |
-| Total          |     0.266 |          |           |                 |
+| Total          |     0.263 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.057 |       0.049 |      0.008 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.054 |       0.047 |      0.008 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.069 |       0.059 |      0.011 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -134,14 +134,14 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-------------------------------+---------------------------------------------------------+-----------------+
-| Clock                         | Domain                                                  | Constraint (ns) |
-+-------------------------------+---------------------------------------------------------+-----------------+
-| clk_out1_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0 |            10.0 |
-| clk_out2_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0 |            20.0 |
-| clkfbout_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0 |             8.0 |
-| sys_clock                     | sys_clock                                               |             8.0 |
-+-------------------------------+---------------------------------------------------------+-----------------+
++---------------------------------+-----------------------------------------------------------+-----------------+
+| Clock                           | Domain                                                    | Constraint (ns) |
++---------------------------------+-----------------------------------------------------------+-----------------+
+| clk_VGA_design_1_clk_wiz_0_0    | design_1_i/clk_wiz_0/inst/clk_VGA_design_1_clk_wiz_0_0    |            20.0 |
+| clk_system_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clk_system_design_1_clk_wiz_0_0 |            10.0 |
+| clkfbout_design_1_clk_wiz_0_0   | design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0   |             8.0 |
+| sys_clock                       | sys_clock                                                 |             8.0 |
++---------------------------------+-----------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -153,8 +153,8 @@ Table of Contents
 +------------------------------+-----------+
 | Name                         | Power (W) |
 +------------------------------+-----------+
-| design_1_wrapper             |     0.158 |
-|   design_1_i                 |     0.155 |
+| design_1_wrapper             |     0.155 |
+|   design_1_i                 |     0.152 |
 |     Coor_PixelR_0            |     0.003 |
 |       U0                     |     0.003 |
 |     TEMP_positie_peddels     |     0.002 |
@@ -167,8 +167,8 @@ Table of Contents
 |       inst                   |     0.107 |
 |     ontvangen_controllers    |     0.032 |
 |       controller_ultrasoon_0 |     0.031 |
-|     score_tekenen_0          |     0.003 |
-|       U0                     |     0.003 |
+|     score_tekenen_0          |     0.002 |
+|       U0                     |     0.002 |
 +------------------------------+-----------+
 
 

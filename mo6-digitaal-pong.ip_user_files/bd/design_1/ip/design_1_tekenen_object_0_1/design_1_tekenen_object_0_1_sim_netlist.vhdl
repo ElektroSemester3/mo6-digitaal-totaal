@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
 -- Date        : Wed Jan 24 10:28:07 2024
 -- Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_tekenen_object_0_1/design_1_tekenen_object_0_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_tekenen_object_0_1 -prefix
+--               design_1_tekenen_object_0_1_ design_1_tekenen_object_0_1_sim_netlist.vhdl
 -- Design      : design_1_tekenen_object_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -33,8 +33,6 @@ entity design_1_tekenen_object_0_1_tekenen_object is
     size_y : in STD_LOGIC_VECTOR ( 8 downto 0 );
     pixel_value_i : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_tekenen_object_0_1_tekenen_object : entity is "tekenen_object";
 end design_1_tekenen_object_0_1_tekenen_object;
 
 architecture STRUCTURE of design_1_tekenen_object_0_1_tekenen_object is

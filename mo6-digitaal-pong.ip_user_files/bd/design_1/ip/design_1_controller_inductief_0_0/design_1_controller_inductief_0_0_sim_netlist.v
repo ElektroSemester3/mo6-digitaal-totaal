@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Wed Jan 24 02:14:44 2024
+// Date        : Wed Jan 24 02:14:41 2024
 // Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_controller_inductief_0_0/design_1_controller_inductief_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_controller_inductief_0_0 -prefix
+//               design_1_controller_inductief_0_0_ design_1_controller_inductief_0_0_sim_netlist.v
 // Design      : design_1_controller_inductief_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,36 +13,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_controller_inductief_0_0,controller_inductief,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "controller_inductief,Vivado 2023.1" *) 
-(* NotValidForBitStream *)
-module design_1_controller_inductief_0_0
-   (clk,
-    reset,
-    enable,
-    freq_in,
-    value_out);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input reset;
-  input enable;
-  input freq_in;
-  output [8:0]value_out;
-
-  wire clk;
-  wire enable;
-  wire freq_in;
-  wire reset;
-  wire [8:0]value_out;
-
-  design_1_controller_inductief_0_0_controller_inductief U0
-       (.clk(clk),
-        .enable(enable),
-        .freq_in(freq_in),
-        .reset(reset),
-        .value_out(value_out));
-endmodule
-
-(* ORIG_REF_NAME = "controller_inductief" *) 
 module design_1_controller_inductief_0_0_controller_inductief
    (value_out,
     reset,
@@ -3212,6 +3182,35 @@ module design_1_controller_inductief_0_0_controller_inductief
        (.I0(\value_reg[3]_i_2_n_4 ),
         .I1(\value_reg[3]_i_2_n_6 ),
         .O(\value_reg[8]_i_99_n_0 ));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "design_1_controller_inductief_0_0,controller_inductief,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "controller_inductief,Vivado 2023.1" *) 
+(* NotValidForBitStream *)
+module design_1_controller_inductief_0_0
+   (clk,
+    reset,
+    enable,
+    freq_in,
+    value_out);
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input reset;
+  input enable;
+  input freq_in;
+  output [8:0]value_out;
+
+  wire clk;
+  wire enable;
+  wire freq_in;
+  wire reset;
+  wire [8:0]value_out;
+
+  design_1_controller_inductief_0_0_controller_inductief U0
+       (.clk(clk),
+        .enable(enable),
+        .freq_in(freq_in),
+        .reset(reset),
+        .value_out(value_out));
 endmodule
 `ifndef GLBL
 `define GLBL

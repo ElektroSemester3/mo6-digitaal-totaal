@@ -11,7 +11,6 @@
       "validated": "true"
     },
     "design_tree": {
-      "clk_wiz_0": "",
       "ontvangen_controllers": {
         "controller_interconn_0": "",
         "controller_inductief_0": "",
@@ -38,34 +37,11 @@
       "aanraking_herkennen_0": "",
       "positie_balletje_0": "",
       "score_counter_0": "",
+      "clk_wiz_0": "",
       "TEMP_positie_peddels": "",
       "score_tekenen_0": ""
     },
     "ports": {
-      "sys_clock": {
-        "type": "clk",
-        "direction": "I",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "design_1_sys_clock",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "125000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0"
-          }
-        }
-      },
       "reset": {
         "type": "rst",
         "direction": "I",
@@ -149,47 +125,33 @@
       },
       "display_VSYNC": {
         "direction": "O"
+      },
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_sys_clock",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0"
+          }
+        }
       }
     },
     "components": {
-      "clk_wiz_0": {
-        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "design_1_clk_wiz_0_0",
-        "xci_path": "ip\\design_1_clk_wiz_0_0\\design_1_clk_wiz_0_0.xci",
-        "inst_hier_path": "clk_wiz_0",
-        "parameters": {
-          "CLKOUT2_JITTER": {
-            "value": "143.688"
-          },
-          "CLKOUT2_PHASE_ERROR": {
-            "value": "96.948"
-          },
-          "CLKOUT2_REQUESTED_OUT_FREQ": {
-            "value": "50.000"
-          },
-          "CLKOUT2_USED": {
-            "value": "true"
-          },
-          "CLK_IN1_BOARD_INTERFACE": {
-            "value": "sys_clock"
-          },
-          "MMCM_CLKOUT1_DIVIDE": {
-            "value": "20"
-          },
-          "NUM_OUT_CLKS": {
-            "value": "2"
-          },
-          "USE_BOARD_FLOW": {
-            "value": "true"
-          },
-          "USE_LOCKED": {
-            "value": "false"
-          },
-          "USE_RESET": {
-            "value": "true"
-          }
-        }
-      },
       "ontvangen_controllers": {
         "ports": {
           "reset": {
@@ -986,7 +948,7 @@
         "inst_hier_path": "lijn_tekenen_0",
         "parameters": {
           "width_line": {
-            "value": "10"
+            "value": "5"
           }
         },
         "reference_info": {
@@ -1477,11 +1439,57 @@
           }
         }
       },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "xci_path": "ip\\design_1_clk_wiz_0_0\\design_1_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKOUT2_JITTER": {
+            "value": "143.688"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "96.948"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "50"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "CLK_OUT1_PORT": {
+            "value": "clk_system"
+          },
+          "CLK_OUT2_PORT": {
+            "value": "clk_VGA"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "20"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "2"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          }
+        }
+      },
       "TEMP_positie_peddels": {
         "vlnv": "xilinx.com:module_ref:object_positie:1.0",
         "xci_name": "design_1_object_positie_0_0",
         "xci_path": "ip\\design_1_object_positie_0_0\\design_1_object_positie_0_0.xci",
         "inst_hier_path": "TEMP_positie_peddels",
+        "parameters": {
+          "offset": {
+            "value": "0"
+          }
+        },
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "object_positie",
@@ -1550,7 +1558,7 @@
             "value": "20"
           },
           "size": {
-            "value": "5"
+            "value": "10"
           }
         },
         "reference_info": {
@@ -1780,17 +1788,17 @@
           "score_counter_0/clk_slow"
         ]
       },
-      "clk_wiz_0_clk_out1": {
+      "clk_wiz_0_clk_VGA": {
         "ports": [
-          "clk_wiz_0/clk_out1",
-          "ontvangen_controllers/clk",
-          "clk_divider_0/clk_in"
+          "clk_wiz_0/clk_VGA",
+          "beeld_generator_0/CLK"
         ]
       },
-      "clk_wiz_0_clk_out2": {
+      "clk_wiz_0_clk_out1": {
         "ports": [
-          "clk_wiz_0/clk_out2",
-          "beeld_generator_0/CLK"
+          "clk_wiz_0/clk_system",
+          "ontvangen_controllers/clk",
+          "clk_divider_0/clk_in"
         ]
       },
       "constants_dout": {
@@ -1946,12 +1954,12 @@
       "reset_rtl_1": {
         "ports": [
           "reset",
-          "clk_wiz_0/reset",
           "ontvangen_controllers/reset",
           "clk_divider_0/reset",
           "beeld_generator_0/RST",
           "positie_balletje_0/reset",
-          "score_counter_0/reset"
+          "score_counter_0/reset",
+          "clk_wiz_0/reset"
         ]
       },
       "score_counter_0_score_left": {

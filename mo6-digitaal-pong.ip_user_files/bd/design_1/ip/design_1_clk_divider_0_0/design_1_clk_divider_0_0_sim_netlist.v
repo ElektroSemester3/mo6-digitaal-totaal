@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
 // Date        : Wed Jan 24 02:19:12 2024
 // Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_divider_0_0/design_1_clk_divider_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_clk_divider_0_0 -prefix
+//               design_1_clk_divider_0_0_ design_1_clk_divider_0_0_sim_netlist.v
 // Design      : design_1_clk_divider_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,28 +13,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_clk_divider_0_0,clk_divider,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "clk_divider,Vivado 2023.1" *) 
-(* NotValidForBitStream *)
-module design_1_clk_divider_0_0
-   (clk_in,
-    reset,
-    clk_out);
-  input clk_in;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input reset;
-  output clk_out;
-
-  wire clk_in;
-  wire clk_out;
-  wire reset;
-
-  design_1_clk_divider_0_0_clk_divider U0
-       (.clk_in(clk_in),
-        .clk_out(clk_out),
-        .reset(reset));
-endmodule
-
-(* ORIG_REF_NAME = "clk_divider" *) 
 module design_1_clk_divider_0_0_clk_divider
    (clk_out,
     clk_in,
@@ -546,6 +524,27 @@ module design_1_clk_divider_0_0_clk_divider
         .D(\count_reg[8]_i_1_n_6 ),
         .Q(count_reg[9]),
         .R(\count[0]_i_1_n_0 ));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "design_1_clk_divider_0_0,clk_divider,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "clk_divider,Vivado 2023.1" *) 
+(* NotValidForBitStream *)
+module design_1_clk_divider_0_0
+   (clk_in,
+    reset,
+    clk_out);
+  input clk_in;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input reset;
+  output clk_out;
+
+  wire clk_in;
+  wire clk_out;
+  wire reset;
+
+  design_1_clk_divider_0_0_clk_divider U0
+       (.clk_in(clk_in),
+        .clk_out(clk_out),
+        .reset(reset));
 endmodule
 `ifndef GLBL
 `define GLBL

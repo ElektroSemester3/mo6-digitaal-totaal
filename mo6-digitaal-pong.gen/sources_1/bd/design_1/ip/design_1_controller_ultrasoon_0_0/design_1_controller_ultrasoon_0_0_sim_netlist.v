@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
 // Date        : Wed Jan 24 12:02:18 2024
 // Host        : XPS-Tommy running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_controller_ultrasoon_0_0/design_1_controller_ultrasoon_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_controller_ultrasoon_0_0 -prefix
+//               design_1_controller_ultrasoon_0_0_ design_1_controller_ultrasoon_0_0_sim_netlist.v
 // Design      : design_1_controller_ultrasoon_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,40 +13,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_controller_ultrasoon_0_0,controller_ultrasoon,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "controller_ultrasoon,Vivado 2023.1" *) 
-(* NotValidForBitStream *)
-module design_1_controller_ultrasoon_0_0
-   (clk,
-    sensor,
-    enable,
-    reset,
-    value,
-    trigger);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
-  input sensor;
-  input enable;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input reset;
-  output [8:0]value;
-  output trigger;
-
-  wire clk;
-  wire enable;
-  wire reset;
-  wire sensor;
-  wire trigger;
-  wire [8:0]value;
-
-  design_1_controller_ultrasoon_0_0_controller_ultrasoon U0
-       (.clk(clk),
-        .enable(enable),
-        .reset(reset),
-        .sensor(sensor),
-        .trigger(trigger),
-        .value(value));
-endmodule
-
-(* ORIG_REF_NAME = "controller_ultrasoon" *) 
 module design_1_controller_ultrasoon_0_0_controller_ultrasoon
    (trigger,
     value,
@@ -16459,6 +16425,39 @@ module design_1_controller_ultrasoon_0_0_controller_ultrasoon
         .DI({\value[8]_INST_0_i_134_n_0 ,\value[8]_INST_0_i_135_n_0 ,\value[8]_INST_0_i_136_n_0 ,\value[8]_INST_0_i_137_n_0 }),
         .O(\NLW_value[8]_INST_0_i_99_O_UNCONNECTED [3:0]),
         .S({\value[8]_INST_0_i_138_n_0 ,\value[8]_INST_0_i_139_n_0 ,\value[8]_INST_0_i_140_n_0 ,\value[8]_INST_0_i_141_n_0 }));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "design_1_controller_ultrasoon_0_0,controller_ultrasoon,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "controller_ultrasoon,Vivado 2023.1" *) 
+(* NotValidForBitStream *)
+module design_1_controller_ultrasoon_0_0
+   (clk,
+    sensor,
+    enable,
+    reset,
+    value,
+    trigger);
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
+  input sensor;
+  input enable;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input reset;
+  output [8:0]value;
+  output trigger;
+
+  wire clk;
+  wire enable;
+  wire reset;
+  wire sensor;
+  wire trigger;
+  wire [8:0]value;
+
+  design_1_controller_ultrasoon_0_0_controller_ultrasoon U0
+       (.clk(clk),
+        .enable(enable),
+        .reset(reset),
+        .sensor(sensor),
+        .trigger(trigger),
+        .value(value));
 endmodule
 `ifndef GLBL
 `define GLBL

@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
 // Date        : Wed Jan 24 10:28:07 2024
 // Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_tekenen_object_0_1/design_1_tekenen_object_0_1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_tekenen_object_0_1 -prefix
+//               design_1_tekenen_object_0_1_ design_1_tekenen_object_0_1_sim_netlist.v
 // Design      : design_1_tekenen_object_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -82,7 +82,6 @@ module design_1_tekenen_object_0_1
         .vpxl_o(vpxl_o));
 endmodule
 
-(* ORIG_REF_NAME = "tekenen_object" *) 
 module design_1_tekenen_object_0_1_tekenen_object
    (HSYNC_o,
     VSYNC_o,

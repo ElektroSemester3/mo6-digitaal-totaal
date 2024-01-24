@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Wed Jan 24 12:09:10 2024
-# Process ID: 34148
+# Start of session at: Wed Jan 24 13:31:40 2024
+# Process ID: 24920
 # Current directory: D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/design_1_wrapper.vds
@@ -15,7 +15,7 @@ source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
-add_files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1398.664 ; gain = 28.840
+add_files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1405.277 ; gain = 27.859
 Command: read_checkpoint -auto_incremental -incremental D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -28,27 +28,27 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 37184
+INFO: [Synth 8-7075] Helper process launched with PID 34744
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 2228.449 ; gain = 410.477
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 2236.160 ; gain = 409.875
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:37]
 INFO: [Synth 8-3491] module 'design_1' declared at 'd:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:273' bound to instance 'design_1_i' of component 'design_1' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:60]
 INFO: [Synth 8-638] synthesizing module 'design_1' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:299]
-INFO: [Synth 8-3491] module 'design_1_Coor_PixelR_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_Coor_PixelR_0_0_stub.vhdl:6' bound to instance 'Coor_PixelR_0' of component 'design_1_Coor_PixelR_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:584]
-INFO: [Synth 8-638] synthesizing module 'design_1_Coor_PixelR_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_Coor_PixelR_0_0_stub.vhdl:28]
-INFO: [Synth 8-3491] module 'design_1_object_positie_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_object_positie_0_0_stub.vhdl:6' bound to instance 'TEMP_positie_peddels' of component 'design_1_object_positie_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:603]
-INFO: [Synth 8-638] synthesizing module 'design_1_object_positie_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_object_positie_0_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'design_1_tekenen_object_0_1' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_tekenen_object_0_1_stub.vhdl:6' bound to instance 'TEMP_tekenen_peddel_L' of component 'design_1_tekenen_object_0_1' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:616]
-INFO: [Synth 8-638] synthesizing module 'design_1_tekenen_object_0_1' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_tekenen_object_0_1_stub.vhdl:27]
-INFO: [Synth 8-3491] module 'design_1_aanraking_herkennen_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_aanraking_herkennen_0_0_stub.vhdl:6' bound to instance 'aanraking_herkennen_0' of component 'design_1_aanraking_herkennen_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:634]
-INFO: [Synth 8-638] synthesizing module 'design_1_aanraking_herkennen_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_aanraking_herkennen_0_0_stub.vhdl:26]
-INFO: [Synth 8-3491] module 'design_1_beeld_generator_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_beeld_generator_0_0_stub.vhdl:6' bound to instance 'beeld_generator_0' of component 'design_1_beeld_generator_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:651]
-INFO: [Synth 8-638] synthesizing module 'design_1_beeld_generator_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_beeld_generator_0_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'design_1_clk_divider_0_1' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_clk_divider_0_1_stub.vhdl:6' bound to instance 'clk_divider_0' of component 'design_1_clk_divider_0_1' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:664]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_divider_0_1' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_clk_divider_0_1_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_clk_wiz_0_0_stub.vhdl:6' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:670]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_clk_wiz_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'design_1_Coor_PixelR_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_Coor_PixelR_0_0_stub.vhdl:6' bound to instance 'Coor_PixelR_0' of component 'design_1_Coor_PixelR_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:584]
+INFO: [Synth 8-638] synthesizing module 'design_1_Coor_PixelR_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_Coor_PixelR_0_0_stub.vhdl:28]
+INFO: [Synth 8-3491] module 'design_1_object_positie_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_object_positie_0_0_stub.vhdl:6' bound to instance 'TEMP_positie_peddels' of component 'design_1_object_positie_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:603]
+INFO: [Synth 8-638] synthesizing module 'design_1_object_positie_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_object_positie_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'design_1_tekenen_object_0_1' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_tekenen_object_0_1_stub.vhdl:6' bound to instance 'TEMP_tekenen_peddel_L' of component 'design_1_tekenen_object_0_1' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:616]
+INFO: [Synth 8-638] synthesizing module 'design_1_tekenen_object_0_1' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_tekenen_object_0_1_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'design_1_aanraking_herkennen_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_aanraking_herkennen_0_0_stub.vhdl:6' bound to instance 'aanraking_herkennen_0' of component 'design_1_aanraking_herkennen_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:634]
+INFO: [Synth 8-638] synthesizing module 'design_1_aanraking_herkennen_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_aanraking_herkennen_0_0_stub.vhdl:26]
+INFO: [Synth 8-3491] module 'design_1_beeld_generator_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_beeld_generator_0_0_stub.vhdl:6' bound to instance 'beeld_generator_0' of component 'design_1_beeld_generator_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:651]
+INFO: [Synth 8-638] synthesizing module 'design_1_beeld_generator_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_beeld_generator_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'design_1_clk_divider_0_1' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_clk_divider_0_1_stub.vhdl:6' bound to instance 'clk_divider_0' of component 'design_1_clk_divider_0_1' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:664]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_divider_0_1' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_clk_divider_0_1_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_clk_wiz_0_0_stub.vhdl:6' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:670]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_clk_wiz_0_0_stub.vhdl:16]
 INFO: [Synth 8-638] synthesizing module 'constants_imp_10L8KXE' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:27]
 INFO: [Synth 8-3491] module 'design_1_peddels_hoogte_4' declared at 'd:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_4/synth/design_1_peddels_hoogte_4.v:53' bound to instance 'balletje_grootte_RnM' of component 'design_1_peddels_hoogte_4' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:78]
 INFO: [Synth 8-6157] synthesizing module 'design_1_peddels_hoogte_4' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_4/synth/design_1_peddels_hoogte_4.v:53]
@@ -86,51 +86,49 @@ INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__paramete
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized5' (0#1) [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_peddels_hoogte_1' (0#1) [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_1/synth/design_1_peddels_hoogte_1.v:53]
 INFO: [Synth 8-256] done synthesizing module 'constants_imp_10L8KXE' (0#1) [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:27]
-INFO: [Synth 8-3491] module 'design_1_lijn_tekenen_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_lijn_tekenen_0_0_stub.vhdl:6' bound to instance 'lijn_tekenen_0' of component 'design_1_lijn_tekenen_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:687]
-INFO: [Synth 8-638] synthesizing module 'design_1_lijn_tekenen_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_lijn_tekenen_0_0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'design_1_lijn_tekenen_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_lijn_tekenen_0_0_stub.vhdl:6' bound to instance 'lijn_tekenen_0' of component 'design_1_lijn_tekenen_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:687]
+INFO: [Synth 8-638] synthesizing module 'design_1_lijn_tekenen_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_lijn_tekenen_0_0_stub.vhdl:25]
 INFO: [Synth 8-638] synthesizing module 'ontvangen_controllers_imp_RFQXIP' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:130]
-INFO: [Synth 8-3491] module 'design_1_clk_divider_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_clk_divider_0_0_stub.vhdl:6' bound to instance 'clk_divider_0' of component 'design_1_clk_divider_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:220]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_divider_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_clk_divider_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'design_1_controller_draadloos_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_controller_draadloos_0_0_stub.vhdl:6' bound to instance 'controller_draadloos_0' of component 'design_1_controller_draadloos_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:226]
-INFO: [Synth 8-638] synthesizing module 'design_1_controller_draadloos_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_controller_draadloos_0_0_stub.vhdl:19]
-INFO: [Synth 8-3491] module 'design_1_controller_inductief_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_controller_inductief_0_0_stub.vhdl:6' bound to instance 'controller_inductief_0' of component 'design_1_controller_inductief_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:236]
-INFO: [Synth 8-638] synthesizing module 'design_1_controller_inductief_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_controller_inductief_0_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'design_1_controller_interconn_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_controller_interconn_0_0_stub.vhdl:6' bound to instance 'controller_interconn_0' of component 'design_1_controller_interconn_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:244]
-INFO: [Synth 8-638] synthesizing module 'design_1_controller_interconn_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_controller_interconn_0_0_stub.vhdl:24]
-INFO: [Synth 8-3491] module 'design_1_controller_ultrasoon_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_controller_ultrasoon_0_0_stub.vhdl:6' bound to instance 'controller_ultrasoon_0' of component 'design_1_controller_ultrasoon_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:259]
-INFO: [Synth 8-638] synthesizing module 'design_1_controller_ultrasoon_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_controller_ultrasoon_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'design_1_clk_divider_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_clk_divider_0_0_stub.vhdl:6' bound to instance 'clk_divider_0' of component 'design_1_clk_divider_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:220]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_divider_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_clk_divider_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_controller_draadloos_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_controller_draadloos_0_0_stub.vhdl:6' bound to instance 'controller_draadloos_0' of component 'design_1_controller_draadloos_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:226]
+INFO: [Synth 8-638] synthesizing module 'design_1_controller_draadloos_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_controller_draadloos_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'design_1_controller_inductief_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_controller_inductief_0_0_stub.vhdl:6' bound to instance 'controller_inductief_0' of component 'design_1_controller_inductief_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:236]
+INFO: [Synth 8-638] synthesizing module 'design_1_controller_inductief_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_controller_inductief_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'design_1_controller_interconn_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_controller_interconn_0_0_stub.vhdl:6' bound to instance 'controller_interconn_0' of component 'design_1_controller_interconn_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:244]
+INFO: [Synth 8-638] synthesizing module 'design_1_controller_interconn_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_controller_interconn_0_0_stub.vhdl:24]
+INFO: [Synth 8-3491] module 'design_1_controller_ultrasoon_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_controller_ultrasoon_0_0_stub.vhdl:6' bound to instance 'controller_ultrasoon_0' of component 'design_1_controller_ultrasoon_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:259]
+INFO: [Synth 8-638] synthesizing module 'design_1_controller_ultrasoon_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_controller_ultrasoon_0_0_stub.vhdl:18]
 INFO: [Synth 8-256] done synthesizing module 'ontvangen_controllers_imp_RFQXIP' (0#1) [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:130]
-INFO: [Synth 8-3491] module 'design_1_positie_balletje_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_positie_balletje_0_0_stub.vhdl:6' bound to instance 'positie_balletje_0' of component 'design_1_positie_balletje_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:720]
-INFO: [Synth 8-638] synthesizing module 'design_1_positie_balletje_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_positie_balletje_0_0_stub.vhdl:23]
-INFO: [Synth 8-3491] module 'design_1_score_counter_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_score_counter_0_0_stub.vhdl:6' bound to instance 'score_counter_0' of component 'design_1_score_counter_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:734]
-INFO: [Synth 8-638] synthesizing module 'design_1_score_counter_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_score_counter_0_0_stub.vhdl:20]
-INFO: [Synth 8-3491] module 'design_1_score_tekenen_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_score_tekenen_0_0_stub.vhdl:6' bound to instance 'score_tekenen_0' of component 'design_1_score_tekenen_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:745]
-INFO: [Synth 8-638] synthesizing module 'design_1_score_tekenen_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_score_tekenen_0_0_stub.vhdl:27]
-INFO: [Synth 8-3491] module 'design_1_tekenen_object_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_tekenen_object_0_0_stub.vhdl:6' bound to instance 'tekenen_balletje' of component 'design_1_tekenen_object_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:763]
-INFO: [Synth 8-638] synthesizing module 'design_1_tekenen_object_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_tekenen_object_0_0_stub.vhdl:27]
-INFO: [Synth 8-3491] module 'design_1_util_vector_logic_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_util_vector_logic_0_0_stub.vhdl:6' bound to instance 'util_vector_logic_0' of component 'design_1_util_vector_logic_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:782]
-INFO: [Synth 8-638] synthesizing module 'design_1_util_vector_logic_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-34148-XPS-Tommy/realtime/design_1_util_vector_logic_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_positie_balletje_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_positie_balletje_0_0_stub.vhdl:6' bound to instance 'positie_balletje_0' of component 'design_1_positie_balletje_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:720]
+INFO: [Synth 8-638] synthesizing module 'design_1_positie_balletje_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_positie_balletje_0_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'design_1_score_counter_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_score_counter_0_0_stub.vhdl:6' bound to instance 'score_counter_0' of component 'design_1_score_counter_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:734]
+INFO: [Synth 8-638] synthesizing module 'design_1_score_counter_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_score_counter_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'design_1_score_tekenen_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_score_tekenen_0_0_stub.vhdl:6' bound to instance 'score_tekenen_0' of component 'design_1_score_tekenen_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:745]
+INFO: [Synth 8-638] synthesizing module 'design_1_score_tekenen_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_score_tekenen_0_0_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'design_1_tekenen_object_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_tekenen_object_0_0_stub.vhdl:6' bound to instance 'tekenen_balletje' of component 'design_1_tekenen_object_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:763]
+INFO: [Synth 8-638] synthesizing module 'design_1_tekenen_object_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_tekenen_object_0_0_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'design_1_util_vector_logic_0_0' declared at 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_util_vector_logic_0_0_stub.vhdl:6' bound to instance 'util_vector_logic_0' of component 'design_1_util_vector_logic_0_0' [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:782]
+INFO: [Synth 8-638] synthesizing module 'design_1_util_vector_logic_0_0' [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-24920-XPS-Tommy/realtime/design_1_util_vector_logic_0_0_stub.vhdl:15]
 INFO: [Synth 8-256] done synthesizing module 'design_1' (0#1) [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:299]
 INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (0#1) [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:37]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 2321.059 ; gain = 503.086
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 2328.938 ; gain = 502.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2338.957 ; gain = 520.984
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 2328.938 ; gain = 502.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2338.957 ; gain = 520.984
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 2328.938 ; gain = 502.652
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2338.957 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2328.938 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc] for cell 'design_1_i/clk_wiz_0'
-Finished Parsing XDC File [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc] for cell 'design_1_i/clk_wiz_0'
 Parsing XDC File [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_controller_interconn_0_0/design_1_controller_interconn_0_0/design_1_controller_interconn_0_0_in_context.xdc] for cell 'design_1_i/ontvangen_controllers/controller_interconn_0'
 Finished Parsing XDC File [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_controller_interconn_0_0/design_1_controller_interconn_0_0/design_1_controller_interconn_0_0_in_context.xdc] for cell 'design_1_i/ontvangen_controllers/controller_interconn_0'
 Parsing XDC File [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_controller_inductief_0_0/design_1_controller_inductief_0_0/design_1_controller_inductief_0_0_in_context.xdc] for cell 'design_1_i/ontvangen_controllers/controller_inductief_0'
@@ -161,6 +159,8 @@ Parsing XDC File [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-po
 Finished Parsing XDC File [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_positie_balletje_0_0/design_1_positie_balletje_0_0/design_1_positie_balletje_0_0_in_context.xdc] for cell 'design_1_i/positie_balletje_0'
 Parsing XDC File [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_score_counter_0_0/design_1_score_counter_0_0/design_1_score_counter_0_0_in_context.xdc] for cell 'design_1_i/score_counter_0'
 Finished Parsing XDC File [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_score_counter_0_0/design_1_score_counter_0_0/design_1_score_counter_0_0_in_context.xdc] for cell 'design_1_i/score_counter_0'
+Parsing XDC File [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc] for cell 'design_1_i/clk_wiz_0'
+Finished Parsing XDC File [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc] for cell 'design_1_i/clk_wiz_0'
 Parsing XDC File [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_object_positie_0_0/design_1_object_positie_0_0/design_1_object_positie_0_0_in_context.xdc] for cell 'design_1_i/TEMP_positie_peddels'
 Finished Parsing XDC File [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_object_positie_0_0/design_1_object_positie_0_0/design_1_object_positie_0_0_in_context.xdc] for cell 'design_1_i/TEMP_positie_peddels'
 Parsing XDC File [d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_score_tekenen_0_0/design_1_score_tekenen_0_0/design_1_score_tekenen_0_0_in_context.xdc] for cell 'design_1_i/score_tekenen_0'
@@ -173,22 +173,22 @@ Parsing XDC File [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-po
 Finished Parsing XDC File [D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2366.867 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2328.938 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2366.867 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2328.938 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 2366.867 ; gain = 548.895
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 2328.938 ; gain = 502.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 2366.867 ; gain = 548.895
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 2328.938 ; gain = 502.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -196,7 +196,6 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc, line 4).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc, line 5).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clk_wiz_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ontvangen_controllers/controller_interconn_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ontvangen_controllers/controller_inductief_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ontvangen_controllers/controller_draadloos_0. (constraint file  auto generated constraint).
@@ -219,13 +218,14 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/Coor_PixelR_0. (constr
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/aanraking_herkennen_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/positie_balletje_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/score_counter_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clk_wiz_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/TEMP_positie_peddels. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/score_tekenen_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 2366.867 ; gain = 548.895
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 2328.938 ; gain = 502.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 2366.867 ; gain = 548.895
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 2328.938 ; gain = 502.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -248,25 +248,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2366.867 ; gain = 548.895
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 2328.938 ; gain = 502.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 2366.867 ; gain = 548.895
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 2328.938 ; gain = 502.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 2366.867 ; gain = 548.895
+Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 2328.938 ; gain = 502.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 2366.867 ; gain = 548.895
+Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 2328.938 ; gain = 502.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -284,37 +284,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 2366.867 ; gain = 548.895
+Finished IO Insertion : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 2333.836 ; gain = 507.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 2366.867 ; gain = 548.895
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 2333.836 ; gain = 507.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 2366.867 ; gain = 548.895
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 2333.836 ; gain = 507.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 2366.867 ; gain = 548.895
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 2333.836 ; gain = 507.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 2366.867 ; gain = 548.895
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 2333.836 ; gain = 507.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 2366.867 ; gain = 548.895
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 2333.836 ; gain = 507.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -370,24 +370,24 @@ Report Cell Usage:
 |20    |OBUF                                   |     7|
 +------+---------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 2366.867 ; gain = 548.895
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 2333.836 ; gain = 507.551
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 2366.867 ; gain = 520.984
-Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 2366.867 ; gain = 548.895
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 2333.836 ; gain = 507.551
+Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 2333.836 ; gain = 507.551
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2366.867 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2345.891 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2366.867 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2353.520 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: aaca482f
+Synth Design complete | Checksum: 53b3481f
 INFO: [Common 17-83] Releasing license: Synthesis
 102 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 2366.867 ; gain = 958.699
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 2353.520 ; gain = 937.086
 INFO: [Common 17-1381] The checkpoint 'D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jan 24 12:09:43 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 24 13:32:13 2024...

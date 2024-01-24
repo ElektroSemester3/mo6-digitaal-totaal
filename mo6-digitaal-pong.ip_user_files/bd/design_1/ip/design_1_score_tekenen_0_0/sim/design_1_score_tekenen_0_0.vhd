@@ -104,7 +104,7 @@ ARCHITECTURE design_1_score_tekenen_0_0_arch OF design_1_score_tekenen_0_0 IS
 BEGIN
   U0 : score_tekenen
     GENERIC MAP (
-      size => 5,
+      size => 10,
       distance => 20,
       height_offset => 10,
       width_offset => 10

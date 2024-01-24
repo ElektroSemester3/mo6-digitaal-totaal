@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Wed Jan 24 02:14:19 2024
-// Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_sim_netlist.v
+// Date        : Wed Jan 24 13:10:00 2024
+// Host        : XPS-Tommy running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_clk_wiz_0_0 -prefix
+//               design_1_clk_wiz_0_0_ design_1_clk_wiz_0_0_sim_netlist.v
 // Design      : design_1_clk_wiz_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,43 +15,43 @@
 
 (* NotValidForBitStream *)
 module design_1_clk_wiz_0_0
-   (clk_out1,
-    clk_out2,
+   (clk_system,
+    clk_VGA,
     reset,
     clk_in1);
-  output clk_out1;
-  output clk_out2;
+  output clk_system;
+  output clk_VGA;
   input reset;
   input clk_in1;
 
+  wire clk_VGA;
   (* IBUF_LOW_PWR *) (* RTL_KEEP = "yes" *) wire clk_in1;
-  wire clk_out1;
-  wire clk_out2;
+  wire clk_system;
   wire reset;
 
-  design_1_clk_wiz_0_0_clk_wiz inst
-       (.clk_in1(clk_in1),
-        .clk_out1(clk_out1),
-        .clk_out2(clk_out2),
+  design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz inst
+       (.clk_VGA(clk_VGA),
+        .clk_in1(clk_in1),
+        .clk_system(clk_system),
         .reset(reset));
 endmodule
 
-module design_1_clk_wiz_0_0_clk_wiz
-   (clk_out1,
-    clk_out2,
+module design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz
+   (clk_system,
+    clk_VGA,
     reset,
     clk_in1);
-  output clk_out1;
-  output clk_out2;
+  output clk_system;
+  output clk_VGA;
   input reset;
   input clk_in1;
 
+  wire clk_VGA;
+  wire clk_VGA_design_1_clk_wiz_0_0;
   wire clk_in1;
   wire clk_in1_design_1_clk_wiz_0_0;
-  wire clk_out1;
-  wire clk_out1_design_1_clk_wiz_0_0;
-  wire clk_out2;
-  wire clk_out2_design_1_clk_wiz_0_0;
+  wire clk_system;
+  wire clk_system_design_1_clk_wiz_0_0;
   wire clkfbout_buf_design_1_clk_wiz_0_0;
   wire clkfbout_design_1_clk_wiz_0_0;
   wire reset;
@@ -87,12 +87,12 @@ module design_1_clk_wiz_0_0_clk_wiz
         .O(clk_in1_design_1_clk_wiz_0_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout1_buf
-       (.I(clk_out1_design_1_clk_wiz_0_0),
-        .O(clk_out1));
+       (.I(clk_system_design_1_clk_wiz_0_0),
+        .O(clk_system));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout2_buf
-       (.I(clk_out2_design_1_clk_wiz_0_0),
-        .O(clk_out2));
+       (.I(clk_VGA_design_1_clk_wiz_0_0),
+        .O(clk_VGA));
   (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
@@ -152,9 +152,9 @@ module design_1_clk_wiz_0_0_clk_wiz
         .CLKIN2(1'b0),
         .CLKINSEL(1'b1),
         .CLKINSTOPPED(NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED),
-        .CLKOUT0(clk_out1_design_1_clk_wiz_0_0),
+        .CLKOUT0(clk_system_design_1_clk_wiz_0_0),
         .CLKOUT0B(NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED),
-        .CLKOUT1(clk_out2_design_1_clk_wiz_0_0),
+        .CLKOUT1(clk_VGA_design_1_clk_wiz_0_0),
         .CLKOUT1B(NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED),
         .CLKOUT2(NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED),
         .CLKOUT2B(NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED),

@@ -17,10 +17,6 @@ vlog -work xpm  -incr -mfcu  -sv "+incdir+../../../../mo6-digitaal-pong.gen/sour
 vcom -work xpm  -93  \
 "C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_VCOMP.vhd" \
 
-vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/30ef" \
-"../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
-"../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
-
 vcom -work xil_defaultlib  -93  \
 "../../../bd/design_1/ip/design_1_controller_interconn_0_0/sim/design_1_controller_interconn_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_controller_inductief_0_0/sim/design_1_controller_inductief_0_0.vhd" \
@@ -60,6 +56,12 @@ vcom -work xil_defaultlib  -93  \
 "../../../bd/design_1/ip/design_1_score_counter_0_0/sim/design_1_score_counter_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_aanraking_herkennen_0_0/sim/design_1_aanraking_herkennen_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_score_tekenen_0_0/sim/design_1_score_tekenen_0_0.vhd" \
+
+vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/30ef" \
+"../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
+
+vcom -work xil_defaultlib  -93  \
 "../../../bd/design_1/sim/design_1.vhd" \
 
 vlog -work xil_defaultlib \

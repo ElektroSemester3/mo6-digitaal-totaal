@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Wed Jan 24 02:14:19 2024
--- Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_sim_netlist.vhdl
+-- Date        : Wed Jan 24 13:10:00 2024
+-- Host        : XPS-Tommy running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_clk_wiz_0_0 -prefix
+--               design_1_clk_wiz_0_0_ design_1_clk_wiz_0_0_sim_netlist.vhdl
 -- Design      : design_1_clk_wiz_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,19 +15,19 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_clk_wiz_0_0_clk_wiz is
+entity design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz is
   port (
-    clk_out1 : out STD_LOGIC;
-    clk_out2 : out STD_LOGIC;
+    clk_system : out STD_LOGIC;
+    clk_VGA : out STD_LOGIC;
     reset : in STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-end design_1_clk_wiz_0_0_clk_wiz;
+end design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz;
 
-architecture STRUCTURE of design_1_clk_wiz_0_0_clk_wiz is
+architecture STRUCTURE of design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz is
+  signal clk_VGA_design_1_clk_wiz_0_0 : STD_LOGIC;
   signal clk_in1_design_1_clk_wiz_0_0 : STD_LOGIC;
-  signal clk_out1_design_1_clk_wiz_0_0 : STD_LOGIC;
-  signal clk_out2_design_1_clk_wiz_0_0 : STD_LOGIC;
+  signal clk_system_design_1_clk_wiz_0_0 : STD_LOGIC;
   signal clkfbout_buf_design_1_clk_wiz_0_0 : STD_LOGIC;
   signal clkfbout_design_1_clk_wiz_0_0 : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED : STD_LOGIC;
@@ -74,13 +74,13 @@ clkin1_ibufg: unisim.vcomponents.IBUF
     );
 clkout1_buf: unisim.vcomponents.BUFG
      port map (
-      I => clk_out1_design_1_clk_wiz_0_0,
-      O => clk_out1
+      I => clk_system_design_1_clk_wiz_0_0,
+      O => clk_system
     );
 clkout2_buf: unisim.vcomponents.BUFG
      port map (
-      I => clk_out2_design_1_clk_wiz_0_0,
-      O => clk_out2
+      I => clk_VGA_design_1_clk_wiz_0_0,
+      O => clk_VGA
     );
 mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
     generic map(
@@ -142,9 +142,9 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKIN2 => '0',
       CLKINSEL => '1',
       CLKINSTOPPED => NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED,
-      CLKOUT0 => clk_out1_design_1_clk_wiz_0_0,
+      CLKOUT0 => clk_system_design_1_clk_wiz_0_0,
       CLKOUT0B => NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED,
-      CLKOUT1 => clk_out2_design_1_clk_wiz_0_0,
+      CLKOUT1 => clk_VGA_design_1_clk_wiz_0_0,
       CLKOUT1B => NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED,
       CLKOUT2 => NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED,
       CLKOUT2B => NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED,
@@ -175,8 +175,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_clk_wiz_0_0 is
   port (
-    clk_out1 : out STD_LOGIC;
-    clk_out2 : out STD_LOGIC;
+    clk_system : out STD_LOGIC;
+    clk_VGA : out STD_LOGIC;
     reset : in STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
@@ -186,11 +186,11 @@ end design_1_clk_wiz_0_0;
 
 architecture STRUCTURE of design_1_clk_wiz_0_0 is
 begin
-inst: entity work.design_1_clk_wiz_0_0_clk_wiz
+inst: entity work.design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz
      port map (
+      clk_VGA => clk_VGA,
       clk_in1 => clk_in1,
-      clk_out1 => clk_out1,
-      clk_out2 => clk_out2,
+      clk_system => clk_system,
       reset => reset
     );
 end STRUCTURE;

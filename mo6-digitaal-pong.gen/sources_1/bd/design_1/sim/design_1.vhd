@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Wed Jan 24 12:08:29 2024
+--Date        : Wed Jan 24 13:31:04 2024
 --Host        : XPS-Tommy running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -291,20 +291,12 @@ entity design_1 is
     sys_clock : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=27,numReposBlks=25,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=16,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=27,numReposBlks=25,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=16,numPkgbdBlks=0,bdsource=USER,da_board_cnt=3,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
 
 architecture STRUCTURE of design_1 is
-  component design_1_clk_wiz_0_0 is
-  port (
-    reset : in STD_LOGIC;
-    clk_in1 : in STD_LOGIC;
-    clk_out1 : out STD_LOGIC;
-    clk_out2 : out STD_LOGIC
-  );
-  end component design_1_clk_wiz_0_0;
   component design_1_clk_divider_0_1 is
   port (
     clk_in : in STD_LOGIC;
@@ -453,6 +445,14 @@ architecture STRUCTURE of design_1 is
     score_right : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component design_1_score_counter_0_0;
+  component design_1_clk_wiz_0_0 is
+  port (
+    reset : in STD_LOGIC;
+    clk_in1 : in STD_LOGIC;
+    clk_system : out STD_LOGIC;
+    clk_VGA : out STD_LOGIC
+  );
+  end component design_1_clk_wiz_0_0;
   component design_1_object_positie_0_0 is
   port (
     object_width : in STD_LOGIC_VECTOR ( 9 downto 0 );
@@ -511,8 +511,8 @@ architecture STRUCTURE of design_1 is
   signal choice_1_0_1 : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal choice_2_0_1 : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal clk_divider_0_clk_out : STD_LOGIC;
+  signal clk_wiz_0_clk_VGA : STD_LOGIC;
   signal clk_wiz_0_clk_out1 : STD_LOGIC;
-  signal clk_wiz_0_clk_out2 : STD_LOGIC;
   signal constants_dout : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal constants_dout1 : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal constants_dout2 : STD_LOGIC_VECTOR ( 8 downto 0 );
@@ -651,7 +651,7 @@ aanraking_herkennen_0: component design_1_aanraking_herkennen_0_0
 beeld_generator_0: component design_1_beeld_generator_0_0
      port map (
       B => beeld_generator_0_B,
-      CLK => clk_wiz_0_clk_out2,
+      CLK => clk_wiz_0_clk_VGA,
       G => NLW_beeld_generator_0_G_UNCONNECTED,
       HSYNC => beeld_generator_0_HSYNC,
       R => NLW_beeld_generator_0_R_UNCONNECTED,
@@ -669,9 +669,9 @@ clk_divider_0: component design_1_clk_divider_0_1
     );
 clk_wiz_0: component design_1_clk_wiz_0_0
      port map (
+      clk_VGA => clk_wiz_0_clk_VGA,
       clk_in1 => sys_clock_1,
-      clk_out1 => clk_wiz_0_clk_out1,
-      clk_out2 => clk_wiz_0_clk_out2,
+      clk_system => clk_wiz_0_clk_out1,
       reset => reset_rtl_1
     );
 constants: entity work.constants_imp_10L8KXE

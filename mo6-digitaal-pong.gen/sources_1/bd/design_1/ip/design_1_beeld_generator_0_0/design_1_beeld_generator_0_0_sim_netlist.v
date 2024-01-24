@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
 // Date        : Wed Jan 24 02:19:12 2024
 // Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_beeld_generator_0_0/design_1_beeld_generator_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_beeld_generator_0_0 -prefix
+//               design_1_beeld_generator_0_0_ design_1_beeld_generator_0_0_sim_netlist.v
 // Design      : design_1_beeld_generator_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,56 +13,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_beeld_generator_0_0,beeld_generator,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "beeld_generator,Vivado 2023.1" *) 
-(* NotValidForBitStream *)
-module design_1_beeld_generator_0_0
-   (CLK,
-    RST,
-    pxlCLK,
-    HSYNC,
-    VSYNC,
-    R,
-    G,
-    B,
-    vpxl,
-    hpxl);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK, ASSOCIATED_RESET RST, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input CLK;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input RST;
-  output pxlCLK;
-  output HSYNC;
-  output VSYNC;
-  output R;
-  output G;
-  output B;
-  output [9:0]vpxl;
-  output [9:0]hpxl;
-
-  wire \<const0> ;
-  wire CLK;
-  wire HSYNC;
-  wire RST;
-  wire VSYNC;
-  wire [9:0]hpxl;
-  wire pxlCLK;
-  wire [9:0]vpxl;
-
-  assign B = \<const0> ;
-  assign G = \<const0> ;
-  assign R = \<const0> ;
-  GND GND
-       (.G(\<const0> ));
-  design_1_beeld_generator_0_0_beeld_generator U0
-       (.CLK(CLK),
-        .HSYNC(HSYNC),
-        .RST(RST),
-        .VSYNC(VSYNC),
-        .hpxl(hpxl),
-        .pxlCLK(pxlCLK),
-        .vpxl(vpxl));
-endmodule
-
-(* ORIG_REF_NAME = "beeld_generator" *) 
 module design_1_beeld_generator_0_0_beeld_generator
    (pxlCLK,
     HSYNC,
@@ -2733,6 +2683,55 @@ module design_1_beeld_generator_0_0_beeld_generator
         .CLR(RST),
         .D(vs_i_1_n_0),
         .Q(vs));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "design_1_beeld_generator_0_0,beeld_generator,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "beeld_generator,Vivado 2023.1" *) 
+(* NotValidForBitStream *)
+module design_1_beeld_generator_0_0
+   (CLK,
+    RST,
+    pxlCLK,
+    HSYNC,
+    VSYNC,
+    R,
+    G,
+    B,
+    vpxl,
+    hpxl);
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK, ASSOCIATED_RESET RST, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input CLK;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input RST;
+  output pxlCLK;
+  output HSYNC;
+  output VSYNC;
+  output R;
+  output G;
+  output B;
+  output [9:0]vpxl;
+  output [9:0]hpxl;
+
+  wire \<const0> ;
+  wire CLK;
+  wire HSYNC;
+  wire RST;
+  wire VSYNC;
+  wire [9:0]hpxl;
+  wire pxlCLK;
+  wire [9:0]vpxl;
+
+  assign B = \<const0> ;
+  assign G = \<const0> ;
+  assign R = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
+  design_1_beeld_generator_0_0_beeld_generator U0
+       (.CLK(CLK),
+        .HSYNC(HSYNC),
+        .RST(RST),
+        .VSYNC(VSYNC),
+        .hpxl(hpxl),
+        .pxlCLK(pxlCLK),
+        .vpxl(vpxl));
 endmodule
 `ifndef GLBL
 `define GLBL

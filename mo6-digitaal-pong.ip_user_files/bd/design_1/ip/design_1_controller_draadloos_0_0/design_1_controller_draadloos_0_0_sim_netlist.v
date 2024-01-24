@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Wed Jan 24 02:14:44 2024
+// Date        : Wed Jan 24 02:14:41 2024
 // Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_controller_draadloos_0_0/design_1_controller_draadloos_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_controller_draadloos_0_0 -prefix
+//               design_1_controller_draadloos_0_0_ design_1_controller_draadloos_0_0_sim_netlist.v
 // Design      : design_1_controller_draadloos_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,44 +13,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_controller_draadloos_0_0,controller_draadloos,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "controller_draadloos,Vivado 2023.1" *) 
-(* NotValidForBitStream *)
-module design_1_controller_draadloos_0_0
-   (clk_slow,
-    reset,
-    enable,
-    signal_connected,
-    signal_up,
-    signal_down,
-    value_out);
-  input clk_slow;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input reset;
-  input enable;
-  input signal_connected;
-  input signal_up;
-  input signal_down;
-  output [8:0]value_out;
-
-  wire clk_slow;
-  wire enable;
-  wire reset;
-  wire signal_connected;
-  wire signal_down;
-  wire signal_up;
-  wire [8:0]value_out;
-
-  design_1_controller_draadloos_0_0_controller_draadloos U0
-       (.clk_slow(clk_slow),
-        .enable(enable),
-        .reset(reset),
-        .signal_connected(signal_connected),
-        .signal_down(signal_down),
-        .signal_up(signal_up),
-        .value_out(value_out));
-endmodule
-
-(* ORIG_REF_NAME = "controller_draadloos" *) 
 module design_1_controller_draadloos_0_0_controller_draadloos
    (value_out,
     signal_up,
@@ -305,6 +267,43 @@ module design_1_controller_draadloos_0_0_controller_draadloos
         .DI({1'b0,value_out[6:4]}),
         .O({\current_value_reg[8]_i_2_n_4 ,\current_value_reg[8]_i_2_n_5 ,\current_value_reg[8]_i_2_n_6 ,\current_value_reg[8]_i_2_n_7 }),
         .S({\current_value[8]_i_5_n_0 ,\current_value[8]_i_6_n_0 ,\current_value[8]_i_7_n_0 ,\current_value[8]_i_8_n_0 }));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "design_1_controller_draadloos_0_0,controller_draadloos,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "controller_draadloos,Vivado 2023.1" *) 
+(* NotValidForBitStream *)
+module design_1_controller_draadloos_0_0
+   (clk_slow,
+    reset,
+    enable,
+    signal_connected,
+    signal_up,
+    signal_down,
+    value_out);
+  input clk_slow;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input reset;
+  input enable;
+  input signal_connected;
+  input signal_up;
+  input signal_down;
+  output [8:0]value_out;
+
+  wire clk_slow;
+  wire enable;
+  wire reset;
+  wire signal_connected;
+  wire signal_down;
+  wire signal_up;
+  wire [8:0]value_out;
+
+  design_1_controller_draadloos_0_0_controller_draadloos U0
+       (.clk_slow(clk_slow),
+        .enable(enable),
+        .reset(reset),
+        .signal_connected(signal_connected),
+        .signal_down(signal_down),
+        .signal_up(signal_up),
+        .value_out(value_out));
 endmodule
 `ifndef GLBL
 `define GLBL

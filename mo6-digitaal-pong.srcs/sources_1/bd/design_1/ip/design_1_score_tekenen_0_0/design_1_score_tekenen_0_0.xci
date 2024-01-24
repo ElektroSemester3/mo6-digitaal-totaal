@@ -8,14 +8,14 @@
     "gen_directory": "../../../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_score_tekenen_0_0",
     "parameters": {
       "component_parameters": {
-        "size": [ { "value": "5", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "size": [ { "value": "10", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "distance": [ { "value": "20", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "height_offset": [ { "value": "10", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "width_offset": [ { "value": "10", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Component_Name": [ { "value": "design_1_score_tekenen_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
-        "size": [ { "value": "5", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "size": [ { "value": "10", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "distance": [ { "value": "20", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "height_offset": [ { "value": "10", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "width_offset": [ { "value": "10", "resolve_type": "generated", "format": "long", "usage": "all" } ]

@@ -56,8 +56,8 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_out1__100.00000______0.000______50.0______124.615_____96.948
-// clk_out2__50.00000______0.000______50.0______143.688_____96.948
+// clk_system__100.00000______0.000______50.0______124.615_____96.948
+// _clk_VGA__50.00000______0.000______50.0______143.688_____96.948
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -71,8 +71,8 @@
 module design_1_clk_wiz_0_0 
  (
   // Clock out ports
-  output        clk_out1,
-  output        clk_out2,
+  output        clk_system,
+  output        clk_VGA,
   // Status and control signals
   input         reset,
  // Clock in ports
@@ -82,8 +82,8 @@ module design_1_clk_wiz_0_0
   design_1_clk_wiz_0_0_clk_wiz inst
   (
   // Clock out ports  
-  .clk_out1(clk_out1),
-  .clk_out2(clk_out2),
+  .clk_system(clk_system),
+  .clk_VGA(clk_VGA),
   // Status and control signals               
   .reset(reset), 
  // Clock in ports
