@@ -12,11 +12,11 @@
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source design_1_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1361.398 ; gain = 156.340
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1364.082 ; gain = 158.949
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2023.1/data/ip'.
-add_files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1394.230 ; gain = 27.883
+add_files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 1398.176 ; gain = 28.859
 Command: read_checkpoint -auto_incremental -incremental D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -29,96 +29,103 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 37084
+INFO: [Synth 8-7075] Helper process launched with PID 6332
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2222.438 ; gain = 410.383
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2227.184 ; gain = 409.824
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:37]
-INFO: [Synth 8-3491] module 'design_1' declared at 'd:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:261' bound to instance 'design_1_i' of component 'design_1' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:60]
-INFO: [Synth 8-638] synthesizing module 'design_1' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:287]
-INFO: [Synth 8-3491] module 'design_1_Coor_PixelR_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_Coor_PixelR_0_0_stub.vhdl:6' bound to instance 'Coor_PixelR_0' of component 'design_1_Coor_PixelR_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:557]
-INFO: [Synth 8-638] synthesizing module 'design_1_Coor_PixelR_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_Coor_PixelR_0_0_stub.vhdl:28]
-INFO: [Synth 8-3491] module 'design_1_object_positie_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_object_positie_0_0_stub.vhdl:6' bound to instance 'TEMP_positie_peddels' of component 'design_1_object_positie_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:576]
-INFO: [Synth 8-638] synthesizing module 'design_1_object_positie_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_object_positie_0_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'design_1_tekenen_object_0_1' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_tekenen_object_0_1_stub.vhdl:6' bound to instance 'TEMP_tekenen_peddel_L' of component 'design_1_tekenen_object_0_1' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:589]
-INFO: [Synth 8-638] synthesizing module 'design_1_tekenen_object_0_1' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_tekenen_object_0_1_stub.vhdl:27]
-INFO: [Synth 8-3491] module 'design_1_aanraking_herkennen_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_aanraking_herkennen_0_0_stub.vhdl:6' bound to instance 'aanraking_herkennen_0' of component 'design_1_aanraking_herkennen_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:607]
-INFO: [Synth 8-638] synthesizing module 'design_1_aanraking_herkennen_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_aanraking_herkennen_0_0_stub.vhdl:26]
-INFO: [Synth 8-3491] module 'design_1_beeld_generator_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_beeld_generator_0_0_stub.vhdl:6' bound to instance 'beeld_generator_0' of component 'design_1_beeld_generator_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:624]
-INFO: [Synth 8-638] synthesizing module 'design_1_beeld_generator_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_beeld_generator_0_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'design_1_clk_divider_0_1' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_clk_divider_0_1_stub.vhdl:6' bound to instance 'clk_divider_0' of component 'design_1_clk_divider_0_1' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:637]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_divider_0_1' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_clk_divider_0_1_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_clk_wiz_0_0_stub.vhdl:6' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:643]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_clk_wiz_0_0_stub.vhdl:16]
-INFO: [Synth 8-638] synthesizing module 'constants_imp_10L8KXE' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:26]
-INFO: [Synth 8-3491] module 'design_1_peddels_hoogte_4' declared at 'd:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_4/synth/design_1_peddels_hoogte_4.v:53' bound to instance 'balletje_grootte_RnM' of component 'design_1_peddels_hoogte_4' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:70]
+INFO: [Synth 8-3491] module 'design_1' declared at 'd:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:273' bound to instance 'design_1_i' of component 'design_1' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'design_1' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:299]
+INFO: [Synth 8-3491] module 'design_1_Coor_PixelR_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_Coor_PixelR_0_0_stub.vhdl:6' bound to instance 'Coor_PixelR_0' of component 'design_1_Coor_PixelR_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:584]
+INFO: [Synth 8-638] synthesizing module 'design_1_Coor_PixelR_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_Coor_PixelR_0_0_stub.vhdl:28]
+INFO: [Synth 8-3491] module 'design_1_object_positie_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_object_positie_0_0_stub.vhdl:6' bound to instance 'TEMP_positie_peddels' of component 'design_1_object_positie_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:603]
+INFO: [Synth 8-638] synthesizing module 'design_1_object_positie_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_object_positie_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'design_1_tekenen_object_0_1' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_tekenen_object_0_1_stub.vhdl:6' bound to instance 'TEMP_tekenen_peddel_L' of component 'design_1_tekenen_object_0_1' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:616]
+INFO: [Synth 8-638] synthesizing module 'design_1_tekenen_object_0_1' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_tekenen_object_0_1_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'design_1_aanraking_herkennen_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_aanraking_herkennen_0_0_stub.vhdl:6' bound to instance 'aanraking_herkennen_0' of component 'design_1_aanraking_herkennen_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:634]
+INFO: [Synth 8-638] synthesizing module 'design_1_aanraking_herkennen_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_aanraking_herkennen_0_0_stub.vhdl:26]
+INFO: [Synth 8-3491] module 'design_1_beeld_generator_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_beeld_generator_0_0_stub.vhdl:6' bound to instance 'beeld_generator_0' of component 'design_1_beeld_generator_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:651]
+INFO: [Synth 8-638] synthesizing module 'design_1_beeld_generator_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_beeld_generator_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'design_1_clk_divider_0_1' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_clk_divider_0_1_stub.vhdl:6' bound to instance 'clk_divider_0' of component 'design_1_clk_divider_0_1' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:664]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_divider_0_1' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_clk_divider_0_1_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_clk_wiz_0_0_stub.vhdl:6' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:670]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_clk_wiz_0_0_stub.vhdl:16]
+INFO: [Synth 8-638] synthesizing module 'constants_imp_10L8KXE' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:27]
+INFO: [Synth 8-3491] module 'design_1_peddels_hoogte_4' declared at 'd:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_4/synth/design_1_peddels_hoogte_4.v:53' bound to instance 'balletje_grootte_RnM' of component 'design_1_peddels_hoogte_4' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:78]
 INFO: [Synth 8-6157] synthesizing module 'design_1_peddels_hoogte_4' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_4/synth/design_1_peddels_hoogte_4.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_peddels_hoogte_4' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_4/synth/design_1_peddels_hoogte_4.v:53]
-INFO: [Synth 8-3491] module 'design_1_peddels_hoogte_0' declared at 'd:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_0/synth/design_1_peddels_hoogte_0.v:53' bound to instance 'peddels_breedte_RnM' of component 'design_1_peddels_hoogte_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:74]
-INFO: [Synth 8-6157] synthesizing module 'design_1_peddels_hoogte_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_0/synth/design_1_peddels_hoogte_0.v:53]
+INFO: [Synth 8-3491] module 'design_1_scherm_hoogte_0' declared at 'd:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_scherm_hoogte_0/synth/design_1_scherm_hoogte_0.v:53' bound to instance 'max_score_RnM' of component 'design_1_scherm_hoogte_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:82]
+INFO: [Synth 8-6157] synthesizing module 'design_1_scherm_hoogte_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_scherm_hoogte_0/synth/design_1_scherm_hoogte_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_peddels_hoogte_0' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_0/synth/design_1_peddels_hoogte_0.v:53]
-INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at 'd:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53' bound to instance 'peddels_hoogte_RnM' of component 'design_1_xlconstant_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:78]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_scherm_hoogte_0' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_scherm_hoogte_0/synth/design_1_scherm_hoogte_0.v:53]
+INFO: [Synth 8-3491] module 'design_1_peddels_hoogte_0' declared at 'd:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_0/synth/design_1_peddels_hoogte_0.v:53' bound to instance 'peddels_breedte_RnM' of component 'design_1_peddels_hoogte_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:86]
+INFO: [Synth 8-6157] synthesizing module 'design_1_peddels_hoogte_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_0/synth/design_1_peddels_hoogte_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized1' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized1' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_0' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53]
-INFO: [Synth 8-3491] module 'design_1_peddels_hoogte_2' declared at 'd:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_2/synth/design_1_peddels_hoogte_2.v:53' bound to instance 'peddels_x_offset_RnM' of component 'design_1_peddels_hoogte_2' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:82]
-INFO: [Synth 8-6157] synthesizing module 'design_1_peddels_hoogte_2' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_2/synth/design_1_peddels_hoogte_2.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_peddels_hoogte_0' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_0/synth/design_1_peddels_hoogte_0.v:53]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at 'd:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53' bound to instance 'peddels_hoogte_RnM' of component 'design_1_xlconstant_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:90]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized2' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized2' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_peddels_hoogte_2' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_2/synth/design_1_peddels_hoogte_2.v:53]
-INFO: [Synth 8-3491] module 'design_1_peddels_hoogte_3' declared at 'd:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_3/synth/design_1_peddels_hoogte_3.v:53' bound to instance 'scherm_breedte_RnM' of component 'design_1_peddels_hoogte_3' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:86]
-INFO: [Synth 8-6157] synthesizing module 'design_1_peddels_hoogte_3' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_3/synth/design_1_peddels_hoogte_3.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_0' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53]
+INFO: [Synth 8-3491] module 'design_1_peddels_hoogte_2' declared at 'd:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_2/synth/design_1_peddels_hoogte_2.v:53' bound to instance 'peddels_x_offset_RnM' of component 'design_1_peddels_hoogte_2' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:94]
+INFO: [Synth 8-6157] synthesizing module 'design_1_peddels_hoogte_2' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_2/synth/design_1_peddels_hoogte_2.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized3' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized3' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_peddels_hoogte_3' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_3/synth/design_1_peddels_hoogte_3.v:53]
-INFO: [Synth 8-3491] module 'design_1_peddels_hoogte_1' declared at 'd:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_1/synth/design_1_peddels_hoogte_1.v:53' bound to instance 'scherm_hoogte_RnM' of component 'design_1_peddels_hoogte_1' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:90]
-INFO: [Synth 8-6157] synthesizing module 'design_1_peddels_hoogte_1' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_1/synth/design_1_peddels_hoogte_1.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_peddels_hoogte_2' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_2/synth/design_1_peddels_hoogte_2.v:53]
+INFO: [Synth 8-3491] module 'design_1_peddels_hoogte_3' declared at 'd:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_3/synth/design_1_peddels_hoogte_3.v:53' bound to instance 'scherm_breedte_RnM' of component 'design_1_peddels_hoogte_3' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:98]
+INFO: [Synth 8-6157] synthesizing module 'design_1_peddels_hoogte_3' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_3/synth/design_1_peddels_hoogte_3.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized4' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized4' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_peddels_hoogte_3' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_3/synth/design_1_peddels_hoogte_3.v:53]
+INFO: [Synth 8-3491] module 'design_1_peddels_hoogte_1' declared at 'd:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_1/synth/design_1_peddels_hoogte_1.v:53' bound to instance 'scherm_hoogte_RnM' of component 'design_1_peddels_hoogte_1' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:102]
+INFO: [Synth 8-6157] synthesizing module 'design_1_peddels_hoogte_1' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_1/synth/design_1_peddels_hoogte_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized5' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized5' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_peddels_hoogte_1' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_peddels_hoogte_1/synth/design_1_peddels_hoogte_1.v:53]
-INFO: [Synth 8-256] done synthesizing module 'constants_imp_10L8KXE' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:26]
-INFO: [Synth 8-3491] module 'design_1_lijn_tekenen_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_lijn_tekenen_0_0_stub.vhdl:6' bound to instance 'lijn_tekenen_0' of component 'design_1_lijn_tekenen_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:659]
-INFO: [Synth 8-638] synthesizing module 'design_1_lijn_tekenen_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_lijn_tekenen_0_0_stub.vhdl:25]
-INFO: [Synth 8-638] synthesizing module 'ontvangen_controllers_imp_RFQXIP' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:118]
-INFO: [Synth 8-3491] module 'design_1_clk_divider_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_clk_divider_0_0_stub.vhdl:6' bound to instance 'clk_divider_0' of component 'design_1_clk_divider_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:208]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_divider_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_clk_divider_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'design_1_controller_draadloos_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_controller_draadloos_0_0_stub.vhdl:6' bound to instance 'controller_draadloos_0' of component 'design_1_controller_draadloos_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:214]
-INFO: [Synth 8-638] synthesizing module 'design_1_controller_draadloos_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_controller_draadloos_0_0_stub.vhdl:19]
-INFO: [Synth 8-3491] module 'design_1_controller_inductief_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_controller_inductief_0_0_stub.vhdl:6' bound to instance 'controller_inductief_0' of component 'design_1_controller_inductief_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:224]
-INFO: [Synth 8-638] synthesizing module 'design_1_controller_inductief_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_controller_inductief_0_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'design_1_controller_interconn_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_controller_interconn_0_0_stub.vhdl:6' bound to instance 'controller_interconn_0' of component 'design_1_controller_interconn_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:232]
-INFO: [Synth 8-638] synthesizing module 'design_1_controller_interconn_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_controller_interconn_0_0_stub.vhdl:24]
-INFO: [Synth 8-3491] module 'design_1_controller_ultrasoon_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_controller_ultrasoon_0_0_stub.vhdl:6' bound to instance 'controller_ultrasoon_0' of component 'design_1_controller_ultrasoon_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:247]
-INFO: [Synth 8-638] synthesizing module 'design_1_controller_ultrasoon_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_controller_ultrasoon_0_0_stub.vhdl:18]
-INFO: [Synth 8-256] done synthesizing module 'ontvangen_controllers_imp_RFQXIP' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:118]
-INFO: [Synth 8-3491] module 'design_1_positie_balletje_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_positie_balletje_0_0_stub.vhdl:6' bound to instance 'positie_balletje_0' of component 'design_1_positie_balletje_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:692]
-INFO: [Synth 8-638] synthesizing module 'design_1_positie_balletje_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_positie_balletje_0_0_stub.vhdl:23]
-INFO: [Synth 8-3491] module 'design_1_score_tekenen_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_score_tekenen_0_0_stub.vhdl:6' bound to instance 'score_tekenen_0' of component 'design_1_score_tekenen_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:706]
-INFO: [Synth 8-638] synthesizing module 'design_1_score_tekenen_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_score_tekenen_0_0_stub.vhdl:27]
-INFO: [Synth 8-3491] module 'design_1_tekenen_object_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_tekenen_object_0_0_stub.vhdl:6' bound to instance 'tekenen_balletje' of component 'design_1_tekenen_object_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:724]
-INFO: [Synth 8-638] synthesizing module 'design_1_tekenen_object_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_tekenen_object_0_0_stub.vhdl:27]
-INFO: [Synth 8-3491] module 'design_1_util_vector_logic_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_util_vector_logic_0_0_stub.vhdl:6' bound to instance 'util_vector_logic_0' of component 'design_1_util_vector_logic_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:743]
-INFO: [Synth 8-638] synthesizing module 'design_1_util_vector_logic_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-21212-Lenovo-Jochem/realtime/design_1_util_vector_logic_0_0_stub.vhdl:15]
-INFO: [Synth 8-256] done synthesizing module 'design_1' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:287]
+INFO: [Synth 8-256] done synthesizing module 'constants_imp_10L8KXE' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:27]
+INFO: [Synth 8-3491] module 'design_1_lijn_tekenen_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_lijn_tekenen_0_0_stub.vhdl:6' bound to instance 'lijn_tekenen_0' of component 'design_1_lijn_tekenen_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:687]
+INFO: [Synth 8-638] synthesizing module 'design_1_lijn_tekenen_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_lijn_tekenen_0_0_stub.vhdl:25]
+INFO: [Synth 8-638] synthesizing module 'ontvangen_controllers_imp_RFQXIP' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:130]
+INFO: [Synth 8-3491] module 'design_1_clk_divider_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_clk_divider_0_0_stub.vhdl:6' bound to instance 'clk_divider_0' of component 'design_1_clk_divider_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:220]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_divider_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_clk_divider_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_controller_draadloos_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_controller_draadloos_0_0_stub.vhdl:6' bound to instance 'controller_draadloos_0' of component 'design_1_controller_draadloos_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:226]
+INFO: [Synth 8-638] synthesizing module 'design_1_controller_draadloos_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_controller_draadloos_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'design_1_controller_inductief_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_controller_inductief_0_0_stub.vhdl:6' bound to instance 'controller_inductief_0' of component 'design_1_controller_inductief_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:236]
+INFO: [Synth 8-638] synthesizing module 'design_1_controller_inductief_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_controller_inductief_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'design_1_controller_interconn_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_controller_interconn_0_0_stub.vhdl:6' bound to instance 'controller_interconn_0' of component 'design_1_controller_interconn_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:244]
+INFO: [Synth 8-638] synthesizing module 'design_1_controller_interconn_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_controller_interconn_0_0_stub.vhdl:24]
+INFO: [Synth 8-3491] module 'design_1_controller_ultrasoon_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_controller_ultrasoon_0_0_stub.vhdl:6' bound to instance 'controller_ultrasoon_0' of component 'design_1_controller_ultrasoon_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:259]
+INFO: [Synth 8-638] synthesizing module 'design_1_controller_ultrasoon_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_controller_ultrasoon_0_0_stub.vhdl:18]
+INFO: [Synth 8-256] done synthesizing module 'ontvangen_controllers_imp_RFQXIP' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:130]
+INFO: [Synth 8-3491] module 'design_1_positie_balletje_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_positie_balletje_0_0_stub.vhdl:6' bound to instance 'positie_balletje_0' of component 'design_1_positie_balletje_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:720]
+INFO: [Synth 8-638] synthesizing module 'design_1_positie_balletje_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_positie_balletje_0_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'design_1_score_counter_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_score_counter_0_0_stub.vhdl:6' bound to instance 'score_counter_0' of component 'design_1_score_counter_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:734]
+INFO: [Synth 8-638] synthesizing module 'design_1_score_counter_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_score_counter_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'design_1_score_tekenen_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_score_tekenen_0_0_stub.vhdl:6' bound to instance 'score_tekenen_0' of component 'design_1_score_tekenen_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:745]
+INFO: [Synth 8-638] synthesizing module 'design_1_score_tekenen_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_score_tekenen_0_0_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'design_1_tekenen_object_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_tekenen_object_0_0_stub.vhdl:6' bound to instance 'tekenen_balletje' of component 'design_1_tekenen_object_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:763]
+INFO: [Synth 8-638] synthesizing module 'design_1_tekenen_object_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_tekenen_object_0_0_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'design_1_util_vector_logic_0_0' declared at 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_util_vector_logic_0_0_stub.vhdl:6' bound to instance 'util_vector_logic_0' of component 'design_1_util_vector_logic_0_0' [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:782]
+INFO: [Synth 8-638] synthesizing module 'design_1_util_vector_logic_0_0' [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/.Xil/Vivado-17320-Lenovo-Jochem/realtime/design_1_util_vector_logic_0_0_stub.vhdl:15]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (0#1) [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/synth/design_1.vhd:299]
 INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (0#1) [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:37]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2314.930 ; gain = 502.875
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2321.328 ; gain = 503.969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2332.824 ; gain = 520.770
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2321.328 ; gain = 503.969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2332.824 ; gain = 520.770
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2321.328 ; gain = 503.969
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2332.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2321.328 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -129,12 +136,12 @@ Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/
 Finished Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_controller_interconn_0_0/design_1_controller_interconn_0_0/design_1_controller_interconn_0_0_in_context.xdc] for cell 'design_1_i/ontvangen_controllers/controller_interconn_0'
 Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_controller_inductief_0_0/design_1_controller_inductief_0_0/design_1_controller_inductief_0_0_in_context.xdc] for cell 'design_1_i/ontvangen_controllers/controller_inductief_0'
 Finished Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_controller_inductief_0_0/design_1_controller_inductief_0_0/design_1_controller_inductief_0_0_in_context.xdc] for cell 'design_1_i/ontvangen_controllers/controller_inductief_0'
-Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_controller_ultrasoon_0_0/design_1_controller_ultrasoon_0_0/design_1_controller_ultrasoon_0_0_in_context.xdc] for cell 'design_1_i/ontvangen_controllers/controller_ultrasoon_0'
-Finished Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_controller_ultrasoon_0_0/design_1_controller_ultrasoon_0_0/design_1_controller_ultrasoon_0_0_in_context.xdc] for cell 'design_1_i/ontvangen_controllers/controller_ultrasoon_0'
 Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_controller_draadloos_0_0/design_1_controller_draadloos_0_0/design_1_controller_draadloos_0_0_in_context.xdc] for cell 'design_1_i/ontvangen_controllers/controller_draadloos_0'
 Finished Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_controller_draadloos_0_0/design_1_controller_draadloos_0_0/design_1_controller_draadloos_0_0_in_context.xdc] for cell 'design_1_i/ontvangen_controllers/controller_draadloos_0'
 Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_divider_0_0/design_1_clk_divider_0_0/design_1_clk_divider_0_0_in_context.xdc] for cell 'design_1_i/ontvangen_controllers/clk_divider_0'
 Finished Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_divider_0_0/design_1_clk_divider_0_0/design_1_clk_divider_0_0_in_context.xdc] for cell 'design_1_i/ontvangen_controllers/clk_divider_0'
+Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_controller_ultrasoon_0_0/design_1_controller_ultrasoon_0_0/design_1_controller_ultrasoon_0_0_in_context.xdc] for cell 'design_1_i/ontvangen_controllers/controller_ultrasoon_0'
+Finished Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_controller_ultrasoon_0_0/design_1_controller_ultrasoon_0_0/design_1_controller_ultrasoon_0_0_in_context.xdc] for cell 'design_1_i/ontvangen_controllers/controller_ultrasoon_0'
 Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_divider_0_1/design_1_clk_divider_0_1/design_1_clk_divider_0_1_in_context.xdc] for cell 'design_1_i/clk_divider_0'
 Finished Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_divider_0_1/design_1_clk_divider_0_1/design_1_clk_divider_0_1_in_context.xdc] for cell 'design_1_i/clk_divider_0'
 Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0_in_context.xdc] for cell 'design_1_i/util_vector_logic_0'
@@ -143,10 +150,6 @@ Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/
 Finished Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_beeld_generator_0_0/design_1_beeld_generator_0_0/design_1_beeld_generator_0_0_in_context.xdc] for cell 'design_1_i/beeld_generator_0'
 Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_object_positie_0_0/design_1_object_positie_0_0/design_1_object_positie_0_0_in_context.xdc] for cell 'design_1_i/TEMP_positie_peddels'
 Finished Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_object_positie_0_0/design_1_object_positie_0_0/design_1_object_positie_0_0_in_context.xdc] for cell 'design_1_i/TEMP_positie_peddels'
-Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_score_tekenen_0_0/design_1_score_tekenen_0_0/design_1_score_tekenen_0_0_in_context.xdc] for cell 'design_1_i/score_tekenen_0'
-Finished Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_score_tekenen_0_0/design_1_score_tekenen_0_0/design_1_score_tekenen_0_0_in_context.xdc] for cell 'design_1_i/score_tekenen_0'
-Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_aanraking_herkennen_0_0/design_1_aanraking_herkennen_0_0/design_1_aanraking_herkennen_0_0_in_context.xdc] for cell 'design_1_i/aanraking_herkennen_0'
-Finished Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_aanraking_herkennen_0_0/design_1_aanraking_herkennen_0_0/design_1_aanraking_herkennen_0_0_in_context.xdc] for cell 'design_1_i/aanraking_herkennen_0'
 Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_positie_balletje_0_0/design_1_positie_balletje_0_0/design_1_positie_balletje_0_0_in_context.xdc] for cell 'design_1_i/positie_balletje_0'
 Finished Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_positie_balletje_0_0/design_1_positie_balletje_0_0/design_1_positie_balletje_0_0_in_context.xdc] for cell 'design_1_i/positie_balletje_0'
 Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_lijn_tekenen_0_0/design_1_lijn_tekenen_0_0/design_1_lijn_tekenen_0_0_in_context.xdc] for cell 'design_1_i/lijn_tekenen_0'
@@ -157,6 +160,12 @@ Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/
 Finished Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_tekenen_object_0_0/design_1_tekenen_object_0_0/design_1_tekenen_object_0_1_in_context.xdc] for cell 'design_1_i/tekenen_balletje'
 Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_Coor_PixelR_0_0/design_1_Coor_PixelR_0_0/design_1_Coor_PixelR_0_0_in_context.xdc] for cell 'design_1_i/Coor_PixelR_0'
 Finished Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_Coor_PixelR_0_0/design_1_Coor_PixelR_0_0/design_1_Coor_PixelR_0_0_in_context.xdc] for cell 'design_1_i/Coor_PixelR_0'
+Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_score_counter_0_0/design_1_score_counter_0_0/design_1_score_counter_0_0_in_context.xdc] for cell 'design_1_i/score_counter_0'
+Finished Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_score_counter_0_0/design_1_score_counter_0_0/design_1_score_counter_0_0_in_context.xdc] for cell 'design_1_i/score_counter_0'
+Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_aanraking_herkennen_0_0/design_1_aanraking_herkennen_0_0/design_1_aanraking_herkennen_0_0_in_context.xdc] for cell 'design_1_i/aanraking_herkennen_0'
+Finished Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_aanraking_herkennen_0_0/design_1_aanraking_herkennen_0_0/design_1_aanraking_herkennen_0_0_in_context.xdc] for cell 'design_1_i/aanraking_herkennen_0'
+Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_score_tekenen_0_0/design_1_score_tekenen_0_0/design_1_score_tekenen_0_0_in_context.xdc] for cell 'design_1_i/score_tekenen_0'
+Finished Parsing XDC File [d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_score_tekenen_0_0/design_1_score_tekenen_0_0/design_1_score_tekenen_0_0_in_context.xdc] for cell 'design_1_i/score_tekenen_0'
 Parsing XDC File [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/constrs_1/new/constraints.xdc]
 Finished Parsing XDC File [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/constrs_1/new/constraints.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
@@ -165,22 +174,22 @@ Parsing XDC File [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/d
 Finished Parsing XDC File [D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2360.719 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2321.328 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2360.719 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2321.328 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 2360.719 ; gain = 548.664
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 2321.328 ; gain = 503.969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 2360.719 ; gain = 548.664
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 2321.328 ; gain = 503.969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -191,9 +200,9 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  aut
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clk_wiz_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ontvangen_controllers/controller_interconn_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ontvangen_controllers/controller_inductief_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ontvangen_controllers/controller_ultrasoon_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ontvangen_controllers/controller_draadloos_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ontvangen_controllers/clk_divider_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ontvangen_controllers/controller_ultrasoon_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clk_divider_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/util_vector_logic_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/beeld_generator_0. (constraint file  auto generated constraint).
@@ -203,19 +212,21 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/constants/scherm_hoogt
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/constants/peddels_x_offset_RnM. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/constants/scherm_breedte_RnM. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/constants/balletje_grootte_RnM. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/constants/max_score_RnM. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/TEMP_positie_peddels. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/score_tekenen_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/aanraking_herkennen_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/positie_balletje_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/lijn_tekenen_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/TEMP_tekenen_peddel_L. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/tekenen_balletje. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/Coor_PixelR_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/score_counter_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/aanraking_herkennen_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/score_tekenen_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 2360.719 ; gain = 548.664
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 2321.328 ; gain = 503.969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 2360.719 ; gain = 548.664
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 2321.328 ; gain = 503.969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -238,25 +249,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 2360.719 ; gain = 548.664
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 2321.328 ; gain = 503.969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:25 . Memory (MB): peak = 2360.719 ; gain = 548.664
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 2321.328 ; gain = 503.969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:25 . Memory (MB): peak = 2360.719 ; gain = 548.664
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 2321.328 ; gain = 503.969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:25 . Memory (MB): peak = 2360.719 ; gain = 548.664
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 2321.328 ; gain = 503.969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -274,37 +285,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 2360.719 ; gain = 548.664
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2333.367 ; gain = 516.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 2360.719 ; gain = 548.664
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2333.367 ; gain = 516.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 2360.719 ; gain = 548.664
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2333.367 ; gain = 516.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 2360.719 ; gain = 548.664
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2333.367 ; gain = 516.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 2360.719 ; gain = 548.664
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2333.367 ; gain = 516.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 2360.719 ; gain = 548.664
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2333.367 ; gain = 516.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -323,14 +334,15 @@ Report BlackBoxes:
 |7     |design_1_clk_wiz_0_0              |         1|
 |8     |design_1_lijn_tekenen_0_0         |         1|
 |9     |design_1_positie_balletje_0_0     |         1|
-|10    |design_1_score_tekenen_0_0        |         1|
-|11    |design_1_tekenen_object_0_0       |         1|
-|12    |design_1_util_vector_logic_0_0    |         1|
-|13    |design_1_clk_divider_0_0          |         1|
-|14    |design_1_controller_draadloos_0_0 |         1|
-|15    |design_1_controller_inductief_0_0 |         1|
-|16    |design_1_controller_interconn_0_0 |         1|
-|17    |design_1_controller_ultrasoon_0_0 |         1|
+|10    |design_1_score_counter_0_0        |         1|
+|11    |design_1_score_tekenen_0_0        |         1|
+|12    |design_1_tekenen_object_0_0       |         1|
+|13    |design_1_util_vector_logic_0_0    |         1|
+|14    |design_1_clk_divider_0_0          |         1|
+|15    |design_1_controller_draadloos_0_0 |         1|
+|16    |design_1_controller_inductief_0_0 |         1|
+|17    |design_1_controller_interconn_0_0 |         1|
+|18    |design_1_controller_ultrasoon_0_0 |         1|
 +------+----------------------------------+----------+
 
 Report Cell Usage: 
@@ -350,32 +362,33 @@ Report Cell Usage:
 |11    |design_1_lijn_tekenen_0_0_bbox         |     1|
 |12    |design_1_object_positie_0_0_bbox       |     1|
 |13    |design_1_positie_balletje_0_0_bbox     |     1|
-|14    |design_1_score_tekenen_0_0_bbox        |     1|
-|15    |design_1_tekenen_object_0_0_bbox       |     1|
-|16    |design_1_tekenen_object_0_1_bbox       |     1|
-|17    |design_1_util_vector_logic_0_0_bbox    |     1|
-|18    |IBUF                                   |    11|
-|19    |OBUF                                   |     7|
+|14    |design_1_score_counter_0_0_bbox        |     1|
+|15    |design_1_score_tekenen_0_0_bbox        |     1|
+|16    |design_1_tekenen_object_0_0_bbox       |     1|
+|17    |design_1_tekenen_object_0_1_bbox       |     1|
+|18    |design_1_util_vector_logic_0_0_bbox    |     1|
+|19    |IBUF                                   |    11|
+|20    |OBUF                                   |     7|
 +------+---------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 2360.719 ; gain = 548.664
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2333.367 ; gain = 516.008
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:28 . Memory (MB): peak = 2360.719 ; gain = 520.770
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 2360.719 ; gain = 548.664
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 2333.367 ; gain = 516.008
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 2333.367 ; gain = 516.008
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2360.719 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2345.336 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2360.719 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2355.953 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 73d8c75d
+Synth Design complete | Checksum: aaca482f
 INFO: [Common 17-83] Releasing license: Synthesis
-95 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+102 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 2360.719 ; gain = 957.359
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 2355.953 ; gain = 948.441
 INFO: [Common 17-1381] The checkpoint 'D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jan 24 10:48:09 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 24 11:06:08 2024...

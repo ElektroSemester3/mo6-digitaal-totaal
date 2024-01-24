@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Wed Jan 24 10:51:00 2024
+| Date             : Wed Jan 24 11:07:51 2024
 | Host             : Lenovo-Jochem running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -52,14 +52,14 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.004 |        6 |       --- |             --- |
-| Slice Logic    |     0.024 |     4159 |       --- |             --- |
-|   LUT as Logic |     0.021 |     2126 |     53200 |            4.00 |
-|   CARRY4       |     0.002 |      587 |     13300 |            4.41 |
-|   Register     |    <0.001 |      510 |    106400 |            0.48 |
+| Clocks         |     0.003 |        6 |       --- |             --- |
+| Slice Logic    |     0.024 |     4218 |       --- |             --- |
+|   LUT as Logic |     0.021 |     2174 |     53200 |            4.09 |
+|   CARRY4       |     0.002 |      592 |     13300 |            4.45 |
+|   Register     |    <0.001 |      511 |    106400 |            0.48 |
 |   BUFG         |    <0.001 |        2 |        32 |            6.25 |
-|   Others       |     0.000 |       67 |       --- |             --- |
-| Signals        |     0.019 |     3287 |       --- |             --- |
+|   Others       |     0.000 |       65 |       --- |             --- |
+| Signals        |     0.020 |     3323 |       --- |             --- |
 | MMCM           |     0.106 |        1 |         4 |           25.00 |
 | DSPs           |     0.002 |        4 |       220 |            1.82 |
 | I/O            |     0.003 |       19 |       125 |           15.20 |

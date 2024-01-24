@@ -60,7 +60,7 @@ architecture Behavioral of controller_ultrasoon is
 
 begin
     -- Timer for loop
-    timer: process(clk, reset, enable)
+    timer: process(clk)
     begin
         if reset = '1' OR enable = '0' then
             timer_value <= (others => '0');
@@ -77,7 +77,7 @@ begin
     end process timer;
 
     -- Trigger timer
-    trigger_process: process(clk, reset, trigger_reset, enable)
+    trigger_process: process(clk)
     begin
         if reset = '1' OR trigger_reset = '1' OR enable = '0' then
             trigger_timer_value <= (others => '0');
@@ -109,7 +109,7 @@ begin
     end process counter_process;
 
     -- Input decoder / state decoder
-    input_decoder: process(sensor, timer_done, go_to_next)
+    input_decoder: process(sensor, timer_done, go_to_next, current_state)
     begin
         case current_state is
             when reset_values => 
@@ -147,7 +147,7 @@ begin
     end process input_decoder;
 
     -- Memory
-    memory: process(clk, reset, enable)
+    memory: process(clk)
     begin
         -- Set current state to next state on rising edge of clock
         if reset = '1' OR enable = '0' then

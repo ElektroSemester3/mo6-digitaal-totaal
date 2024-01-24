@@ -30,10 +30,11 @@ end score_tekenen;
 
 architecture Behavioral of score_tekenen is
     -- Define the position and size of the line
-    signal pos_x_r  : unsigned(9 downto 0);
-    signal pos_x_l  : unsigned(9 downto 0);
     constant pos_y  : unsigned(8 downto 0) := to_unsigned(height_offset, 9);
     constant size_u : unsigned(9 downto 0) := to_unsigned(size, 10);
+    -- Define the start position of the left and right score
+    signal pos_x_l  : unsigned(9 downto 0) := unsigned(screen_width_i) / 2 - to_unsigned(width_offset, 10);
+    signal pos_x_r  : unsigned(9 downto 0) := unsigned(screen_width_i) / 2 + to_unsigned(width_offset, 10);
 
 begin
     process (pxlCLK_i)
@@ -45,22 +46,22 @@ begin
             vpxl_o <= vpxl_i;
             hpxl_o <= hpxl_i;
             
-            pos_x_r <= unsigned(screen_width_i) / 2 + to_unsigned(width_offset, 10);
-            pos_x_l <= unsigned(screen_width_i) / 2 - to_unsigned(width_offset, 10);
+            -- pos_x_r <= unsigned(screen_width_i) / 2 + to_unsigned(width_offset, 10);
+            -- pos_x_l <= unsigned(screen_width_i) / 2 - to_unsigned(width_offset, 10);
 
             -- output pixel value
             if ((   -- score right
                     unsigned(hpxl_i) >= unsigned(pos_x_r) 
-                    AND unsigned(hpxl_i) <= unsigned(pos_x_r) + (size_u + to_unsigned(distance, 10)) * unsigned(score_r_i)
+                    AND unsigned(hpxl_i) <= unsigned(pos_x_r) + (size_u + to_unsigned(distance, pos_x_r'length)) * unsigned(score_r_i)
                     AND unsigned(vpxl_i) >= unsigned(pos_y) 
                     AND unsigned(vpxl_i) <= unsigned(pos_y) + size_u
-                    AND (unsigned(hpxl_i) - unsigned(pos_x_r) - 1) mod (size_u + to_unsigned(distance, 10)) < size_u)
+                    AND (unsigned(hpxl_i) - unsigned(pos_x_r) - 1) mod (size_u + to_unsigned(distance, pos_x_r'length)) < size_u)
                 OR (-- score left
-                    unsigned(hpxl_i) >= unsigned(pos_x_l) - (size_u + to_unsigned(distance, 10)) * unsigned(score_l_i)
+                    unsigned(hpxl_i) >= unsigned(pos_x_l) - (size_u + to_unsigned(distance, pos_x_l'length)) * unsigned(score_l_i)
                     AND unsigned(hpxl_i) <= unsigned(pos_x_l)
                     AND unsigned(vpxl_i) >= unsigned(pos_y)
                     AND unsigned(vpxl_i) <= unsigned(pos_y) + size_u
-                    AND (unsigned(hpxl_i) - (unsigned(pos_x_l) - (size_u + to_unsigned(distance, 10)) * unsigned(score_l_i)) - 1) mod (size_u + to_unsigned(distance, 10)) >= distance
+                    AND (unsigned(hpxl_i) - (unsigned(pos_x_l) - (size_u + to_unsigned(distance, pos_x_l'length)) * unsigned(score_l_i)) - 1) mod (size_u + to_unsigned(distance, pos_x_l'length)) >= distance
                 )
             ) then
                 pixel_value_o <= '1';

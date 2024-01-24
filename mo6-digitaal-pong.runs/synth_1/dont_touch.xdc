@@ -75,4 +75,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_aa
 # IP: bd/design_1/ip/design_1_positie_balletje_0_0/design_1_positie_balletje_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_positie_balletje_0_0 || ORIG_REF_NAME==design_1_positie_balletje_0_0} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_scherm_hoogte_0/design_1_scherm_hoogte_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_scherm_hoogte_0 || ORIG_REF_NAME==design_1_scherm_hoogte_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_score_counter_0_0/design_1_score_counter_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_score_counter_0_0 || ORIG_REF_NAME==design_1_score_counter_0_0} -quiet] -quiet
+
 # XDC: d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/design_1_ooc.xdc

@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_1_controller_ultrasoon_0_0_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 set_param ips.modRefOverrideMrefDirPath d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/mref
@@ -92,7 +94,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/new/controller_ultrasoon.vhd
-read_ip -quiet d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/bd/design_1/ip/design_1_controller_ultrasoon_0_0/design_1_controller_ultrasoon_0_0.xci
+read_ip -quiet D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/bd/design_1/ip/design_1_controller_ultrasoon_0_0/design_1_controller_ultrasoon_0_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
