@@ -1,0 +1,79 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "design_1_positie_balletje_0_0",
+    "cell_name": "positie_balletje_0",
+    "component_reference": "xilinx.com:module_ref:positie_balletje:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_positie_balletje_0_0",
+    "parameters": {
+      "component_parameters": {
+        "step": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "angle_1": [ { "value": "2", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "angle_2": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "angle_3": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "start_angle": [ { "value": "10", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "Component_Name": [ { "value": "design_1_positie_balletje_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "model_parameters": {
+        "step": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "angle_1": [ { "value": "2", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "angle_2": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "angle_3": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "start_angle": [ { "value": "10", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynq" } ],
+        "BASE_BOARD_PART": [ { "value": "tul.com.tw:pynq-z2:part0:1.0" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7z020" } ],
+        "PACKAGE": [ { "value": "clg400" } ],
+        "PREFHDL": [ { "value": "VHDL" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_positie_balletje_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2023.1" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "reset": [ { "direction": "in" } ],
+        "screen_width": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "screen_heigth": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "clk_slow": [ { "direction": "in" } ],
+        "angle_index": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
+        "running": [ { "direction": "in" } ],
+        "peddel_touch": [ { "direction": "in" } ],
+        "side_touch": [ { "direction": "in" } ],
+        "top_bottom_touch": [ { "direction": "in" } ],
+        "pos_x_out": [ { "direction": "out", "size_left": "9", "size_right": "0" } ],
+        "pos_y_out": [ { "direction": "out", "size_left": "9", "size_right": "0" } ]
+      },
+      "interfaces": {
+        "reset": {
+          "vlnv": "xilinx.com:signal:reset:1.0",
+          "abstraction_type": "xilinx.com:signal:reset_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "POLARITY": [ { "value": "ACTIVE_HIGH", "value_src": "user", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "RST": [ { "physical_name": "reset" } ]
+          }
+        }
+      }
+    }
+  }
+}

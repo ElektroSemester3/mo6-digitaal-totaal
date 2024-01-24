@@ -1,0 +1,18 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.25",
+   "Default View_TopLeft":"-858,-140",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace inst peddels_hoogte -pg 1 -lvl 1 -x 80 -y 260 -defaultsOSRD
+preplace inst peddels_breedte -pg 1 -lvl 1 -x 80 -y 160 -defaultsOSRD
+preplace inst peddels_x_offset -pg 1 -lvl 1 -x 80 -y 360 -defaultsOSRD
+preplace inst scherm_breedte -pg 1 -lvl 1 -x 80 -y 460 -defaultsOSRD
+preplace inst scherm_hoogte -pg 1 -lvl 1 -x 80 -y 560 -defaultsOSRD
+preplace inst balletje_grootte -pg 1 -lvl 1 -x 80 -y 60 -defaultsOSRD
+levelinfo -pg 1 0 80 160
+pagesize -pg 1 -db -bbox -sgen 0 0 160 620
+"
+}
+

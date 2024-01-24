@@ -1,0 +1,1953 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x26718C0AAE704DB9",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "clk_wiz_0": "",
+      "ontvangen_controllers": {
+        "controller_interconn_0": "",
+        "controller_inductief_0": "",
+        "controller_ultrasoon_0": "",
+        "controller_draadloos_0": "",
+        "clk_divider_0": ""
+      },
+      "clk_divider_0": "",
+      "TEMP_positie_peddels": "",
+      "util_vector_logic_0": "",
+      "beeld_generator_0": "",
+      "aanraking_herkennen_0": "",
+      "positie_balletje_0": "",
+      "tekenen_balletje": "",
+      "TEMP_tekenen_peddel_L": "",
+      "Coor_PixelR_0": "",
+      "lijn_tekenen_0": "",
+      "constants": {
+        "peddels_hoogte": "",
+        "peddels_breedte": "",
+        "scherm_hoogte": "",
+        "peddels_x_offset": "",
+        "scherm_breedte": "",
+        "balletje_grootte": ""
+      },
+      "score_tekenen_0": ""
+    },
+    "ports": {
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_sys_clock",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0"
+          }
+        }
+      },
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "enable": {
+        "direction": "I",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "controllers_choice_1": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      },
+      "controllers_choice_2": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      },
+      "controller_draadloos_connected": {
+        "direction": "I"
+      },
+      "controller_draadloos_up": {
+        "direction": "I"
+      },
+      "controller_draadloos_down": {
+        "direction": "I"
+      },
+      "controller_inductief_in": {
+        "direction": "I"
+      },
+      "controller_ultrasoon_in": {
+        "direction": "I"
+      },
+      "controller_ultrasoon_trigger": {
+        "direction": "O"
+      },
+      "status_running": {
+        "direction": "O",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "display_B": {
+        "direction": "O"
+      },
+      "display_G": {
+        "direction": "O"
+      },
+      "display_R": {
+        "direction": "O"
+      },
+      "display_HSYNC": {
+        "direction": "O"
+      },
+      "display_VSYNC": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "xci_path": "ip\\design_1_clk_wiz_0_0\\design_1_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKOUT2_JITTER": {
+            "value": "143.688"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "96.948"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "50.000"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "20"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "2"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "true"
+          }
+        }
+      },
+      "ontvangen_controllers": {
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "enable_0": {
+            "direction": "I"
+          },
+          "choice_1_0": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "choice_2_0": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "signal_connected_0": {
+            "direction": "I"
+          },
+          "signal_up_0": {
+            "direction": "I"
+          },
+          "signal_down_0": {
+            "direction": "I"
+          },
+          "freq_in_0": {
+            "direction": "I"
+          },
+          "sensor_0": {
+            "direction": "I"
+          },
+          "trigger_0": {
+            "direction": "O"
+          },
+          "controller_output_1": {
+            "direction": "O",
+            "left": "8",
+            "right": "0"
+          },
+          "controller_output_2": {
+            "direction": "O",
+            "left": "8",
+            "right": "0"
+          },
+          "active": {
+            "direction": "O"
+          }
+        },
+        "components": {
+          "controller_interconn_0": {
+            "vlnv": "xilinx.com:module_ref:controller_interconnect:1.0",
+            "xci_name": "design_1_controller_interconn_0_0",
+            "xci_path": "ip\\design_1_controller_interconn_0_0\\design_1_controller_interconn_0_0.xci",
+            "inst_hier_path": "ontvangen_controllers/controller_interconn_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "controller_interconnect",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "enable": {
+                "direction": "I",
+                "parameters": {
+                  "PortType": {
+                    "value": "undef",
+                    "value_src": "ip_prop"
+                  },
+                  "PortType.PROP_SRC": {
+                    "value": "false",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "choice_1": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "choice_2": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "controller_input_1": {
+                "direction": "I",
+                "left": "8",
+                "right": "0"
+              },
+              "controller_input_2": {
+                "direction": "I",
+                "left": "8",
+                "right": "0"
+              },
+              "controller_input_3": {
+                "direction": "I",
+                "left": "8",
+                "right": "0"
+              },
+              "controller_enable_1": {
+                "direction": "O"
+              },
+              "controller_enable_2": {
+                "direction": "O"
+              },
+              "controller_enable_3": {
+                "direction": "O"
+              },
+              "controller_output_1": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              },
+              "controller_output_2": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              },
+              "active": {
+                "direction": "O",
+                "parameters": {
+                  "PortType": {
+                    "value": "undef",
+                    "value_src": "ip_prop"
+                  },
+                  "PortType.PROP_SRC": {
+                    "value": "false",
+                    "value_src": "ip_prop"
+                  }
+                }
+              }
+            }
+          },
+          "controller_inductief_0": {
+            "vlnv": "xilinx.com:module_ref:controller_inductief:1.0",
+            "xci_name": "design_1_controller_inductief_0_0",
+            "xci_path": "ip\\design_1_controller_inductief_0_0\\design_1_controller_inductief_0_0.xci",
+            "inst_hier_path": "ontvangen_controllers/controller_inductief_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "controller_inductief",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_RESET": {
+                    "value": "reset",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "ip_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "ip_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "/clk_wiz_0_clk_out1",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "reset": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "enable": {
+                "direction": "I"
+              },
+              "freq_in": {
+                "direction": "I"
+              },
+              "value_out": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              }
+            }
+          },
+          "controller_ultrasoon_0": {
+            "vlnv": "xilinx.com:module_ref:controller_ultrasoon:1.0",
+            "xci_name": "design_1_controller_ultrasoon_0_0",
+            "xci_path": "ip\\design_1_controller_ultrasoon_0_0\\design_1_controller_ultrasoon_0_0.xci",
+            "inst_hier_path": "ontvangen_controllers/controller_ultrasoon_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "controller_ultrasoon",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_RESET": {
+                    "value": "reset",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "ip_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "ip_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "/clk_wiz_0_clk_out1",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "sensor": {
+                "direction": "I"
+              },
+              "enable": {
+                "direction": "I"
+              },
+              "reset": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "value": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              },
+              "trigger": {
+                "direction": "O"
+              }
+            }
+          },
+          "controller_draadloos_0": {
+            "vlnv": "xilinx.com:module_ref:controller_draadloos:1.0",
+            "xci_name": "design_1_controller_draadloos_0_0",
+            "xci_path": "ip\\design_1_controller_draadloos_0_0\\design_1_controller_draadloos_0_0.xci",
+            "inst_hier_path": "ontvangen_controllers/controller_draadloos_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "controller_draadloos",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk_slow": {
+                "direction": "I"
+              },
+              "reset": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "enable": {
+                "direction": "I"
+              },
+              "signal_connected": {
+                "direction": "I"
+              },
+              "signal_up": {
+                "direction": "I"
+              },
+              "signal_down": {
+                "direction": "I"
+              },
+              "value_out": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              }
+            }
+          },
+          "clk_divider_0": {
+            "vlnv": "xilinx.com:module_ref:clk_divider:1.0",
+            "xci_name": "design_1_clk_divider_0_0",
+            "xci_path": "ip\\design_1_clk_divider_0_0\\design_1_clk_divider_0_0.xci",
+            "inst_hier_path": "ontvangen_controllers/clk_divider_0",
+            "parameters": {
+              "division": {
+                "value": "200000"
+              }
+            },
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "clk_divider",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk_in": {
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "ip_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "ip_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "/clk_wiz_0_clk_out1",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "reset": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "clk_out": {
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "nets": {
+          "Net": {
+            "ports": [
+              "reset",
+              "controller_draadloos_0/reset",
+              "controller_ultrasoon_0/reset",
+              "controller_inductief_0/reset",
+              "clk_divider_0/reset"
+            ]
+          },
+          "Net1": {
+            "ports": [
+              "clk",
+              "controller_inductief_0/clk",
+              "controller_ultrasoon_0/clk",
+              "clk_divider_0/clk_in"
+            ]
+          },
+          "choice_1_0_1": {
+            "ports": [
+              "choice_1_0",
+              "controller_interconn_0/choice_1"
+            ]
+          },
+          "choice_2_0_1": {
+            "ports": [
+              "choice_2_0",
+              "controller_interconn_0/choice_2"
+            ]
+          },
+          "clk_divider_0_clk_out": {
+            "ports": [
+              "clk_divider_0/clk_out",
+              "controller_draadloos_0/clk_slow"
+            ]
+          },
+          "controller_draadloos_0_value_out": {
+            "ports": [
+              "controller_draadloos_0/value_out",
+              "controller_interconn_0/controller_input_3"
+            ]
+          },
+          "controller_inductief_0_value_out": {
+            "ports": [
+              "controller_inductief_0/value_out",
+              "controller_interconn_0/controller_input_1"
+            ]
+          },
+          "controller_interconn_0_active": {
+            "ports": [
+              "controller_interconn_0/active",
+              "active"
+            ]
+          },
+          "controller_interconn_0_controller_enable_1": {
+            "ports": [
+              "controller_interconn_0/controller_enable_1",
+              "controller_inductief_0/enable"
+            ]
+          },
+          "controller_interconn_0_controller_enable_2": {
+            "ports": [
+              "controller_interconn_0/controller_enable_2",
+              "controller_ultrasoon_0/enable"
+            ]
+          },
+          "controller_interconn_0_controller_enable_3": {
+            "ports": [
+              "controller_interconn_0/controller_enable_3",
+              "controller_draadloos_0/enable"
+            ]
+          },
+          "controller_interconn_0_controller_output_1": {
+            "ports": [
+              "controller_interconn_0/controller_output_1",
+              "controller_output_1"
+            ]
+          },
+          "controller_interconn_0_controller_output_2": {
+            "ports": [
+              "controller_interconn_0/controller_output_2",
+              "controller_output_2"
+            ]
+          },
+          "controller_ultrasoon_0_trigger": {
+            "ports": [
+              "controller_ultrasoon_0/trigger",
+              "trigger_0"
+            ]
+          },
+          "controller_ultrasoon_0_value": {
+            "ports": [
+              "controller_ultrasoon_0/value",
+              "controller_interconn_0/controller_input_2"
+            ]
+          },
+          "enable_0_1": {
+            "ports": [
+              "enable_0",
+              "controller_interconn_0/enable"
+            ]
+          },
+          "freq_in_0_1": {
+            "ports": [
+              "freq_in_0",
+              "controller_inductief_0/freq_in"
+            ]
+          },
+          "sensor_0_1": {
+            "ports": [
+              "sensor_0",
+              "controller_ultrasoon_0/sensor"
+            ]
+          },
+          "signal_connected_0_1": {
+            "ports": [
+              "signal_connected_0",
+              "controller_draadloos_0/signal_connected"
+            ]
+          },
+          "signal_down_0_1": {
+            "ports": [
+              "signal_down_0",
+              "controller_draadloos_0/signal_down"
+            ]
+          },
+          "signal_up_0_1": {
+            "ports": [
+              "signal_up_0",
+              "controller_draadloos_0/signal_up"
+            ]
+          }
+        }
+      },
+      "clk_divider_0": {
+        "vlnv": "xilinx.com:module_ref:clk_divider:1.0",
+        "xci_name": "design_1_clk_divider_0_1",
+        "xci_path": "ip\\design_1_clk_divider_0_1\\design_1_clk_divider_0_1.xci",
+        "inst_hier_path": "clk_divider_0",
+        "parameters": {
+          "division": {
+            "value": "750000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clk_divider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_in": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "clk_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "TEMP_positie_peddels": {
+        "vlnv": "xilinx.com:module_ref:object_positie:1.0",
+        "xci_name": "design_1_object_positie_0_0",
+        "xci_path": "ip\\design_1_object_positie_0_0\\design_1_object_positie_0_0.xci",
+        "inst_hier_path": "TEMP_positie_peddels",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "object_positie",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "object_width": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "object_height": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "size_window_width": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "size_window_height": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "value_1": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "value_2": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "position_x_1": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "position_y_1": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "position_x_2": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "position_y_2": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "design_1_util_vector_logic_0_0",
+        "xci_path": "ip\\design_1_util_vector_logic_0_0\\design_1_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "beeld_generator_0": {
+        "vlnv": "xilinx.com:module_ref:beeld_generator:1.0",
+        "xci_name": "design_1_beeld_generator_0_0",
+        "xci_path": "ip\\design_1_beeld_generator_0_0\\design_1_beeld_generator_0_0.xci",
+        "inst_hier_path": "beeld_generator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "beeld_generator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "RST",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "RST": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "pxlCLK": {
+            "direction": "O"
+          },
+          "HSYNC": {
+            "direction": "O"
+          },
+          "VSYNC": {
+            "direction": "O"
+          },
+          "R": {
+            "direction": "O"
+          },
+          "G": {
+            "direction": "O"
+          },
+          "B": {
+            "direction": "O"
+          },
+          "vpxl": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "hpxl": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          }
+        }
+      },
+      "aanraking_herkennen_0": {
+        "vlnv": "xilinx.com:module_ref:aanraking_herkennen:1.0",
+        "xci_name": "design_1_aanraking_herkennen_0_0",
+        "xci_path": "ip\\design_1_aanraking_herkennen_0_0\\design_1_aanraking_herkennen_0_0.xci",
+        "inst_hier_path": "aanraking_herkennen_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "aanraking_herkennen",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "hoogte_scherm": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "breedte_scherm": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "grootte_balletje": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "hoogte_peddels": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "breedte_peddels": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "offset_peddels": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "x_positie_balletje": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "y_positie_balletje": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "positie_peddel_links": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "positie_peddel_rechts": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "aanraking_balletje_peddel": {
+            "direction": "O"
+          },
+          "aanraking_balletje_peddel_zone": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "aanraking_balletje_zijkant": {
+            "direction": "O"
+          },
+          "aanraking_balletje_bovenonder": {
+            "direction": "O"
+          }
+        }
+      },
+      "positie_balletje_0": {
+        "vlnv": "xilinx.com:module_ref:positie_balletje:1.0",
+        "xci_name": "design_1_positie_balletje_0_0",
+        "xci_path": "ip\\design_1_positie_balletje_0_0\\design_1_positie_balletje_0_0.xci",
+        "inst_hier_path": "positie_balletje_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "positie_balletje",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "screen_width": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "screen_heigth": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "clk_slow": {
+            "direction": "I"
+          },
+          "angle_index": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "running": {
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "peddel_touch": {
+            "direction": "I"
+          },
+          "side_touch": {
+            "direction": "I"
+          },
+          "top_bottom_touch": {
+            "direction": "I"
+          },
+          "pos_x_out": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "pos_y_out": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          }
+        }
+      },
+      "tekenen_balletje": {
+        "vlnv": "xilinx.com:module_ref:tekenen_object:1.0",
+        "xci_name": "design_1_tekenen_object_0_0",
+        "xci_path": "ip\\design_1_tekenen_object_0_0\\design_1_tekenen_object_0_0.xci",
+        "inst_hier_path": "tekenen_balletje",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "tekenen_object",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "pixel_value_i": {
+            "direction": "I"
+          },
+          "pxlCLK_i": {
+            "direction": "I"
+          },
+          "HSYNC_i": {
+            "direction": "I"
+          },
+          "VSYNC_i": {
+            "direction": "I"
+          },
+          "vpxl_i": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "hpxl_i": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "pos_x": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "pos_y": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "size_x": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "size_y": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "pixel_value_o": {
+            "direction": "O"
+          },
+          "HSYNC_o": {
+            "direction": "O"
+          },
+          "VSYNC_o": {
+            "direction": "O"
+          },
+          "vpxl_o": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "hpxl_o": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          }
+        }
+      },
+      "TEMP_tekenen_peddel_L": {
+        "vlnv": "xilinx.com:module_ref:tekenen_object:1.0",
+        "xci_name": "design_1_tekenen_object_0_1",
+        "xci_path": "ip\\design_1_tekenen_object_0_1\\design_1_tekenen_object_0_1.xci",
+        "inst_hier_path": "TEMP_tekenen_peddel_L",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "tekenen_object",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "pixel_value_i": {
+            "direction": "I"
+          },
+          "pxlCLK_i": {
+            "direction": "I"
+          },
+          "HSYNC_i": {
+            "direction": "I"
+          },
+          "VSYNC_i": {
+            "direction": "I"
+          },
+          "vpxl_i": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "hpxl_i": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "pos_x": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "pos_y": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "size_x": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "size_y": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "pixel_value_o": {
+            "direction": "O"
+          },
+          "HSYNC_o": {
+            "direction": "O"
+          },
+          "VSYNC_o": {
+            "direction": "O"
+          },
+          "vpxl_o": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "hpxl_o": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          }
+        }
+      },
+      "Coor_PixelR_0": {
+        "vlnv": "xilinx.com:module_ref:Coor_PixelR:1.0",
+        "xci_name": "design_1_Coor_PixelR_0_0",
+        "xci_path": "ip\\design_1_Coor_PixelR_0_0\\design_1_Coor_PixelR_0_0.xci",
+        "inst_hier_path": "Coor_PixelR_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Coor_PixelR",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "PixelClock": {
+            "direction": "I"
+          },
+          "HSYNC_i": {
+            "direction": "I"
+          },
+          "VSYNC_i": {
+            "direction": "I"
+          },
+          "PixelSig_in": {
+            "direction": "I"
+          },
+          "VPixel": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "HPixel": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "CR_in": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "BreetePeddels": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "HoogtePeddels": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "Offcet": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "CoorR_yboven_out": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "PixelSig_out": {
+            "direction": "O"
+          },
+          "HSYNC_o": {
+            "direction": "O"
+          },
+          "VSYNC_o": {
+            "direction": "O"
+          },
+          "VPixel_out": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "HPixel_out": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          }
+        }
+      },
+      "lijn_tekenen_0": {
+        "vlnv": "xilinx.com:module_ref:lijn_tekenen:1.0",
+        "xci_name": "design_1_lijn_tekenen_0_0",
+        "xci_path": "ip\\design_1_lijn_tekenen_0_0\\design_1_lijn_tekenen_0_0.xci",
+        "inst_hier_path": "lijn_tekenen_0",
+        "parameters": {
+          "width_line": {
+            "value": "5"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "lijn_tekenen",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "pixel_value_i": {
+            "direction": "I"
+          },
+          "pxlCLK_i": {
+            "direction": "I"
+          },
+          "HSYNC_i": {
+            "direction": "I"
+          },
+          "VSYNC_i": {
+            "direction": "I"
+          },
+          "vpxl_i": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "hpxl_i": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "screen_x": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "screen_y": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "pixel_value_o": {
+            "direction": "O"
+          },
+          "HSYNC_o": {
+            "direction": "O"
+          },
+          "VSYNC_o": {
+            "direction": "O"
+          },
+          "vpxl_o": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "hpxl_o": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          }
+        }
+      },
+      "constants": {
+        "ports": {
+          "balletje_grootte": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "peddels_breedte": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "peddels_hoogte": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "peddels_x_offset": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "scherm_breedte": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "scherm_hoogte": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          }
+        },
+        "components": {
+          "peddels_hoogte": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "design_1_xlconstant_0_0",
+            "xci_path": "ip\\design_1_xlconstant_0_0\\design_1_xlconstant_0_0.xci",
+            "inst_hier_path": "constants/peddels_hoogte",
+            "parameters": {
+              "CONST_VAL": {
+                "value": "80"
+              },
+              "CONST_WIDTH": {
+                "value": "10"
+              }
+            }
+          },
+          "peddels_breedte": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "design_1_peddels_hoogte_0",
+            "xci_path": "ip\\design_1_peddels_hoogte_0\\design_1_peddels_hoogte_0.xci",
+            "inst_hier_path": "constants/peddels_breedte",
+            "parameters": {
+              "CONST_VAL": {
+                "value": "20"
+              },
+              "CONST_WIDTH": {
+                "value": "10"
+              }
+            }
+          },
+          "scherm_hoogte": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "design_1_peddels_hoogte_1",
+            "xci_path": "ip\\design_1_peddels_hoogte_1\\design_1_peddels_hoogte_1.xci",
+            "inst_hier_path": "constants/scherm_hoogte",
+            "parameters": {
+              "CONST_VAL": {
+                "value": "480"
+              },
+              "CONST_WIDTH": {
+                "value": "10"
+              }
+            }
+          },
+          "peddels_x_offset": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "design_1_peddels_hoogte_2",
+            "xci_path": "ip\\design_1_peddels_hoogte_2\\design_1_peddels_hoogte_2.xci",
+            "inst_hier_path": "constants/peddels_x_offset",
+            "parameters": {
+              "CONST_VAL": {
+                "value": "0"
+              },
+              "CONST_WIDTH": {
+                "value": "10"
+              }
+            }
+          },
+          "scherm_breedte": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "design_1_peddels_hoogte_3",
+            "xci_path": "ip\\design_1_peddels_hoogte_3\\design_1_peddels_hoogte_3.xci",
+            "inst_hier_path": "constants/scherm_breedte",
+            "parameters": {
+              "CONST_VAL": {
+                "value": "640"
+              },
+              "CONST_WIDTH": {
+                "value": "10"
+              }
+            }
+          },
+          "balletje_grootte": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "design_1_peddels_hoogte_4",
+            "xci_path": "ip\\design_1_peddels_hoogte_4\\design_1_peddels_hoogte_4.xci",
+            "inst_hier_path": "constants/balletje_grootte",
+            "parameters": {
+              "CONST_VAL": {
+                "value": "8"
+              },
+              "CONST_WIDTH": {
+                "value": "10"
+              }
+            }
+          }
+        },
+        "nets": {
+          "balletje_grootte_dout": {
+            "ports": [
+              "balletje_grootte/dout",
+              "balletje_grootte"
+            ]
+          },
+          "peddels_breedte_dout": {
+            "ports": [
+              "peddels_breedte/dout",
+              "peddels_breedte"
+            ]
+          },
+          "peddels_hoogte_dout": {
+            "ports": [
+              "peddels_hoogte/dout",
+              "peddels_hoogte"
+            ]
+          },
+          "peddels_x_offset_dout": {
+            "ports": [
+              "peddels_x_offset/dout",
+              "peddels_x_offset"
+            ]
+          },
+          "scherm_breedte_dout": {
+            "ports": [
+              "scherm_breedte/dout",
+              "scherm_breedte"
+            ]
+          },
+          "scherm_hoogte_dout": {
+            "ports": [
+              "scherm_hoogte/dout",
+              "scherm_hoogte"
+            ]
+          }
+        }
+      },
+      "score_tekenen_0": {
+        "vlnv": "xilinx.com:module_ref:score_tekenen:1.0",
+        "xci_name": "design_1_score_tekenen_0_0",
+        "xci_path": "ip\\design_1_score_tekenen_0_0\\design_1_score_tekenen_0_0.xci",
+        "inst_hier_path": "score_tekenen_0",
+        "parameters": {
+          "distance": {
+            "value": "20"
+          },
+          "size": {
+            "value": "5"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "score_tekenen",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "pixel_value_i": {
+            "direction": "I"
+          },
+          "pxlCLK_i": {
+            "direction": "I"
+          },
+          "HSYNC_i": {
+            "direction": "I"
+          },
+          "VSYNC_i": {
+            "direction": "I"
+          },
+          "vpxl_i": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "hpxl_i": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "score_l_i": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "score_r_i": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "screen_width_i": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "screen_height_i": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "pixel_value_o": {
+            "direction": "O"
+          },
+          "HSYNC_o": {
+            "direction": "O"
+          },
+          "VSYNC_o": {
+            "direction": "O"
+          },
+          "vpxl_o": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "hpxl_o": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Coor_PixelR_0_CoorR_yboven_out": {
+        "ports": [
+          "Coor_PixelR_0/CoorR_yboven_out",
+          "aanraking_herkennen_0/positie_peddel_rechts"
+        ]
+      },
+      "Coor_PixelR_0_HPixel_out": {
+        "ports": [
+          "Coor_PixelR_0/HPixel_out",
+          "lijn_tekenen_0/hpxl_i"
+        ]
+      },
+      "Coor_PixelR_0_HSYNC_o": {
+        "ports": [
+          "Coor_PixelR_0/HSYNC_o",
+          "lijn_tekenen_0/HSYNC_i"
+        ]
+      },
+      "Coor_PixelR_0_PixelSig_out": {
+        "ports": [
+          "Coor_PixelR_0/PixelSig_out",
+          "lijn_tekenen_0/pixel_value_i"
+        ]
+      },
+      "Coor_PixelR_0_VPixel_out": {
+        "ports": [
+          "Coor_PixelR_0/VPixel_out",
+          "lijn_tekenen_0/vpxl_i"
+        ]
+      },
+      "Coor_PixelR_0_VSYNC_o": {
+        "ports": [
+          "Coor_PixelR_0/VSYNC_o",
+          "lijn_tekenen_0/VSYNC_i"
+        ]
+      },
+      "TEMP_positie_peddels_position_x_1": {
+        "ports": [
+          "TEMP_positie_peddels/position_x_1",
+          "TEMP_tekenen_peddel_L/pos_x"
+        ]
+      },
+      "TEMP_tekenen_peddel_L_HSYNC_o": {
+        "ports": [
+          "TEMP_tekenen_peddel_L/HSYNC_o",
+          "Coor_PixelR_0/HSYNC_i"
+        ]
+      },
+      "TEMP_tekenen_peddel_L_VSYNC_o": {
+        "ports": [
+          "TEMP_tekenen_peddel_L/VSYNC_o",
+          "Coor_PixelR_0/VSYNC_i"
+        ]
+      },
+      "TEMP_tekenen_peddel_L_hpxl_o": {
+        "ports": [
+          "TEMP_tekenen_peddel_L/hpxl_o",
+          "Coor_PixelR_0/HPixel"
+        ]
+      },
+      "TEMP_tekenen_peddel_L_pixel_value_o": {
+        "ports": [
+          "TEMP_tekenen_peddel_L/pixel_value_o",
+          "Coor_PixelR_0/PixelSig_in"
+        ]
+      },
+      "TEMP_tekenen_peddel_L_vpxl_o": {
+        "ports": [
+          "TEMP_tekenen_peddel_L/vpxl_o",
+          "Coor_PixelR_0/VPixel"
+        ]
+      },
+      "aanraking_herkennen_0_aanraking_balletje_bovenonder": {
+        "ports": [
+          "aanraking_herkennen_0/aanraking_balletje_bovenonder",
+          "positie_balletje_0/top_bottom_touch"
+        ]
+      },
+      "aanraking_herkennen_0_aanraking_balletje_peddel": {
+        "ports": [
+          "aanraking_herkennen_0/aanraking_balletje_peddel",
+          "positie_balletje_0/peddel_touch"
+        ]
+      },
+      "aanraking_herkennen_0_aanraking_balletje_peddel_zone": {
+        "ports": [
+          "aanraking_herkennen_0/aanraking_balletje_peddel_zone",
+          "positie_balletje_0/angle_index"
+        ]
+      },
+      "aanraking_herkennen_0_aanraking_balletje_zijkant": {
+        "ports": [
+          "aanraking_herkennen_0/aanraking_balletje_zijkant",
+          "positie_balletje_0/side_touch"
+        ]
+      },
+      "beeld_generator_0_B": {
+        "ports": [
+          "beeld_generator_0/B",
+          "tekenen_balletje/pixel_value_i"
+        ]
+      },
+      "beeld_generator_0_HSYNC": {
+        "ports": [
+          "beeld_generator_0/HSYNC",
+          "tekenen_balletje/HSYNC_i"
+        ]
+      },
+      "beeld_generator_0_VSYNC": {
+        "ports": [
+          "beeld_generator_0/VSYNC",
+          "tekenen_balletje/VSYNC_i"
+        ]
+      },
+      "beeld_generator_0_hpxl": {
+        "ports": [
+          "beeld_generator_0/hpxl",
+          "tekenen_balletje/hpxl_i"
+        ]
+      },
+      "beeld_generator_0_pxlCLK": {
+        "ports": [
+          "beeld_generator_0/pxlCLK",
+          "tekenen_balletje/pxlCLK_i",
+          "TEMP_tekenen_peddel_L/pxlCLK_i",
+          "Coor_PixelR_0/PixelClock",
+          "lijn_tekenen_0/pxlCLK_i",
+          "score_tekenen_0/pxlCLK_i"
+        ]
+      },
+      "beeld_generator_0_vpxl": {
+        "ports": [
+          "beeld_generator_0/vpxl",
+          "tekenen_balletje/vpxl_i"
+        ]
+      },
+      "choice_1_0_1": {
+        "ports": [
+          "controllers_choice_1",
+          "ontvangen_controllers/choice_1_0"
+        ]
+      },
+      "choice_2_0_1": {
+        "ports": [
+          "controllers_choice_2",
+          "ontvangen_controllers/choice_2_0"
+        ]
+      },
+      "clk_divider_0_clk_out": {
+        "ports": [
+          "clk_divider_0/clk_out",
+          "positie_balletje_0/clk_slow"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "ontvangen_controllers/clk",
+          "clk_divider_0/clk_in"
+        ]
+      },
+      "clk_wiz_0_clk_out2": {
+        "ports": [
+          "clk_wiz_0/clk_out2",
+          "beeld_generator_0/CLK"
+        ]
+      },
+      "constants_dout": {
+        "ports": [
+          "constants/balletje_grootte",
+          "aanraking_herkennen_0/grootte_balletje",
+          "tekenen_balletje/size_x",
+          "tekenen_balletje/size_y"
+        ]
+      },
+      "constants_dout1": {
+        "ports": [
+          "constants/peddels_breedte",
+          "aanraking_herkennen_0/breedte_peddels",
+          "TEMP_positie_peddels/object_width",
+          "TEMP_tekenen_peddel_L/size_x",
+          "Coor_PixelR_0/BreetePeddels"
+        ]
+      },
+      "constants_dout2": {
+        "ports": [
+          "constants/peddels_hoogte",
+          "aanraking_herkennen_0/hoogte_peddels",
+          "TEMP_positie_peddels/object_height",
+          "TEMP_tekenen_peddel_L/size_y",
+          "Coor_PixelR_0/HoogtePeddels"
+        ]
+      },
+      "constants_dout3": {
+        "ports": [
+          "constants/peddels_x_offset",
+          "aanraking_herkennen_0/offset_peddels",
+          "Coor_PixelR_0/Offcet"
+        ]
+      },
+      "constants_dout4": {
+        "ports": [
+          "constants/scherm_breedte",
+          "aanraking_herkennen_0/breedte_scherm",
+          "TEMP_positie_peddels/size_window_width",
+          "positie_balletje_0/screen_width",
+          "score_tekenen_0/screen_width_i"
+        ]
+      },
+      "constants_dout5": {
+        "ports": [
+          "constants/scherm_hoogte",
+          "aanraking_herkennen_0/hoogte_scherm",
+          "TEMP_positie_peddels/size_window_height",
+          "positie_balletje_0/screen_heigth",
+          "score_tekenen_0/screen_height_i"
+        ]
+      },
+      "enable_0_1": {
+        "ports": [
+          "enable",
+          "ontvangen_controllers/enable_0",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "freq_in_0_1": {
+        "ports": [
+          "controller_inductief_in",
+          "ontvangen_controllers/freq_in_0"
+        ]
+      },
+      "lijn_tekenen_0_HSYNC_o": {
+        "ports": [
+          "lijn_tekenen_0/HSYNC_o",
+          "score_tekenen_0/HSYNC_i"
+        ]
+      },
+      "lijn_tekenen_0_VSYNC_o": {
+        "ports": [
+          "lijn_tekenen_0/VSYNC_o",
+          "score_tekenen_0/VSYNC_i"
+        ]
+      },
+      "lijn_tekenen_0_hpxl_o": {
+        "ports": [
+          "lijn_tekenen_0/hpxl_o",
+          "score_tekenen_0/hpxl_i"
+        ]
+      },
+      "lijn_tekenen_0_pixel_value_o": {
+        "ports": [
+          "lijn_tekenen_0/pixel_value_o",
+          "score_tekenen_0/pixel_value_i"
+        ]
+      },
+      "lijn_tekenen_0_vpxl_o": {
+        "ports": [
+          "lijn_tekenen_0/vpxl_o",
+          "score_tekenen_0/vpxl_i"
+        ]
+      },
+      "object_positie_0_position_y_1": {
+        "ports": [
+          "TEMP_positie_peddels/position_y_1",
+          "aanraking_herkennen_0/positie_peddel_links",
+          "TEMP_tekenen_peddel_L/pos_y"
+        ]
+      },
+      "ontvangen_controllers_active": {
+        "ports": [
+          "ontvangen_controllers/active",
+          "util_vector_logic_0/Op2"
+        ]
+      },
+      "ontvangen_controllers_controller_output_1": {
+        "ports": [
+          "ontvangen_controllers/controller_output_1",
+          "TEMP_positie_peddels/value_1"
+        ]
+      },
+      "ontvangen_controllers_controller_output_2": {
+        "ports": [
+          "ontvangen_controllers/controller_output_2",
+          "TEMP_positie_peddels/value_2",
+          "Coor_PixelR_0/CR_in"
+        ]
+      },
+      "ontvangen_controllers_trigger_0": {
+        "ports": [
+          "ontvangen_controllers/trigger_0",
+          "controller_ultrasoon_trigger"
+        ]
+      },
+      "positie_balletje_0_pos_x_out": {
+        "ports": [
+          "positie_balletje_0/pos_x_out",
+          "aanraking_herkennen_0/x_positie_balletje",
+          "tekenen_balletje/pos_x"
+        ]
+      },
+      "positie_balletje_0_pos_y_out": {
+        "ports": [
+          "positie_balletje_0/pos_y_out",
+          "aanraking_herkennen_0/y_positie_balletje",
+          "tekenen_balletje/pos_y"
+        ]
+      },
+      "reset_rtl_1": {
+        "ports": [
+          "reset",
+          "clk_wiz_0/reset",
+          "ontvangen_controllers/reset",
+          "clk_divider_0/reset",
+          "beeld_generator_0/RST",
+          "positie_balletje_0/reset"
+        ]
+      },
+      "score_tekenen_0_HSYNC_o": {
+        "ports": [
+          "score_tekenen_0/HSYNC_o",
+          "display_HSYNC"
+        ]
+      },
+      "score_tekenen_0_VSYNC_o": {
+        "ports": [
+          "score_tekenen_0/VSYNC_o",
+          "display_VSYNC"
+        ]
+      },
+      "score_tekenen_0_pixel_value_o": {
+        "ports": [
+          "score_tekenen_0/pixel_value_o",
+          "display_B",
+          "display_G",
+          "display_R"
+        ]
+      },
+      "sensor_0_1": {
+        "ports": [
+          "controller_ultrasoon_in",
+          "ontvangen_controllers/sensor_0"
+        ]
+      },
+      "signal_connected_0_1": {
+        "ports": [
+          "controller_draadloos_connected",
+          "ontvangen_controllers/signal_connected_0"
+        ]
+      },
+      "signal_down_0_1": {
+        "ports": [
+          "controller_draadloos_down",
+          "ontvangen_controllers/signal_down_0"
+        ]
+      },
+      "signal_up_0_1": {
+        "ports": [
+          "controller_draadloos_up",
+          "ontvangen_controllers/signal_up_0"
+        ]
+      },
+      "sys_clock_1": {
+        "ports": [
+          "sys_clock",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "tekenen_balletje_HSYNC_o": {
+        "ports": [
+          "tekenen_balletje/HSYNC_o",
+          "TEMP_tekenen_peddel_L/HSYNC_i"
+        ]
+      },
+      "tekenen_balletje_VSYNC_o": {
+        "ports": [
+          "tekenen_balletje/VSYNC_o",
+          "TEMP_tekenen_peddel_L/VSYNC_i"
+        ]
+      },
+      "tekenen_balletje_hpxl_o": {
+        "ports": [
+          "tekenen_balletje/hpxl_o",
+          "TEMP_tekenen_peddel_L/hpxl_i"
+        ]
+      },
+      "tekenen_balletje_pixel_value_o": {
+        "ports": [
+          "tekenen_balletje/pixel_value_o",
+          "TEMP_tekenen_peddel_L/pixel_value_i"
+        ]
+      },
+      "tekenen_balletje_vpxl_o": {
+        "ports": [
+          "tekenen_balletje/vpxl_o",
+          "TEMP_tekenen_peddel_L/vpxl_i"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "status_running",
+          "positie_balletje_0/running"
+        ]
+      }
+    }
+  }
+}
