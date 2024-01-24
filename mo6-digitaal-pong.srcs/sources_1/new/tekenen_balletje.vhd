@@ -10,8 +10,10 @@ entity tekenen_object is
         pxlCLK_i, HSYNC_i, VSYNC_i  : in STD_LOGIC;
         vpxl_i, hpxl_i              : in STD_LOGIC_VECTOR (9 downto 0);
         -- object parameters
-        pos_x, pos_y                : in STD_LOGIC_VECTOR (9 downto 0);
-        size_x, size_y              : in STD_LOGIC_VECTOR (9 downto 0);
+        pos_x                       : in STD_LOGIC_VECTOR (9 downto 0);
+        pos_y                       : in STD_LOGIC_VECTOR (8 downto 0);
+        size_x                      : in STD_LOGIC_VECTOR (9 downto 0);
+        size_y                      : in STD_LOGIC_VECTOR (8 downto 0);
         -- output pixel value
         pixel_value_o               : out STD_LOGIC;
         -- pass through signals

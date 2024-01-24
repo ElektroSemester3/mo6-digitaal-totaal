@@ -57,8 +57,8 @@
 #include "systemc.h"
 class design_1_peddels_hoogte_4 : public sc_module {
   public:
-xlconstant_v1_1_7<10,8> mod;
-  sc_out< sc_bv<10> > dout;
+xlconstant_v1_1_7<9,8> mod;
+  sc_out< sc_bv<9> > dout;
 design_1_peddels_hoogte_4 (sc_core::sc_module_name name);
   };
 

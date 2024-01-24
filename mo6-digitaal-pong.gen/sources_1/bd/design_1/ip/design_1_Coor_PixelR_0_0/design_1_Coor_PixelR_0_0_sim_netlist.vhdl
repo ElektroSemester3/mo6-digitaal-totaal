@@ -2,7 +2,7 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Wed Jan 24 02:19:19 2024
+-- Date        : Wed Jan 24 10:41:59 2024
 -- Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_Coor_PixelR_0_0/design_1_Coor_PixelR_0_0_sim_netlist.vhdl
@@ -17,16 +17,16 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_Coor_PixelR_0_0_Coor_PixelR is
   port (
-    CoorR_yboven_out : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    CoorR_yboven_out : out STD_LOGIC_VECTOR ( 8 downto 0 );
     HSYNC_o : out STD_LOGIC;
     VSYNC_o : out STD_LOGIC;
     VPixel_out : out STD_LOGIC_VECTOR ( 9 downto 0 );
     HPixel_out : out STD_LOGIC_VECTOR ( 9 downto 0 );
     PixelSig_out : out STD_LOGIC;
     CR_in : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    HoogtePeddels : in STD_LOGIC_VECTOR ( 8 downto 0 );
     BreetePeddels : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    Offcet : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    HoogtePeddels : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    Offcet : in STD_LOGIC_VECTOR ( 8 downto 0 );
     PixelClock : in STD_LOGIC;
     HSYNC_i : in STD_LOGIC;
     VSYNC_i : in STD_LOGIC;
@@ -222,7 +222,8 @@ architecture STRUCTURE of design_1_Coor_PixelR_0_0_Coor_PixelR is
   signal \CR_velue_Hoogte[7]_i_1_n_0\ : STD_LOGIC;
   signal \CR_velue_Hoogte[8]_i_1_n_0\ : STD_LOGIC;
   signal \CR_velue_Hoogte[9]_i_1_n_0\ : STD_LOGIC;
-  signal CR_velue_times0 : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal CR_velue_times : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal CR_velue_times0 : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal \CR_velue_times[3]_i_10_n_0\ : STD_LOGIC;
   signal \CR_velue_times[3]_i_2_n_0\ : STD_LOGIC;
   signal \CR_velue_times[3]_i_3_n_0\ : STD_LOGIC;
@@ -240,6 +241,7 @@ architecture STRUCTURE of design_1_Coor_PixelR_0_0_Coor_PixelR is
   signal \CR_velue_times[7]_i_15_n_0\ : STD_LOGIC;
   signal \CR_velue_times[7]_i_16_n_0\ : STD_LOGIC;
   signal \CR_velue_times[7]_i_17_n_0\ : STD_LOGIC;
+  signal \CR_velue_times[7]_i_18_n_0\ : STD_LOGIC;
   signal \CR_velue_times[7]_i_2_n_0\ : STD_LOGIC;
   signal \CR_velue_times[7]_i_3_n_0\ : STD_LOGIC;
   signal \CR_velue_times[7]_i_4_n_0\ : STD_LOGIC;
@@ -248,14 +250,13 @@ architecture STRUCTURE of design_1_Coor_PixelR_0_0_Coor_PixelR is
   signal \CR_velue_times[7]_i_7_n_0\ : STD_LOGIC;
   signal \CR_velue_times[7]_i_8_n_0\ : STD_LOGIC;
   signal \CR_velue_times[7]_i_9_n_0\ : STD_LOGIC;
-  signal \CR_velue_times[9]_i_2_n_0\ : STD_LOGIC;
-  signal \CR_velue_times[9]_i_3_n_0\ : STD_LOGIC;
-  signal \CR_velue_times[9]_i_4_n_0\ : STD_LOGIC;
-  signal \CR_velue_times[9]_i_5_n_0\ : STD_LOGIC;
-  signal \CR_velue_times[9]_i_6_n_0\ : STD_LOGIC;
-  signal \CR_velue_times[9]_i_7_n_0\ : STD_LOGIC;
-  signal \CR_velue_times[9]_i_8_n_0\ : STD_LOGIC;
-  signal \CR_velue_times[9]_i_9_n_0\ : STD_LOGIC;
+  signal \CR_velue_times[8]_i_2_n_0\ : STD_LOGIC;
+  signal \CR_velue_times[8]_i_3_n_0\ : STD_LOGIC;
+  signal \CR_velue_times[8]_i_4_n_0\ : STD_LOGIC;
+  signal \CR_velue_times[8]_i_5_n_0\ : STD_LOGIC;
+  signal \CR_velue_times[8]_i_6_n_0\ : STD_LOGIC;
+  signal \CR_velue_times[8]_i_7_n_0\ : STD_LOGIC;
+  signal \CR_velue_times[8]_i_8_n_0\ : STD_LOGIC;
   signal \CR_velue_times_reg[3]_i_1_n_0\ : STD_LOGIC;
   signal \CR_velue_times_reg[3]_i_1_n_1\ : STD_LOGIC;
   signal \CR_velue_times_reg[3]_i_1_n_2\ : STD_LOGIC;
@@ -264,17 +265,6 @@ architecture STRUCTURE of design_1_Coor_PixelR_0_0_Coor_PixelR is
   signal \CR_velue_times_reg[7]_i_1_n_1\ : STD_LOGIC;
   signal \CR_velue_times_reg[7]_i_1_n_2\ : STD_LOGIC;
   signal \CR_velue_times_reg[7]_i_1_n_3\ : STD_LOGIC;
-  signal \CR_velue_times_reg[9]_i_1_n_3\ : STD_LOGIC;
-  signal \CR_velue_times_reg_n_0_[0]\ : STD_LOGIC;
-  signal \CR_velue_times_reg_n_0_[1]\ : STD_LOGIC;
-  signal \CR_velue_times_reg_n_0_[2]\ : STD_LOGIC;
-  signal \CR_velue_times_reg_n_0_[3]\ : STD_LOGIC;
-  signal \CR_velue_times_reg_n_0_[4]\ : STD_LOGIC;
-  signal \CR_velue_times_reg_n_0_[5]\ : STD_LOGIC;
-  signal \CR_velue_times_reg_n_0_[6]\ : STD_LOGIC;
-  signal \CR_velue_times_reg_n_0_[7]\ : STD_LOGIC;
-  signal \CR_velue_times_reg_n_0_[8]\ : STD_LOGIC;
-  signal \CR_velue_times_reg_n_0_[9]\ : STD_LOGIC;
   signal CoorR : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal \CoorR[1]_i_1_n_0\ : STD_LOGIC;
   signal \CoorR[2]_i_1_n_0\ : STD_LOGIC;
@@ -286,27 +276,26 @@ architecture STRUCTURE of design_1_Coor_PixelR_0_0_Coor_PixelR is
   signal \CoorR[8]_i_1_n_0\ : STD_LOGIC;
   signal \CoorR[8]_i_2_n_0\ : STD_LOGIC;
   signal \CoorR[8]_i_3_n_0\ : STD_LOGIC;
-  signal CoorR_yboven : STD_LOGIC_VECTOR ( 9 downto 0 );
-  signal CoorR_yboven0 : STD_LOGIC_VECTOR ( 9 downto 0 );
-  signal \CoorR_yboven[3]_i_2_n_0\ : STD_LOGIC;
-  signal \CoorR_yboven[3]_i_3_n_0\ : STD_LOGIC;
-  signal \CoorR_yboven[3]_i_4_n_0\ : STD_LOGIC;
-  signal \CoorR_yboven[3]_i_5_n_0\ : STD_LOGIC;
-  signal \CoorR_yboven[7]_i_2_n_0\ : STD_LOGIC;
-  signal \CoorR_yboven[7]_i_3_n_0\ : STD_LOGIC;
-  signal \CoorR_yboven[7]_i_4_n_0\ : STD_LOGIC;
-  signal \CoorR_yboven[7]_i_5_n_0\ : STD_LOGIC;
-  signal \CoorR_yboven[9]_i_2_n_0\ : STD_LOGIC;
-  signal \CoorR_yboven[9]_i_3_n_0\ : STD_LOGIC;
-  signal \CoorR_yboven_reg[3]_i_1_n_0\ : STD_LOGIC;
-  signal \CoorR_yboven_reg[3]_i_1_n_1\ : STD_LOGIC;
-  signal \CoorR_yboven_reg[3]_i_1_n_2\ : STD_LOGIC;
-  signal \CoorR_yboven_reg[3]_i_1_n_3\ : STD_LOGIC;
-  signal \CoorR_yboven_reg[7]_i_1_n_0\ : STD_LOGIC;
-  signal \CoorR_yboven_reg[7]_i_1_n_1\ : STD_LOGIC;
-  signal \CoorR_yboven_reg[7]_i_1_n_2\ : STD_LOGIC;
-  signal \CoorR_yboven_reg[7]_i_1_n_3\ : STD_LOGIC;
-  signal \CoorR_yboven_reg[9]_i_1_n_3\ : STD_LOGIC;
+  signal \CoorR[8]_i_4_n_0\ : STD_LOGIC;
+  signal CoorR_yboven : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal CoorR_yboven0 : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal \CoorR_yboven0_carry__0_i_1_n_0\ : STD_LOGIC;
+  signal \CoorR_yboven0_carry__0_i_2_n_0\ : STD_LOGIC;
+  signal \CoorR_yboven0_carry__0_i_3_n_0\ : STD_LOGIC;
+  signal \CoorR_yboven0_carry__0_i_4_n_0\ : STD_LOGIC;
+  signal \CoorR_yboven0_carry__0_n_0\ : STD_LOGIC;
+  signal \CoorR_yboven0_carry__0_n_1\ : STD_LOGIC;
+  signal \CoorR_yboven0_carry__0_n_2\ : STD_LOGIC;
+  signal \CoorR_yboven0_carry__0_n_3\ : STD_LOGIC;
+  signal \CoorR_yboven0_carry__1_i_1_n_0\ : STD_LOGIC;
+  signal CoorR_yboven0_carry_i_1_n_0 : STD_LOGIC;
+  signal CoorR_yboven0_carry_i_2_n_0 : STD_LOGIC;
+  signal CoorR_yboven0_carry_i_3_n_0 : STD_LOGIC;
+  signal CoorR_yboven0_carry_i_4_n_0 : STD_LOGIC;
+  signal CoorR_yboven0_carry_n_0 : STD_LOGIC;
+  signal CoorR_yboven0_carry_n_1 : STD_LOGIC;
+  signal CoorR_yboven0_carry_n_2 : STD_LOGIC;
+  signal CoorR_yboven0_carry_n_3 : STD_LOGIC;
   signal PixelSig_out1 : STD_LOGIC;
   signal \PixelSig_out1_carry__0_i_1_n_0\ : STD_LOGIC;
   signal \PixelSig_out1_carry__0_i_2_n_0\ : STD_LOGIC;
@@ -341,7 +330,6 @@ architecture STRUCTURE of design_1_Coor_PixelR_0_0_Coor_PixelR is
   signal PixelSig_out30_in : STD_LOGIC;
   signal \PixelSig_out3_carry__0_i_1_n_0\ : STD_LOGIC;
   signal \PixelSig_out3_carry__0_i_2_n_0\ : STD_LOGIC;
-  signal \PixelSig_out3_carry__0_i_3_n_0\ : STD_LOGIC;
   signal PixelSig_out3_carry_i_10_n_0 : STD_LOGIC;
   signal PixelSig_out3_carry_i_1_n_0 : STD_LOGIC;
   signal PixelSig_out3_carry_i_2_n_0 : STD_LOGIC;
@@ -494,10 +482,10 @@ architecture STRUCTURE of design_1_Coor_PixelR_0_0_Coor_PixelR is
   signal \NLW_CR_velue_H_gedeeld_100_reg[3]_i_3_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 2 to 2 );
   signal \NLW_CR_velue_H_gedeeld_100_reg[3]_i_3_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   signal \NLW_CR_velue_H_gedeeld_100_reg[3]_i_4_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal \NLW_CR_velue_times_reg[9]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
-  signal \NLW_CR_velue_times_reg[9]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
-  signal \NLW_CoorR_yboven_reg[9]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
-  signal \NLW_CoorR_yboven_reg[9]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
+  signal \NLW_CR_velue_times_reg[8]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_CR_velue_times_reg[8]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_CoorR_yboven0_carry__1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_CoorR_yboven0_carry__1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal NLW_PixelSig_out1_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_PixelSig_out1_carry__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \NLW_PixelSig_out1_carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -525,36 +513,38 @@ architecture STRUCTURE of design_1_Coor_PixelR_0_0_Coor_PixelR is
   attribute ADDER_THRESHOLD of \CR_velue1__0_carry__0\ : label is 35;
   attribute ADDER_THRESHOLD of \CR_velue1__0_carry__1\ : label is 35;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \CR_velue[0]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \CR_velue[1]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \CR_velue[3]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \CR_velue[5]_i_2\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \CR_velue[6]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \CR_velue[7]_i_2\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \CR_velue[0]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \CR_velue[1]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \CR_velue[3]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \CR_velue[5]_i_2\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \CR_velue[6]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \CR_velue[7]_i_2\ : label is "soft_lutpair3";
   attribute HLUTNM : string;
   attribute HLUTNM of \CR_velue_H_gedeeld_100[3]_i_15\ : label is "lutpair0";
   attribute HLUTNM of \CR_velue_H_gedeeld_100[3]_i_19\ : label is "lutpair0";
   attribute ADDER_THRESHOLD of \CR_velue_H_gedeeld_100_reg[3]_i_2\ : label is 35;
   attribute ADDER_THRESHOLD of \CR_velue_H_gedeeld_100_reg[3]_i_4\ : label is 35;
-  attribute SOFT_HLUTNM of \CR_velue_Hoogte[6]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \CR_velue_Hoogte[7]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \CR_velue_Hoogte[8]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \CR_velue_Hoogte[9]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \CR_velue_Hoogte[6]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \CR_velue_Hoogte[7]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \CR_velue_Hoogte[8]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \CR_velue_Hoogte[9]_i_1\ : label is "soft_lutpair7";
   attribute SOFT_HLUTNM of \CR_velue_times[3]_i_10\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \CR_velue_times[7]_i_17\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \CR_velue_times[7]_i_17\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \CR_velue_times[7]_i_18\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \CR_velue_times[8]_i_6\ : label is "soft_lutpair5";
   attribute METHODOLOGY_DRC_VIOS : string;
-  attribute METHODOLOGY_DRC_VIOS of \CR_velue_times_reg[3]_i_1\ : label is "{SYNTH-9 {cell *THIS*} {string 10x4}}";
-  attribute METHODOLOGY_DRC_VIOS of \CR_velue_times_reg[7]_i_1\ : label is "{SYNTH-9 {cell *THIS*} {string 10x4}}";
-  attribute METHODOLOGY_DRC_VIOS of \CR_velue_times_reg[9]_i_1\ : label is "{SYNTH-9 {cell *THIS*} {string 10x4}}";
-  attribute SOFT_HLUTNM of \CoorR[1]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \CoorR[2]_i_1\ : label is "soft_lutpair7";
+  attribute METHODOLOGY_DRC_VIOS of \CR_velue_times_reg[3]_i_1\ : label is "{SYNTH-9 {cell *THIS*} {string 9x4}}";
+  attribute METHODOLOGY_DRC_VIOS of \CR_velue_times_reg[7]_i_1\ : label is "{SYNTH-9 {cell *THIS*} {string 9x4}}";
+  attribute METHODOLOGY_DRC_VIOS of \CR_velue_times_reg[8]_i_1\ : label is "{SYNTH-9 {cell *THIS*} {string 9x4}}";
+  attribute SOFT_HLUTNM of \CoorR[2]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \CoorR[3]_i_1\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \CoorR[4]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \CoorR[7]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \CoorR[8]_i_2\ : label is "soft_lutpair5";
-  attribute ADDER_THRESHOLD of \CoorR_yboven_reg[3]_i_1\ : label is 35;
-  attribute ADDER_THRESHOLD of \CoorR_yboven_reg[7]_i_1\ : label is 35;
-  attribute ADDER_THRESHOLD of \CoorR_yboven_reg[9]_i_1\ : label is 35;
+  attribute SOFT_HLUTNM of \CoorR[7]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \CoorR[8]_i_2\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \CoorR[8]_i_3\ : label is "soft_lutpair4";
+  attribute ADDER_THRESHOLD of CoorR_yboven0_carry : label is 35;
+  attribute ADDER_THRESHOLD of \CoorR_yboven0_carry__0\ : label is 35;
+  attribute ADDER_THRESHOLD of \CoorR_yboven0_carry__1\ : label is 35;
   attribute COMPARATOR_THRESHOLD : integer;
   attribute COMPARATOR_THRESHOLD of PixelSig_out1_carry : label is 11;
   attribute COMPARATOR_THRESHOLD of \PixelSig_out1_carry__0\ : label is 11;
@@ -1714,25 +1704,24 @@ begin
     );
 \CR_velue_Hoogte[8]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"AAA9"
+      INIT => X"FE01"
     )
         port map (
-      I0 => HoogtePeddels(8),
-      I1 => HoogtePeddels(6),
-      I2 => HoogtePeddels(5),
-      I3 => HoogtePeddels(7),
+      I0 => HoogtePeddels(7),
+      I1 => HoogtePeddels(5),
+      I2 => HoogtePeddels(6),
+      I3 => HoogtePeddels(8),
       O => \CR_velue_Hoogte[8]_i_1_n_0\
     );
-\CR_velue_Hoogte[9]_i_1\: unisim.vcomponents.LUT5
+\CR_velue_Hoogte[9]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0001FFFE"
+      INIT => X"FFFE"
     )
         port map (
-      I0 => HoogtePeddels(8),
-      I1 => HoogtePeddels(6),
-      I2 => HoogtePeddels(5),
-      I3 => HoogtePeddels(7),
-      I4 => HoogtePeddels(9),
+      I0 => HoogtePeddels(7),
+      I1 => HoogtePeddels(5),
+      I2 => HoogtePeddels(6),
+      I3 => HoogtePeddels(8),
       O => \CR_velue_Hoogte[9]_i_1_n_0\
     );
 \CR_velue_Hoogte_reg[0]\: unisim.vcomponents.FDRE
@@ -2082,7 +2071,20 @@ begin
       I5 => CR_velue(3),
       O => \CR_velue_times[7]_i_15_n_0\
     );
-\CR_velue_times[7]_i_16\: unisim.vcomponents.LUT4
+\CR_velue_times[7]_i_16\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7888877787778777"
+    )
+        port map (
+      I0 => CR_velue_H_gedeeld_100(1),
+      I1 => CR_velue(6),
+      I2 => CR_velue(4),
+      I3 => CR_velue_H_gedeeld_100(3),
+      I4 => CR_velue(5),
+      I5 => CR_velue_H_gedeeld_100(2),
+      O => \CR_velue_times[7]_i_16_n_0\
+    );
+\CR_velue_times[7]_i_17\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"956A"
     )
@@ -2091,16 +2093,16 @@ begin
       I1 => CR_velue(4),
       I2 => CR_velue_H_gedeeld_100(0),
       I3 => \CR_velue_times[7]_i_14_n_0\,
-      O => \CR_velue_times[7]_i_16_n_0\
+      O => \CR_velue_times[7]_i_17_n_0\
     );
-\CR_velue_times[7]_i_17\: unisim.vcomponents.LUT2
+\CR_velue_times[7]_i_18\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"7"
     )
         port map (
       I0 => CR_velue(1),
       I1 => CR_velue_H_gedeeld_100(2),
-      O => \CR_velue_times[7]_i_17_n_0\
+      O => \CR_velue_times[7]_i_18_n_0\
     );
 \CR_velue_times[7]_i_2\: unisim.vcomponents.LUT4
     generic map(
@@ -2152,10 +2154,10 @@ begin
     )
         port map (
       I0 => \CR_velue_times[7]_i_2_n_0\,
-      I1 => \CR_velue_times[9]_i_5_n_0\,
+      I1 => \CR_velue_times[7]_i_16_n_0\,
       I2 => CR_velue_H_gedeeld_100(0),
       I3 => CR_velue(7),
-      I4 => \CR_velue_times[9]_i_6_n_0\,
+      I4 => \CR_velue_times[8]_i_3_n_0\,
       O => \CR_velue_times[7]_i_6_n_0\
     );
 \CR_velue_times[7]_i_7\: unisim.vcomponents.LUT5
@@ -2187,62 +2189,28 @@ begin
       INIT => X"95AA559555955595"
     )
         port map (
-      I0 => \CR_velue_times[7]_i_16_n_0\,
+      I0 => \CR_velue_times[7]_i_17_n_0\,
       I1 => CR_velue(2),
       I2 => CR_velue_H_gedeeld_100(1),
-      I3 => \CR_velue_times[7]_i_17_n_0\,
+      I3 => \CR_velue_times[7]_i_18_n_0\,
       I4 => CR_velue(0),
       I5 => CR_velue_H_gedeeld_100(3),
       O => \CR_velue_times[7]_i_9_n_0\
     );
-\CR_velue_times[9]_i_2\: unisim.vcomponents.LUT4
+\CR_velue_times[8]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8F08"
+      INIT => X"2DB4B4D2B4D2D24B"
     )
         port map (
-      I0 => CR_velue_H_gedeeld_100(0),
-      I1 => CR_velue(7),
-      I2 => \CR_velue_times[9]_i_5_n_0\,
-      I3 => \CR_velue_times[9]_i_6_n_0\,
-      O => \CR_velue_times[9]_i_2_n_0\
+      I0 => \CR_velue_times[8]_i_3_n_0\,
+      I1 => \CR_velue_times[8]_i_4_n_0\,
+      I2 => \CR_velue_times[8]_i_5_n_0\,
+      I3 => \CR_velue_times[8]_i_6_n_0\,
+      I4 => \CR_velue_times[8]_i_7_n_0\,
+      I5 => \CR_velue_times[8]_i_8_n_0\,
+      O => \CR_velue_times[8]_i_2_n_0\
     );
-\CR_velue_times[9]_i_3\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"2D"
-    )
-        port map (
-      I0 => \CR_velue_times[9]_i_7_n_0\,
-      I1 => \CR_velue_times[9]_i_8_n_0\,
-      I2 => \CR_velue_times[9]_i_9_n_0\,
-      O => \CR_velue_times[9]_i_3_n_0\
-    );
-\CR_velue_times[9]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"4DDDB222B2224DDD"
-    )
-        port map (
-      I0 => \CR_velue_times[9]_i_6_n_0\,
-      I1 => \CR_velue_times[9]_i_5_n_0\,
-      I2 => CR_velue(7),
-      I3 => CR_velue_H_gedeeld_100(0),
-      I4 => \CR_velue_times[9]_i_8_n_0\,
-      I5 => \CR_velue_times[9]_i_7_n_0\,
-      O => \CR_velue_times[9]_i_4_n_0\
-    );
-\CR_velue_times[9]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7888877787778777"
-    )
-        port map (
-      I0 => CR_velue_H_gedeeld_100(1),
-      I1 => CR_velue(6),
-      I2 => CR_velue(4),
-      I3 => CR_velue_H_gedeeld_100(3),
-      I4 => CR_velue(5),
-      I5 => CR_velue_H_gedeeld_100(2),
-      O => \CR_velue_times[9]_i_5_n_0\
-    );
-\CR_velue_times[9]_i_6\: unisim.vcomponents.LUT6
+\CR_velue_times[8]_i_3\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"F888800080008000"
     )
@@ -2253,22 +2221,18 @@ begin
       I3 => CR_velue(4),
       I4 => CR_velue_H_gedeeld_100(1),
       I5 => CR_velue(5),
-      O => \CR_velue_times[9]_i_6_n_0\
+      O => \CR_velue_times[8]_i_3_n_0\
     );
-\CR_velue_times[9]_i_7\: unisim.vcomponents.LUT6
+\CR_velue_times[8]_i_4\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"F888800080008000"
+      INIT => X"7"
     )
         port map (
-      I0 => CR_velue_H_gedeeld_100(3),
-      I1 => CR_velue(4),
-      I2 => CR_velue_H_gedeeld_100(2),
-      I3 => CR_velue(5),
-      I4 => CR_velue_H_gedeeld_100(1),
-      I5 => CR_velue(6),
-      O => \CR_velue_times[9]_i_7_n_0\
+      I0 => CR_velue(7),
+      I1 => CR_velue_H_gedeeld_100(0),
+      O => \CR_velue_times[8]_i_4_n_0\
     );
-\CR_velue_times[9]_i_8\: unisim.vcomponents.LUT6
+\CR_velue_times[8]_i_5\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"7888877787778777"
     )
@@ -2279,20 +2243,34 @@ begin
       I3 => CR_velue_H_gedeeld_100(3),
       I4 => CR_velue(6),
       I5 => CR_velue_H_gedeeld_100(2),
-      O => \CR_velue_times[9]_i_8_n_0\
+      O => \CR_velue_times[8]_i_5_n_0\
     );
-\CR_velue_times[9]_i_9\: unisim.vcomponents.LUT6
+\CR_velue_times[8]_i_6\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"18A0CFFF87FF0FFF"
+      INIT => X"7"
     )
         port map (
-      I0 => CR_velue_H_gedeeld_100(1),
-      I1 => CR_velue(5),
-      I2 => CR_velue(6),
-      I3 => CR_velue_H_gedeeld_100(3),
-      I4 => CR_velue(7),
-      I5 => CR_velue_H_gedeeld_100(2),
-      O => \CR_velue_times[9]_i_9_n_0\
+      I0 => CR_velue(4),
+      I1 => CR_velue_H_gedeeld_100(3),
+      O => \CR_velue_times[8]_i_6_n_0\
+    );
+\CR_velue_times[8]_i_7\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"7"
+    )
+        port map (
+      I0 => CR_velue(5),
+      I1 => CR_velue_H_gedeeld_100(2),
+      O => \CR_velue_times[8]_i_7_n_0\
+    );
+\CR_velue_times[8]_i_8\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"7"
+    )
+        port map (
+      I0 => CR_velue(6),
+      I1 => CR_velue_H_gedeeld_100(1),
+      O => \CR_velue_times[8]_i_8_n_0\
     );
 \CR_velue_times_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -2302,7 +2280,7 @@ begin
       C => PixelClock,
       CE => '1',
       D => CR_velue_times0(0),
-      Q => \CR_velue_times_reg_n_0_[0]\,
+      Q => CR_velue_times(0),
       R => '0'
     );
 \CR_velue_times_reg[1]\: unisim.vcomponents.FDRE
@@ -2313,7 +2291,7 @@ begin
       C => PixelClock,
       CE => '1',
       D => CR_velue_times0(1),
-      Q => \CR_velue_times_reg_n_0_[1]\,
+      Q => CR_velue_times(1),
       R => '0'
     );
 \CR_velue_times_reg[2]\: unisim.vcomponents.FDRE
@@ -2324,7 +2302,7 @@ begin
       C => PixelClock,
       CE => '1',
       D => CR_velue_times0(2),
-      Q => \CR_velue_times_reg_n_0_[2]\,
+      Q => CR_velue_times(2),
       R => '0'
     );
 \CR_velue_times_reg[3]\: unisim.vcomponents.FDRE
@@ -2335,7 +2313,7 @@ begin
       C => PixelClock,
       CE => '1',
       D => CR_velue_times0(3),
-      Q => \CR_velue_times_reg_n_0_[3]\,
+      Q => CR_velue_times(3),
       R => '0'
     );
 \CR_velue_times_reg[3]_i_1\: unisim.vcomponents.CARRY4
@@ -2364,7 +2342,7 @@ begin
       C => PixelClock,
       CE => '1',
       D => CR_velue_times0(4),
-      Q => \CR_velue_times_reg_n_0_[4]\,
+      Q => CR_velue_times(4),
       R => '0'
     );
 \CR_velue_times_reg[5]\: unisim.vcomponents.FDRE
@@ -2375,7 +2353,7 @@ begin
       C => PixelClock,
       CE => '1',
       D => CR_velue_times0(5),
-      Q => \CR_velue_times_reg_n_0_[5]\,
+      Q => CR_velue_times(5),
       R => '0'
     );
 \CR_velue_times_reg[6]\: unisim.vcomponents.FDRE
@@ -2386,7 +2364,7 @@ begin
       C => PixelClock,
       CE => '1',
       D => CR_velue_times0(6),
-      Q => \CR_velue_times_reg_n_0_[6]\,
+      Q => CR_velue_times(6),
       R => '0'
     );
 \CR_velue_times_reg[7]\: unisim.vcomponents.FDRE
@@ -2397,7 +2375,7 @@ begin
       C => PixelClock,
       CE => '1',
       D => CR_velue_times0(7),
-      Q => \CR_velue_times_reg_n_0_[7]\,
+      Q => CR_velue_times(7),
       R => '0'
     );
 \CR_velue_times_reg[7]_i_1\: unisim.vcomponents.CARRY4
@@ -2426,41 +2404,27 @@ begin
       C => PixelClock,
       CE => '1',
       D => CR_velue_times0(8),
-      Q => \CR_velue_times_reg_n_0_[8]\,
+      Q => CR_velue_times(8),
       R => '0'
     );
-\CR_velue_times_reg[9]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => PixelClock,
-      CE => '1',
-      D => CR_velue_times0(9),
-      Q => \CR_velue_times_reg_n_0_[9]\,
-      R => '0'
-    );
-\CR_velue_times_reg[9]_i_1\: unisim.vcomponents.CARRY4
+\CR_velue_times_reg[8]_i_1\: unisim.vcomponents.CARRY4
      port map (
       CI => \CR_velue_times_reg[7]_i_1_n_0\,
-      CO(3 downto 1) => \NLW_CR_velue_times_reg[9]_i_1_CO_UNCONNECTED\(3 downto 1),
-      CO(0) => \CR_velue_times_reg[9]_i_1_n_3\,
+      CO(3 downto 0) => \NLW_CR_velue_times_reg[8]_i_1_CO_UNCONNECTED\(3 downto 0),
       CYINIT => '0',
-      DI(3 downto 1) => B"000",
-      DI(0) => \CR_velue_times[9]_i_2_n_0\,
-      O(3 downto 2) => \NLW_CR_velue_times_reg[9]_i_1_O_UNCONNECTED\(3 downto 2),
-      O(1 downto 0) => CR_velue_times0(9 downto 8),
-      S(3 downto 2) => B"00",
-      S(1) => \CR_velue_times[9]_i_3_n_0\,
-      S(0) => \CR_velue_times[9]_i_4_n_0\
+      DI(3 downto 0) => B"0000",
+      O(3 downto 1) => \NLW_CR_velue_times_reg[8]_i_1_O_UNCONNECTED\(3 downto 1),
+      O(0) => CR_velue_times0(8),
+      S(3 downto 1) => B"000",
+      S(0) => \CR_velue_times[8]_i_2_n_0\
     );
 \CoorR[1]_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"6"
     )
         port map (
-      I0 => \CR_velue_times_reg_n_0_[0]\,
-      I1 => \CR_velue_times_reg_n_0_[1]\,
+      I0 => CR_velue_times(0),
+      I1 => CR_velue_times(1),
       O => \CoorR[1]_i_1_n_0\
     );
 \CoorR[2]_i_1\: unisim.vcomponents.LUT3
@@ -2468,9 +2432,9 @@ begin
       INIT => X"1E"
     )
         port map (
-      I0 => \CR_velue_times_reg_n_0_[0]\,
-      I1 => \CR_velue_times_reg_n_0_[1]\,
-      I2 => \CR_velue_times_reg_n_0_[2]\,
+      I0 => CR_velue_times(0),
+      I1 => CR_velue_times(1),
+      I2 => CR_velue_times(2),
       O => \CoorR[2]_i_1_n_0\
     );
 \CoorR[3]_i_1\: unisim.vcomponents.LUT4
@@ -2478,10 +2442,10 @@ begin
       INIT => X"01FE"
     )
         port map (
-      I0 => \CR_velue_times_reg_n_0_[2]\,
-      I1 => \CR_velue_times_reg_n_0_[1]\,
-      I2 => \CR_velue_times_reg_n_0_[0]\,
-      I3 => \CR_velue_times_reg_n_0_[3]\,
+      I0 => CR_velue_times(2),
+      I1 => CR_velue_times(1),
+      I2 => CR_velue_times(0),
+      I3 => CR_velue_times(3),
       O => \CoorR[3]_i_1_n_0\
     );
 \CoorR[4]_i_1\: unisim.vcomponents.LUT5
@@ -2489,11 +2453,11 @@ begin
       INIT => X"0001FFFE"
     )
         port map (
-      I0 => \CR_velue_times_reg_n_0_[3]\,
-      I1 => \CR_velue_times_reg_n_0_[0]\,
-      I2 => \CR_velue_times_reg_n_0_[1]\,
-      I3 => \CR_velue_times_reg_n_0_[2]\,
-      I4 => \CR_velue_times_reg_n_0_[4]\,
+      I0 => CR_velue_times(3),
+      I1 => CR_velue_times(0),
+      I2 => CR_velue_times(1),
+      I3 => CR_velue_times(2),
+      I4 => CR_velue_times(4),
       O => \CoorR[4]_i_1_n_0\
     );
 \CoorR[5]_i_1\: unisim.vcomponents.LUT6
@@ -2501,12 +2465,12 @@ begin
       INIT => X"FFFFFFFE00000001"
     )
         port map (
-      I0 => \CR_velue_times_reg_n_0_[4]\,
-      I1 => \CR_velue_times_reg_n_0_[2]\,
-      I2 => \CR_velue_times_reg_n_0_[1]\,
-      I3 => \CR_velue_times_reg_n_0_[0]\,
-      I4 => \CR_velue_times_reg_n_0_[3]\,
-      I5 => \CR_velue_times_reg_n_0_[5]\,
+      I0 => CR_velue_times(4),
+      I1 => CR_velue_times(2),
+      I2 => CR_velue_times(1),
+      I3 => CR_velue_times(0),
+      I4 => CR_velue_times(3),
+      I5 => CR_velue_times(5),
       O => \CoorR[5]_i_1_n_0\
     );
 \CoorR[6]_i_1\: unisim.vcomponents.LUT2
@@ -2514,8 +2478,8 @@ begin
       INIT => X"6"
     )
         port map (
-      I0 => \CoorR[8]_i_3_n_0\,
-      I1 => \CR_velue_times_reg_n_0_[6]\,
+      I0 => \CoorR[8]_i_4_n_0\,
+      I1 => CR_velue_times(6),
       O => \CoorR[6]_i_1_n_0\
     );
 \CoorR[7]_i_1\: unisim.vcomponents.LUT3
@@ -2523,52 +2487,63 @@ begin
       INIT => X"2D"
     )
         port map (
-      I0 => \CR_velue_times_reg_n_0_[6]\,
-      I1 => \CoorR[8]_i_3_n_0\,
-      I2 => \CR_velue_times_reg_n_0_[7]\,
+      I0 => CR_velue_times(6),
+      I1 => \CoorR[8]_i_4_n_0\,
+      I2 => CR_velue_times(7),
       O => \CoorR[7]_i_1_n_0\
     );
 \CoorR[8]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"EAAAAAAA"
+      INIT => X"AAEAAAAA"
     )
         port map (
-      I0 => \CR_velue_times_reg_n_0_[9]\,
-      I1 => \CR_velue_times_reg_n_0_[7]\,
-      I2 => \CR_velue_times_reg_n_0_[8]\,
-      I3 => \CR_velue_times_reg_n_0_[5]\,
-      I4 => \CR_velue_times_reg_n_0_[6]\,
+      I0 => CR_velue_times(8),
+      I1 => CR_velue_times(6),
+      I2 => CR_velue_times(5),
+      I3 => \CoorR[8]_i_3_n_0\,
+      I4 => CR_velue_times(4),
       O => \CoorR[8]_i_1_n_0\
     );
-\CoorR[8]_i_2\: unisim.vcomponents.LUT4
+\CoorR[8]_i_2\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"20DF"
+      INIT => X"DF"
     )
         port map (
-      I0 => \CR_velue_times_reg_n_0_[7]\,
-      I1 => \CoorR[8]_i_3_n_0\,
-      I2 => \CR_velue_times_reg_n_0_[6]\,
-      I3 => \CR_velue_times_reg_n_0_[8]\,
+      I0 => CR_velue_times(7),
+      I1 => \CoorR[8]_i_4_n_0\,
+      I2 => CR_velue_times(6),
       O => \CoorR[8]_i_2_n_0\
     );
-\CoorR[8]_i_3\: unisim.vcomponents.LUT6
+\CoorR[8]_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"55555557"
+    )
+        port map (
+      I0 => CR_velue_times(7),
+      I1 => CR_velue_times(3),
+      I2 => CR_velue_times(0),
+      I3 => CR_velue_times(1),
+      I4 => CR_velue_times(2),
+      O => \CoorR[8]_i_3_n_0\
+    );
+\CoorR[8]_i_4\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"00000001FFFFFFFF"
     )
         port map (
-      I0 => \CR_velue_times_reg_n_0_[4]\,
-      I1 => \CR_velue_times_reg_n_0_[2]\,
-      I2 => \CR_velue_times_reg_n_0_[1]\,
-      I3 => \CR_velue_times_reg_n_0_[0]\,
-      I4 => \CR_velue_times_reg_n_0_[3]\,
-      I5 => \CR_velue_times_reg_n_0_[5]\,
-      O => \CoorR[8]_i_3_n_0\
+      I0 => CR_velue_times(4),
+      I1 => CR_velue_times(2),
+      I2 => CR_velue_times(1),
+      I3 => CR_velue_times(0),
+      I4 => CR_velue_times(3),
+      I5 => CR_velue_times(5),
+      O => \CoorR[8]_i_4_n_0\
     );
 \CoorR_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => PixelClock,
       CE => '1',
-      D => \CR_velue_times_reg_n_0_[0]\,
+      D => CR_velue_times(0),
       Q => CoorR(0),
       R => \CoorR[8]_i_1_n_0\
     );
@@ -2636,94 +2611,127 @@ begin
       Q => CoorR(8),
       R => \CoorR[8]_i_1_n_0\
     );
-\CoorR_yboven[3]_i_2\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"9"
-    )
-        port map (
-      I0 => CoorR(3),
-      I1 => HoogtePeddels(3),
-      O => \CoorR_yboven[3]_i_2_n_0\
+CoorR_yboven0_carry: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => CoorR_yboven0_carry_n_0,
+      CO(2) => CoorR_yboven0_carry_n_1,
+      CO(1) => CoorR_yboven0_carry_n_2,
+      CO(0) => CoorR_yboven0_carry_n_3,
+      CYINIT => '1',
+      DI(3 downto 0) => CoorR(3 downto 0),
+      O(3 downto 0) => CoorR_yboven0(3 downto 0),
+      S(3) => CoorR_yboven0_carry_i_1_n_0,
+      S(2) => CoorR_yboven0_carry_i_2_n_0,
+      S(1) => CoorR_yboven0_carry_i_3_n_0,
+      S(0) => CoorR_yboven0_carry_i_4_n_0
     );
-\CoorR_yboven[3]_i_3\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"9"
-    )
-        port map (
-      I0 => CoorR(2),
-      I1 => HoogtePeddels(2),
-      O => \CoorR_yboven[3]_i_3_n_0\
+\CoorR_yboven0_carry__0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => CoorR_yboven0_carry_n_0,
+      CO(3) => \CoorR_yboven0_carry__0_n_0\,
+      CO(2) => \CoorR_yboven0_carry__0_n_1\,
+      CO(1) => \CoorR_yboven0_carry__0_n_2\,
+      CO(0) => \CoorR_yboven0_carry__0_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => CoorR(7 downto 4),
+      O(3 downto 0) => CoorR_yboven0(7 downto 4),
+      S(3) => \CoorR_yboven0_carry__0_i_1_n_0\,
+      S(2) => \CoorR_yboven0_carry__0_i_2_n_0\,
+      S(1) => \CoorR_yboven0_carry__0_i_3_n_0\,
+      S(0) => \CoorR_yboven0_carry__0_i_4_n_0\
     );
-\CoorR_yboven[3]_i_4\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"9"
-    )
-        port map (
-      I0 => CoorR(1),
-      I1 => HoogtePeddels(1),
-      O => \CoorR_yboven[3]_i_4_n_0\
-    );
-\CoorR_yboven[3]_i_5\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"9"
-    )
-        port map (
-      I0 => CoorR(0),
-      I1 => HoogtePeddels(0),
-      O => \CoorR_yboven[3]_i_5_n_0\
-    );
-\CoorR_yboven[7]_i_2\: unisim.vcomponents.LUT2
+\CoorR_yboven0_carry__0_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"9"
     )
         port map (
       I0 => CoorR(7),
       I1 => HoogtePeddels(7),
-      O => \CoorR_yboven[7]_i_2_n_0\
+      O => \CoorR_yboven0_carry__0_i_1_n_0\
     );
-\CoorR_yboven[7]_i_3\: unisim.vcomponents.LUT2
+\CoorR_yboven0_carry__0_i_2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"9"
     )
         port map (
       I0 => CoorR(6),
       I1 => HoogtePeddels(6),
-      O => \CoorR_yboven[7]_i_3_n_0\
+      O => \CoorR_yboven0_carry__0_i_2_n_0\
     );
-\CoorR_yboven[7]_i_4\: unisim.vcomponents.LUT2
+\CoorR_yboven0_carry__0_i_3\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"9"
     )
         port map (
       I0 => CoorR(5),
       I1 => HoogtePeddels(5),
-      O => \CoorR_yboven[7]_i_4_n_0\
+      O => \CoorR_yboven0_carry__0_i_3_n_0\
     );
-\CoorR_yboven[7]_i_5\: unisim.vcomponents.LUT2
+\CoorR_yboven0_carry__0_i_4\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"9"
     )
         port map (
       I0 => CoorR(4),
       I1 => HoogtePeddels(4),
-      O => \CoorR_yboven[7]_i_5_n_0\
+      O => \CoorR_yboven0_carry__0_i_4_n_0\
     );
-\CoorR_yboven[9]_i_2\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => HoogtePeddels(9),
-      O => \CoorR_yboven[9]_i_2_n_0\
+\CoorR_yboven0_carry__1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \CoorR_yboven0_carry__0_n_0\,
+      CO(3 downto 0) => \NLW_CoorR_yboven0_carry__1_CO_UNCONNECTED\(3 downto 0),
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 1) => \NLW_CoorR_yboven0_carry__1_O_UNCONNECTED\(3 downto 1),
+      O(0) => CoorR_yboven0(8),
+      S(3 downto 1) => B"000",
+      S(0) => \CoorR_yboven0_carry__1_i_1_n_0\
     );
-\CoorR_yboven[9]_i_3\: unisim.vcomponents.LUT2
+\CoorR_yboven0_carry__1_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"9"
     )
         port map (
       I0 => CoorR(8),
       I1 => HoogtePeddels(8),
-      O => \CoorR_yboven[9]_i_3_n_0\
+      O => \CoorR_yboven0_carry__1_i_1_n_0\
+    );
+CoorR_yboven0_carry_i_1: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => CoorR(3),
+      I1 => HoogtePeddels(3),
+      O => CoorR_yboven0_carry_i_1_n_0
+    );
+CoorR_yboven0_carry_i_2: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => CoorR(2),
+      I1 => HoogtePeddels(2),
+      O => CoorR_yboven0_carry_i_2_n_0
+    );
+CoorR_yboven0_carry_i_3: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => CoorR(1),
+      I1 => HoogtePeddels(1),
+      O => CoorR_yboven0_carry_i_3_n_0
+    );
+CoorR_yboven0_carry_i_4: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => CoorR(0),
+      I1 => HoogtePeddels(0),
+      O => CoorR_yboven0_carry_i_4_n_0
     );
 \CoorR_yboven_out_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -2797,14 +2805,6 @@ begin
       Q => CoorR_yboven_out(8),
       R => '0'
     );
-\CoorR_yboven_out_reg[9]\: unisim.vcomponents.FDRE
-     port map (
-      C => PixelClock,
-      CE => '1',
-      D => CoorR_yboven(9),
-      Q => CoorR_yboven_out(9),
-      R => '0'
-    );
 \CoorR_yboven_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => PixelClock,
@@ -2836,21 +2836,6 @@ begin
       D => CoorR_yboven0(3),
       Q => CoorR_yboven(3),
       R => '0'
-    );
-\CoorR_yboven_reg[3]_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => '0',
-      CO(3) => \CoorR_yboven_reg[3]_i_1_n_0\,
-      CO(2) => \CoorR_yboven_reg[3]_i_1_n_1\,
-      CO(1) => \CoorR_yboven_reg[3]_i_1_n_2\,
-      CO(0) => \CoorR_yboven_reg[3]_i_1_n_3\,
-      CYINIT => '1',
-      DI(3 downto 0) => CoorR(3 downto 0),
-      O(3 downto 0) => CoorR_yboven0(3 downto 0),
-      S(3) => \CoorR_yboven[3]_i_2_n_0\,
-      S(2) => \CoorR_yboven[3]_i_3_n_0\,
-      S(1) => \CoorR_yboven[3]_i_4_n_0\,
-      S(0) => \CoorR_yboven[3]_i_5_n_0\
     );
 \CoorR_yboven_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -2884,21 +2869,6 @@ begin
       Q => CoorR_yboven(7),
       R => '0'
     );
-\CoorR_yboven_reg[7]_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \CoorR_yboven_reg[3]_i_1_n_0\,
-      CO(3) => \CoorR_yboven_reg[7]_i_1_n_0\,
-      CO(2) => \CoorR_yboven_reg[7]_i_1_n_1\,
-      CO(1) => \CoorR_yboven_reg[7]_i_1_n_2\,
-      CO(0) => \CoorR_yboven_reg[7]_i_1_n_3\,
-      CYINIT => '0',
-      DI(3 downto 0) => CoorR(7 downto 4),
-      O(3 downto 0) => CoorR_yboven0(7 downto 4),
-      S(3) => \CoorR_yboven[7]_i_2_n_0\,
-      S(2) => \CoorR_yboven[7]_i_3_n_0\,
-      S(1) => \CoorR_yboven[7]_i_4_n_0\,
-      S(0) => \CoorR_yboven[7]_i_5_n_0\
-    );
 \CoorR_yboven_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => PixelClock,
@@ -2906,28 +2876,6 @@ begin
       D => CoorR_yboven0(8),
       Q => CoorR_yboven(8),
       R => '0'
-    );
-\CoorR_yboven_reg[9]\: unisim.vcomponents.FDRE
-     port map (
-      C => PixelClock,
-      CE => '1',
-      D => CoorR_yboven0(9),
-      Q => CoorR_yboven(9),
-      R => '0'
-    );
-\CoorR_yboven_reg[9]_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \CoorR_yboven_reg[7]_i_1_n_0\,
-      CO(3 downto 1) => \NLW_CoorR_yboven_reg[9]_i_1_CO_UNCONNECTED\(3 downto 1),
-      CO(0) => \CoorR_yboven_reg[9]_i_1_n_3\,
-      CYINIT => '0',
-      DI(3 downto 1) => B"000",
-      DI(0) => CoorR(8),
-      O(3 downto 2) => \NLW_CoorR_yboven_reg[9]_i_1_O_UNCONNECTED\(3 downto 2),
-      O(1 downto 0) => CoorR_yboven0(9 downto 8),
-      S(3 downto 2) => B"00",
-      S(1) => \CoorR_yboven[9]_i_2_n_0\,
-      S(0) => \CoorR_yboven[9]_i_3_n_0\
     );
 \HPixel_out_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -3049,22 +2997,22 @@ PixelSig_out1_carry: unisim.vcomponents.CARRY4
     );
 \PixelSig_out1_carry__0_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"10"
+      INIT => X"04"
     )
         port map (
       I0 => VPixel(9),
-      I1 => VPixel(8),
-      I2 => CoorR(8),
+      I1 => CoorR(8),
+      I2 => VPixel(8),
       O => \PixelSig_out1_carry__0_i_1_n_0\
     );
 \PixelSig_out1_carry__0_i_2\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"09"
+      INIT => X"21"
     )
         port map (
-      I0 => CoorR(8),
-      I1 => VPixel(8),
-      I2 => VPixel(9),
+      I0 => VPixel(8),
+      I1 => VPixel(9),
+      I2 => CoorR(8),
       O => \PixelSig_out1_carry__0_i_2_n_0\
     );
 PixelSig_out1_carry_i_1: unisim.vcomponents.LUT4
@@ -3116,10 +3064,10 @@ PixelSig_out1_carry_i_5: unisim.vcomponents.LUT4
       INIT => X"9009"
     )
         port map (
-      I0 => CoorR(7),
-      I1 => VPixel(7),
-      I2 => CoorR(6),
-      I3 => VPixel(6),
+      I0 => VPixel(7),
+      I1 => CoorR(7),
+      I2 => VPixel(6),
+      I3 => CoorR(6),
       O => PixelSig_out1_carry_i_5_n_0
     );
 PixelSig_out1_carry_i_6: unisim.vcomponents.LUT4
@@ -3127,10 +3075,10 @@ PixelSig_out1_carry_i_6: unisim.vcomponents.LUT4
       INIT => X"9009"
     )
         port map (
-      I0 => CoorR(5),
-      I1 => VPixel(5),
-      I2 => CoorR(4),
-      I3 => VPixel(4),
+      I0 => VPixel(5),
+      I1 => CoorR(5),
+      I2 => VPixel(4),
+      I3 => CoorR(4),
       O => PixelSig_out1_carry_i_6_n_0
     );
 PixelSig_out1_carry_i_7: unisim.vcomponents.LUT4
@@ -3138,10 +3086,10 @@ PixelSig_out1_carry_i_7: unisim.vcomponents.LUT4
       INIT => X"9009"
     )
         port map (
-      I0 => CoorR(3),
-      I1 => VPixel(3),
-      I2 => CoorR(2),
-      I3 => VPixel(2),
+      I0 => VPixel(3),
+      I1 => CoorR(3),
+      I2 => VPixel(2),
+      I3 => CoorR(2),
       O => PixelSig_out1_carry_i_7_n_0
     );
 PixelSig_out1_carry_i_8: unisim.vcomponents.LUT4
@@ -3149,10 +3097,10 @@ PixelSig_out1_carry_i_8: unisim.vcomponents.LUT4
       INIT => X"9009"
     )
         port map (
-      I0 => CoorR(1),
-      I1 => VPixel(1),
-      I2 => CoorR(0),
-      I3 => VPixel(0),
+      I0 => VPixel(1),
+      I1 => CoorR(1),
+      I2 => VPixel(0),
+      I3 => CoorR(0),
       O => PixelSig_out1_carry_i_8_n_0
     );
 PixelSig_out2_carry: unisim.vcomponents.CARRY4
@@ -3185,26 +3133,24 @@ PixelSig_out2_carry: unisim.vcomponents.CARRY4
       S(3 downto 1) => B"000",
       S(0) => \PixelSig_out2_carry__0_i_2_n_0\
     );
-\PixelSig_out2_carry__0_i_1\: unisim.vcomponents.LUT4
+\PixelSig_out2_carry__0_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"22B2"
+      INIT => X"F4"
     )
         port map (
-      I0 => VPixel(9),
-      I1 => CoorR_yboven(9),
-      I2 => VPixel(8),
-      I3 => CoorR_yboven(8),
+      I0 => CoorR_yboven(8),
+      I1 => VPixel(8),
+      I2 => VPixel(9),
       O => \PixelSig_out2_carry__0_i_1_n_0\
     );
-\PixelSig_out2_carry__0_i_2\: unisim.vcomponents.LUT4
+\PixelSig_out2_carry__0_i_2\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"9009"
+      INIT => X"09"
     )
         port map (
-      I0 => CoorR_yboven(9),
-      I1 => VPixel(9),
-      I2 => CoorR_yboven(8),
-      I3 => VPixel(8),
+      I0 => CoorR_yboven(8),
+      I1 => VPixel(8),
+      I2 => VPixel(9),
       O => \PixelSig_out2_carry__0_i_2_n_0\
     );
 PixelSig_out2_carry_i_1: unisim.vcomponents.LUT4
@@ -3325,39 +3271,31 @@ PixelSig_out3_carry: unisim.vcomponents.CARRY4
       S(3 downto 1) => B"000",
       S(0) => \PixelSig_out3_carry__0_i_2_n_0\
     );
-\PixelSig_out3_carry__0_i_1\: unisim.vcomponents.LUT5
+\PixelSig_out3_carry__0_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2212B21B"
-    )
-        port map (
-      I0 => Offcet(9),
-      I1 => HPixel(9),
-      I2 => \PixelSig_out3_carry__0_i_3_n_0\,
-      I3 => Offcet(8),
-      I4 => HPixel(8),
-      O => \PixelSig_out3_carry__0_i_1_n_0\
-    );
-\PixelSig_out3_carry__0_i_2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"94020294"
-    )
-        port map (
-      I0 => \PixelSig_out3_carry__0_i_3_n_0\,
-      I1 => HPixel(8),
-      I2 => Offcet(8),
-      I3 => Offcet(9),
-      I4 => HPixel(9),
-      O => \PixelSig_out3_carry__0_i_2_n_0\
-    );
-\PixelSig_out3_carry__0_i_3\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"1F"
+      INIT => X"0000001F001F00FF"
     )
         port map (
       I0 => Offcet(6),
       I1 => PixelSig_out3_carry_i_9_n_0,
       I2 => Offcet(7),
-      O => \PixelSig_out3_carry__0_i_3_n_0\
+      I3 => HPixel(9),
+      I4 => HPixel(8),
+      I5 => Offcet(8),
+      O => \PixelSig_out3_carry__0_i_1_n_0\
+    );
+\PixelSig_out3_carry__0_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000001F1FE0E000"
+    )
+        port map (
+      I0 => Offcet(6),
+      I1 => PixelSig_out3_carry_i_9_n_0,
+      I2 => Offcet(7),
+      I3 => Offcet(8),
+      I4 => HPixel(8),
+      I5 => HPixel(9),
+      O => \PixelSig_out3_carry__0_i_2_n_0\
     );
 PixelSig_out3_carry_i_1: unisim.vcomponents.LUT5
     generic map(
@@ -3648,15 +3586,14 @@ PixelSig_out4_carry: unisim.vcomponents.CARRY4
       I1 => BreetePeddels(7),
       O => \PixelSig_out4_carry__1_i_1_n_0\
     );
-\PixelSig_out4_carry__1_i_2\: unisim.vcomponents.LUT4
+\PixelSig_out4_carry__1_i_2\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"E11E"
+      INIT => X"1E"
     )
         port map (
       I0 => Offcet(8),
       I1 => BreetePeddels(8),
-      I2 => Offcet(9),
-      I3 => BreetePeddels(9),
+      I2 => BreetePeddels(9),
       O => \PixelSig_out4_carry__1_i_2_n_0\
     );
 \PixelSig_out4_carry__1_i_3\: unisim.vcomponents.LUT4
@@ -4740,9 +4677,9 @@ entity design_1_Coor_PixelR_0_0 is
     HPixel : in STD_LOGIC_VECTOR ( 9 downto 0 );
     CR_in : in STD_LOGIC_VECTOR ( 8 downto 0 );
     BreetePeddels : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    HoogtePeddels : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    Offcet : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    CoorR_yboven_out : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    HoogtePeddels : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    Offcet : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    CoorR_yboven_out : out STD_LOGIC_VECTOR ( 8 downto 0 );
     PixelSig_out : out STD_LOGIC;
     HSYNC_o : out STD_LOGIC;
     VSYNC_o : out STD_LOGIC;
@@ -4767,13 +4704,13 @@ U0: entity work.design_1_Coor_PixelR_0_0_Coor_PixelR
      port map (
       BreetePeddels(9 downto 0) => BreetePeddels(9 downto 0),
       CR_in(8 downto 0) => CR_in(8 downto 0),
-      CoorR_yboven_out(9 downto 0) => CoorR_yboven_out(9 downto 0),
+      CoorR_yboven_out(8 downto 0) => CoorR_yboven_out(8 downto 0),
       HPixel(9 downto 0) => HPixel(9 downto 0),
       HPixel_out(9 downto 0) => HPixel_out(9 downto 0),
       HSYNC_i => HSYNC_i,
       HSYNC_o => HSYNC_o,
-      HoogtePeddels(9 downto 0) => HoogtePeddels(9 downto 0),
-      Offcet(9 downto 0) => Offcet(9 downto 0),
+      HoogtePeddels(8 downto 0) => HoogtePeddels(8 downto 0),
+      Offcet(8 downto 0) => Offcet(8 downto 0),
       PixelClock => PixelClock,
       PixelSig_in => PixelSig_in,
       PixelSig_out => PixelSig_out,

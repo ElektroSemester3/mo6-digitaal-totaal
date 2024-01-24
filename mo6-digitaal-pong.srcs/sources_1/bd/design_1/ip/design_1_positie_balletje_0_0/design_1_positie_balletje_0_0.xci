@@ -50,7 +50,7 @@
       "ports": {
         "reset": [ { "direction": "in" } ],
         "screen_width": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
-        "screen_heigth": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "screen_heigth": [ { "direction": "in", "size_left": "8", "size_right": "0" } ],
         "clk_slow": [ { "direction": "in" } ],
         "angle_index": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
         "running": [ { "direction": "in" } ],
@@ -58,7 +58,7 @@
         "side_touch": [ { "direction": "in" } ],
         "top_bottom_touch": [ { "direction": "in" } ],
         "pos_x_out": [ { "direction": "out", "size_left": "9", "size_right": "0" } ],
-        "pos_y_out": [ { "direction": "out", "size_left": "9", "size_right": "0" } ]
+        "pos_y_out": [ { "direction": "out", "size_left": "8", "size_right": "0" } ]
       },
       "interfaces": {
         "reset": {

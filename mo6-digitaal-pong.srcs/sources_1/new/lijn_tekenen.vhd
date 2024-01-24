@@ -14,11 +14,12 @@ entity lijn_tekenen is
         pxlCLK_i, HSYNC_i, VSYNC_i  : in STD_LOGIC;
         vpxl_i, hpxl_i              : in STD_LOGIC_VECTOR (9 downto 0);
         -- object parameters
-        screen_x, screen_y          : in STD_LOGIC_VECTOR (9 downto 0);
+        screen_x                    : in STD_LOGIC_VECTOR (9 downto 0);
+        screen_y                    : in STD_LOGIC_VECTOR (8 downto 0);
         -- output pixel value
         pixel_value_o               : out STD_LOGIC;
         -- pass through signals
-        HSYNC_o, VSYNC_o  : out STD_LOGIC;
+        HSYNC_o, VSYNC_o            : out STD_LOGIC;
         vpxl_o, hpxl_o              : out STD_LOGIC_VECTOR (9 downto 0)
     );
 end lijn_tekenen;
@@ -26,9 +27,9 @@ end lijn_tekenen;
 architecture Behavioral of lijn_tekenen is
     -- Define the position and size of the line
     constant size_x : unsigned(9 downto 0) := to_unsigned(width_line, 10);
-    constant size_y : unsigned(9 downto 0) := unsigned(screen_y);
+    constant size_y : unsigned(8 downto 0) := unsigned(screen_y);
     constant pos_x : unsigned(9 downto 0) := to_unsigned(to_integer(unsigned(screen_x) / 2) - to_integer(size_x / 2), 10);
-    constant pos_y : unsigned(9 downto 0) := to_unsigned(0, 10);
+    constant pos_y : unsigned(8 downto 0) := to_unsigned(0, 9);
 
 begin
     process (pxlCLK_i)

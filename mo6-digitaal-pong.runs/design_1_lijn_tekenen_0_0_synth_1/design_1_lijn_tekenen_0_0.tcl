@@ -93,7 +93,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/new/lijn_tekenen.vhd
-read_ip -quiet d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/bd/design_1/ip/design_1_lijn_tekenen_0_0/design_1_lijn_tekenen_0_0.xci
+read_ip -quiet D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/bd/design_1/ip/design_1_lijn_tekenen_0_0/design_1_lijn_tekenen_0_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

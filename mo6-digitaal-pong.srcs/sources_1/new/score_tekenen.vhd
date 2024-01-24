@@ -19,7 +19,7 @@ entity score_tekenen is
         score_l_i                   : in STD_LOGIC_VECTOR (3 downto 0);
         score_r_i                   : in STD_LOGIC_VECTOR (3 downto 0);
         screen_width_i              : in STD_LOGIC_VECTOR (9 downto 0);
-        screen_height_i             : in STD_LOGIC_VECTOR (9 downto 0);
+        screen_height_i             : in STD_LOGIC_VECTOR (8 downto 0);
         -- output pixel value
         pixel_value_o               : out STD_LOGIC;
         -- pass through signals
@@ -32,7 +32,7 @@ architecture Behavioral of score_tekenen is
     -- Define the position and size of the line
     signal pos_x_r  : unsigned(9 downto 0);
     signal pos_x_l  : unsigned(9 downto 0);
-    constant pos_y  : unsigned(9 downto 0) := to_unsigned(height_offset, 10);
+    constant pos_y  : unsigned(8 downto 0) := to_unsigned(height_offset, 9);
     constant size_u : unsigned(9 downto 0) := to_unsigned(size, 10);
 
 begin

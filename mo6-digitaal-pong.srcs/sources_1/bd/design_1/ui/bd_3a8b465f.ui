@@ -1,18 +1,30 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.25",
-   "Default View_TopLeft":"-858,-140",
+   "Default View_ScaleFactor":"1.21987",
+   "Default View_TopLeft":"-250,3",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
+preplace portBus scherm_hoogte -pg 1 -lvl 2 -x 180 -y 560 -defaultsOSRD
+preplace portBus scherm_breedte -pg 1 -lvl 2 -x 180 -y 460 -defaultsOSRD
+preplace portBus peddels_x_offset -pg 1 -lvl 2 -x 180 -y 360 -defaultsOSRD
+preplace portBus peddels_hoogte -pg 1 -lvl 2 -x 180 -y 260 -defaultsOSRD
+preplace portBus balletje_grootte -pg 1 -lvl 2 -x 180 -y 60 -defaultsOSRD
+preplace portBus peddels_breedte -pg 1 -lvl 2 -x 180 -y 160 -defaultsOSRD
 preplace inst peddels_hoogte -pg 1 -lvl 1 -x 80 -y 260 -defaultsOSRD
 preplace inst peddels_breedte -pg 1 -lvl 1 -x 80 -y 160 -defaultsOSRD
+preplace inst scherm_hoogte -pg 1 -lvl 1 -x 80 -y 560 -defaultsOSRD
 preplace inst peddels_x_offset -pg 1 -lvl 1 -x 80 -y 360 -defaultsOSRD
 preplace inst scherm_breedte -pg 1 -lvl 1 -x 80 -y 460 -defaultsOSRD
-preplace inst scherm_hoogte -pg 1 -lvl 1 -x 80 -y 560 -defaultsOSRD
 preplace inst balletje_grootte -pg 1 -lvl 1 -x 80 -y 60 -defaultsOSRD
-levelinfo -pg 1 0 80 160
-pagesize -pg 1 -db -bbox -sgen 0 0 160 620
+preplace netloc scherm_hoogte_dout 1 1 1 NJ 560
+preplace netloc scherm_breedte_dout 1 1 1 NJ 460
+preplace netloc peddels_x_offset_dout 1 1 1 NJ 360
+preplace netloc peddels_hoogte_dout 1 1 1 NJ 260
+preplace netloc balletje_grootte_dout 1 1 1 NJ 60
+preplace netloc peddels_breedte_dout 1 1 1 NJ 160
+levelinfo -pg 1 0 80 180
+pagesize -pg 1 -db -bbox -sgen 0 0 370 620
 "
 }
-
+0

@@ -55,7 +55,7 @@
         "score_l_i": [ { "direction": "in", "size_left": "3", "size_right": "0" } ],
         "score_r_i": [ { "direction": "in", "size_left": "3", "size_right": "0" } ],
         "screen_width_i": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
-        "screen_height_i": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "screen_height_i": [ { "direction": "in", "size_left": "8", "size_right": "0" } ],
         "pixel_value_o": [ { "direction": "out" } ],
         "HSYNC_o": [ { "direction": "out" } ],
         "VSYNC_o": [ { "direction": "out" } ],

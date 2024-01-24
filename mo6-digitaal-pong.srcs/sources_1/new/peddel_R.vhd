@@ -41,9 +41,9 @@ entity Coor_PixelR is
            HPixel : in STD_LOGIC_vector(9 downto 0);
            CR_in : in STD_LOGIC_vector(8 downto 0); -- input van de linker controller 
            BreetePeddels : in  STD_LOGIC_VECTOR(9 downto 0);
-           HoogtePeddels : in STD_LOGIC_VECTOR(9 downto 0);
-           Offcet : in  STD_LOGIC_VECTOR(9 downto 0);
-           CoorR_yboven_out : out STD_LOGIC_VECTOR(9 downto 0);
+           HoogtePeddels : in STD_LOGIC_VECTOR(8 downto 0);
+           Offcet : in  STD_LOGIC_VECTOR(8 downto 0);
+           CoorR_yboven_out : out STD_LOGIC_VECTOR(8 downto 0);
            PixelSig_out : out STD_LOGIC;
            HSYNC_o, VSYNC_o  : out STD_LOGIC;
            VPixel_out, HPixel_out : out STD_LOGIC_vector(9 downto 0)
@@ -57,13 +57,13 @@ end Coor_PixelR;
 
 architecture Behavioral of Coor_PixelR is
 
-signal CoorR : STD_LOGIC_vector(9 downto 0);
+signal CoorR : STD_LOGIC_vector(8 downto 0);
 signal CR_velue : STD_LOGIC_vector(9 downto 0) := "0000000001";--(others => '0'); --controleren of dit is wat ik binnen krijg van de vorige module
 signal CR_velue_Hoogte : STD_LOGIC_VECTOR(9 downto 0);
 signal CR_velue_H_gedeeld_100 : STD_LOGIC_VECTOR(9 downto 0);
-signal CR_velue_times : STD_LOGIC_vector(9 downto 0) := "0000000001";--(others => '0'); --controleren of dit is wat ik binnen krijg van de vorige module * 4
+signal CR_velue_times : STD_LOGIC_vector(8 downto 0) := "000000001";--(others => '0'); --controleren of dit is wat ik binnen krijg van de vorige module * 4
 
-signal CoorR_yboven : STD_LOGIC_VECTOR(9 downto 0);
+signal CoorR_yboven : STD_LOGIC_VECTOR(8 downto 0);
 constant CoorR_xlinks : STD_LOGIC_VECTOR(9 downto 0) := STD_LOGIC_VECTOR(to_unsigned(640,10) - unsigned(Offcet) - unsigned(BreetePeddels));
 constant CoorR_xrechts : STD_LOGIC_VECTOR(9 downto 0):= STD_LOGIC_VECTOR(to_unsigned(640,10) - unsigned(Offcet)); 
 
@@ -101,14 +101,14 @@ begin
     CR_velue_H_gedeeld_100 <= std_logic_vector(resize(unsigned(CR_velue_Hoogte )/to_unsigned(100,10),10));
      
     --CL_velue_H_gedeeld_100 * CL_velue
-    CR_velue_times <= std_logic_vector(resize(unsigned(CR_velue)*unsigned(CR_velue_H_gedeeld_100),10)); 
+    CR_velue_times <= std_logic_vector(resize(unsigned(CR_velue)*unsigned(CR_velue_H_gedeeld_100),9)); 
     
     --unsigned is om van een vector een biner getal te maken.
     --to_unsigned is om van een getal een biner getal te maken.
     if (CR_velue_times >= std_logic_vector(to_unsigned(480,10))) then
-        CoorR <= std_logic_vector(to_unsigned(0,10));
+        CoorR <= std_logic_vector(to_unsigned(0,9));
     else    
-        CoorR <= std_logic_vector(to_unsigned(480,10) - (unsigned(CR_velue_times)));
+        CoorR <= std_logic_vector(to_unsigned(480,9) - (unsigned(CR_velue_times)));
     end if;
 
         --CoorL - HoogtePeddels

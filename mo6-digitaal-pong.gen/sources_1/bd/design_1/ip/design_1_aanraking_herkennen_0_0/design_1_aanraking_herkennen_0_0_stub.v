@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Wed Jan 24 02:19:13 2024
+// Date        : Wed Jan 24 10:22:22 2024
 // Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_aanraking_herkennen_0_0/design_1_aanraking_herkennen_0_0_stub.v
@@ -20,17 +20,17 @@ module design_1_aanraking_herkennen_0_0(hoogte_scherm, breedte_scherm,
   y_positie_balletje, positie_peddel_links, positie_peddel_rechts, 
   aanraking_balletje_peddel, aanraking_balletje_peddel_zone, 
   aanraking_balletje_zijkant, aanraking_balletje_bovenonder)
-/* synthesis syn_black_box black_box_pad_pin="hoogte_scherm[9:0],breedte_scherm[9:0],grootte_balletje[9:0],hoogte_peddels[9:0],breedte_peddels[9:0],offset_peddels[9:0],x_positie_balletje[9:0],y_positie_balletje[9:0],positie_peddel_links[9:0],positie_peddel_rechts[9:0],aanraking_balletje_peddel,aanraking_balletje_peddel_zone[1:0],aanraking_balletje_zijkant,aanraking_balletje_bovenonder" */;
-  input [9:0]hoogte_scherm;
+/* synthesis syn_black_box black_box_pad_pin="hoogte_scherm[8:0],breedte_scherm[9:0],grootte_balletje[8:0],hoogte_peddels[8:0],breedte_peddels[9:0],offset_peddels[8:0],x_positie_balletje[9:0],y_positie_balletje[8:0],positie_peddel_links[8:0],positie_peddel_rechts[8:0],aanraking_balletje_peddel,aanraking_balletje_peddel_zone[1:0],aanraking_balletje_zijkant,aanraking_balletje_bovenonder" */;
+  input [8:0]hoogte_scherm;
   input [9:0]breedte_scherm;
-  input [9:0]grootte_balletje;
-  input [9:0]hoogte_peddels;
+  input [8:0]grootte_balletje;
+  input [8:0]hoogte_peddels;
   input [9:0]breedte_peddels;
-  input [9:0]offset_peddels;
+  input [8:0]offset_peddels;
   input [9:0]x_positie_balletje;
-  input [9:0]y_positie_balletje;
-  input [9:0]positie_peddel_links;
-  input [9:0]positie_peddel_rechts;
+  input [8:0]y_positie_balletje;
+  input [8:0]positie_peddel_links;
+  input [8:0]positie_peddel_rechts;
   output aanraking_balletje_peddel;
   output [1:0]aanraking_balletje_peddel_zone;
   output aanraking_balletje_zijkant;

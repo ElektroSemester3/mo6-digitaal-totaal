@@ -55,16 +55,16 @@ USE ieee.numeric_std.ALL;
 
 ENTITY design_1_aanraking_herkennen_0_0 IS
   PORT (
-    hoogte_scherm : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    hoogte_scherm : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
     breedte_scherm : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    grootte_balletje : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    hoogte_peddels : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    grootte_balletje : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+    hoogte_peddels : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
     breedte_peddels : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    offset_peddels : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    offset_peddels : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
     x_positie_balletje : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    y_positie_balletje : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    positie_peddel_links : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    positie_peddel_rechts : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    y_positie_balletje : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+    positie_peddel_links : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+    positie_peddel_rechts : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
     aanraking_balletje_peddel : OUT STD_LOGIC;
     aanraking_balletje_peddel_zone : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     aanraking_balletje_zijkant : OUT STD_LOGIC;
@@ -77,16 +77,16 @@ ARCHITECTURE design_1_aanraking_herkennen_0_0_arch OF design_1_aanraking_herkenn
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_1_aanraking_herkennen_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT aanraking_herkennen IS
     PORT (
-      hoogte_scherm : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+      hoogte_scherm : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
       breedte_scherm : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-      grootte_balletje : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-      hoogte_peddels : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+      grootte_balletje : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+      hoogte_peddels : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
       breedte_peddels : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-      offset_peddels : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+      offset_peddels : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
       x_positie_balletje : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-      y_positie_balletje : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-      positie_peddel_links : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-      positie_peddel_rechts : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+      y_positie_balletje : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+      positie_peddel_links : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+      positie_peddel_rechts : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
       aanraking_balletje_peddel : OUT STD_LOGIC;
       aanraking_balletje_peddel_zone : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
       aanraking_balletje_zijkant : OUT STD_LOGIC;

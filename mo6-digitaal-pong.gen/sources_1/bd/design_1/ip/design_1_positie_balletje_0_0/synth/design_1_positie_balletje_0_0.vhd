@@ -57,7 +57,7 @@ ENTITY design_1_positie_balletje_0_0 IS
   PORT (
     reset : IN STD_LOGIC;
     screen_width : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    screen_heigth : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    screen_heigth : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
     clk_slow : IN STD_LOGIC;
     angle_index : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     running : IN STD_LOGIC;
@@ -65,7 +65,7 @@ ENTITY design_1_positie_balletje_0_0 IS
     side_touch : IN STD_LOGIC;
     top_bottom_touch : IN STD_LOGIC;
     pos_x_out : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-    pos_y_out : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+    pos_y_out : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
   );
 END design_1_positie_balletje_0_0;
 
@@ -83,7 +83,7 @@ ARCHITECTURE design_1_positie_balletje_0_0_arch OF design_1_positie_balletje_0_0
     PORT (
       reset : IN STD_LOGIC;
       screen_width : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-      screen_heigth : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+      screen_heigth : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
       clk_slow : IN STD_LOGIC;
       angle_index : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       running : IN STD_LOGIC;
@@ -91,7 +91,7 @@ ARCHITECTURE design_1_positie_balletje_0_0_arch OF design_1_positie_balletje_0_0
       side_touch : IN STD_LOGIC;
       top_bottom_touch : IN STD_LOGIC;
       pos_x_out : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-      pos_y_out : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+      pos_y_out : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
     );
   END COMPONENT positie_balletje;
   ATTRIBUTE X_CORE_INFO : STRING;

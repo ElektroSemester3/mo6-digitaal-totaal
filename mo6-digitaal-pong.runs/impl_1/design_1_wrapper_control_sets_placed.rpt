@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Wed Jan 24 02:31:13 2024
+| Date         : Wed Jan 24 10:50:19 2024
 | Host         : Lenovo-Jochem running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
 | Design       : design_1_wrapper
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    26 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |   102 |
+| Unused register locations in slices containing registers |    98 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -46,8 +46,8 @@ Table of Contents
 | >= 8 to < 10       |     5 |
 | >= 10 to < 12      |     3 |
 | >= 12 to < 14      |     1 |
-| >= 14 to < 16      |     0 |
-| >= 16              |    10 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     9 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             210 |           92 |
-| No           | No                    | Yes                    |              80 |           28 |
-| No           | Yes                   | No                     |              83 |           24 |
-| Yes          | No                    | No                     |              18 |            6 |
-| Yes          | No                    | Yes                    |             104 |           33 |
+| No           | No                    | No                     |             207 |           94 |
+| No           | No                    | Yes                    |              79 |           31 |
+| No           | Yes                   | No                     |              83 |           23 |
+| Yes          | No                    | No                     |              18 |            4 |
+| Yes          | No                    | Yes                    |             104 |           32 |
 | Yes          | Yes                   | No                     |              19 |            6 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -75,30 +75,30 @@ Table of Contents
 +------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+----------------+--------------+
 |  design_1_i/clk_wiz_0/inst/clk_out2                                          |                                                                                               |                                                                                    |                1 |              1 |         1.00 |
 |  design_1_i/ontvangen_controllers/controller_ultrasoon_0/U0/go_to_next__0    |                                                                                               |                                                                                    |                1 |              1 |         1.00 |
-| ~design_1_i/ontvangen_controllers/controller_ultrasoon_0/U0/distance_mm__0   |                                                                                               |                                                                                    |                1 |              2 |         2.00 |
-|  design_1_i/clk_divider_0/U0/clk_out_BUFG                                    | design_1_i/positie_balletje_0/U0/angle_0                                                      | reset_IBUF                                                                         |                2 |              4 |         2.00 |
-|  design_1_i/clk_divider_0/U0/clk_out_BUFG                                    | design_1_i/positie_balletje_0/U0/y_pos                                                        | reset_IBUF                                                                         |                1 |              4 |         4.00 |
+| ~design_1_i/ontvangen_controllers/controller_ultrasoon_0/U0/distance_mm__0   |                                                                                               |                                                                                    |                2 |              2 |         1.00 |
+|  design_1_i/clk_divider_0/U0/clk_out_BUFG                                    | design_1_i/positie_balletje_0/U0/angle_0                                                      | reset_IBUF                                                                         |                1 |              4 |         4.00 |
+|  design_1_i/clk_divider_0/U0/clk_out_BUFG                                    | design_1_i/positie_balletje_0/U0/y_pos                                                        | reset_IBUF                                                                         |                2 |              4 |         2.00 |
 |  design_1_i/clk_wiz_0/inst/clk_out1                                          |                                                                                               |                                                                                    |                4 |              5 |         1.25 |
-|  reset_IBUF                                                                  |                                                                                               |                                                                                    |                4 |              6 |         1.50 |
-|  design_1_i/beeld_generator_0/U0/pxlCLK_BUFG                                 | design_1_i/Coor_PixelR_0/U0/CR_velue0                                                         |                                                                                    |                3 |              8 |         2.67 |
-|  design_1_i/clk_divider_0/U0/clk_out_BUFG                                    |                                                                                               |                                                                                    |                4 |              9 |         2.25 |
-|  design_1_i/beeld_generator_0/U0/pxlCLK_BUFG                                 |                                                                                               | design_1_i/Coor_PixelR_0/U0/CoorR[8]_i_1_n_0                                       |                4 |              9 |         2.25 |
+|  reset_IBUF                                                                  |                                                                                               |                                                                                    |                3 |              6 |         2.00 |
+|  design_1_i/beeld_generator_0/U0/pxlCLK_BUFG                                 | design_1_i/Coor_PixelR_0/U0/CR_velue0                                                         |                                                                                    |                2 |              8 |         4.00 |
 |  design_1_i/ontvangen_controllers/controller_interconn_0/controller_enable_1 |                                                                                               |                                                                                    |                6 |              9 |         1.50 |
+|  design_1_i/beeld_generator_0/U0/pxlCLK_BUFG                                 |                                                                                               | design_1_i/Coor_PixelR_0/U0/CoorR[8]_i_1_n_0                                       |                3 |              9 |         3.00 |
+|  design_1_i/clk_divider_0/U0/clk_out_BUFG                                    |                                                                                               |                                                                                    |                6 |              9 |         1.50 |
 |  design_1_i/ontvangen_controllers/clk_divider_0/U0/clk_out                   | design_1_i/ontvangen_controllers/controller_draadloos_0/U0/current_value                      | reset_IBUF                                                                         |                3 |              9 |         3.00 |
 |  design_1_i/clk_wiz_0/inst/clk_out1                                          |                                                                                               | design_1_i/ontvangen_controllers/controller_inductief_0/U0/timing_count[9]_i_1_n_0 |                4 |             10 |         2.50 |
-|  design_1_i/clk_wiz_0/inst/clk_out1                                          | design_1_i/ontvangen_controllers/controller_inductief_0/U0/rising_edge_count_final[9]_i_1_n_0 |                                                                                    |                3 |             10 |         3.33 |
 |  design_1_i/clk_wiz_0/inst/clk_out1                                          | design_1_i/ontvangen_controllers/controller_inductief_0/U0/rising_edge_detected               | design_1_i/ontvangen_controllers/controller_inductief_0/U0/rising_edge_count0      |                3 |             10 |         3.33 |
-|  design_1_i/clk_divider_0/U0/clk_out_BUFG                                    | design_1_i/util_vector_logic_0/Res[0]                                                         | reset_IBUF                                                                         |                6 |             12 |         2.00 |
-|  design_1_i/clk_divider_0/U0/clk_out_BUFG                                    |                                                                                               | reset_IBUF                                                                         |                7 |             16 |         2.29 |
-|  design_1_i/ontvangen_controllers/controller_ultrasoon_0/U0/distance_mm__0   |                                                                                               |                                                                                    |                5 |             16 |         3.20 |
-|  design_1_i/clk_wiz_0/inst/clk_out1                                          | design_1_i/ontvangen_controllers/controller_ultrasoon_0/U0/trigger_timer_value[19]_i_1_n_0    | design_1_i/ontvangen_controllers/controller_ultrasoon_0/U0/timer_value0            |                4 |             20 |         5.00 |
-|  design_1_i/clk_wiz_0/inst/clk_out1                                          |                                                                                               | design_1_i/ontvangen_controllers/controller_ultrasoon_0/U0/timer_value0            |                7 |             28 |         4.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1                                          | design_1_i/ontvangen_controllers/controller_inductief_0/U0/rising_edge_count_final[9]_i_1_n_0 |                                                                                    |                2 |             10 |         5.00 |
+|  design_1_i/clk_divider_0/U0/clk_out_BUFG                                    | design_1_i/util_vector_logic_0/Res[0]                                                         | reset_IBUF                                                                         |                4 |             12 |         3.00 |
+|  design_1_i/clk_divider_0/U0/clk_out_BUFG                                    |                                                                                               | reset_IBUF                                                                         |                7 |             15 |         2.14 |
+|  design_1_i/ontvangen_controllers/controller_ultrasoon_0/U0/distance_mm__0   |                                                                                               |                                                                                    |                8 |             16 |         2.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1                                          | design_1_i/ontvangen_controllers/controller_ultrasoon_0/U0/trigger_timer_value[19]_i_1_n_0    | design_1_i/ontvangen_controllers/controller_ultrasoon_0/U0/timer_value0            |                6 |             20 |         3.33 |
+|  design_1_i/clk_wiz_0/inst/clk_out1                                          |                                                                                               | design_1_i/ontvangen_controllers/controller_ultrasoon_0/U0/timer_value0            |                8 |             28 |         3.50 |
+|  design_1_i/beeld_generator_0/U0/pxlCLK_BUFG                                 | design_1_i/beeld_generator_0/U0/vPos                                                          | reset_IBUF                                                                         |               11 |             32 |         2.91 |
 |  design_1_i/clk_wiz_0/inst/clk_out1                                          |                                                                                               | design_1_i/clk_divider_0/U0/count[0]_i_1_n_0                                       |                8 |             32 |         4.00 |
 |  design_1_i/clk_wiz_0/inst/clk_out1                                          |                                                                                               | design_1_i/ontvangen_controllers/clk_divider_0/U0/count[0]_i_1_n_0                 |                8 |             32 |         4.00 |
 |  design_1_i/clk_wiz_0/inst/clk_out1                                          | design_1_i/ontvangen_controllers/controller_ultrasoon_0/U0/counter_enable                     | design_1_i/ontvangen_controllers/controller_ultrasoon_0/U0/counter0                |                8 |             32 |         4.00 |
-|  design_1_i/beeld_generator_0/U0/pxlCLK_BUFG                                 | design_1_i/beeld_generator_0/U0/vPos                                                          | reset_IBUF                                                                         |               12 |             32 |         2.67 |
-|  design_1_i/beeld_generator_0/U0/pxlCLK_BUFG                                 |                                                                                               | reset_IBUF                                                                         |               14 |             36 |         2.57 |
-|  design_1_i/beeld_generator_0/U0/pxlCLK_BUFG                                 |                                                                                               |                                                                                    |               66 |            161 |         2.44 |
+|  design_1_i/beeld_generator_0/U0/pxlCLK_BUFG                                 |                                                                                               | reset_IBUF                                                                         |               16 |             36 |         2.25 |
+|  design_1_i/beeld_generator_0/U0/pxlCLK_BUFG                                 |                                                                                               |                                                                                    |               63 |            158 |         2.51 |
 +------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+----------------+--------------+
 
 

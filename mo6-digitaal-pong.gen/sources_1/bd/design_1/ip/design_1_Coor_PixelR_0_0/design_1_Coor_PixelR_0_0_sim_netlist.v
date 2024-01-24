@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Wed Jan 24 02:19:19 2024
+// Date        : Wed Jan 24 10:41:59 2024
 // Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_Coor_PixelR_0_0/design_1_Coor_PixelR_0_0_sim_netlist.v
@@ -41,9 +41,9 @@ module design_1_Coor_PixelR_0_0
   input [9:0]HPixel;
   input [8:0]CR_in;
   input [9:0]BreetePeddels;
-  input [9:0]HoogtePeddels;
-  input [9:0]Offcet;
-  output [9:0]CoorR_yboven_out;
+  input [8:0]HoogtePeddels;
+  input [8:0]Offcet;
+  output [8:0]CoorR_yboven_out;
   output PixelSig_out;
   output HSYNC_o;
   output VSYNC_o;
@@ -52,13 +52,13 @@ module design_1_Coor_PixelR_0_0
 
   wire [9:0]BreetePeddels;
   wire [8:0]CR_in;
-  wire [9:0]CoorR_yboven_out;
+  wire [8:0]CoorR_yboven_out;
   wire [9:0]HPixel;
   wire [9:0]HPixel_out;
   wire HSYNC_i;
   wire HSYNC_o;
-  wire [9:0]HoogtePeddels;
-  wire [9:0]Offcet;
+  wire [8:0]HoogtePeddels;
+  wire [8:0]Offcet;
   wire PixelClock;
   wire PixelSig_in;
   wire PixelSig_out;
@@ -95,25 +95,25 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
     HPixel_out,
     PixelSig_out,
     CR_in,
+    HoogtePeddels,
     BreetePeddels,
     Offcet,
-    HoogtePeddels,
     PixelClock,
     HSYNC_i,
     VSYNC_i,
     VPixel,
     HPixel,
     PixelSig_in);
-  output [9:0]CoorR_yboven_out;
+  output [8:0]CoorR_yboven_out;
   output HSYNC_o;
   output VSYNC_o;
   output [9:0]VPixel_out;
   output [9:0]HPixel_out;
   output PixelSig_out;
   input [8:0]CR_in;
+  input [8:0]HoogtePeddels;
   input [9:0]BreetePeddels;
-  input [9:0]Offcet;
-  input [9:0]HoogtePeddels;
+  input [8:0]Offcet;
   input PixelClock;
   input HSYNC_i;
   input VSYNC_i;
@@ -306,7 +306,8 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
   wire \CR_velue_Hoogte[7]_i_1_n_0 ;
   wire \CR_velue_Hoogte[8]_i_1_n_0 ;
   wire \CR_velue_Hoogte[9]_i_1_n_0 ;
-  wire [9:0]CR_velue_times0;
+  wire [8:0]CR_velue_times;
+  wire [8:0]CR_velue_times0;
   wire \CR_velue_times[3]_i_10_n_0 ;
   wire \CR_velue_times[3]_i_2_n_0 ;
   wire \CR_velue_times[3]_i_3_n_0 ;
@@ -324,6 +325,7 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
   wire \CR_velue_times[7]_i_15_n_0 ;
   wire \CR_velue_times[7]_i_16_n_0 ;
   wire \CR_velue_times[7]_i_17_n_0 ;
+  wire \CR_velue_times[7]_i_18_n_0 ;
   wire \CR_velue_times[7]_i_2_n_0 ;
   wire \CR_velue_times[7]_i_3_n_0 ;
   wire \CR_velue_times[7]_i_4_n_0 ;
@@ -332,14 +334,13 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
   wire \CR_velue_times[7]_i_7_n_0 ;
   wire \CR_velue_times[7]_i_8_n_0 ;
   wire \CR_velue_times[7]_i_9_n_0 ;
-  wire \CR_velue_times[9]_i_2_n_0 ;
-  wire \CR_velue_times[9]_i_3_n_0 ;
-  wire \CR_velue_times[9]_i_4_n_0 ;
-  wire \CR_velue_times[9]_i_5_n_0 ;
-  wire \CR_velue_times[9]_i_6_n_0 ;
-  wire \CR_velue_times[9]_i_7_n_0 ;
-  wire \CR_velue_times[9]_i_8_n_0 ;
-  wire \CR_velue_times[9]_i_9_n_0 ;
+  wire \CR_velue_times[8]_i_2_n_0 ;
+  wire \CR_velue_times[8]_i_3_n_0 ;
+  wire \CR_velue_times[8]_i_4_n_0 ;
+  wire \CR_velue_times[8]_i_5_n_0 ;
+  wire \CR_velue_times[8]_i_6_n_0 ;
+  wire \CR_velue_times[8]_i_7_n_0 ;
+  wire \CR_velue_times[8]_i_8_n_0 ;
   wire \CR_velue_times_reg[3]_i_1_n_0 ;
   wire \CR_velue_times_reg[3]_i_1_n_1 ;
   wire \CR_velue_times_reg[3]_i_1_n_2 ;
@@ -348,17 +349,6 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
   wire \CR_velue_times_reg[7]_i_1_n_1 ;
   wire \CR_velue_times_reg[7]_i_1_n_2 ;
   wire \CR_velue_times_reg[7]_i_1_n_3 ;
-  wire \CR_velue_times_reg[9]_i_1_n_3 ;
-  wire \CR_velue_times_reg_n_0_[0] ;
-  wire \CR_velue_times_reg_n_0_[1] ;
-  wire \CR_velue_times_reg_n_0_[2] ;
-  wire \CR_velue_times_reg_n_0_[3] ;
-  wire \CR_velue_times_reg_n_0_[4] ;
-  wire \CR_velue_times_reg_n_0_[5] ;
-  wire \CR_velue_times_reg_n_0_[6] ;
-  wire \CR_velue_times_reg_n_0_[7] ;
-  wire \CR_velue_times_reg_n_0_[8] ;
-  wire \CR_velue_times_reg_n_0_[9] ;
   wire [8:0]CoorR;
   wire \CoorR[1]_i_1_n_0 ;
   wire \CoorR[2]_i_1_n_0 ;
@@ -370,34 +360,33 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
   wire \CoorR[8]_i_1_n_0 ;
   wire \CoorR[8]_i_2_n_0 ;
   wire \CoorR[8]_i_3_n_0 ;
-  wire [9:0]CoorR_yboven;
-  wire [9:0]CoorR_yboven0;
-  wire \CoorR_yboven[3]_i_2_n_0 ;
-  wire \CoorR_yboven[3]_i_3_n_0 ;
-  wire \CoorR_yboven[3]_i_4_n_0 ;
-  wire \CoorR_yboven[3]_i_5_n_0 ;
-  wire \CoorR_yboven[7]_i_2_n_0 ;
-  wire \CoorR_yboven[7]_i_3_n_0 ;
-  wire \CoorR_yboven[7]_i_4_n_0 ;
-  wire \CoorR_yboven[7]_i_5_n_0 ;
-  wire \CoorR_yboven[9]_i_2_n_0 ;
-  wire \CoorR_yboven[9]_i_3_n_0 ;
-  wire [9:0]CoorR_yboven_out;
-  wire \CoorR_yboven_reg[3]_i_1_n_0 ;
-  wire \CoorR_yboven_reg[3]_i_1_n_1 ;
-  wire \CoorR_yboven_reg[3]_i_1_n_2 ;
-  wire \CoorR_yboven_reg[3]_i_1_n_3 ;
-  wire \CoorR_yboven_reg[7]_i_1_n_0 ;
-  wire \CoorR_yboven_reg[7]_i_1_n_1 ;
-  wire \CoorR_yboven_reg[7]_i_1_n_2 ;
-  wire \CoorR_yboven_reg[7]_i_1_n_3 ;
-  wire \CoorR_yboven_reg[9]_i_1_n_3 ;
+  wire \CoorR[8]_i_4_n_0 ;
+  wire [8:0]CoorR_yboven;
+  wire [8:0]CoorR_yboven0;
+  wire CoorR_yboven0_carry__0_i_1_n_0;
+  wire CoorR_yboven0_carry__0_i_2_n_0;
+  wire CoorR_yboven0_carry__0_i_3_n_0;
+  wire CoorR_yboven0_carry__0_i_4_n_0;
+  wire CoorR_yboven0_carry__0_n_0;
+  wire CoorR_yboven0_carry__0_n_1;
+  wire CoorR_yboven0_carry__0_n_2;
+  wire CoorR_yboven0_carry__0_n_3;
+  wire CoorR_yboven0_carry__1_i_1_n_0;
+  wire CoorR_yboven0_carry_i_1_n_0;
+  wire CoorR_yboven0_carry_i_2_n_0;
+  wire CoorR_yboven0_carry_i_3_n_0;
+  wire CoorR_yboven0_carry_i_4_n_0;
+  wire CoorR_yboven0_carry_n_0;
+  wire CoorR_yboven0_carry_n_1;
+  wire CoorR_yboven0_carry_n_2;
+  wire CoorR_yboven0_carry_n_3;
+  wire [8:0]CoorR_yboven_out;
   wire [9:0]HPixel;
   wire [9:0]HPixel_out;
   wire HSYNC_i;
   wire HSYNC_o;
-  wire [9:0]HoogtePeddels;
-  wire [9:0]Offcet;
+  wire [8:0]HoogtePeddels;
+  wire [8:0]Offcet;
   wire PixelClock;
   wire PixelSig_in;
   wire PixelSig_out;
@@ -435,7 +424,6 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
   wire PixelSig_out30_in;
   wire PixelSig_out3_carry__0_i_1_n_0;
   wire PixelSig_out3_carry__0_i_2_n_0;
-  wire PixelSig_out3_carry__0_i_3_n_0;
   wire PixelSig_out3_carry_i_10_n_0;
   wire PixelSig_out3_carry_i_1_n_0;
   wire PixelSig_out3_carry_i_2_n_0;
@@ -592,10 +580,10 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
   wire [2:2]\NLW_CR_velue_H_gedeeld_100_reg[3]_i_3_CO_UNCONNECTED ;
   wire [3:3]\NLW_CR_velue_H_gedeeld_100_reg[3]_i_3_O_UNCONNECTED ;
   wire [3:0]\NLW_CR_velue_H_gedeeld_100_reg[3]_i_4_O_UNCONNECTED ;
-  wire [3:1]\NLW_CR_velue_times_reg[9]_i_1_CO_UNCONNECTED ;
-  wire [3:2]\NLW_CR_velue_times_reg[9]_i_1_O_UNCONNECTED ;
-  wire [3:1]\NLW_CoorR_yboven_reg[9]_i_1_CO_UNCONNECTED ;
-  wire [3:2]\NLW_CoorR_yboven_reg[9]_i_1_O_UNCONNECTED ;
+  wire [3:0]\NLW_CR_velue_times_reg[8]_i_1_CO_UNCONNECTED ;
+  wire [3:1]\NLW_CR_velue_times_reg[8]_i_1_O_UNCONNECTED ;
+  wire [3:0]NLW_CoorR_yboven0_carry__1_CO_UNCONNECTED;
+  wire [3:1]NLW_CoorR_yboven0_carry__1_O_UNCONNECTED;
   wire [3:0]NLW_PixelSig_out1_carry_O_UNCONNECTED;
   wire [3:1]NLW_PixelSig_out1_carry__0_CO_UNCONNECTED;
   wire [3:0]NLW_PixelSig_out1_carry__0_O_UNCONNECTED;
@@ -891,7 +879,7 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
        (.I0(CR_in[3]),
         .I1(CR_in[0]),
         .O(CR_velue1__0_carry_i_7_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'hAE51)) 
     \CR_velue[0]_i_1 
@@ -900,7 +888,7 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
         .I2(CR_velue1[15]),
         .I3(CR_velue1[9]),
         .O(\CR_velue[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'hF4FF0B00)) 
     \CR_velue[1]_i_1 
@@ -920,7 +908,7 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
         .I4(\CR_velue0_inferred__0/i___93_carry__2_n_2 ),
         .I5(CR_velue1[11]),
         .O(\CR_velue[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
     .INIT(32'hFF7F0080)) 
     \CR_velue[3]_i_1 
@@ -950,7 +938,7 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
         .I4(\CR_velue[5]_i_3_n_0 ),
         .I5(CR_velue1[14]),
         .O(\CR_velue[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \CR_velue[5]_i_2 
@@ -964,7 +952,7 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
         .I1(\CR_velue0_inferred__0/i___56_carry__2_n_7 ),
         .I2(\CR_velue0_inferred__0/i___93_carry__2_n_2 ),
         .O(\CR_velue[5]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'hFF770008)) 
     \CR_velue[6]_i_1 
@@ -983,7 +971,7 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
         .I3(HPixel[5]),
         .I4(\CR_velue[7]_i_5_n_0 ),
         .O(CR_velue0));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
     .INIT(16'h0080)) 
     \CR_velue[7]_i_2 
@@ -1307,14 +1295,14 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
     \CR_velue_Hoogte[5]_i_1 
        (.I0(HoogtePeddels[5]),
         .O(\CR_velue_Hoogte[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h9)) 
     \CR_velue_Hoogte[6]_i_1 
        (.I0(HoogtePeddels[6]),
         .I1(HoogtePeddels[5]),
         .O(\CR_velue_Hoogte[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'hA9)) 
     \CR_velue_Hoogte[7]_i_1 
@@ -1322,24 +1310,23 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
         .I1(HoogtePeddels[5]),
         .I2(HoogtePeddels[6]),
         .O(\CR_velue_Hoogte[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
-    .INIT(16'hAAA9)) 
+    .INIT(16'hFE01)) 
     \CR_velue_Hoogte[8]_i_1 
-       (.I0(HoogtePeddels[8]),
-        .I1(HoogtePeddels[6]),
-        .I2(HoogtePeddels[5]),
-        .I3(HoogtePeddels[7]),
+       (.I0(HoogtePeddels[7]),
+        .I1(HoogtePeddels[5]),
+        .I2(HoogtePeddels[6]),
+        .I3(HoogtePeddels[8]),
         .O(\CR_velue_Hoogte[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT5 #(
-    .INIT(32'h0001FFFE)) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
     \CR_velue_Hoogte[9]_i_1 
-       (.I0(HoogtePeddels[8]),
-        .I1(HoogtePeddels[6]),
-        .I2(HoogtePeddels[5]),
-        .I3(HoogtePeddels[7]),
-        .I4(HoogtePeddels[9]),
+       (.I0(HoogtePeddels[7]),
+        .I1(HoogtePeddels[5]),
+        .I2(HoogtePeddels[6]),
+        .I3(HoogtePeddels[8]),
         .O(\CR_velue_Hoogte[9]_i_1_n_0 ));
   FDRE \CR_velue_Hoogte_reg[0] 
        (.C(PixelClock),
@@ -1600,21 +1587,32 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
         .I4(CR_velue_H_gedeeld_100[0]),
         .I5(CR_velue[3]),
         .O(\CR_velue_times[7]_i_15_n_0 ));
+  LUT6 #(
+    .INIT(64'h7888877787778777)) 
+    \CR_velue_times[7]_i_16 
+       (.I0(CR_velue_H_gedeeld_100[1]),
+        .I1(CR_velue[6]),
+        .I2(CR_velue[4]),
+        .I3(CR_velue_H_gedeeld_100[3]),
+        .I4(CR_velue[5]),
+        .I5(CR_velue_H_gedeeld_100[2]),
+        .O(\CR_velue_times[7]_i_16_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'h956A)) 
-    \CR_velue_times[7]_i_16 
+    \CR_velue_times[7]_i_17 
        (.I0(\CR_velue_times[7]_i_15_n_0 ),
         .I1(CR_velue[4]),
         .I2(CR_velue_H_gedeeld_100[0]),
         .I3(\CR_velue_times[7]_i_14_n_0 ),
-        .O(\CR_velue_times[7]_i_16_n_0 ));
+        .O(\CR_velue_times[7]_i_17_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h7)) 
-    \CR_velue_times[7]_i_17 
+    \CR_velue_times[7]_i_18 
        (.I0(CR_velue[1]),
         .I1(CR_velue_H_gedeeld_100[2]),
-        .O(\CR_velue_times[7]_i_17_n_0 ));
+        .O(\CR_velue_times[7]_i_18_n_0 ));
   LUT4 #(
     .INIT(16'h8F08)) 
     \CR_velue_times[7]_i_2 
@@ -1651,10 +1649,10 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
     .INIT(32'h96666999)) 
     \CR_velue_times[7]_i_6 
        (.I0(\CR_velue_times[7]_i_2_n_0 ),
-        .I1(\CR_velue_times[9]_i_5_n_0 ),
+        .I1(\CR_velue_times[7]_i_16_n_0 ),
         .I2(CR_velue_H_gedeeld_100[0]),
         .I3(CR_velue[7]),
-        .I4(\CR_velue_times[9]_i_6_n_0 ),
+        .I4(\CR_velue_times[8]_i_3_n_0 ),
         .O(\CR_velue_times[7]_i_6_n_0 ));
   LUT5 #(
     .INIT(32'h96666999)) 
@@ -1677,95 +1675,75 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
   LUT6 #(
     .INIT(64'h95AA559555955595)) 
     \CR_velue_times[7]_i_9 
-       (.I0(\CR_velue_times[7]_i_16_n_0 ),
+       (.I0(\CR_velue_times[7]_i_17_n_0 ),
         .I1(CR_velue[2]),
         .I2(CR_velue_H_gedeeld_100[1]),
-        .I3(\CR_velue_times[7]_i_17_n_0 ),
+        .I3(\CR_velue_times[7]_i_18_n_0 ),
         .I4(CR_velue[0]),
         .I5(CR_velue_H_gedeeld_100[3]),
         .O(\CR_velue_times[7]_i_9_n_0 ));
-  LUT4 #(
-    .INIT(16'h8F08)) 
-    \CR_velue_times[9]_i_2 
-       (.I0(CR_velue_H_gedeeld_100[0]),
-        .I1(CR_velue[7]),
-        .I2(\CR_velue_times[9]_i_5_n_0 ),
-        .I3(\CR_velue_times[9]_i_6_n_0 ),
-        .O(\CR_velue_times[9]_i_2_n_0 ));
-  LUT3 #(
-    .INIT(8'h2D)) 
-    \CR_velue_times[9]_i_3 
-       (.I0(\CR_velue_times[9]_i_7_n_0 ),
-        .I1(\CR_velue_times[9]_i_8_n_0 ),
-        .I2(\CR_velue_times[9]_i_9_n_0 ),
-        .O(\CR_velue_times[9]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'h4DDDB222B2224DDD)) 
-    \CR_velue_times[9]_i_4 
-       (.I0(\CR_velue_times[9]_i_6_n_0 ),
-        .I1(\CR_velue_times[9]_i_5_n_0 ),
-        .I2(CR_velue[7]),
-        .I3(CR_velue_H_gedeeld_100[0]),
-        .I4(\CR_velue_times[9]_i_8_n_0 ),
-        .I5(\CR_velue_times[9]_i_7_n_0 ),
-        .O(\CR_velue_times[9]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'h7888877787778777)) 
-    \CR_velue_times[9]_i_5 
-       (.I0(CR_velue_H_gedeeld_100[1]),
-        .I1(CR_velue[6]),
-        .I2(CR_velue[4]),
-        .I3(CR_velue_H_gedeeld_100[3]),
-        .I4(CR_velue[5]),
-        .I5(CR_velue_H_gedeeld_100[2]),
-        .O(\CR_velue_times[9]_i_5_n_0 ));
+    .INIT(64'h2DB4B4D2B4D2D24B)) 
+    \CR_velue_times[8]_i_2 
+       (.I0(\CR_velue_times[8]_i_3_n_0 ),
+        .I1(\CR_velue_times[8]_i_4_n_0 ),
+        .I2(\CR_velue_times[8]_i_5_n_0 ),
+        .I3(\CR_velue_times[8]_i_6_n_0 ),
+        .I4(\CR_velue_times[8]_i_7_n_0 ),
+        .I5(\CR_velue_times[8]_i_8_n_0 ),
+        .O(\CR_velue_times[8]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hF888800080008000)) 
-    \CR_velue_times[9]_i_6 
+    \CR_velue_times[8]_i_3 
        (.I0(CR_velue_H_gedeeld_100[3]),
         .I1(CR_velue[3]),
         .I2(CR_velue_H_gedeeld_100[2]),
         .I3(CR_velue[4]),
         .I4(CR_velue_H_gedeeld_100[1]),
         .I5(CR_velue[5]),
-        .O(\CR_velue_times[9]_i_6_n_0 ));
-  LUT6 #(
-    .INIT(64'hF888800080008000)) 
-    \CR_velue_times[9]_i_7 
-       (.I0(CR_velue_H_gedeeld_100[3]),
-        .I1(CR_velue[4]),
-        .I2(CR_velue_H_gedeeld_100[2]),
-        .I3(CR_velue[5]),
-        .I4(CR_velue_H_gedeeld_100[1]),
-        .I5(CR_velue[6]),
-        .O(\CR_velue_times[9]_i_7_n_0 ));
+        .O(\CR_velue_times[8]_i_3_n_0 ));
+  LUT2 #(
+    .INIT(4'h7)) 
+    \CR_velue_times[8]_i_4 
+       (.I0(CR_velue[7]),
+        .I1(CR_velue_H_gedeeld_100[0]),
+        .O(\CR_velue_times[8]_i_4_n_0 ));
   LUT6 #(
     .INIT(64'h7888877787778777)) 
-    \CR_velue_times[9]_i_8 
+    \CR_velue_times[8]_i_5 
        (.I0(CR_velue_H_gedeeld_100[1]),
         .I1(CR_velue[7]),
         .I2(CR_velue[5]),
         .I3(CR_velue_H_gedeeld_100[3]),
         .I4(CR_velue[6]),
         .I5(CR_velue_H_gedeeld_100[2]),
-        .O(\CR_velue_times[9]_i_8_n_0 ));
-  LUT6 #(
-    .INIT(64'h18A0CFFF87FF0FFF)) 
-    \CR_velue_times[9]_i_9 
-       (.I0(CR_velue_H_gedeeld_100[1]),
-        .I1(CR_velue[5]),
-        .I2(CR_velue[6]),
-        .I3(CR_velue_H_gedeeld_100[3]),
-        .I4(CR_velue[7]),
-        .I5(CR_velue_H_gedeeld_100[2]),
-        .O(\CR_velue_times[9]_i_9_n_0 ));
+        .O(\CR_velue_times[8]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT2 #(
+    .INIT(4'h7)) 
+    \CR_velue_times[8]_i_6 
+       (.I0(CR_velue[4]),
+        .I1(CR_velue_H_gedeeld_100[3]),
+        .O(\CR_velue_times[8]_i_6_n_0 ));
+  LUT2 #(
+    .INIT(4'h7)) 
+    \CR_velue_times[8]_i_7 
+       (.I0(CR_velue[5]),
+        .I1(CR_velue_H_gedeeld_100[2]),
+        .O(\CR_velue_times[8]_i_7_n_0 ));
+  LUT2 #(
+    .INIT(4'h7)) 
+    \CR_velue_times[8]_i_8 
+       (.I0(CR_velue[6]),
+        .I1(CR_velue_H_gedeeld_100[1]),
+        .O(\CR_velue_times[8]_i_8_n_0 ));
   FDRE #(
     .INIT(1'b1)) 
     \CR_velue_times_reg[0] 
        (.C(PixelClock),
         .CE(1'b1),
         .D(CR_velue_times0[0]),
-        .Q(\CR_velue_times_reg_n_0_[0] ),
+        .Q(CR_velue_times[0]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -1773,7 +1751,7 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
        (.C(PixelClock),
         .CE(1'b1),
         .D(CR_velue_times0[1]),
-        .Q(\CR_velue_times_reg_n_0_[1] ),
+        .Q(CR_velue_times[1]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -1781,7 +1759,7 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
        (.C(PixelClock),
         .CE(1'b1),
         .D(CR_velue_times0[2]),
-        .Q(\CR_velue_times_reg_n_0_[2] ),
+        .Q(CR_velue_times[2]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -1789,9 +1767,9 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
        (.C(PixelClock),
         .CE(1'b1),
         .D(CR_velue_times0[3]),
-        .Q(\CR_velue_times_reg_n_0_[3] ),
+        .Q(CR_velue_times[3]),
         .R(1'b0));
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-9 {cell *THIS*} {string 10x4}}" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-9 {cell *THIS*} {string 9x4}}" *) 
   CARRY4 \CR_velue_times_reg[3]_i_1 
        (.CI(1'b0),
         .CO({\CR_velue_times_reg[3]_i_1_n_0 ,\CR_velue_times_reg[3]_i_1_n_1 ,\CR_velue_times_reg[3]_i_1_n_2 ,\CR_velue_times_reg[3]_i_1_n_3 }),
@@ -1805,7 +1783,7 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
        (.C(PixelClock),
         .CE(1'b1),
         .D(CR_velue_times0[4]),
-        .Q(\CR_velue_times_reg_n_0_[4] ),
+        .Q(CR_velue_times[4]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -1813,7 +1791,7 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
        (.C(PixelClock),
         .CE(1'b1),
         .D(CR_velue_times0[5]),
-        .Q(\CR_velue_times_reg_n_0_[5] ),
+        .Q(CR_velue_times[5]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -1821,7 +1799,7 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
        (.C(PixelClock),
         .CE(1'b1),
         .D(CR_velue_times0[6]),
-        .Q(\CR_velue_times_reg_n_0_[6] ),
+        .Q(CR_velue_times[6]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -1829,9 +1807,9 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
        (.C(PixelClock),
         .CE(1'b1),
         .D(CR_velue_times0[7]),
-        .Q(\CR_velue_times_reg_n_0_[7] ),
+        .Q(CR_velue_times[7]),
         .R(1'b0));
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-9 {cell *THIS*} {string 10x4}}" *) 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-9 {cell *THIS*} {string 9x4}}" *) 
   CARRY4 \CR_velue_times_reg[7]_i_1 
        (.CI(\CR_velue_times_reg[3]_i_1_n_0 ),
         .CO({\CR_velue_times_reg[7]_i_1_n_0 ,\CR_velue_times_reg[7]_i_1_n_1 ,\CR_velue_times_reg[7]_i_1_n_2 ,\CR_velue_times_reg[7]_i_1_n_3 }),
@@ -1845,114 +1823,114 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
        (.C(PixelClock),
         .CE(1'b1),
         .D(CR_velue_times0[8]),
-        .Q(\CR_velue_times_reg_n_0_[8] ),
+        .Q(CR_velue_times[8]),
         .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \CR_velue_times_reg[9] 
-       (.C(PixelClock),
-        .CE(1'b1),
-        .D(CR_velue_times0[9]),
-        .Q(\CR_velue_times_reg_n_0_[9] ),
-        .R(1'b0));
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-9 {cell *THIS*} {string 10x4}}" *) 
-  CARRY4 \CR_velue_times_reg[9]_i_1 
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-9 {cell *THIS*} {string 9x4}}" *) 
+  CARRY4 \CR_velue_times_reg[8]_i_1 
        (.CI(\CR_velue_times_reg[7]_i_1_n_0 ),
-        .CO({\NLW_CR_velue_times_reg[9]_i_1_CO_UNCONNECTED [3:1],\CR_velue_times_reg[9]_i_1_n_3 }),
+        .CO(\NLW_CR_velue_times_reg[8]_i_1_CO_UNCONNECTED [3:0]),
         .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,\CR_velue_times[9]_i_2_n_0 }),
-        .O({\NLW_CR_velue_times_reg[9]_i_1_O_UNCONNECTED [3:2],CR_velue_times0[9:8]}),
-        .S({1'b0,1'b0,\CR_velue_times[9]_i_3_n_0 ,\CR_velue_times[9]_i_4_n_0 }));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\NLW_CR_velue_times_reg[8]_i_1_O_UNCONNECTED [3:1],CR_velue_times0[8]}),
+        .S({1'b0,1'b0,1'b0,\CR_velue_times[8]_i_2_n_0 }));
   LUT2 #(
     .INIT(4'h6)) 
     \CoorR[1]_i_1 
-       (.I0(\CR_velue_times_reg_n_0_[0] ),
-        .I1(\CR_velue_times_reg_n_0_[1] ),
+       (.I0(CR_velue_times[0]),
+        .I1(CR_velue_times[1]),
         .O(\CoorR[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'h1E)) 
     \CoorR[2]_i_1 
-       (.I0(\CR_velue_times_reg_n_0_[0] ),
-        .I1(\CR_velue_times_reg_n_0_[1] ),
-        .I2(\CR_velue_times_reg_n_0_[2] ),
+       (.I0(CR_velue_times[0]),
+        .I1(CR_velue_times[1]),
+        .I2(CR_velue_times[2]),
         .O(\CoorR[2]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'h01FE)) 
     \CoorR[3]_i_1 
-       (.I0(\CR_velue_times_reg_n_0_[2] ),
-        .I1(\CR_velue_times_reg_n_0_[1] ),
-        .I2(\CR_velue_times_reg_n_0_[0] ),
-        .I3(\CR_velue_times_reg_n_0_[3] ),
+       (.I0(CR_velue_times[2]),
+        .I1(CR_velue_times[1]),
+        .I2(CR_velue_times[0]),
+        .I3(CR_velue_times[3]),
         .O(\CoorR[3]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'h0001FFFE)) 
     \CoorR[4]_i_1 
-       (.I0(\CR_velue_times_reg_n_0_[3] ),
-        .I1(\CR_velue_times_reg_n_0_[0] ),
-        .I2(\CR_velue_times_reg_n_0_[1] ),
-        .I3(\CR_velue_times_reg_n_0_[2] ),
-        .I4(\CR_velue_times_reg_n_0_[4] ),
+       (.I0(CR_velue_times[3]),
+        .I1(CR_velue_times[0]),
+        .I2(CR_velue_times[1]),
+        .I3(CR_velue_times[2]),
+        .I4(CR_velue_times[4]),
         .O(\CoorR[4]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFE00000001)) 
     \CoorR[5]_i_1 
-       (.I0(\CR_velue_times_reg_n_0_[4] ),
-        .I1(\CR_velue_times_reg_n_0_[2] ),
-        .I2(\CR_velue_times_reg_n_0_[1] ),
-        .I3(\CR_velue_times_reg_n_0_[0] ),
-        .I4(\CR_velue_times_reg_n_0_[3] ),
-        .I5(\CR_velue_times_reg_n_0_[5] ),
+       (.I0(CR_velue_times[4]),
+        .I1(CR_velue_times[2]),
+        .I2(CR_velue_times[1]),
+        .I3(CR_velue_times[0]),
+        .I4(CR_velue_times[3]),
+        .I5(CR_velue_times[5]),
         .O(\CoorR[5]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \CoorR[6]_i_1 
-       (.I0(\CoorR[8]_i_3_n_0 ),
-        .I1(\CR_velue_times_reg_n_0_[6] ),
+       (.I0(\CoorR[8]_i_4_n_0 ),
+        .I1(CR_velue_times[6]),
         .O(\CoorR[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'h2D)) 
     \CoorR[7]_i_1 
-       (.I0(\CR_velue_times_reg_n_0_[6] ),
-        .I1(\CoorR[8]_i_3_n_0 ),
-        .I2(\CR_velue_times_reg_n_0_[7] ),
+       (.I0(CR_velue_times[6]),
+        .I1(\CoorR[8]_i_4_n_0 ),
+        .I2(CR_velue_times[7]),
         .O(\CoorR[7]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'hEAAAAAAA)) 
+    .INIT(32'hAAEAAAAA)) 
     \CoorR[8]_i_1 
-       (.I0(\CR_velue_times_reg_n_0_[9] ),
-        .I1(\CR_velue_times_reg_n_0_[7] ),
-        .I2(\CR_velue_times_reg_n_0_[8] ),
-        .I3(\CR_velue_times_reg_n_0_[5] ),
-        .I4(\CR_velue_times_reg_n_0_[6] ),
+       (.I0(CR_velue_times[8]),
+        .I1(CR_velue_times[6]),
+        .I2(CR_velue_times[5]),
+        .I3(\CoorR[8]_i_3_n_0 ),
+        .I4(CR_velue_times[4]),
         .O(\CoorR[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT4 #(
-    .INIT(16'h20DF)) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT3 #(
+    .INIT(8'hDF)) 
     \CoorR[8]_i_2 
-       (.I0(\CR_velue_times_reg_n_0_[7] ),
-        .I1(\CoorR[8]_i_3_n_0 ),
-        .I2(\CR_velue_times_reg_n_0_[6] ),
-        .I3(\CR_velue_times_reg_n_0_[8] ),
+       (.I0(CR_velue_times[7]),
+        .I1(\CoorR[8]_i_4_n_0 ),
+        .I2(CR_velue_times[6]),
         .O(\CoorR[8]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT5 #(
+    .INIT(32'h55555557)) 
+    \CoorR[8]_i_3 
+       (.I0(CR_velue_times[7]),
+        .I1(CR_velue_times[3]),
+        .I2(CR_velue_times[0]),
+        .I3(CR_velue_times[1]),
+        .I4(CR_velue_times[2]),
+        .O(\CoorR[8]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'h00000001FFFFFFFF)) 
-    \CoorR[8]_i_3 
-       (.I0(\CR_velue_times_reg_n_0_[4] ),
-        .I1(\CR_velue_times_reg_n_0_[2] ),
-        .I2(\CR_velue_times_reg_n_0_[1] ),
-        .I3(\CR_velue_times_reg_n_0_[0] ),
-        .I4(\CR_velue_times_reg_n_0_[3] ),
-        .I5(\CR_velue_times_reg_n_0_[5] ),
-        .O(\CoorR[8]_i_3_n_0 ));
+    \CoorR[8]_i_4 
+       (.I0(CR_velue_times[4]),
+        .I1(CR_velue_times[2]),
+        .I2(CR_velue_times[1]),
+        .I3(CR_velue_times[0]),
+        .I4(CR_velue_times[3]),
+        .I5(CR_velue_times[5]),
+        .O(\CoorR[8]_i_4_n_0 ));
   FDRE \CoorR_reg[0] 
        (.C(PixelClock),
         .CE(1'b1),
-        .D(\CR_velue_times_reg_n_0_[0] ),
+        .D(CR_velue_times[0]),
         .Q(CoorR[0]),
         .R(\CoorR[8]_i_1_n_0 ));
   FDRE \CoorR_reg[1] 
@@ -2003,65 +1981,84 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
         .D(\CoorR[8]_i_2_n_0 ),
         .Q(CoorR[8]),
         .R(\CoorR[8]_i_1_n_0 ));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 CoorR_yboven0_carry
+       (.CI(1'b0),
+        .CO({CoorR_yboven0_carry_n_0,CoorR_yboven0_carry_n_1,CoorR_yboven0_carry_n_2,CoorR_yboven0_carry_n_3}),
+        .CYINIT(1'b1),
+        .DI(CoorR[3:0]),
+        .O(CoorR_yboven0[3:0]),
+        .S({CoorR_yboven0_carry_i_1_n_0,CoorR_yboven0_carry_i_2_n_0,CoorR_yboven0_carry_i_3_n_0,CoorR_yboven0_carry_i_4_n_0}));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 CoorR_yboven0_carry__0
+       (.CI(CoorR_yboven0_carry_n_0),
+        .CO({CoorR_yboven0_carry__0_n_0,CoorR_yboven0_carry__0_n_1,CoorR_yboven0_carry__0_n_2,CoorR_yboven0_carry__0_n_3}),
+        .CYINIT(1'b0),
+        .DI(CoorR[7:4]),
+        .O(CoorR_yboven0[7:4]),
+        .S({CoorR_yboven0_carry__0_i_1_n_0,CoorR_yboven0_carry__0_i_2_n_0,CoorR_yboven0_carry__0_i_3_n_0,CoorR_yboven0_carry__0_i_4_n_0}));
   LUT2 #(
     .INIT(4'h9)) 
-    \CoorR_yboven[3]_i_2 
-       (.I0(CoorR[3]),
-        .I1(HoogtePeddels[3]),
-        .O(\CoorR_yboven[3]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \CoorR_yboven[3]_i_3 
-       (.I0(CoorR[2]),
-        .I1(HoogtePeddels[2]),
-        .O(\CoorR_yboven[3]_i_3_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \CoorR_yboven[3]_i_4 
-       (.I0(CoorR[1]),
-        .I1(HoogtePeddels[1]),
-        .O(\CoorR_yboven[3]_i_4_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \CoorR_yboven[3]_i_5 
-       (.I0(CoorR[0]),
-        .I1(HoogtePeddels[0]),
-        .O(\CoorR_yboven[3]_i_5_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \CoorR_yboven[7]_i_2 
+    CoorR_yboven0_carry__0_i_1
        (.I0(CoorR[7]),
         .I1(HoogtePeddels[7]),
-        .O(\CoorR_yboven[7]_i_2_n_0 ));
+        .O(CoorR_yboven0_carry__0_i_1_n_0));
   LUT2 #(
     .INIT(4'h9)) 
-    \CoorR_yboven[7]_i_3 
+    CoorR_yboven0_carry__0_i_2
        (.I0(CoorR[6]),
         .I1(HoogtePeddels[6]),
-        .O(\CoorR_yboven[7]_i_3_n_0 ));
+        .O(CoorR_yboven0_carry__0_i_2_n_0));
   LUT2 #(
     .INIT(4'h9)) 
-    \CoorR_yboven[7]_i_4 
+    CoorR_yboven0_carry__0_i_3
        (.I0(CoorR[5]),
         .I1(HoogtePeddels[5]),
-        .O(\CoorR_yboven[7]_i_4_n_0 ));
+        .O(CoorR_yboven0_carry__0_i_3_n_0));
   LUT2 #(
     .INIT(4'h9)) 
-    \CoorR_yboven[7]_i_5 
+    CoorR_yboven0_carry__0_i_4
        (.I0(CoorR[4]),
         .I1(HoogtePeddels[4]),
-        .O(\CoorR_yboven[7]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \CoorR_yboven[9]_i_2 
-       (.I0(HoogtePeddels[9]),
-        .O(\CoorR_yboven[9]_i_2_n_0 ));
+        .O(CoorR_yboven0_carry__0_i_4_n_0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 CoorR_yboven0_carry__1
+       (.CI(CoorR_yboven0_carry__0_n_0),
+        .CO(NLW_CoorR_yboven0_carry__1_CO_UNCONNECTED[3:0]),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({NLW_CoorR_yboven0_carry__1_O_UNCONNECTED[3:1],CoorR_yboven0[8]}),
+        .S({1'b0,1'b0,1'b0,CoorR_yboven0_carry__1_i_1_n_0}));
   LUT2 #(
     .INIT(4'h9)) 
-    \CoorR_yboven[9]_i_3 
+    CoorR_yboven0_carry__1_i_1
        (.I0(CoorR[8]),
         .I1(HoogtePeddels[8]),
-        .O(\CoorR_yboven[9]_i_3_n_0 ));
+        .O(CoorR_yboven0_carry__1_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    CoorR_yboven0_carry_i_1
+       (.I0(CoorR[3]),
+        .I1(HoogtePeddels[3]),
+        .O(CoorR_yboven0_carry_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    CoorR_yboven0_carry_i_2
+       (.I0(CoorR[2]),
+        .I1(HoogtePeddels[2]),
+        .O(CoorR_yboven0_carry_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    CoorR_yboven0_carry_i_3
+       (.I0(CoorR[1]),
+        .I1(HoogtePeddels[1]),
+        .O(CoorR_yboven0_carry_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    CoorR_yboven0_carry_i_4
+       (.I0(CoorR[0]),
+        .I1(HoogtePeddels[0]),
+        .O(CoorR_yboven0_carry_i_4_n_0));
   FDRE \CoorR_yboven_out_reg[0] 
        (.C(PixelClock),
         .CE(1'b1),
@@ -2116,12 +2113,6 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
         .D(CoorR_yboven[8]),
         .Q(CoorR_yboven_out[8]),
         .R(1'b0));
-  FDRE \CoorR_yboven_out_reg[9] 
-       (.C(PixelClock),
-        .CE(1'b1),
-        .D(CoorR_yboven[9]),
-        .Q(CoorR_yboven_out[9]),
-        .R(1'b0));
   FDRE \CoorR_yboven_reg[0] 
        (.C(PixelClock),
         .CE(1'b1),
@@ -2146,14 +2137,6 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
         .D(CoorR_yboven0[3]),
         .Q(CoorR_yboven[3]),
         .R(1'b0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \CoorR_yboven_reg[3]_i_1 
-       (.CI(1'b0),
-        .CO({\CoorR_yboven_reg[3]_i_1_n_0 ,\CoorR_yboven_reg[3]_i_1_n_1 ,\CoorR_yboven_reg[3]_i_1_n_2 ,\CoorR_yboven_reg[3]_i_1_n_3 }),
-        .CYINIT(1'b1),
-        .DI(CoorR[3:0]),
-        .O(CoorR_yboven0[3:0]),
-        .S({\CoorR_yboven[3]_i_2_n_0 ,\CoorR_yboven[3]_i_3_n_0 ,\CoorR_yboven[3]_i_4_n_0 ,\CoorR_yboven[3]_i_5_n_0 }));
   FDRE \CoorR_yboven_reg[4] 
        (.C(PixelClock),
         .CE(1'b1),
@@ -2178,34 +2161,12 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
         .D(CoorR_yboven0[7]),
         .Q(CoorR_yboven[7]),
         .R(1'b0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \CoorR_yboven_reg[7]_i_1 
-       (.CI(\CoorR_yboven_reg[3]_i_1_n_0 ),
-        .CO({\CoorR_yboven_reg[7]_i_1_n_0 ,\CoorR_yboven_reg[7]_i_1_n_1 ,\CoorR_yboven_reg[7]_i_1_n_2 ,\CoorR_yboven_reg[7]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI(CoorR[7:4]),
-        .O(CoorR_yboven0[7:4]),
-        .S({\CoorR_yboven[7]_i_2_n_0 ,\CoorR_yboven[7]_i_3_n_0 ,\CoorR_yboven[7]_i_4_n_0 ,\CoorR_yboven[7]_i_5_n_0 }));
   FDRE \CoorR_yboven_reg[8] 
        (.C(PixelClock),
         .CE(1'b1),
         .D(CoorR_yboven0[8]),
         .Q(CoorR_yboven[8]),
         .R(1'b0));
-  FDRE \CoorR_yboven_reg[9] 
-       (.C(PixelClock),
-        .CE(1'b1),
-        .D(CoorR_yboven0[9]),
-        .Q(CoorR_yboven[9]),
-        .R(1'b0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \CoorR_yboven_reg[9]_i_1 
-       (.CI(\CoorR_yboven_reg[7]_i_1_n_0 ),
-        .CO({\NLW_CoorR_yboven_reg[9]_i_1_CO_UNCONNECTED [3:1],\CoorR_yboven_reg[9]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,CoorR[8]}),
-        .O({\NLW_CoorR_yboven_reg[9]_i_1_O_UNCONNECTED [3:2],CoorR_yboven0[9:8]}),
-        .S({1'b0,1'b0,\CoorR_yboven[9]_i_2_n_0 ,\CoorR_yboven[9]_i_3_n_0 }));
   FDRE \HPixel_out_reg[0] 
        (.C(PixelClock),
         .CE(1'b1),
@@ -2289,18 +2250,18 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
         .O(NLW_PixelSig_out1_carry__0_O_UNCONNECTED[3:0]),
         .S({1'b0,1'b0,1'b0,PixelSig_out1_carry__0_i_2_n_0}));
   LUT3 #(
-    .INIT(8'h10)) 
+    .INIT(8'h04)) 
     PixelSig_out1_carry__0_i_1
        (.I0(VPixel[9]),
-        .I1(VPixel[8]),
-        .I2(CoorR[8]),
+        .I1(CoorR[8]),
+        .I2(VPixel[8]),
         .O(PixelSig_out1_carry__0_i_1_n_0));
   LUT3 #(
-    .INIT(8'h09)) 
+    .INIT(8'h21)) 
     PixelSig_out1_carry__0_i_2
-       (.I0(CoorR[8]),
-        .I1(VPixel[8]),
-        .I2(VPixel[9]),
+       (.I0(VPixel[8]),
+        .I1(VPixel[9]),
+        .I2(CoorR[8]),
         .O(PixelSig_out1_carry__0_i_2_n_0));
   LUT4 #(
     .INIT(16'h22B2)) 
@@ -2337,34 +2298,34 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
   LUT4 #(
     .INIT(16'h9009)) 
     PixelSig_out1_carry_i_5
-       (.I0(CoorR[7]),
-        .I1(VPixel[7]),
-        .I2(CoorR[6]),
-        .I3(VPixel[6]),
+       (.I0(VPixel[7]),
+        .I1(CoorR[7]),
+        .I2(VPixel[6]),
+        .I3(CoorR[6]),
         .O(PixelSig_out1_carry_i_5_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     PixelSig_out1_carry_i_6
-       (.I0(CoorR[5]),
-        .I1(VPixel[5]),
-        .I2(CoorR[4]),
-        .I3(VPixel[4]),
+       (.I0(VPixel[5]),
+        .I1(CoorR[5]),
+        .I2(VPixel[4]),
+        .I3(CoorR[4]),
         .O(PixelSig_out1_carry_i_6_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     PixelSig_out1_carry_i_7
-       (.I0(CoorR[3]),
-        .I1(VPixel[3]),
-        .I2(CoorR[2]),
-        .I3(VPixel[2]),
+       (.I0(VPixel[3]),
+        .I1(CoorR[3]),
+        .I2(VPixel[2]),
+        .I3(CoorR[2]),
         .O(PixelSig_out1_carry_i_7_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     PixelSig_out1_carry_i_8
-       (.I0(CoorR[1]),
-        .I1(VPixel[1]),
-        .I2(CoorR[0]),
-        .I3(VPixel[0]),
+       (.I0(VPixel[1]),
+        .I1(CoorR[1]),
+        .I2(VPixel[0]),
+        .I3(CoorR[0]),
         .O(PixelSig_out1_carry_i_8_n_0));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 PixelSig_out2_carry
@@ -2382,21 +2343,19 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
         .DI({1'b0,1'b0,1'b0,PixelSig_out2_carry__0_i_1_n_0}),
         .O(NLW_PixelSig_out2_carry__0_O_UNCONNECTED[3:0]),
         .S({1'b0,1'b0,1'b0,PixelSig_out2_carry__0_i_2_n_0}));
-  LUT4 #(
-    .INIT(16'h22B2)) 
+  LUT3 #(
+    .INIT(8'hF4)) 
     PixelSig_out2_carry__0_i_1
-       (.I0(VPixel[9]),
-        .I1(CoorR_yboven[9]),
-        .I2(VPixel[8]),
-        .I3(CoorR_yboven[8]),
+       (.I0(CoorR_yboven[8]),
+        .I1(VPixel[8]),
+        .I2(VPixel[9]),
         .O(PixelSig_out2_carry__0_i_1_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
+  LUT3 #(
+    .INIT(8'h09)) 
     PixelSig_out2_carry__0_i_2
-       (.I0(CoorR_yboven[9]),
-        .I1(VPixel[9]),
-        .I2(CoorR_yboven[8]),
-        .I3(VPixel[8]),
+       (.I0(CoorR_yboven[8]),
+        .I1(VPixel[8]),
+        .I2(VPixel[9]),
         .O(PixelSig_out2_carry__0_i_2_n_0));
   LUT4 #(
     .INIT(16'h22B2)) 
@@ -2478,31 +2437,26 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
         .DI({1'b0,1'b0,1'b0,PixelSig_out3_carry__0_i_1_n_0}),
         .O(NLW_PixelSig_out3_carry__0_O_UNCONNECTED[3:0]),
         .S({1'b0,1'b0,1'b0,PixelSig_out3_carry__0_i_2_n_0}));
-  LUT5 #(
-    .INIT(32'h2212B21B)) 
+  LUT6 #(
+    .INIT(64'h0000001F001F00FF)) 
     PixelSig_out3_carry__0_i_1
-       (.I0(Offcet[9]),
-        .I1(HPixel[9]),
-        .I2(PixelSig_out3_carry__0_i_3_n_0),
-        .I3(Offcet[8]),
-        .I4(HPixel[8]),
-        .O(PixelSig_out3_carry__0_i_1_n_0));
-  LUT5 #(
-    .INIT(32'h94020294)) 
-    PixelSig_out3_carry__0_i_2
-       (.I0(PixelSig_out3_carry__0_i_3_n_0),
-        .I1(HPixel[8]),
-        .I2(Offcet[8]),
-        .I3(Offcet[9]),
-        .I4(HPixel[9]),
-        .O(PixelSig_out3_carry__0_i_2_n_0));
-  LUT3 #(
-    .INIT(8'h1F)) 
-    PixelSig_out3_carry__0_i_3
        (.I0(Offcet[6]),
         .I1(PixelSig_out3_carry_i_9_n_0),
         .I2(Offcet[7]),
-        .O(PixelSig_out3_carry__0_i_3_n_0));
+        .I3(HPixel[9]),
+        .I4(HPixel[8]),
+        .I5(Offcet[8]),
+        .O(PixelSig_out3_carry__0_i_1_n_0));
+  LUT6 #(
+    .INIT(64'h0000001F1FE0E000)) 
+    PixelSig_out3_carry__0_i_2
+       (.I0(Offcet[6]),
+        .I1(PixelSig_out3_carry_i_9_n_0),
+        .I2(Offcet[7]),
+        .I3(Offcet[8]),
+        .I4(HPixel[8]),
+        .I5(HPixel[9]),
+        .O(PixelSig_out3_carry__0_i_2_n_0));
   LUT5 #(
     .INIT(32'h0440CDD3)) 
     PixelSig_out3_carry_i_1
@@ -2695,13 +2649,12 @@ module design_1_Coor_PixelR_0_0_Coor_PixelR
        (.I0(Offcet[7]),
         .I1(BreetePeddels[7]),
         .O(PixelSig_out4_carry__1_i_1_n_0));
-  LUT4 #(
-    .INIT(16'hE11E)) 
+  LUT3 #(
+    .INIT(8'h1E)) 
     PixelSig_out4_carry__1_i_2
        (.I0(Offcet[8]),
         .I1(BreetePeddels[8]),
-        .I2(Offcet[9]),
-        .I3(BreetePeddels[9]),
+        .I2(BreetePeddels[9]),
         .O(PixelSig_out4_carry__1_i_2_n_0));
   LUT4 #(
     .INIT(16'h7887)) 

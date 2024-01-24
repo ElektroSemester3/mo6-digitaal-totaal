@@ -63,9 +63,9 @@ ENTITY design_1_Coor_PixelR_0_0 IS
     HPixel : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     CR_in : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
     BreetePeddels : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    HoogtePeddels : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    Offcet : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    CoorR_yboven_out : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+    HoogtePeddels : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+    Offcet : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+    CoorR_yboven_out : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
     PixelSig_out : OUT STD_LOGIC;
     HSYNC_o : OUT STD_LOGIC;
     VSYNC_o : OUT STD_LOGIC;
@@ -87,9 +87,9 @@ ARCHITECTURE design_1_Coor_PixelR_0_0_arch OF design_1_Coor_PixelR_0_0 IS
       HPixel : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       CR_in : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
       BreetePeddels : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-      HoogtePeddels : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-      Offcet : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-      CoorR_yboven_out : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+      HoogtePeddels : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+      Offcet : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+      CoorR_yboven_out : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
       PixelSig_out : OUT STD_LOGIC;
       HSYNC_o : OUT STD_LOGIC;
       VSYNC_o : OUT STD_LOGIC;

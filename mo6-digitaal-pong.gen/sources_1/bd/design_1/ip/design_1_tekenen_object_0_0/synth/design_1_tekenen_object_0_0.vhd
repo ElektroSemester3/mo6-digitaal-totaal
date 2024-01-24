@@ -62,9 +62,9 @@ ENTITY design_1_tekenen_object_0_0 IS
     vpxl_i : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     hpxl_i : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     pos_x : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    pos_y : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    pos_y : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
     size_x : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    size_y : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    size_y : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
     pixel_value_o : OUT STD_LOGIC;
     HSYNC_o : OUT STD_LOGIC;
     VSYNC_o : OUT STD_LOGIC;
@@ -85,9 +85,9 @@ ARCHITECTURE design_1_tekenen_object_0_0_arch OF design_1_tekenen_object_0_0 IS
       vpxl_i : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       hpxl_i : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       pos_x : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-      pos_y : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+      pos_y : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
       size_x : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-      size_y : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+      size_y : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
       pixel_value_o : OUT STD_LOGIC;
       HSYNC_o : OUT STD_LOGIC;
       VSYNC_o : OUT STD_LOGIC;

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Wed Jan 24 02:19:14 2024
+| Date         : Wed Jan 24 10:28:15 2024
 | Host         : Lenovo-Jochem running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_lijn_tekenen_0_0_utilization_synth.rpt -pb design_1_lijn_tekenen_0_0_utilization_synth.pb
 | Design       : design_1_lijn_tekenen_0_0
@@ -150,11 +150,11 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | LUT6     |   33 |                 LUT |
 | FDRE     |   23 |        Flop & Latch |
-| LUT4     |   16 |                 LUT |
+| LUT4     |   14 |                 LUT |
 | LUT5     |    8 |                 LUT |
 | CARRY4   |    6 |          CarryLogic |
+| LUT3     |    3 |                 LUT |
 | LUT2     |    2 |                 LUT |
-| LUT3     |    1 |                 LUT |
 +----------+------+---------------------+
 
 

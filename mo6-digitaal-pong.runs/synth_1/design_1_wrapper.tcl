@@ -89,7 +89,7 @@ set_property ip_output_repo d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.cach
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+read_vhdl -library xil_defaultlib D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
 add_files D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc]

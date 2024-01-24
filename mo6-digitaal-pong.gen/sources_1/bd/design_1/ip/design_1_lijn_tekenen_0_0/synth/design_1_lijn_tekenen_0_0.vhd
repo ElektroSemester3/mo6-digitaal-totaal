@@ -62,7 +62,7 @@ ENTITY design_1_lijn_tekenen_0_0 IS
     vpxl_i : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     hpxl_i : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     screen_x : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    screen_y : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    screen_y : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
     pixel_value_o : OUT STD_LOGIC;
     HSYNC_o : OUT STD_LOGIC;
     VSYNC_o : OUT STD_LOGIC;
@@ -87,7 +87,7 @@ ARCHITECTURE design_1_lijn_tekenen_0_0_arch OF design_1_lijn_tekenen_0_0 IS
       vpxl_i : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       hpxl_i : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       screen_x : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-      screen_y : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+      screen_y : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
       pixel_value_o : OUT STD_LOGIC;
       HSYNC_o : OUT STD_LOGIC;
       VSYNC_o : OUT STD_LOGIC;

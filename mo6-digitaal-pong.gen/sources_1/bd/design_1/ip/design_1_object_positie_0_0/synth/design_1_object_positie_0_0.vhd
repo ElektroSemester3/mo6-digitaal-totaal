@@ -56,15 +56,15 @@ USE ieee.numeric_std.ALL;
 ENTITY design_1_object_positie_0_0 IS
   PORT (
     object_width : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    object_height : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    object_height : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
     size_window_width : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    size_window_height : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    size_window_height : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
     value_1 : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
     value_2 : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
     position_x_1 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-    position_y_1 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+    position_y_1 : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
     position_x_2 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-    position_y_2 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+    position_y_2 : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
   );
 END design_1_object_positie_0_0;
 
@@ -77,15 +77,15 @@ ARCHITECTURE design_1_object_positie_0_0_arch OF design_1_object_positie_0_0 IS
     );
     PORT (
       object_width : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-      object_height : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+      object_height : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
       size_window_width : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-      size_window_height : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+      size_window_height : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
       value_1 : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
       value_2 : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
       position_x_1 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-      position_y_1 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+      position_y_1 : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
       position_x_2 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-      position_y_2 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+      position_y_2 : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
     );
   END COMPONENT object_positie;
   ATTRIBUTE X_CORE_INFO : STRING;

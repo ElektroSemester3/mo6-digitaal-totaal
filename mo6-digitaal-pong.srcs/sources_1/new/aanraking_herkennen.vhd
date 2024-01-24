@@ -6,16 +6,16 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity aanraking_herkennen is
     Port (
-        hoogte_scherm : in STD_LOGIC_VECTOR (9 downto 0);
+        hoogte_scherm : in STD_LOGIC_VECTOR (8 downto 0);
         breedte_scherm : in STD_LOGIC_VECTOR (9 downto 0);
-        grootte_balletje : in STD_LOGIC_VECTOR (9 downto 0);
-        hoogte_peddels : in STD_LOGIC_VECTOR (9 downto 0);
+        grootte_balletje : in STD_LOGIC_VECTOR (8 downto 0);
+        hoogte_peddels : in STD_LOGIC_VECTOR (8 downto 0);
         breedte_peddels : in STD_LOGIC_VECTOR (9 downto 0);
-        offset_peddels : in STD_LOGIC_VECTOR (9 downto 0);
+        offset_peddels : in STD_LOGIC_VECTOR (8 downto 0);
         x_positie_balletje : in STD_LOGIC_VECTOR (9 downto 0);
-        y_positie_balletje : in STD_LOGIC_VECTOR (9 downto 0);
-        positie_peddel_links : in STD_LOGIC_VECTOR (9 downto 0);
-        positie_peddel_rechts : in STD_LOGIC_VECTOR (9 downto 0);
+        y_positie_balletje : in STD_LOGIC_VECTOR (8 downto 0);
+        positie_peddel_links : in STD_LOGIC_VECTOR (8 downto 0);
+        positie_peddel_rechts : in STD_LOGIC_VECTOR (8 downto 0);
         aanraking_balletje_peddel : out STD_LOGIC;
         aanraking_balletje_peddel_zone : out STD_LOGIC_VECTOR (1 downto 0);
         aanraking_balletje_zijkant : out STD_LOGIC;
@@ -37,15 +37,15 @@ architecture Behavioral of aanraking_herkennen is
     signal aanraking_onderkant : STD_LOGIC := '0';
 
     signal breedte_scherm_uns : unsigned (9 downto 0);
-    signal hoogte_scherm_uns : unsigned (9 downto 0);
-    signal grootte_balletje_uns : unsigned (9 downto 0);
-    signal hoogte_peddels_uns : unsigned (9 downto 0);
+    signal hoogte_scherm_uns : unsigned (8 downto 0);
+    signal grootte_balletje_uns : unsigned (8 downto 0);
+    signal hoogte_peddels_uns : unsigned (8 downto 0);
     signal breedte_peddels_uns : unsigned (9 downto 0);
     signal x_positie_balletje_uns : unsigned (9 downto 0);
-    signal y_positie_balletje_uns : unsigned (9 downto 0);
-    signal positie_peddel_links_uns : unsigned (9 downto 0);
-    signal positie_peddel_rechts_uns : unsigned (9 downto 0);
-    signal offset_peddels_uns : unsigned (9 downto 0);
+    signal y_positie_balletje_uns : unsigned (8 downto 0);
+    signal positie_peddel_links_uns : unsigned (8 downto 0);
+    signal positie_peddel_rechts_uns : unsigned (8 downto 0);
+    signal offset_peddels_uns : unsigned (8 downto 0);
 
 begin
 
