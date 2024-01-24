@@ -65,6 +65,7 @@ ENTITY design_1_score_tekenen_0_0 IS
     score_r_i : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     screen_width_i : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     screen_height_i : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+    max_score : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     pixel_value_o : OUT STD_LOGIC;
     HSYNC_o : OUT STD_LOGIC;
     VSYNC_o : OUT STD_LOGIC;
@@ -94,6 +95,7 @@ ARCHITECTURE design_1_score_tekenen_0_0_arch OF design_1_score_tekenen_0_0 IS
       score_r_i : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       screen_width_i : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       screen_height_i : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+      max_score : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       pixel_value_o : OUT STD_LOGIC;
       HSYNC_o : OUT STD_LOGIC;
       VSYNC_o : OUT STD_LOGIC;
@@ -106,16 +108,16 @@ ARCHITECTURE design_1_score_tekenen_0_0_arch OF design_1_score_tekenen_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_score_tekenen_0_0_arch : ARCHITECTURE IS "design_1_score_tekenen_0_0,score_tekenen,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_score_tekenen_0_0_arch: ARCHITECTURE IS "design_1_score_tekenen_0_0,score_tekenen,{x_ipProduct=Vivado 2023.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=score_tekenen,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,size=10,distance=20,height_offset=10,width_offset=10}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_score_tekenen_0_0_arch: ARCHITECTURE IS "design_1_score_tekenen_0_0,score_tekenen,{x_ipProduct=Vivado 2023.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=score_tekenen,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,size=10,distance=5,height_offset=10,width_offset=20}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_1_score_tekenen_0_0_arch: ARCHITECTURE IS "module_ref";
 BEGIN
   U0 : score_tekenen
     GENERIC MAP (
       size => 10,
-      distance => 20,
+      distance => 5,
       height_offset => 10,
-      width_offset => 10
+      width_offset => 20
     )
     PORT MAP (
       pixel_value_i => pixel_value_i,
@@ -128,6 +130,7 @@ BEGIN
       score_r_i => score_r_i,
       screen_width_i => screen_width_i,
       screen_height_i => screen_height_i,
+      max_score => max_score,
       pixel_value_o => pixel_value_o,
       HSYNC_o => HSYNC_o,
       VSYNC_o => VSYNC_o,

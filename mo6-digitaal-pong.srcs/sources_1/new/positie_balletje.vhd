@@ -6,7 +6,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity positie_balletje is
     generic ( 
-        step        : integer := 1;
+        step_x      : integer := 1;
+        step_y      : integer := 1;
         angle_1     : integer := 2;
         angle_2     : integer := 1;
         angle_3     : integer := 0;
@@ -90,12 +91,11 @@ begin
                 elsif (peddel_touch = '1' AND peddel_touch_r = '0') then
                     case angle_index is
                         when "00" => 
-                            angle <= angle + to_unsigned(0, 10);
-                            if y_dir = up then
-                                y_dir <= down;
-                            else
-                                y_dir <= up;
-                            end if;
+                            -- if y_dir = up then
+                            --     y_dir <= down;
+                            -- else
+                            --     y_dir <= up;
+                            -- end if;
     
                         when "01" => 
                             if angle >= to_unsigned(angle_1, 10) then
@@ -133,7 +133,7 @@ begin
                                 end if;
                             end if;
     
-                        when others => angle <= unsigned(screen_width);
+                        when others => angle <= to_unsigned(start_angle, 10);
                     end case;
                 end if;
 
@@ -144,9 +144,9 @@ begin
                 if (side_touch = '1' AND side_touch_r = '0') then
                     x_pos <= x_start;
                 elsif x_dir = right then
-                    x_pos <=  x_pos + step;
+                    x_pos <=  x_pos + to_unsigned(step_x, x_pos'length);
                 else
-                    x_pos <=  x_pos - step;
+                    x_pos <=  x_pos - to_unsigned(step_x, x_pos'length);
                 end if;
 
                 -- check if the ball is touching the top or bottom else add the step based on the angle
@@ -155,10 +155,10 @@ begin
                     angle_counter <= (others => '0');
                 elsif angle_counter >= angle then--AND angle /= 0 then
                     if y_dir = up then
-                        y_pos <= y_pos - step;
+                        y_pos <= y_pos - to_unsigned(step_y, y_pos'length);
                         angle_counter <= (others => '0');
                     else
-                        y_pos <= y_pos + step;
+                        y_pos <= y_pos + to_unsigned(step_y, y_pos'length);
                         angle_counter <= (others => '0');
                     end if;
                 else

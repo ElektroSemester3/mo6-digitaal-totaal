@@ -74,7 +74,8 @@ ARCHITECTURE design_1_positie_balletje_0_0_arch OF design_1_positie_balletje_0_0
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_1_positie_balletje_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT positie_balletje IS
     GENERIC (
-      step : INTEGER;
+      step_x : INTEGER;
+      step_y : INTEGER;
       angle_1 : INTEGER;
       angle_2 : INTEGER;
       angle_3 : INTEGER;
@@ -99,7 +100,7 @@ ARCHITECTURE design_1_positie_balletje_0_0_arch OF design_1_positie_balletje_0_0
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_positie_balletje_0_0_arch : ARCHITECTURE IS "design_1_positie_balletje_0_0,positie_balletje,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_positie_balletje_0_0_arch: ARCHITECTURE IS "design_1_positie_balletje_0_0,positie_balletje,{x_ipProduct=Vivado 2023.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=positie_balletje,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,step=1,angle_1=2,angle_2=1,angle_3=0,start_angle=10}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_positie_balletje_0_0_arch: ARCHITECTURE IS "design_1_positie_balletje_0_0,positie_balletje,{x_ipProduct=Vivado 2023.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=positie_balletje,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,step_x=1,step_y=2,angle_1=2,angle_2=1,angle_3=0,start_angle=10}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_1_positie_balletje_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -109,7 +110,8 @@ ARCHITECTURE design_1_positie_balletje_0_0_arch OF design_1_positie_balletje_0_0
 BEGIN
   U0 : positie_balletje
     GENERIC MAP (
-      step => 1,
+      step_x => 1,
+      step_y => 2,
       angle_1 => 2,
       angle_2 => 1,
       angle_3 => 0,

@@ -74,7 +74,8 @@ ARCHITECTURE design_1_positie_balletje_0_0_arch OF design_1_positie_balletje_0_0
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_1_positie_balletje_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT positie_balletje IS
     GENERIC (
-      step : INTEGER;
+      step_x : INTEGER;
+      step_y : INTEGER;
       angle_1 : INTEGER;
       angle_2 : INTEGER;
       angle_3 : INTEGER;
@@ -101,7 +102,8 @@ ARCHITECTURE design_1_positie_balletje_0_0_arch OF design_1_positie_balletje_0_0
 BEGIN
   U0 : positie_balletje
     GENERIC MAP (
-      step => 1,
+      step_x => 1,
+      step_y => 2,
       angle_1 => 2,
       angle_2 => 1,
       angle_3 => 0,

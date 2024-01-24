@@ -1,0 +1,58 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "design_1_Coor_PixelL_0_0",
+    "cell_name": "Coor_PixelL_0",
+    "component_reference": "xilinx.com:module_ref:Coor_PixelL:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_Coor_PixelL_0_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "design_1_Coor_PixelL_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynq" } ],
+        "BASE_BOARD_PART": [ { "value": "tul.com.tw:pynq-z2:part0:1.0" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7z020" } ],
+        "PACKAGE": [ { "value": "clg400" } ],
+        "PREFHDL": [ { "value": "VHDL" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_Coor_PixelL_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2023.1" } ],
+        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "PixelClock": [ { "direction": "in" } ],
+        "HSYNC_i": [ { "direction": "in" } ],
+        "VSYNC_i": [ { "direction": "in" } ],
+        "PixelSig_in": [ { "direction": "in" } ],
+        "VPixel": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "HPixel": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "CL_in": [ { "direction": "in", "size_left": "8", "size_right": "0" } ],
+        "BreetePeddels": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "HoogtePeddels": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "Offcet": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "CoorL_yboven_out": [ { "direction": "out", "size_left": "9", "size_right": "0" } ],
+        "PixelSig_out": [ { "direction": "out" } ],
+        "HSYNC_o": [ { "direction": "out" } ],
+        "VSYNC_o": [ { "direction": "out" } ],
+        "VPixel_out": [ { "direction": "out", "size_left": "9", "size_right": "0" } ],
+        "HPixel_out": [ { "direction": "out", "size_left": "9", "size_right": "0" } ]
+      }
+    }
+  }
+}

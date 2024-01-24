@@ -185,7 +185,7 @@ begin
                 go_to_next <= '1';
                 -- Calculate distance in millimeters (mm)
                 -- distance_mm <= counter * sound_cycle_time / input_frequency_u;
-                distance_mm <= to_unsigned(to_integer(counter * sound_cycle_time / input_frequency_u), 16);
+                distance_mm <= resize(counter * sound_cycle_time / input_frequency_u, 16);
 
             when no_feedback =>
                 -- disable counter
@@ -204,9 +204,9 @@ begin
     end process output_decoder;
 
     -- Output
-   value <= std_logic_vector(to_unsigned(0, 9)) when distance_mm < min_distance_mm_u OR enable = '0' else
+   value <= std_logic_vector(to_unsigned(0, value'length)) when distance_mm < min_distance_mm_u OR enable = '0' else
             std_logic_vector(value_max) when distance_mm > max_distance_mm_u else
-            std_logic_vector(to_unsigned(to_integer((distance_mm - min_distance_mm_u) * value_max) / to_integer(max_distance_mm_u - min_distance_mm_u), 9));
+            std_logic_vector(resize(((distance_mm - min_distance_mm_u) * value_max) / (max_distance_mm_u - min_distance_mm_u), value'length));
 
     -- value <= std_logic_vector(value_max) when distance_mm < min_distance_mm_u OR enable = '0' else
     --          std_logic_vector(to_unsigned(0, 9)) when distance_mm > max_distance_mm_u else

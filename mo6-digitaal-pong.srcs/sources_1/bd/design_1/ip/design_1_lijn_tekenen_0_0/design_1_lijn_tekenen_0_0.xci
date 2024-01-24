@@ -8,12 +8,12 @@
     "gen_directory": "../../../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_lijn_tekenen_0_0",
     "parameters": {
       "component_parameters": {
-        "width_line": [ { "value": "5", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "width_line": [ { "value": "3", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "space_between_lines": [ { "value": "10", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Component_Name": [ { "value": "design_1_lijn_tekenen_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
-        "width_line": [ { "value": "5", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "width_line": [ { "value": "3", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "space_between_lines": [ { "value": "10", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
@@ -37,7 +37,7 @@
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2023.1" } ],
-        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
       }
     },
     "boundary": {

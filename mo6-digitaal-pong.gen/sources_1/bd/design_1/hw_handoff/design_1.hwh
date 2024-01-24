@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 24 13:31:04 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 24 16:21:12 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -12,9 +12,8 @@
         <CONNECTION INSTANCE="ontvangen_controllers_controller_ultrasoon_0" PORT="reset"/>
         <CONNECTION INSTANCE="clk_divider_0" PORT="reset"/>
         <CONNECTION INSTANCE="beeld_generator_0" PORT="RST"/>
-        <CONNECTION INSTANCE="positie_balletje_0" PORT="reset"/>
         <CONNECTION INSTANCE="score_counter_0" PORT="reset"/>
-        <CONNECTION INSTANCE="clk_wiz_0" PORT="reset"/>
+        <CONNECTION INSTANCE="positie_balletje_0" PORT="reset"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="External_Ports_enable">
@@ -103,6 +102,96 @@
   <EXTERNALINTERFACES/>
 
   <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/Coor_PixelL_0" HWVERSION="1.0" INSTANCE="Coor_PixelL_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Coor_PixelL" VLNV="xilinx.com:module_ref:Coor_PixelL:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_Coor_PixelL_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="PixelClock" SIGIS="undef" SIGNAME="beeld_generator_0_pxlCLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="beeld_generator_0" PORT="pxlCLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="HSYNC_i" SIGIS="undef" SIGNAME="tekenen_balletje_HSYNC_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="tekenen_balletje" PORT="HSYNC_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="VSYNC_i" SIGIS="undef" SIGNAME="tekenen_balletje_VSYNC_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="tekenen_balletje" PORT="VSYNC_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="PixelSig_in" SIGIS="undef" SIGNAME="tekenen_balletje_pixel_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="tekenen_balletje" PORT="pixel_value_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="9" NAME="VPixel" RIGHT="0" SIGIS="undef" SIGNAME="tekenen_balletje_vpxl_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="tekenen_balletje" PORT="vpxl_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="9" NAME="HPixel" RIGHT="0" SIGIS="undef" SIGNAME="tekenen_balletje_hpxl_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="tekenen_balletje" PORT="hpxl_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="CL_in" RIGHT="0" SIGIS="undef" SIGNAME="ontvangen_controllers_controller_interconn_0_controller_output_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ontvangen_controllers_controller_interconn_0" PORT="controller_output_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="9" NAME="BreetePeddels" RIGHT="0" SIGIS="undef" SIGNAME="constants_peddels_breedte_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="constants_peddels_breedte" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="9" NAME="HoogtePeddels" RIGHT="0" SIGIS="undef" SIGNAME="constants_peddels_hoogte_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="constants_peddels_hoogte" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="9" NAME="Offcet" RIGHT="0" SIGIS="undef" SIGNAME="constants_peddels_x_offset_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="constants_peddels_x_offset" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="9" NAME="CoorL_yboven_out" RIGHT="0" SIGIS="undef" SIGNAME="Coor_PixelL_0_CoorL_yboven_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="positie_peddel_links"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="PixelSig_out" SIGIS="undef" SIGNAME="Coor_PixelL_0_PixelSig_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Coor_PixelR_0" PORT="PixelSig_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="HSYNC_o" SIGIS="undef" SIGNAME="Coor_PixelL_0_HSYNC_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Coor_PixelR_0" PORT="HSYNC_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="VSYNC_o" SIGIS="undef" SIGNAME="Coor_PixelL_0_VSYNC_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Coor_PixelR_0" PORT="VSYNC_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="9" NAME="VPixel_out" RIGHT="0" SIGIS="undef" SIGNAME="Coor_PixelL_0_VPixel_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Coor_PixelR_0" PORT="VPixel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="9" NAME="HPixel_out" RIGHT="0" SIGIS="undef" SIGNAME="Coor_PixelL_0_HPixel_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Coor_PixelR_0" PORT="HPixel"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/Coor_PixelR_0" HWVERSION="1.0" INSTANCE="Coor_PixelR_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Coor_PixelR" VLNV="xilinx.com:module_ref:Coor_PixelR:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -115,29 +204,29 @@
             <CONNECTION INSTANCE="beeld_generator_0" PORT="pxlCLK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="HSYNC_i" SIGIS="undef" SIGNAME="TEMP_tekenen_peddel_L_HSYNC_o">
+        <PORT DIR="I" NAME="HSYNC_i" SIGIS="undef" SIGNAME="Coor_PixelL_0_HSYNC_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="TEMP_tekenen_peddel_L" PORT="HSYNC_o"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="HSYNC_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="VSYNC_i" SIGIS="undef" SIGNAME="TEMP_tekenen_peddel_L_VSYNC_o">
+        <PORT DIR="I" NAME="VSYNC_i" SIGIS="undef" SIGNAME="Coor_PixelL_0_VSYNC_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="TEMP_tekenen_peddel_L" PORT="VSYNC_o"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="VSYNC_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="PixelSig_in" SIGIS="undef" SIGNAME="TEMP_tekenen_peddel_L_pixel_value_o">
+        <PORT DIR="I" NAME="PixelSig_in" SIGIS="undef" SIGNAME="Coor_PixelL_0_PixelSig_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="TEMP_tekenen_peddel_L" PORT="pixel_value_o"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="PixelSig_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="9" NAME="VPixel" RIGHT="0" SIGIS="undef" SIGNAME="TEMP_tekenen_peddel_L_vpxl_o">
+        <PORT DIR="I" LEFT="9" NAME="VPixel" RIGHT="0" SIGIS="undef" SIGNAME="Coor_PixelL_0_VPixel_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="TEMP_tekenen_peddel_L" PORT="vpxl_o"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="VPixel_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="9" NAME="HPixel" RIGHT="0" SIGIS="undef" SIGNAME="TEMP_tekenen_peddel_L_hpxl_o">
+        <PORT DIR="I" LEFT="9" NAME="HPixel" RIGHT="0" SIGIS="undef" SIGNAME="Coor_PixelL_0_HPixel_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="TEMP_tekenen_peddel_L" PORT="hpxl_o"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="HPixel_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="8" NAME="CR_in" RIGHT="0" SIGIS="undef" SIGNAME="ontvangen_controllers_controller_interconn_0_controller_output_2">
@@ -150,17 +239,17 @@
             <CONNECTION INSTANCE="constants_peddels_breedte" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="8" NAME="HoogtePeddels" RIGHT="0" SIGIS="undef" SIGNAME="constants_peddels_hoogte_dout">
+        <PORT DIR="I" LEFT="9" NAME="HoogtePeddels" RIGHT="0" SIGIS="undef" SIGNAME="constants_peddels_hoogte_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="constants_peddels_hoogte" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="8" NAME="Offcet" RIGHT="0" SIGIS="undef" SIGNAME="constants_peddels_x_offset_dout">
+        <PORT DIR="I" LEFT="9" NAME="Offcet" RIGHT="0" SIGIS="undef" SIGNAME="constants_peddels_x_offset_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="constants_peddels_x_offset" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="8" NAME="CoorR_yboven_out" RIGHT="0" SIGIS="undef" SIGNAME="Coor_PixelR_0_CoorR_yboven_out">
+        <PORT DIR="O" LEFT="9" NAME="CoorR_yboven_out" RIGHT="0" SIGIS="undef" SIGNAME="Coor_PixelR_0_CoorR_yboven_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="positie_peddel_rechts"/>
           </CONNECTIONS>
@@ -188,145 +277,6 @@
         <PORT DIR="O" LEFT="9" NAME="HPixel_out" RIGHT="0" SIGIS="undef" SIGNAME="Coor_PixelR_0_HPixel_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="lijn_tekenen_0" PORT="hpxl_i"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/TEMP_positie_peddels" HWVERSION="1.0" INSTANCE="TEMP_positie_peddels" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="object_positie" VLNV="xilinx.com:module_ref:object_positie:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="offset" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_object_positie_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="9" NAME="object_width" RIGHT="0" SIGIS="undef" SIGNAME="constants_peddels_breedte_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="constants_peddels_breedte" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="8" NAME="object_height" RIGHT="0" SIGIS="undef" SIGNAME="constants_peddels_hoogte_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="constants_peddels_hoogte" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="9" NAME="size_window_width" RIGHT="0" SIGIS="undef" SIGNAME="constants_scherm_breedte_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="constants_scherm_breedte" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="8" NAME="size_window_height" RIGHT="0" SIGIS="undef" SIGNAME="constants_scherm_hoogte_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="constants_scherm_hoogte" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="8" NAME="value_1" RIGHT="0" SIGIS="undef" SIGNAME="ontvangen_controllers_controller_interconn_0_controller_output_1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ontvangen_controllers_controller_interconn_0" PORT="controller_output_1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="8" NAME="value_2" RIGHT="0" SIGIS="undef" SIGNAME="ontvangen_controllers_controller_interconn_0_controller_output_2">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ontvangen_controllers_controller_interconn_0" PORT="controller_output_2"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="9" NAME="position_x_1" RIGHT="0" SIGIS="undef" SIGNAME="TEMP_positie_peddels_position_x_1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TEMP_tekenen_peddel_L" PORT="pos_x"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="8" NAME="position_y_1" RIGHT="0" SIGIS="undef" SIGNAME="TEMP_positie_peddels_position_y_1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TEMP_tekenen_peddel_L" PORT="pos_y"/>
-            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="positie_peddel_links"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="9" NAME="position_x_2" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="8" NAME="position_y_2" RIGHT="0" SIGIS="undef"/>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/TEMP_tekenen_peddel_L" HWVERSION="1.0" INSTANCE="TEMP_tekenen_peddel_L" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="tekenen_object" VLNV="xilinx.com:module_ref:tekenen_object:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_tekenen_object_0_1"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" NAME="pixel_value_i" SIGIS="undef" SIGNAME="tekenen_balletje_pixel_value_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="tekenen_balletje" PORT="pixel_value_o"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="pxlCLK_i" SIGIS="undef" SIGNAME="beeld_generator_0_pxlCLK">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="beeld_generator_0" PORT="pxlCLK"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="HSYNC_i" SIGIS="undef" SIGNAME="tekenen_balletje_HSYNC_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="tekenen_balletje" PORT="HSYNC_o"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="VSYNC_i" SIGIS="undef" SIGNAME="tekenen_balletje_VSYNC_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="tekenen_balletje" PORT="VSYNC_o"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="9" NAME="vpxl_i" RIGHT="0" SIGIS="undef" SIGNAME="tekenen_balletje_vpxl_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="tekenen_balletje" PORT="vpxl_o"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="9" NAME="hpxl_i" RIGHT="0" SIGIS="undef" SIGNAME="tekenen_balletje_hpxl_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="tekenen_balletje" PORT="hpxl_o"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="9" NAME="pos_x" RIGHT="0" SIGIS="undef" SIGNAME="TEMP_positie_peddels_position_x_1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TEMP_positie_peddels" PORT="position_x_1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="8" NAME="pos_y" RIGHT="0" SIGIS="undef" SIGNAME="TEMP_positie_peddels_position_y_1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="TEMP_positie_peddels" PORT="position_y_1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="9" NAME="size_x" RIGHT="0" SIGIS="undef" SIGNAME="constants_peddels_breedte_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="constants_peddels_breedte" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="8" NAME="size_y" RIGHT="0" SIGIS="undef" SIGNAME="constants_peddels_hoogte_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="constants_peddels_hoogte" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="pixel_value_o" SIGIS="undef" SIGNAME="TEMP_tekenen_peddel_L_pixel_value_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Coor_PixelR_0" PORT="PixelSig_in"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="HSYNC_o" SIGIS="undef" SIGNAME="TEMP_tekenen_peddel_L_HSYNC_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Coor_PixelR_0" PORT="HSYNC_i"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="VSYNC_o" SIGIS="undef" SIGNAME="TEMP_tekenen_peddel_L_VSYNC_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Coor_PixelR_0" PORT="VSYNC_i"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="9" NAME="vpxl_o" RIGHT="0" SIGIS="undef" SIGNAME="TEMP_tekenen_peddel_L_vpxl_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Coor_PixelR_0" PORT="VPixel"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="9" NAME="hpxl_o" RIGHT="0" SIGIS="undef" SIGNAME="TEMP_tekenen_peddel_L_hpxl_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Coor_PixelR_0" PORT="HPixel"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -379,9 +329,9 @@
             <CONNECTION INSTANCE="positie_balletje_0" PORT="pos_y_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="8" NAME="positie_peddel_links" RIGHT="0" SIGIS="undef" SIGNAME="TEMP_positie_peddels_position_y_1">
+        <PORT DIR="I" LEFT="8" NAME="positie_peddel_links" RIGHT="0" SIGIS="undef" SIGNAME="Coor_PixelL_0_CoorL_yboven_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="TEMP_positie_peddels" PORT="position_y_1"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="CoorL_yboven_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="8" NAME="positie_peddel_rechts" RIGHT="0" SIGIS="undef" SIGNAME="Coor_PixelR_0_CoorR_yboven_out">
@@ -401,8 +351,8 @@
         </PORT>
         <PORT DIR="O" NAME="aanraking_balletje_zijkant" SIGIS="undef" SIGNAME="aanraking_herkennen_0_aanraking_balletje_zijkant">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="positie_balletje_0" PORT="side_touch"/>
             <CONNECTION INSTANCE="score_counter_0" PORT="side_touch"/>
+            <CONNECTION INSTANCE="positie_balletje_0" PORT="side_touch"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="aanraking_balletje_bovenonder" SIGIS="undef" SIGNAME="aanraking_herkennen_0_aanraking_balletje_bovenonder">
@@ -433,9 +383,9 @@
         <PORT DIR="O" NAME="pxlCLK" SIGIS="undef" SIGNAME="beeld_generator_0_pxlCLK">
           <CONNECTIONS>
             <CONNECTION INSTANCE="lijn_tekenen_0" PORT="pxlCLK_i"/>
-            <CONNECTION INSTANCE="TEMP_tekenen_peddel_L" PORT="pxlCLK_i"/>
             <CONNECTION INSTANCE="tekenen_balletje" PORT="pxlCLK_i"/>
             <CONNECTION INSTANCE="Coor_PixelR_0" PORT="PixelClock"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="PixelClock"/>
             <CONNECTION INSTANCE="score_tekenen_0" PORT="pxlCLK_i"/>
           </CONNECTIONS>
         </PORT>
@@ -489,8 +439,8 @@
         </PORT>
         <PORT DIR="O" NAME="clk_out" SIGIS="undef" SIGNAME="clk_divider_0_clk_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="positie_balletje_0" PORT="clk_slow"/>
             <CONNECTION INSTANCE="score_counter_0" PORT="clk_slow"/>
+            <CONNECTION INSTANCE="positie_balletje_0" PORT="clk_slow"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -553,7 +503,7 @@
         <PARAMETER NAME="C_PHASESHIFT_MODE" VALUE="WAVEFORM"/>
         <PARAMETER NAME="C_SECONDARY_SOURCE" VALUE="Single_ended_clock_capable_pin"/>
         <PARAMETER NAME="C_CLKFB_IN_SIGNALING" VALUE="SINGLE"/>
-        <PARAMETER NAME="C_USE_RESET" VALUE="1"/>
+        <PARAMETER NAME="C_USE_RESET" VALUE="0"/>
         <PARAMETER NAME="C_RESET_LOW" VALUE="0"/>
         <PARAMETER NAME="C_USE_LOCKED" VALUE="0"/>
         <PARAMETER NAME="C_USE_INCLK_STOPPED" VALUE="0"/>
@@ -944,7 +894,7 @@
         <PARAMETER NAME="SUMMARY_STRINGS" VALUE="empty"/>
         <PARAMETER NAME="USE_LOCKED" VALUE="false"/>
         <PARAMETER NAME="CALC_DONE" VALUE="empty"/>
-        <PARAMETER NAME="USE_RESET" VALUE="true"/>
+        <PARAMETER NAME="USE_RESET" VALUE="false"/>
         <PARAMETER NAME="USE_POWER_DOWN" VALUE="false"/>
         <PARAMETER NAME="USE_STATUS" VALUE="false"/>
         <PARAMETER NAME="USE_FREEZE" VALUE="false"/>
@@ -1076,11 +1026,6 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk_in1" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="sys_clock"/>
@@ -1133,6 +1078,7 @@
         <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="constants_max_score_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="score_counter_0" PORT="max_score"/>
+            <CONNECTION INSTANCE="score_tekenen_0" PORT="max_score"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1149,10 +1095,9 @@
       <PORTS>
         <PORT DIR="O" LEFT="9" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="constants_peddels_breedte_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="TEMP_tekenen_peddel_L" PORT="size_x"/>
             <CONNECTION INSTANCE="Coor_PixelR_0" PORT="BreetePeddels"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="BreetePeddels"/>
             <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="breedte_peddels"/>
-            <CONNECTION INSTANCE="TEMP_positie_peddels" PORT="object_width"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1169,10 +1114,9 @@
       <PORTS>
         <PORT DIR="O" LEFT="8" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="constants_peddels_hoogte_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="TEMP_tekenen_peddel_L" PORT="size_y"/>
             <CONNECTION INSTANCE="Coor_PixelR_0" PORT="HoogtePeddels"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="HoogtePeddels"/>
             <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="hoogte_peddels"/>
-            <CONNECTION INSTANCE="TEMP_positie_peddels" PORT="object_height"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1190,6 +1134,7 @@
         <PORT DIR="O" LEFT="8" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="constants_peddels_x_offset_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Coor_PixelR_0" PORT="Offcet"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="Offcet"/>
             <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="offset_peddels"/>
           </CONNECTIONS>
         </PORT>
@@ -1208,11 +1153,10 @@
         <PORT DIR="O" LEFT="9" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="constants_scherm_breedte_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="lijn_tekenen_0" PORT="screen_x"/>
-            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="breedte_scherm"/>
-            <CONNECTION INSTANCE="positie_balletje_0" PORT="screen_width"/>
             <CONNECTION INSTANCE="score_counter_0" PORT="screen_width"/>
-            <CONNECTION INSTANCE="TEMP_positie_peddels" PORT="size_window_width"/>
+            <CONNECTION INSTANCE="positie_balletje_0" PORT="screen_width"/>
             <CONNECTION INSTANCE="score_tekenen_0" PORT="screen_width_i"/>
+            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="breedte_scherm"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1230,10 +1174,9 @@
         <PORT DIR="O" LEFT="8" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="constants_scherm_hoogte_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="lijn_tekenen_0" PORT="screen_y"/>
-            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="hoogte_scherm"/>
             <CONNECTION INSTANCE="positie_balletje_0" PORT="screen_heigth"/>
-            <CONNECTION INSTANCE="TEMP_positie_peddels" PORT="size_window_height"/>
             <CONNECTION INSTANCE="score_tekenen_0" PORT="screen_height_i"/>
+            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="hoogte_scherm"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1242,7 +1185,7 @@
     <MODULE COREREVISION="1" FULLNAME="/lijn_tekenen_0" HWVERSION="1.0" INSTANCE="lijn_tekenen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="lijn_tekenen" VLNV="xilinx.com:module_ref:lijn_tekenen:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="width_line" VALUE="5"/>
+        <PARAMETER NAME="width_line" VALUE="3"/>
         <PARAMETER NAME="space_between_lines" VALUE="10"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_lijn_tekenen_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -1476,13 +1419,12 @@
         </PORT>
         <PORT DIR="O" LEFT="8" NAME="controller_output_1" RIGHT="0" SIGIS="undef" SIGNAME="ontvangen_controllers_controller_interconn_0_controller_output_1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="TEMP_positie_peddels" PORT="value_1"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="CL_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="8" NAME="controller_output_2" RIGHT="0" SIGIS="undef" SIGNAME="ontvangen_controllers_controller_interconn_0_controller_output_2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Coor_PixelR_0" PORT="CR_in"/>
-            <CONNECTION INSTANCE="TEMP_positie_peddels" PORT="value_2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="active" SIGIS="undef" SIGNAME="ontvangen_controllers_controller_interconn_0_active">
@@ -1541,7 +1483,8 @@
     <MODULE COREREVISION="1" FULLNAME="/positie_balletje_0" HWVERSION="1.0" INSTANCE="positie_balletje_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="positie_balletje" VLNV="xilinx.com:module_ref:positie_balletje:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="step" VALUE="1"/>
+        <PARAMETER NAME="step_x" VALUE="1"/>
+        <PARAMETER NAME="step_y" VALUE="2"/>
         <PARAMETER NAME="angle_1" VALUE="2"/>
         <PARAMETER NAME="angle_2" VALUE="1"/>
         <PARAMETER NAME="angle_3" VALUE="0"/>
@@ -1598,8 +1541,8 @@
         <PORT DIR="O" LEFT="9" NAME="pos_x_out" RIGHT="0" SIGIS="undef" SIGNAME="positie_balletje_0_pos_x_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="tekenen_balletje" PORT="pos_x"/>
-            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="x_positie_balletje"/>
             <CONNECTION INSTANCE="score_counter_0" PORT="pos_x"/>
+            <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="x_positie_balletje"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="8" NAME="pos_y_out" RIGHT="0" SIGIS="undef" SIGNAME="positie_balletje_0_pos_y_out">
@@ -1665,9 +1608,9 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="size" VALUE="10"/>
-        <PARAMETER NAME="distance" VALUE="20"/>
+        <PARAMETER NAME="distance" VALUE="5"/>
         <PARAMETER NAME="height_offset" VALUE="10"/>
-        <PARAMETER NAME="width_offset" VALUE="10"/>
+        <PARAMETER NAME="width_offset" VALUE="20"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_score_tekenen_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -1720,6 +1663,11 @@
         <PORT DIR="I" LEFT="8" NAME="screen_height_i" RIGHT="0" SIGIS="undef" SIGNAME="constants_scherm_hoogte_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="constants_scherm_hoogte" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="max_score" RIGHT="0" SIGIS="undef" SIGNAME="constants_max_score_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="constants_max_score" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="pixel_value_o" SIGIS="undef" SIGNAME="score_tekenen_0_pixel_value_o">
@@ -1803,27 +1751,27 @@
         </PORT>
         <PORT DIR="O" NAME="pixel_value_o" SIGIS="undef" SIGNAME="tekenen_balletje_pixel_value_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="TEMP_tekenen_peddel_L" PORT="pixel_value_i"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="PixelSig_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="HSYNC_o" SIGIS="undef" SIGNAME="tekenen_balletje_HSYNC_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="TEMP_tekenen_peddel_L" PORT="HSYNC_i"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="HSYNC_i"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="VSYNC_o" SIGIS="undef" SIGNAME="tekenen_balletje_VSYNC_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="TEMP_tekenen_peddel_L" PORT="VSYNC_i"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="VSYNC_i"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="9" NAME="vpxl_o" RIGHT="0" SIGIS="undef" SIGNAME="tekenen_balletje_vpxl_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="TEMP_tekenen_peddel_L" PORT="vpxl_i"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="VPixel"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="9" NAME="hpxl_o" RIGHT="0" SIGIS="undef" SIGNAME="tekenen_balletje_hpxl_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="TEMP_tekenen_peddel_L" PORT="hpxl_i"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="HPixel"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

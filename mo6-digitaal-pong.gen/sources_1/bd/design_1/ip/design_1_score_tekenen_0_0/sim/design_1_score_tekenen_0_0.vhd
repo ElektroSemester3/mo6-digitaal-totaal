@@ -65,6 +65,7 @@ ENTITY design_1_score_tekenen_0_0 IS
     score_r_i : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     screen_width_i : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     screen_height_i : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+    max_score : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     pixel_value_o : OUT STD_LOGIC;
     HSYNC_o : OUT STD_LOGIC;
     VSYNC_o : OUT STD_LOGIC;
@@ -94,6 +95,7 @@ ARCHITECTURE design_1_score_tekenen_0_0_arch OF design_1_score_tekenen_0_0 IS
       score_r_i : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       screen_width_i : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       screen_height_i : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+      max_score : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       pixel_value_o : OUT STD_LOGIC;
       HSYNC_o : OUT STD_LOGIC;
       VSYNC_o : OUT STD_LOGIC;
@@ -105,9 +107,9 @@ BEGIN
   U0 : score_tekenen
     GENERIC MAP (
       size => 10,
-      distance => 20,
+      distance => 5,
       height_offset => 10,
-      width_offset => 10
+      width_offset => 20
     )
     PORT MAP (
       pixel_value_i => pixel_value_i,
@@ -120,6 +122,7 @@ BEGIN
       score_r_i => score_r_i,
       screen_width_i => screen_width_i,
       screen_height_i => screen_height_i,
+      max_score => max_score,
       pixel_value_o => pixel_value_o,
       HSYNC_o => HSYNC_o,
       VSYNC_o => VSYNC_o,

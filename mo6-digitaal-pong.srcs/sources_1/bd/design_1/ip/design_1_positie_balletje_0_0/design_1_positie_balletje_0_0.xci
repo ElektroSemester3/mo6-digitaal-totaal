@@ -8,7 +8,8 @@
     "gen_directory": "../../../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_positie_balletje_0_0",
     "parameters": {
       "component_parameters": {
-        "step": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "step_x": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "step_y": [ { "value": "2", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "angle_1": [ { "value": "2", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "angle_2": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "angle_3": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -16,7 +17,8 @@
         "Component_Name": [ { "value": "design_1_positie_balletje_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
-        "step": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "step_x": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "step_y": [ { "value": "2", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "angle_1": [ { "value": "2", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "angle_2": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "angle_3": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -43,7 +45,7 @@
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2023.1" } ],
-        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
       }
     },
     "boundary": {

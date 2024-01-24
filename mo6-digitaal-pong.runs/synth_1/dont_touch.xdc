@@ -51,34 +51,39 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_pe
 # IP: bd/design_1/ip/design_1_scherm_hoogte_0/design_1_scherm_hoogte_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_scherm_hoogte_0 || ORIG_REF_NAME==design_1_scherm_hoogte_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_object_positie_0_0/design_1_object_positie_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_object_positie_0_0 || ORIG_REF_NAME==design_1_object_positie_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_positie_balletje_0_0/design_1_positie_balletje_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_positie_balletje_0_0 || ORIG_REF_NAME==design_1_positie_balletje_0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_lijn_tekenen_0_0/design_1_lijn_tekenen_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_lijn_tekenen_0_0 || ORIG_REF_NAME==design_1_lijn_tekenen_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_tekenen_object_0_1/design_1_tekenen_object_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_tekenen_object_0_1 || ORIG_REF_NAME==design_1_tekenen_object_0_1} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_tekenen_object_0_0/design_1_tekenen_object_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_tekenen_object_0_0 || ORIG_REF_NAME==design_1_tekenen_object_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_Coor_PixelR_0_0/design_1_Coor_PixelR_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_Coor_PixelR_0_0 || ORIG_REF_NAME==design_1_Coor_PixelR_0_0} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_aanraking_herkennen_0_0/design_1_aanraking_herkennen_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_aanraking_herkennen_0_0 || ORIG_REF_NAME==design_1_aanraking_herkennen_0_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_score_counter_0_0/design_1_score_counter_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_score_counter_0_0 || ORIG_REF_NAME==design_1_score_counter_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_aanraking_herkennen_0_0/design_1_aanraking_herkennen_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_aanraking_herkennen_0_0 || ORIG_REF_NAME==design_1_aanraking_herkennen_0_0} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_0_0 || ORIG_REF_NAME==design_1_clk_wiz_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_Coor_PixelR_0_0/design_1_Coor_PixelR_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_Coor_PixelR_0_0 || ORIG_REF_NAME==design_1_Coor_PixelR_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_positie_balletje_0_0/design_1_positie_balletje_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_positie_balletje_0_0 || ORIG_REF_NAME==design_1_positie_balletje_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_Coor_PixelL_0_0/design_1_Coor_PixelL_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_Coor_PixelL_0_0 || ORIG_REF_NAME==design_1_Coor_PixelL_0_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_score_tekenen_0_0/design_1_score_tekenen_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_score_tekenen_0_0 || ORIG_REF_NAME==design_1_score_tekenen_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_0_0 || ORIG_REF_NAME==design_1_clk_wiz_0_0} -quiet] -quiet
+# XDC: d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_0_0 || ORIG_REF_NAME==design_1_clk_wiz_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_0_0 || ORIG_REF_NAME==design_1_clk_wiz_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc
 
 # XDC: d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/design_1_ooc.xdc

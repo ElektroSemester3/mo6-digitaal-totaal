@@ -90,7 +90,23 @@ set_property ip_output_repo d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-d
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+read_vhdl -library xil_defaultlib {
+  D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/new/controller_interconnect.vhd
+  D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/new/controller_inductief.vhd
+  D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/new/controller_draadloos.vhd
+  D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/new/clk_divider.vhd
+  D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/new/controller_ultrasoon.vhd
+  D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/new/beeld_generator.vhd
+  D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/new/lijn_tekenen.vhd
+  D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/new/tekenen_balletje.vhd
+  D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/new/aanraking_herkennen.vhd
+  D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/new/score_counter.vhd
+  D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/new/peddel_R.vhd
+  D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/new/positie_balletje.vhd
+  D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/new/Coor_PixelL.vhd
+  D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/new/score_tekenen.vhd
+  D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+}
 add_files D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc]

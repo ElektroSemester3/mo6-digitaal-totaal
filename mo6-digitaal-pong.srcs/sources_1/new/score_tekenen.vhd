@@ -20,6 +20,7 @@ entity score_tekenen is
         score_r_i                   : in STD_LOGIC_VECTOR (3 downto 0);
         screen_width_i              : in STD_LOGIC_VECTOR (9 downto 0);
         screen_height_i             : in STD_LOGIC_VECTOR (8 downto 0);
+        max_score                   : in std_logic_vector(3 downto 0);
         -- output pixel value
         pixel_value_o               : out STD_LOGIC;
         -- pass through signals

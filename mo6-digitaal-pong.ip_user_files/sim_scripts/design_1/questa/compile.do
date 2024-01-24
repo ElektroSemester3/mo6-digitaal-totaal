@@ -47,21 +47,20 @@ vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../mo6-digitaal-pong.g
 "../../../bd/design_1/ip/design_1_scherm_hoogte_0/sim/design_1_scherm_hoogte_0.v" \
 
 vcom -work xil_defaultlib  -93  \
-"../../../bd/design_1/ip/design_1_object_positie_0_0/sim/design_1_object_positie_0_0.vhd" \
-"../../../bd/design_1/ip/design_1_positie_balletje_0_0/sim/design_1_positie_balletje_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_lijn_tekenen_0_0/sim/design_1_lijn_tekenen_0_0.vhd" \
-"../../../bd/design_1/ip/design_1_tekenen_object_0_1/sim/design_1_tekenen_object_0_1.vhd" \
 "../../../bd/design_1/ip/design_1_tekenen_object_0_0/sim/design_1_tekenen_object_0_0.vhd" \
-"../../../bd/design_1/ip/design_1_Coor_PixelR_0_0/sim/design_1_Coor_PixelR_0_0.vhd" \
-"../../../bd/design_1/ip/design_1_score_counter_0_0/sim/design_1_score_counter_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_aanraking_herkennen_0_0/sim/design_1_aanraking_herkennen_0_0.vhd" \
-"../../../bd/design_1/ip/design_1_score_tekenen_0_0/sim/design_1_score_tekenen_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_score_counter_0_0/sim/design_1_score_counter_0_0.vhd" \
 
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/30ef" \
 "../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
 "../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
 
 vcom -work xil_defaultlib  -93  \
+"../../../bd/design_1/ip/design_1_Coor_PixelR_0_0/sim/design_1_Coor_PixelR_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_positie_balletje_0_0/sim/design_1_positie_balletje_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_Coor_PixelL_0_0/sim/design_1_Coor_PixelL_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_score_tekenen_0_0/sim/design_1_score_tekenen_0_0.vhd" \
 "../../../bd/design_1/sim/design_1.vhd" \
 
 vlog -work xil_defaultlib \
