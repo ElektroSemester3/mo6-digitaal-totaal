@@ -31,14 +31,14 @@
         "balletje_grootte": "",
         "max_score": ""
       },
-      "TEMP_positie_peddels": "",
-      "positie_balletje_0": "",
       "lijn_tekenen_0": "",
       "TEMP_tekenen_peddel_L": "",
       "tekenen_balletje": "",
       "Coor_PixelR_0": "",
-      "score_counter_0": "",
       "aanraking_herkennen_0": "",
+      "positie_balletje_0": "",
+      "score_counter_0": "",
+      "TEMP_positie_peddels": "",
       "score_tekenen_0": ""
     },
     "ports": {
@@ -979,141 +979,6 @@
           }
         }
       },
-      "TEMP_positie_peddels": {
-        "vlnv": "xilinx.com:module_ref:object_positie:1.0",
-        "xci_name": "design_1_object_positie_0_0",
-        "xci_path": "ip\\design_1_object_positie_0_0\\design_1_object_positie_0_0.xci",
-        "inst_hier_path": "TEMP_positie_peddels",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "object_positie",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "object_width": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "object_height": {
-            "direction": "I",
-            "left": "8",
-            "right": "0"
-          },
-          "size_window_width": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "size_window_height": {
-            "direction": "I",
-            "left": "8",
-            "right": "0"
-          },
-          "value_1": {
-            "direction": "I",
-            "left": "8",
-            "right": "0"
-          },
-          "value_2": {
-            "direction": "I",
-            "left": "8",
-            "right": "0"
-          },
-          "position_x_1": {
-            "direction": "O",
-            "left": "9",
-            "right": "0"
-          },
-          "position_y_1": {
-            "direction": "O",
-            "left": "8",
-            "right": "0"
-          },
-          "position_x_2": {
-            "direction": "O",
-            "left": "9",
-            "right": "0"
-          },
-          "position_y_2": {
-            "direction": "O",
-            "left": "8",
-            "right": "0"
-          }
-        }
-      },
-      "positie_balletje_0": {
-        "vlnv": "xilinx.com:module_ref:positie_balletje:1.0",
-        "xci_name": "design_1_positie_balletje_0_0",
-        "xci_path": "ip\\design_1_positie_balletje_0_0\\design_1_positie_balletje_0_0.xci",
-        "inst_hier_path": "positie_balletje_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "positie_balletje",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "reset": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH"
-              }
-            }
-          },
-          "screen_width": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "screen_heigth": {
-            "direction": "I",
-            "left": "8",
-            "right": "0"
-          },
-          "clk_slow": {
-            "direction": "I"
-          },
-          "angle_index": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "running": {
-            "direction": "I",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "peddel_touch": {
-            "direction": "I"
-          },
-          "side_touch": {
-            "direction": "I"
-          },
-          "top_bottom_touch": {
-            "direction": "I"
-          },
-          "pos_x_out": {
-            "direction": "O",
-            "left": "9",
-            "right": "0"
-          },
-          "pos_y_out": {
-            "direction": "O",
-            "left": "8",
-            "right": "0"
-          }
-        }
-      },
       "lijn_tekenen_0": {
         "vlnv": "xilinx.com:module_ref:lijn_tekenen:1.0",
         "xci_name": "design_1_lijn_tekenen_0_0",
@@ -1121,7 +986,7 @@
         "inst_hier_path": "lijn_tekenen_0",
         "parameters": {
           "width_line": {
-            "value": "5"
+            "value": "10"
           }
         },
         "reference_info": {
@@ -1410,59 +1275,6 @@
           }
         }
       },
-      "score_counter_0": {
-        "vlnv": "xilinx.com:module_ref:score_counter:1.0",
-        "xci_name": "design_1_score_counter_0_0",
-        "xci_path": "ip\\design_1_score_counter_0_0\\design_1_score_counter_0_0.xci",
-        "inst_hier_path": "score_counter_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "score_counter",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "reset": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH"
-              }
-            }
-          },
-          "clk_slow": {
-            "direction": "I"
-          },
-          "side_touch": {
-            "direction": "I"
-          },
-          "pos_x": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "screen_width": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "max_score": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "score_left": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "score_right": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          }
-        }
-      },
       "aanraking_herkennen_0": {
         "vlnv": "xilinx.com:module_ref:aanraking_herkennen:1.0",
         "xci_name": "design_1_aanraking_herkennen_0_0",
@@ -1537,6 +1349,194 @@
           },
           "aanraking_balletje_bovenonder": {
             "direction": "O"
+          }
+        }
+      },
+      "positie_balletje_0": {
+        "vlnv": "xilinx.com:module_ref:positie_balletje:1.0",
+        "xci_name": "design_1_positie_balletje_0_0",
+        "xci_path": "ip\\design_1_positie_balletje_0_0\\design_1_positie_balletje_0_0.xci",
+        "inst_hier_path": "positie_balletje_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "positie_balletje",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "screen_width": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "screen_heigth": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "clk_slow": {
+            "direction": "I"
+          },
+          "angle_index": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "running": {
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "peddel_touch": {
+            "direction": "I"
+          },
+          "side_touch": {
+            "direction": "I"
+          },
+          "top_bottom_touch": {
+            "direction": "I"
+          },
+          "pos_x_out": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "pos_y_out": {
+            "direction": "O",
+            "left": "8",
+            "right": "0"
+          }
+        }
+      },
+      "score_counter_0": {
+        "vlnv": "xilinx.com:module_ref:score_counter:1.0",
+        "xci_name": "design_1_score_counter_0_0",
+        "xci_path": "ip\\design_1_score_counter_0_0\\design_1_score_counter_0_0.xci",
+        "inst_hier_path": "score_counter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "score_counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "clk_slow": {
+            "direction": "I"
+          },
+          "side_touch": {
+            "direction": "I"
+          },
+          "pos_x": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "screen_width": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "max_score": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "score_left": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "score_right": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "TEMP_positie_peddels": {
+        "vlnv": "xilinx.com:module_ref:object_positie:1.0",
+        "xci_name": "design_1_object_positie_0_0",
+        "xci_path": "ip\\design_1_object_positie_0_0\\design_1_object_positie_0_0.xci",
+        "inst_hier_path": "TEMP_positie_peddels",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "object_positie",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "object_width": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "object_height": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "size_window_width": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "size_window_height": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "value_1": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "value_2": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "position_x_1": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "position_y_1": {
+            "direction": "O",
+            "left": "8",
+            "right": "0"
+          },
+          "position_x_2": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "position_y_2": {
+            "direction": "O",
+            "left": "8",
+            "right": "0"
           }
         }
       },
@@ -1804,19 +1804,19 @@
       "constants_dout1": {
         "ports": [
           "constants/peddels_breedte",
-          "TEMP_positie_peddels/object_width",
           "TEMP_tekenen_peddel_L/size_x",
           "Coor_PixelR_0/BreetePeddels",
-          "aanraking_herkennen_0/breedte_peddels"
+          "aanraking_herkennen_0/breedte_peddels",
+          "TEMP_positie_peddels/object_width"
         ]
       },
       "constants_dout2": {
         "ports": [
           "constants/peddels_hoogte",
-          "TEMP_positie_peddels/object_height",
           "TEMP_tekenen_peddel_L/size_y",
           "Coor_PixelR_0/HoogtePeddels",
-          "aanraking_herkennen_0/hoogte_peddels"
+          "aanraking_herkennen_0/hoogte_peddels",
+          "TEMP_positie_peddels/object_height"
         ]
       },
       "constants_dout3": {
@@ -1829,21 +1829,21 @@
       "constants_dout4": {
         "ports": [
           "constants/scherm_breedte",
-          "TEMP_positie_peddels/size_window_width",
-          "positie_balletje_0/screen_width",
           "lijn_tekenen_0/screen_x",
-          "score_counter_0/screen_width",
           "aanraking_herkennen_0/breedte_scherm",
+          "positie_balletje_0/screen_width",
+          "score_counter_0/screen_width",
+          "TEMP_positie_peddels/size_window_width",
           "score_tekenen_0/screen_width_i"
         ]
       },
       "constants_dout5": {
         "ports": [
           "constants/scherm_hoogte",
-          "TEMP_positie_peddels/size_window_height",
-          "positie_balletje_0/screen_heigth",
           "lijn_tekenen_0/screen_y",
           "aanraking_herkennen_0/hoogte_scherm",
+          "positie_balletje_0/screen_heigth",
+          "TEMP_positie_peddels/size_window_height",
           "score_tekenen_0/screen_height_i"
         ]
       },
@@ -1918,8 +1918,8 @@
       "ontvangen_controllers_controller_output_2": {
         "ports": [
           "ontvangen_controllers/controller_output_2",
-          "TEMP_positie_peddels/value_2",
-          "Coor_PixelR_0/CR_in"
+          "Coor_PixelR_0/CR_in",
+          "TEMP_positie_peddels/value_2"
         ]
       },
       "ontvangen_controllers_trigger_0": {
@@ -1932,8 +1932,8 @@
         "ports": [
           "positie_balletje_0/pos_x_out",
           "tekenen_balletje/pos_x",
-          "score_counter_0/pos_x",
-          "aanraking_herkennen_0/x_positie_balletje"
+          "aanraking_herkennen_0/x_positie_balletje",
+          "score_counter_0/pos_x"
         ]
       },
       "positie_balletje_0_pos_y_out": {

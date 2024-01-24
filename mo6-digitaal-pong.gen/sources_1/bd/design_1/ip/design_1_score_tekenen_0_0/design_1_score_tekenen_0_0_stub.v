@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Wed Jan 24 11:04:50 2024
-// Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
+// Date        : Wed Jan 24 12:02:13 2024
+// Host        : XPS-Tommy running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_score_tekenen_0_0/design_1_score_tekenen_0_0_stub.v
+//               d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_score_tekenen_0_0/design_1_score_tekenen_0_0_stub.v
 // Design      : design_1_score_tekenen_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

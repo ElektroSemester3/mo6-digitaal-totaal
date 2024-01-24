@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/constrs_1/new/constraints.xdc rfile:../../../mo6-digitaal-pong.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.srcs/constrs_1/new/constraints.xdc rfile:../../../mo6-digitaal-pong.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN L19 [get_ports reset]
 set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]

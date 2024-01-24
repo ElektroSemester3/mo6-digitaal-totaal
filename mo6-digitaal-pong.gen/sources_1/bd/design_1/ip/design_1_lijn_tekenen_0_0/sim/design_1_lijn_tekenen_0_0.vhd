@@ -98,7 +98,7 @@ ARCHITECTURE design_1_lijn_tekenen_0_0_arch OF design_1_lijn_tekenen_0_0 IS
 BEGIN
   U0 : lijn_tekenen
     GENERIC MAP (
-      width_line => 5,
+      width_line => 10,
       space_between_lines => 10
     )
     PORT MAP (

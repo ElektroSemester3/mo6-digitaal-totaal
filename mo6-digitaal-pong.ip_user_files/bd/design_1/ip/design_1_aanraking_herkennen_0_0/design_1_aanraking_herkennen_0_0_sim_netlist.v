@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
 // Date        : Wed Jan 24 10:22:22 2024
 // Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_aanraking_herkennen_0_0/design_1_aanraking_herkennen_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_aanraking_herkennen_0_0 -prefix
+//               design_1_aanraking_herkennen_0_0_ design_1_aanraking_herkennen_0_0_sim_netlist.v
 // Design      : design_1_aanraking_herkennen_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,72 +13,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_aanraking_herkennen_0_0,aanraking_herkennen,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "aanraking_herkennen,Vivado 2023.1" *) 
-(* NotValidForBitStream *)
-module design_1_aanraking_herkennen_0_0
-   (hoogte_scherm,
-    breedte_scherm,
-    grootte_balletje,
-    hoogte_peddels,
-    breedte_peddels,
-    offset_peddels,
-    x_positie_balletje,
-    y_positie_balletje,
-    positie_peddel_links,
-    positie_peddel_rechts,
-    aanraking_balletje_peddel,
-    aanraking_balletje_peddel_zone,
-    aanraking_balletje_zijkant,
-    aanraking_balletje_bovenonder);
-  input [8:0]hoogte_scherm;
-  input [9:0]breedte_scherm;
-  input [8:0]grootte_balletje;
-  input [8:0]hoogte_peddels;
-  input [9:0]breedte_peddels;
-  input [8:0]offset_peddels;
-  input [9:0]x_positie_balletje;
-  input [8:0]y_positie_balletje;
-  input [8:0]positie_peddel_links;
-  input [8:0]positie_peddel_rechts;
-  output aanraking_balletje_peddel;
-  output [1:0]aanraking_balletje_peddel_zone;
-  output aanraking_balletje_zijkant;
-  output aanraking_balletje_bovenonder;
-
-  wire aanraking_balletje_bovenonder;
-  wire aanraking_balletje_peddel;
-  wire [1:0]aanraking_balletje_peddel_zone;
-  wire aanraking_balletje_zijkant;
-  wire [9:0]breedte_peddels;
-  wire [9:0]breedte_scherm;
-  wire [8:0]grootte_balletje;
-  wire [8:0]hoogte_peddels;
-  wire [8:0]hoogte_scherm;
-  wire [8:0]offset_peddels;
-  wire [8:0]positie_peddel_links;
-  wire [8:0]positie_peddel_rechts;
-  wire [9:0]x_positie_balletje;
-  wire [8:0]y_positie_balletje;
-
-  design_1_aanraking_herkennen_0_0_aanraking_herkennen U0
-       (.aanraking_balletje_bovenonder(aanraking_balletje_bovenonder),
-        .aanraking_balletje_peddel(aanraking_balletje_peddel),
-        .aanraking_balletje_peddel_zone(aanraking_balletje_peddel_zone),
-        .aanraking_balletje_zijkant(aanraking_balletje_zijkant),
-        .breedte_peddels(breedte_peddels),
-        .breedte_scherm(breedte_scherm),
-        .grootte_balletje(grootte_balletje),
-        .hoogte_peddels(hoogte_peddels),
-        .hoogte_scherm(hoogte_scherm),
-        .offset_peddels(offset_peddels),
-        .positie_peddel_links(positie_peddel_links),
-        .positie_peddel_rechts(positie_peddel_rechts),
-        .x_positie_balletje(x_positie_balletje),
-        .y_positie_balletje(y_positie_balletje));
-endmodule
-
-(* ORIG_REF_NAME = "aanraking_herkennen" *) 
 module design_1_aanraking_herkennen_0_0_aanraking_herkennen
    (aanraking_balletje_zijkant,
     aanraking_balletje_peddel,
@@ -6422,6 +6356,71 @@ module design_1_aanraking_herkennen_0_0_aanraking_herkennen
         .I4(offset_peddels[3]),
         .I5(breedte_peddels[3]),
         .O(plusOp__0_carry_i_8_n_0));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "design_1_aanraking_herkennen_0_0,aanraking_herkennen,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "aanraking_herkennen,Vivado 2023.1" *) 
+(* NotValidForBitStream *)
+module design_1_aanraking_herkennen_0_0
+   (hoogte_scherm,
+    breedte_scherm,
+    grootte_balletje,
+    hoogte_peddels,
+    breedte_peddels,
+    offset_peddels,
+    x_positie_balletje,
+    y_positie_balletje,
+    positie_peddel_links,
+    positie_peddel_rechts,
+    aanraking_balletje_peddel,
+    aanraking_balletje_peddel_zone,
+    aanraking_balletje_zijkant,
+    aanraking_balletje_bovenonder);
+  input [8:0]hoogte_scherm;
+  input [9:0]breedte_scherm;
+  input [8:0]grootte_balletje;
+  input [8:0]hoogte_peddels;
+  input [9:0]breedte_peddels;
+  input [8:0]offset_peddels;
+  input [9:0]x_positie_balletje;
+  input [8:0]y_positie_balletje;
+  input [8:0]positie_peddel_links;
+  input [8:0]positie_peddel_rechts;
+  output aanraking_balletje_peddel;
+  output [1:0]aanraking_balletje_peddel_zone;
+  output aanraking_balletje_zijkant;
+  output aanraking_balletje_bovenonder;
+
+  wire aanraking_balletje_bovenonder;
+  wire aanraking_balletje_peddel;
+  wire [1:0]aanraking_balletje_peddel_zone;
+  wire aanraking_balletje_zijkant;
+  wire [9:0]breedte_peddels;
+  wire [9:0]breedte_scherm;
+  wire [8:0]grootte_balletje;
+  wire [8:0]hoogte_peddels;
+  wire [8:0]hoogte_scherm;
+  wire [8:0]offset_peddels;
+  wire [8:0]positie_peddel_links;
+  wire [8:0]positie_peddel_rechts;
+  wire [9:0]x_positie_balletje;
+  wire [8:0]y_positie_balletje;
+
+  design_1_aanraking_herkennen_0_0_aanraking_herkennen U0
+       (.aanraking_balletje_bovenonder(aanraking_balletje_bovenonder),
+        .aanraking_balletje_peddel(aanraking_balletje_peddel),
+        .aanraking_balletje_peddel_zone(aanraking_balletje_peddel_zone),
+        .aanraking_balletje_zijkant(aanraking_balletje_zijkant),
+        .breedte_peddels(breedte_peddels),
+        .breedte_scherm(breedte_scherm),
+        .grootte_balletje(grootte_balletje),
+        .hoogte_peddels(hoogte_peddels),
+        .hoogte_scherm(hoogte_scherm),
+        .offset_peddels(offset_peddels),
+        .positie_peddel_links(positie_peddel_links),
+        .positie_peddel_rechts(positie_peddel_rechts),
+        .x_positie_balletje(x_positie_balletje),
+        .y_positie_balletje(y_positie_balletje));
 endmodule
 `ifndef GLBL
 `define GLBL

@@ -2,8 +2,8 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Wed Jan 24 10:41:01 2024
---Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
+--Date        : Wed Jan 24 12:08:29 2024
+--Host        : XPS-Tommy running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
 --Purpose     : IP block netlist
@@ -15,6 +15,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity constants_imp_10L8KXE is
   port (
     balletje_grootte : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    max_score : out STD_LOGIC_VECTOR ( 3 downto 0 );
     peddels_breedte : out STD_LOGIC_VECTOR ( 9 downto 0 );
     peddels_hoogte : out STD_LOGIC_VECTOR ( 8 downto 0 );
     peddels_x_offset : out STD_LOGIC_VECTOR ( 8 downto 0 );
@@ -54,7 +55,13 @@ architecture STRUCTURE of constants_imp_10L8KXE is
     dout : out STD_LOGIC_VECTOR ( 8 downto 0 )
   );
   end component design_1_peddels_hoogte_4;
+  component design_1_scherm_hoogte_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component design_1_scherm_hoogte_0;
   signal balletje_grootte_dout : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal max_score_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal peddels_breedte_dout : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal peddels_hoogte_dout : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal peddels_x_offset_dout : STD_LOGIC_VECTOR ( 8 downto 0 );
@@ -62,6 +69,7 @@ architecture STRUCTURE of constants_imp_10L8KXE is
   signal scherm_hoogte_dout : STD_LOGIC_VECTOR ( 8 downto 0 );
 begin
   balletje_grootte(8 downto 0) <= balletje_grootte_dout(8 downto 0);
+  max_score(3 downto 0) <= max_score_dout(3 downto 0);
   peddels_breedte(9 downto 0) <= peddels_breedte_dout(9 downto 0);
   peddels_hoogte(8 downto 0) <= peddels_hoogte_dout(8 downto 0);
   peddels_x_offset(8 downto 0) <= peddels_x_offset_dout(8 downto 0);
@@ -70,6 +78,10 @@ begin
 balletje_grootte_RnM: component design_1_peddels_hoogte_4
      port map (
       dout(8 downto 0) => balletje_grootte_dout(8 downto 0)
+    );
+max_score_RnM: component design_1_scherm_hoogte_0
+     port map (
+      dout(3 downto 0) => max_score_dout(3 downto 0)
     );
 peddels_breedte_RnM: component design_1_peddels_hoogte_0
      port map (
@@ -141,16 +153,6 @@ architecture STRUCTURE of ontvangen_controllers_imp_RFQXIP is
     value_out : out STD_LOGIC_VECTOR ( 8 downto 0 )
   );
   end component design_1_controller_inductief_0_0;
-  component design_1_controller_ultrasoon_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    sensor : in STD_LOGIC;
-    enable : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    value : out STD_LOGIC_VECTOR ( 8 downto 0 );
-    trigger : out STD_LOGIC
-  );
-  end component design_1_controller_ultrasoon_0_0;
   component design_1_controller_draadloos_0_0 is
   port (
     clk_slow : in STD_LOGIC;
@@ -169,6 +171,16 @@ architecture STRUCTURE of ontvangen_controllers_imp_RFQXIP is
     clk_out : out STD_LOGIC
   );
   end component design_1_clk_divider_0_0;
+  component design_1_controller_ultrasoon_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    sensor : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    value : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    trigger : out STD_LOGIC
+  );
+  end component design_1_controller_ultrasoon_0_0;
   signal Net : STD_LOGIC;
   signal Net1 : STD_LOGIC;
   signal choice_1_0_1 : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -279,7 +291,7 @@ entity design_1 is
     sys_clock : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=25,numReposBlks=23,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=15,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=27,numReposBlks=25,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=16,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -321,72 +333,6 @@ architecture STRUCTURE of design_1 is
     hpxl : out STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   end component design_1_beeld_generator_0_0;
-  component design_1_object_positie_0_0 is
-  port (
-    object_width : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    object_height : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    size_window_width : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    size_window_height : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    value_1 : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    value_2 : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    position_x_1 : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    position_y_1 : out STD_LOGIC_VECTOR ( 8 downto 0 );
-    position_x_2 : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    position_y_2 : out STD_LOGIC_VECTOR ( 8 downto 0 )
-  );
-  end component design_1_object_positie_0_0;
-  component design_1_score_tekenen_0_0 is
-  port (
-    pixel_value_i : in STD_LOGIC;
-    pxlCLK_i : in STD_LOGIC;
-    HSYNC_i : in STD_LOGIC;
-    VSYNC_i : in STD_LOGIC;
-    vpxl_i : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    hpxl_i : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    score_l_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    score_r_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    screen_width_i : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    screen_height_i : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    pixel_value_o : out STD_LOGIC;
-    HSYNC_o : out STD_LOGIC;
-    VSYNC_o : out STD_LOGIC;
-    vpxl_o : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    hpxl_o : out STD_LOGIC_VECTOR ( 9 downto 0 )
-  );
-  end component design_1_score_tekenen_0_0;
-  component design_1_aanraking_herkennen_0_0 is
-  port (
-    hoogte_scherm : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    breedte_scherm : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    grootte_balletje : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    hoogte_peddels : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    breedte_peddels : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    offset_peddels : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    x_positie_balletje : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    y_positie_balletje : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    positie_peddel_links : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    positie_peddel_rechts : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    aanraking_balletje_peddel : out STD_LOGIC;
-    aanraking_balletje_peddel_zone : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    aanraking_balletje_zijkant : out STD_LOGIC;
-    aanraking_balletje_bovenonder : out STD_LOGIC
-  );
-  end component design_1_aanraking_herkennen_0_0;
-  component design_1_positie_balletje_0_0 is
-  port (
-    reset : in STD_LOGIC;
-    screen_width : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    screen_heigth : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    clk_slow : in STD_LOGIC;
-    angle_index : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    running : in STD_LOGIC;
-    peddel_touch : in STD_LOGIC;
-    side_touch : in STD_LOGIC;
-    top_bottom_touch : in STD_LOGIC;
-    pos_x_out : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    pos_y_out : out STD_LOGIC_VECTOR ( 8 downto 0 )
-  );
-  end component design_1_positie_balletje_0_0;
   component design_1_lijn_tekenen_0_0 is
   port (
     pixel_value_i : in STD_LOGIC;
@@ -462,6 +408,84 @@ architecture STRUCTURE of design_1 is
     HPixel_out : out STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   end component design_1_Coor_PixelR_0_0;
+  component design_1_aanraking_herkennen_0_0 is
+  port (
+    hoogte_scherm : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    breedte_scherm : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    grootte_balletje : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    hoogte_peddels : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    breedte_peddels : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    offset_peddels : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    x_positie_balletje : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    y_positie_balletje : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    positie_peddel_links : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    positie_peddel_rechts : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    aanraking_balletje_peddel : out STD_LOGIC;
+    aanraking_balletje_peddel_zone : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    aanraking_balletje_zijkant : out STD_LOGIC;
+    aanraking_balletje_bovenonder : out STD_LOGIC
+  );
+  end component design_1_aanraking_herkennen_0_0;
+  component design_1_positie_balletje_0_0 is
+  port (
+    reset : in STD_LOGIC;
+    screen_width : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    screen_heigth : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    clk_slow : in STD_LOGIC;
+    angle_index : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    running : in STD_LOGIC;
+    peddel_touch : in STD_LOGIC;
+    side_touch : in STD_LOGIC;
+    top_bottom_touch : in STD_LOGIC;
+    pos_x_out : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    pos_y_out : out STD_LOGIC_VECTOR ( 8 downto 0 )
+  );
+  end component design_1_positie_balletje_0_0;
+  component design_1_score_counter_0_0 is
+  port (
+    reset : in STD_LOGIC;
+    clk_slow : in STD_LOGIC;
+    side_touch : in STD_LOGIC;
+    pos_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    screen_width : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    max_score : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    score_left : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    score_right : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component design_1_score_counter_0_0;
+  component design_1_object_positie_0_0 is
+  port (
+    object_width : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    object_height : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    size_window_width : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    size_window_height : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    value_1 : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    value_2 : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    position_x_1 : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    position_y_1 : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    position_x_2 : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    position_y_2 : out STD_LOGIC_VECTOR ( 8 downto 0 )
+  );
+  end component design_1_object_positie_0_0;
+  component design_1_score_tekenen_0_0 is
+  port (
+    pixel_value_i : in STD_LOGIC;
+    pxlCLK_i : in STD_LOGIC;
+    HSYNC_i : in STD_LOGIC;
+    VSYNC_i : in STD_LOGIC;
+    vpxl_i : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    hpxl_i : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    score_l_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    score_r_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    screen_width_i : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    screen_height_i : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    pixel_value_o : out STD_LOGIC;
+    HSYNC_o : out STD_LOGIC;
+    VSYNC_o : out STD_LOGIC;
+    vpxl_o : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    hpxl_o : out STD_LOGIC_VECTOR ( 9 downto 0 )
+  );
+  end component design_1_score_tekenen_0_0;
   signal Coor_PixelR_0_CoorR_yboven_out : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal Coor_PixelR_0_HPixel_out : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal Coor_PixelR_0_HSYNC_o : STD_LOGIC;
@@ -495,6 +519,7 @@ architecture STRUCTURE of design_1 is
   signal constants_dout3 : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal constants_dout4 : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal constants_dout5 : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal constants_max_score : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal enable_0_1 : STD_LOGIC;
   signal freq_in_0_1 : STD_LOGIC;
   signal lijn_tekenen_0_HSYNC_o : STD_LOGIC;
@@ -510,6 +535,8 @@ architecture STRUCTURE of design_1 is
   signal positie_balletje_0_pos_x_out : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal positie_balletje_0_pos_y_out : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal reset_rtl_1 : STD_LOGIC;
+  signal score_counter_0_score_left : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal score_counter_0_score_right : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal score_tekenen_0_HSYNC_o : STD_LOGIC;
   signal score_tekenen_0_VSYNC_o : STD_LOGIC;
   signal score_tekenen_0_pixel_value_o : STD_LOGIC;
@@ -650,6 +677,7 @@ clk_wiz_0: component design_1_clk_wiz_0_0
 constants: entity work.constants_imp_10L8KXE
      port map (
       balletje_grootte(8 downto 0) => constants_dout(8 downto 0),
+      max_score(3 downto 0) => constants_max_score(3 downto 0),
       peddels_breedte(9 downto 0) => constants_dout1(9 downto 0),
       peddels_hoogte(8 downto 0) => constants_dout2(8 downto 0),
       peddels_x_offset(8 downto 0) => constants_dout3(8 downto 0),
@@ -703,6 +731,17 @@ positie_balletje_0: component design_1_positie_balletje_0_0
       side_touch => aanraking_herkennen_0_aanraking_balletje_zijkant,
       top_bottom_touch => aanraking_herkennen_0_aanraking_balletje_bovenonder
     );
+score_counter_0: component design_1_score_counter_0_0
+     port map (
+      clk_slow => clk_divider_0_clk_out,
+      max_score(3 downto 0) => constants_max_score(3 downto 0),
+      pos_x(9 downto 0) => positie_balletje_0_pos_x_out(9 downto 0),
+      reset => reset_rtl_1,
+      score_left(3 downto 0) => score_counter_0_score_left(3 downto 0),
+      score_right(3 downto 0) => score_counter_0_score_right(3 downto 0),
+      screen_width(9 downto 0) => constants_dout4(9 downto 0),
+      side_touch => aanraking_herkennen_0_aanraking_balletje_zijkant
+    );
 score_tekenen_0: component design_1_score_tekenen_0_0
      port map (
       HSYNC_i => lijn_tekenen_0_HSYNC_o,
@@ -714,8 +753,8 @@ score_tekenen_0: component design_1_score_tekenen_0_0
       pixel_value_i => lijn_tekenen_0_pixel_value_o,
       pixel_value_o => score_tekenen_0_pixel_value_o,
       pxlCLK_i => beeld_generator_0_pxlCLK,
-      score_l_i(3 downto 0) => B"0000",
-      score_r_i(3 downto 0) => B"0000",
+      score_l_i(3 downto 0) => score_counter_0_score_left(3 downto 0),
+      score_r_i(3 downto 0) => score_counter_0_score_right(3 downto 0),
       screen_height_i(8 downto 0) => constants_dout5(8 downto 0),
       screen_width_i(9 downto 0) => constants_dout4(9 downto 0),
       vpxl_i(9 downto 0) => lijn_tekenen_0_vpxl_o(9 downto 0),

@@ -12,10 +12,10 @@ vmap util_vector_logic_v2_0_2 questa_lib/msim/util_vector_logic_v2_0_2
 vmap xlconstant_v1_1_7 questa_lib/msim/xlconstant_v1_1_7
 
 vlog -work xpm  -incr -mfcu  -sv "+incdir+../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/30ef" \
-"D:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+"C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 
 vcom -work xpm  -93  \
-"D:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_VCOMP.vhd" \
+"C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/30ef" \
 "../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
@@ -24,9 +24,9 @@ vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../mo6-digitaal-pong.g
 vcom -work xil_defaultlib  -93  \
 "../../../bd/design_1/ip/design_1_controller_interconn_0_0/sim/design_1_controller_interconn_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_controller_inductief_0_0/sim/design_1_controller_inductief_0_0.vhd" \
-"../../../bd/design_1/ip/design_1_controller_ultrasoon_0_0/sim/design_1_controller_ultrasoon_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_controller_draadloos_0_0/sim/design_1_controller_draadloos_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_clk_divider_0_0/sim/design_1_clk_divider_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_controller_ultrasoon_0_0/sim/design_1_controller_ultrasoon_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_clk_divider_0_1/sim/design_1_clk_divider_0_1.vhd" \
 
 vlog -work util_vector_logic_v2_0_2  -incr -mfcu  "+incdir+../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/30ef" \
@@ -37,8 +37,6 @@ vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../mo6-digitaal-pong.g
 
 vcom -work xil_defaultlib  -93  \
 "../../../bd/design_1/ip/design_1_beeld_generator_0_0/sim/design_1_beeld_generator_0_0.vhd" \
-"../../../bd/design_1/ip/design_1_tekenen_object_0_0/sim/design_1_tekenen_object_0_0.vhd" \
-"../../../bd/design_1/ip/design_1_tekenen_object_0_1/sim/design_1_tekenen_object_0_1.vhd" \
 
 vlog -work xlconstant_v1_1_7  -incr -mfcu  "+incdir+../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/30ef" \
 "../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v" \
@@ -50,14 +48,18 @@ vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../mo6-digitaal-pong.g
 "../../../bd/design_1/ip/design_1_peddels_hoogte_2/sim/design_1_peddels_hoogte_2.v" \
 "../../../bd/design_1/ip/design_1_peddels_hoogte_3/sim/design_1_peddels_hoogte_3.v" \
 "../../../bd/design_1/ip/design_1_peddels_hoogte_4/sim/design_1_peddels_hoogte_4.v" \
+"../../../bd/design_1/ip/design_1_scherm_hoogte_0/sim/design_1_scherm_hoogte_0.v" \
 
 vcom -work xil_defaultlib  -93  \
-"../../../bd/design_1/ip/design_1_lijn_tekenen_0_0/sim/design_1_lijn_tekenen_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_object_positie_0_0/sim/design_1_object_positie_0_0.vhd" \
-"../../../bd/design_1/ip/design_1_score_tekenen_0_0/sim/design_1_score_tekenen_0_0.vhd" \
-"../../../bd/design_1/ip/design_1_Coor_PixelR_0_0/sim/design_1_Coor_PixelR_0_0.vhd" \
-"../../../bd/design_1/ip/design_1_aanraking_herkennen_0_0/sim/design_1_aanraking_herkennen_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_positie_balletje_0_0/sim/design_1_positie_balletje_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_lijn_tekenen_0_0/sim/design_1_lijn_tekenen_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_tekenen_object_0_1/sim/design_1_tekenen_object_0_1.vhd" \
+"../../../bd/design_1/ip/design_1_tekenen_object_0_0/sim/design_1_tekenen_object_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_Coor_PixelR_0_0/sim/design_1_Coor_PixelR_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_score_counter_0_0/sim/design_1_score_counter_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_aanraking_herkennen_0_0/sim/design_1_aanraking_herkennen_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_score_tekenen_0_0/sim/design_1_score_tekenen_0_0.vhd" \
 "../../../bd/design_1/sim/design_1.vhd" \
 
 vlog -work xil_defaultlib \

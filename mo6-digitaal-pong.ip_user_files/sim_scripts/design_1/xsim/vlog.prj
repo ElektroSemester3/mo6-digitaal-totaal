@@ -8,6 +8,7 @@ verilog xil_defaultlib --include "../../../../mo6-digitaal-pong.gen/sources_1/bd
 "../../../bd/design_1/ip/design_1_peddels_hoogte_2/sim/design_1_peddels_hoogte_2.v" \
 "../../../bd/design_1/ip/design_1_peddels_hoogte_3/sim/design_1_peddels_hoogte_3.v" \
 "../../../bd/design_1/ip/design_1_peddels_hoogte_4/sim/design_1_peddels_hoogte_4.v" \
+"../../../bd/design_1/ip/design_1_scherm_hoogte_0/sim/design_1_scherm_hoogte_0.v" \
 
 verilog xil_defaultlib "glbl.v"
 

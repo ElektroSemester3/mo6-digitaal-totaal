@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Wed Jan 24 10:22:23 2024
-// Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
+// Date        : Wed Jan 24 12:02:13 2024
+// Host        : XPS-Tommy running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_positie_balletje_0_0/design_1_positie_balletje_0_0_sim_netlist.v
+//               d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_positie_balletje_0_0/design_1_positie_balletje_0_0_sim_netlist.v
 // Design      : design_1_positie_balletje_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

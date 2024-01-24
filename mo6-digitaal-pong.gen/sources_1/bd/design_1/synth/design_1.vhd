@@ -2,8 +2,8 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Wed Jan 24 11:03:37 2024
---Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
+--Date        : Wed Jan 24 12:08:29 2024
+--Host        : XPS-Tommy running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
 --Purpose     : IP block netlist
@@ -333,35 +333,6 @@ architecture STRUCTURE of design_1 is
     hpxl : out STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   end component design_1_beeld_generator_0_0;
-  component design_1_object_positie_0_0 is
-  port (
-    object_width : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    object_height : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    size_window_width : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    size_window_height : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    value_1 : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    value_2 : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    position_x_1 : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    position_y_1 : out STD_LOGIC_VECTOR ( 8 downto 0 );
-    position_x_2 : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    position_y_2 : out STD_LOGIC_VECTOR ( 8 downto 0 )
-  );
-  end component design_1_object_positie_0_0;
-  component design_1_positie_balletje_0_0 is
-  port (
-    reset : in STD_LOGIC;
-    screen_width : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    screen_heigth : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    clk_slow : in STD_LOGIC;
-    angle_index : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    running : in STD_LOGIC;
-    peddel_touch : in STD_LOGIC;
-    side_touch : in STD_LOGIC;
-    top_bottom_touch : in STD_LOGIC;
-    pos_x_out : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    pos_y_out : out STD_LOGIC_VECTOR ( 8 downto 0 )
-  );
-  end component design_1_positie_balletje_0_0;
   component design_1_lijn_tekenen_0_0 is
   port (
     pixel_value_i : in STD_LOGIC;
@@ -437,18 +408,6 @@ architecture STRUCTURE of design_1 is
     HPixel_out : out STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   end component design_1_Coor_PixelR_0_0;
-  component design_1_score_counter_0_0 is
-  port (
-    reset : in STD_LOGIC;
-    clk_slow : in STD_LOGIC;
-    side_touch : in STD_LOGIC;
-    pos_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    screen_width : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    max_score : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    score_left : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    score_right : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component design_1_score_counter_0_0;
   component design_1_aanraking_herkennen_0_0 is
   port (
     hoogte_scherm : in STD_LOGIC_VECTOR ( 8 downto 0 );
@@ -467,6 +426,47 @@ architecture STRUCTURE of design_1 is
     aanraking_balletje_bovenonder : out STD_LOGIC
   );
   end component design_1_aanraking_herkennen_0_0;
+  component design_1_positie_balletje_0_0 is
+  port (
+    reset : in STD_LOGIC;
+    screen_width : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    screen_heigth : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    clk_slow : in STD_LOGIC;
+    angle_index : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    running : in STD_LOGIC;
+    peddel_touch : in STD_LOGIC;
+    side_touch : in STD_LOGIC;
+    top_bottom_touch : in STD_LOGIC;
+    pos_x_out : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    pos_y_out : out STD_LOGIC_VECTOR ( 8 downto 0 )
+  );
+  end component design_1_positie_balletje_0_0;
+  component design_1_score_counter_0_0 is
+  port (
+    reset : in STD_LOGIC;
+    clk_slow : in STD_LOGIC;
+    side_touch : in STD_LOGIC;
+    pos_x : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    screen_width : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    max_score : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    score_left : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    score_right : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component design_1_score_counter_0_0;
+  component design_1_object_positie_0_0 is
+  port (
+    object_width : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    object_height : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    size_window_width : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    size_window_height : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    value_1 : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    value_2 : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    position_x_1 : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    position_y_1 : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    position_x_2 : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    position_y_2 : out STD_LOGIC_VECTOR ( 8 downto 0 )
+  );
+  end component design_1_object_positie_0_0;
   component design_1_score_tekenen_0_0 is
   port (
     pixel_value_i : in STD_LOGIC;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1706090622">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1706094518">
   <File Type="ROUTE-PWR" Name="design_1_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="design_1_wrapper_power_summary_routed.pb"/>
@@ -98,12 +98,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/controller_ultrasoon.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/controller_draadloos.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -116,19 +110,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/controller_ultrasoon.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/beeld_generator.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/tekenen_balletje.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/lijn_tekenen.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -140,7 +128,19 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/score_tekenen.vhd">
+    <File Path="$PSRCDIR/sources_1/new/positie_balletje.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/lijn_tekenen.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/tekenen_balletje.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -152,19 +152,19 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/score_counter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/aanraking_herkennen.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/positie_balletje.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/score_counter.vhd">
+    <File Path="$PSRCDIR/sources_1/new/score_tekenen.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -234,13 +234,13 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_beeld_generator_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_controller_inductief_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clk_divider_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_lijn_tekenen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clk_divider_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_score_tekenen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_util_vector_logic_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_object_positie_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_lijn_tekenen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_tekenen_object_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_Coor_PixelR_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_controller_ultrasoon_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_object_positie_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_score_counter_0_0"/>
 </GenRun>

@@ -55,7 +55,7 @@ begin
                     AND unsigned(hpxl_i) <= unsigned(pos_x_r) + (size_u + to_unsigned(distance, pos_x_r'length)) * unsigned(score_r_i)
                     AND unsigned(vpxl_i) >= unsigned(pos_y) 
                     AND unsigned(vpxl_i) <= unsigned(pos_y) + size_u
-                    AND (unsigned(hpxl_i) - unsigned(pos_x_r) - 1) mod (size_u + to_unsigned(distance, pos_x_r'length)) < size_u)
+                    AND (unsigned(hpxl_i) - unsigned(pos_x_r) + 1) mod (size_u + to_unsigned(distance, pos_x_r'length)) < size_u)
                 OR (-- score left
                     unsigned(hpxl_i) >= unsigned(pos_x_l) - (size_u + to_unsigned(distance, pos_x_l'length)) * unsigned(score_l_i)
                     AND unsigned(hpxl_i) <= unsigned(pos_x_l)
