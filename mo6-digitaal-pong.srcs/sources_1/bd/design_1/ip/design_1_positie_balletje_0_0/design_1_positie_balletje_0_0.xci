@@ -9,7 +9,7 @@
     "parameters": {
       "component_parameters": {
         "step_x": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "step_y": [ { "value": "2", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "step_y": [ { "value": "1", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "angle_1": [ { "value": "2", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "angle_2": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "angle_3": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -18,7 +18,7 @@
       },
       "model_parameters": {
         "step_x": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "step_y": [ { "value": "2", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "step_y": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "angle_1": [ { "value": "2", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "angle_2": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "angle_3": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],

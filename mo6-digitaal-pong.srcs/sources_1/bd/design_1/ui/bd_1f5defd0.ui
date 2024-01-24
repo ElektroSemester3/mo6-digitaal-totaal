@@ -1,13 +1,13 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.03461",
-   "Default View_TopLeft":"-602,-481",
+   "Default View_TopLeft":"592,-488",
    "ExpandedHierarchyInLayout":"",
-   "PinnedBlocks":"/ontvangen_controllers|/clk_divider_0|/util_vector_logic_0|/beeld_generator_0|/constants|/lijn_tekenen_0|/tekenen_balletje|/aanraking_herkennen_0|/score_counter_0|/clk_wiz_0|/Coor_PixelR_0|/positie_balletje_0|/Coor_PixelL_0|/score_tekenen_0|",
-   "PinnedPorts":"reset|enable|controllers_choice_1|controllers_choice_2|controller_draadloos_connected|controller_draadloos_up|controller_draadloos_down|controller_inductief_in|controller_ultrasoon_in|controller_ultrasoon_trigger|status_running|display_B|display_G|display_R|display_HSYNC|display_VSYNC|sys_clock|",
+   "PinnedBlocks":"/ontvangen_controllers|/clk_divider_0|/beeld_generator_0|/constants|/lijn_tekenen_0|/tekenen_balletje|/aanraking_herkennen_0|/score_counter_0|/clk_wiz_0|/Coor_PixelR_0|/positie_balletje_0|/Coor_PixelL_0|/score_tekenen_0|",
+   "PinnedPorts":"reset|enable|controllers_choice_1|controllers_choice_2|controller_draadloos_connected|controller_draadloos_up|controller_draadloos_down|controller_inductief_in|controller_ultrasoon_in|controller_ultrasoon_trigger|status_running|display_B|display_G|display_R|display_HSYNC|display_VSYNC|sys_clock|reset_hw|",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port port-id_reset -pg 1 -lvl 0 -x -350 -y 260 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x -350 -y 60 -defaultsOSRD
 preplace port port-id_enable -pg 1 -lvl 0 -x -350 -y 340 -defaultsOSRD
 preplace port port-id_controller_draadloos_connected -pg 1 -lvl 0 -x -350 -y 530 -defaultsOSRD
 preplace port port-id_controller_draadloos_up -pg 1 -lvl 0 -x -350 -y 560 -defaultsOSRD
@@ -20,89 +20,94 @@ preplace port port-id_display_G -pg 1 -lvl 9 -x 3640 -y -360 -defaultsOSRD
 preplace port port-id_display_R -pg 1 -lvl 9 -x 3640 -y -390 -defaultsOSRD
 preplace port port-id_display_HSYNC -pg 1 -lvl 9 -x 3640 -y -300 -defaultsOSRD
 preplace port port-id_display_VSYNC -pg 1 -lvl 9 -x 3640 -y -270 -defaultsOSRD
-preplace port port-id_sys_clock -pg 1 -lvl 0 -x -350 -y 180 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x -350 -y 190 -defaultsOSRD
+preplace port port-id_reset_hw -pg 1 -lvl 0 -x -350 -y 90 -defaultsOSRD
 preplace portBus controllers_choice_1 -pg 1 -lvl 0 -x -350 -y 420 -defaultsOSRD
 preplace portBus controllers_choice_2 -pg 1 -lvl 0 -x -350 -y 460 -defaultsOSRD
 preplace portBus status_running -pg 1 -lvl 9 -x 3640 -y 490 -defaultsOSRD
-preplace inst ontvangen_controllers -pg 1 -lvl 2 -x 740 -y 510 -defaultsOSRD
-preplace inst clk_divider_0 -pg 1 -lvl 1 -x 50 -y 390 -defaultsOSRD
-preplace inst util_vector_logic_0 -pg 1 -lvl 3 -x 1220 -y 490 -defaultsOSRD
-preplace inst beeld_generator_0 -pg 1 -lvl 3 -x 1220 -y -360 -defaultsOSRD
+preplace inst ontvangen_controllers -pg 1 -lvl 2 -x 900 -y 510 -defaultsOSRD
+preplace inst clk_divider_0 -pg 1 -lvl 1 -x 50 -y 300 -defaultsOSRD
+preplace inst Running_AND_gate -pg 1 -lvl 3 -x 1400 -y 490 -defaultsOSRD
+preplace inst beeld_generator_0 -pg 1 -lvl 3 -x 1400 -y -360 -defaultsOSRD
 preplace inst constants -pg 1 -lvl 1 -x 50 -y -450 -defaultsOSRD -resize 202 388
 preplace inst lijn_tekenen_0 -pg 1 -lvl 7 -x 3050 -y -270 -defaultsOSRD
-preplace inst tekenen_balletje -pg 1 -lvl 4 -x 1694 -y -350 -defaultsOSRD
-preplace inst score_counter_0 -pg 1 -lvl 7 -x 3050 -y 20 -defaultsOSRD
+preplace inst tekenen_balletje -pg 1 -lvl 4 -x 1760 -y -350 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 50 -y 170 -defaultsOSRD
 preplace inst Coor_PixelR_0 -pg 1 -lvl 6 -x 2650 -y -290 -defaultsOSRD
-preplace inst positie_balletje_0 -pg 1 -lvl 3 -x 1220 -y 0 -defaultsOSRD
 preplace inst Coor_PixelL_0 -pg 1 -lvl 5 -x 2186 -y -310 -defaultsOSRD
 preplace inst score_tekenen_0 -pg 1 -lvl 8 -x 3470 -y -270 -defaultsOSRD
-preplace inst aanraking_herkennen_0 -pg 1 -lvl 2 -x 740 -y 50 -defaultsOSRD
-preplace netloc Coor_PixelL_0_CoorL_yboven_out 1 1 5 480 -520 NJ -520 NJ -520 NJ -520 2370
+preplace inst aanraking_herkennen_0 -pg 1 -lvl 2 -x 900 -y 50 -defaultsOSRD
+preplace inst score_counter_0 -pg 1 -lvl 7 -x 3050 -y 20 -defaultsOSRD
+preplace inst Reset_score_OR_gate -pg 1 -lvl 3 -x 1400 -y 290 -defaultsOSRD
+preplace inst positie_balletje_0 -pg 1 -lvl 3 -x 1400 -y 0 -defaultsOSRD
+preplace netloc Coor_PixelL_0_CoorL_yboven_out 1 1 5 640 -520 NJ -520 NJ -520 NJ -520 2370
 preplace netloc Coor_PixelL_0_HPixel_out 1 5 1 2420 -280n
 preplace netloc Coor_PixelL_0_HSYNC_o 1 5 1 2380 -360n
 preplace netloc Coor_PixelL_0_PixelSig_out 1 5 1 2390 -340n
 preplace netloc Coor_PixelL_0_VPixel_out 1 5 1 2410 -300n
 preplace netloc Coor_PixelL_0_VSYNC_o 1 5 1 2400 -340n
-preplace netloc Coor_PixelR_0_CoorR_yboven_out 1 1 6 490 -510 N -510 N -510 N -510 N -510 2830
+preplace netloc Coor_PixelR_0_CoorR_yboven_out 1 1 6 650 -510 N -510 N -510 N -510 N -510 2830
 preplace netloc Coor_PixelR_0_HPixel_out 1 6 1 NJ -240
 preplace netloc Coor_PixelR_0_HSYNC_o 1 6 1 NJ -300
-preplace netloc Coor_PixelR_0_PixelSig_out 1 6 1 2850J -340n
+preplace netloc Coor_PixelR_0_PixelSig_out 1 6 1 2840J -340n
 preplace netloc Coor_PixelR_0_VPixel_out 1 6 1 NJ -260
 preplace netloc Coor_PixelR_0_VSYNC_o 1 6 1 NJ -280
 preplace netloc aanraking_herkennen_0_aanraking_balletje_bovenonder 1 2 1 N 80
-preplace netloc aanraking_herkennen_0_aanraking_balletje_peddel 1 2 1 1030 20n
-preplace netloc aanraking_herkennen_0_aanraking_balletje_peddel_zone 1 2 1 1020 0n
-preplace netloc aanraking_herkennen_0_aanraking_balletje_zijkant 1 2 5 1050 140 1460 40 N 40 N 40 2900
-preplace netloc beeld_generator_0_B 1 3 1 1370J -440n
-preplace netloc beeld_generator_0_HSYNC 1 3 1 1380J -410n
-preplace netloc beeld_generator_0_VSYNC 1 3 1 1380J -390n
-preplace netloc beeld_generator_0_hpxl 1 3 1 1390J -340n
-preplace netloc beeld_generator_0_pxlCLK 1 3 5 1484J -500 2006J -460 2400 -440 2890 -400 3210
-preplace netloc beeld_generator_0_vpxl 1 3 1 1380J -360n
-preplace netloc choice_1_0_1 1 0 2 -320J 320 180J
-preplace netloc choice_2_0_1 1 0 2 -330J 310 190J
-preplace netloc clk_divider_0_clk_out 1 1 6 210 350 1010 160 1440 20 N 20 N 20 2880
+preplace netloc aanraking_herkennen_0_aanraking_balletje_peddel 1 2 1 1190 20n
+preplace netloc aanraking_herkennen_0_aanraking_balletje_peddel_zone 1 2 1 1180 0n
+preplace netloc aanraking_herkennen_0_aanraking_balletje_zijkant 1 2 5 1230 140 1630 50 N 50 N 50 2830
+preplace netloc beeld_generator_0_B 1 3 1 1550J -440n
+preplace netloc beeld_generator_0_HSYNC 1 3 1 1560J -410n
+preplace netloc beeld_generator_0_VSYNC 1 3 1 1560J -390n
+preplace netloc beeld_generator_0_hpxl 1 3 1 1570J -340n
+preplace netloc beeld_generator_0_pxlCLK 1 3 5 1560J -500 2006J -460 2400 -440 2900 -400 3210
+preplace netloc beeld_generator_0_vpxl 1 3 1 1560J -360n
+preplace netloc choice_1_0_1 1 0 2 NJ 420 190J
+preplace netloc choice_2_0_1 1 0 2 NJ 460 180J
+preplace netloc clk_divider_0_clk_out 1 1 6 N 300 1170 160 1620 20 N 20 N 20 2890
 preplace netloc clk_wiz_0_clk_VGA 1 1 2 210J -370 NJ
-preplace netloc clk_wiz_0_clk_out1 1 0 2 -80 300 200
-preplace netloc constants_dout 1 1 3 430 -230 N -230 1564
-preplace netloc constants_dout1 1 1 5 410 -210 N -210 1440 -200 1986J -130 2440
-preplace netloc constants_dout2 1 1 5 440 -200 N -200 1420 -190 1996J -160 2370
-preplace netloc constants_dout3 1 1 5 420 -190 N -190 1410J -180 2006 -150 2450
-preplace netloc constants_dout4 1 1 7 460 -100 1000 150 N 150 N 150 N 150 2870 -140 3200
-preplace netloc constants_dout5 1 1 7 470 -140 1050 -140 N -140 1840 -120 N -120 2850 -130 3260
-preplace netloc constants_max_score 1 1 7 NJ -300 970J -220 1430J -130 1830 -110 N -110 2890 -120 3280
-preplace netloc enable_0_1 1 0 3 -310J 460 410 360 990J
-preplace netloc freq_in_0_1 1 0 2 -300J 580 NJ
+preplace netloc clk_wiz_0_clk_out1 1 0 2 -80 370 200
+preplace netloc constants_dout 1 1 3 600 -230 N -230 1610
+preplace netloc constants_dout1 1 1 5 570 -190 N -190 N -190 1996J -160 2370
+preplace netloc constants_dout2 1 1 5 610 -210 N -210 1590 -200 1986J -130 2450
+preplace netloc constants_dout3 1 1 5 590 -180 N -180 NJ -180 2006 -150 2440
+preplace netloc constants_dout4 1 1 7 620 -100 1160 150 N 150 N 150 N 150 2880 -130 3260
+preplace netloc constants_dout5 1 1 7 630 -140 1210 -150 1550 -130 1900 -120 N -120 2870 -140 3270
+preplace netloc constants_max_score 1 1 7 NJ -300 1220J -220 1570J -120 1890 -110 N -110 2900 -120 3290
+preplace netloc enable_0_1 1 0 3 -330J 380 560 360 1140J
+preplace netloc freq_in_0_1 1 0 2 -310J 580 NJ
 preplace netloc lijn_tekenen_0_HSYNC_o 1 7 1 3210 -330n
 preplace netloc lijn_tekenen_0_VSYNC_o 1 7 1 3220 -310n
 preplace netloc lijn_tekenen_0_hpxl_o 1 7 1 3240 -270n
 preplace netloc lijn_tekenen_0_pixel_value_o 1 7 1 3200 -370n
 preplace netloc lijn_tekenen_0_vpxl_o 1 7 1 3230 -290n
-preplace netloc ontvangen_controllers_active 1 2 1 1060J 500n
-preplace netloc ontvangen_controllers_controller_output_1 1 2 3 1040 -150 N -150 1860
-preplace netloc ontvangen_controllers_controller_output_2 1 2 4 1050 170 N 170 N 170 2430
-preplace netloc ontvangen_controllers_trigger_0 1 2 7 970J 420 NJ 420 NJ 420 N 420 NJ 420 NJ 420 N
-preplace netloc positie_balletje_0_pos_x_out 1 1 6 500 -180 N -180 1400 30 N 30 N 30 N
-preplace netloc positie_balletje_0_pos_y_out 1 1 3 510 -170 N -170 1450
-preplace netloc reset_rtl_1 1 0 7 -90 270 450 -110 1070J -160 N -160 1850 -140 N -140 2860
+preplace netloc ontvangen_controllers_active 1 2 1 1230J 500n
+preplace netloc ontvangen_controllers_controller_output_1 1 2 3 1150 -160 N -160 1900
+preplace netloc ontvangen_controllers_controller_output_2 1 2 4 1220 -140 N -140 N -140 2430
+preplace netloc ontvangen_controllers_trigger_0 1 2 7 1130J 420 NJ 420 NJ 420 N 420 NJ 420 NJ 420 N
+preplace netloc positie_balletje_0_pos_x_out 1 1 6 670 -200 N -200 1580 30 N 30 N 30 N
+preplace netloc positie_balletje_0_pos_y_out 1 1 3 660 -170 N -170 1600
+preplace netloc reset_rtl_1 1 0 7 N 60 580 -110 1200J 170 1610 -30 N -30 N -30 N
 preplace netloc score_counter_0_score_left 1 7 1 3250 -250n
-preplace netloc score_counter_0_score_right 1 7 1 3270 -230n
+preplace netloc score_counter_0_score_right 1 7 1 3280 -230n
 preplace netloc score_tekenen_0_HSYNC_o 1 8 1 3620 -300n
 preplace netloc score_tekenen_0_VSYNC_o 1 8 1 N -270
 preplace netloc score_tekenen_0_pixel_value_o 1 8 1 3620 -390n
-preplace netloc sensor_0_1 1 0 2 -290J 600 NJ
-preplace netloc signal_connected_0_1 1 0 2 -290J 520 NJ
+preplace netloc sensor_0_1 1 0 2 -300J 600 NJ
+preplace netloc signal_connected_0_1 1 0 2 -330J 520 NJ
 preplace netloc signal_down_0_1 1 0 2 -320J 560 NJ
 preplace netloc signal_up_0_1 1 0 2 -330J 540 NJ
-preplace netloc sys_clock_1 1 0 1 -290 170n
-preplace netloc tekenen_balletje_HSYNC_o 1 4 1 1880 -380n
-preplace netloc tekenen_balletje_VSYNC_o 1 4 1 1880 -360n
-preplace netloc tekenen_balletje_hpxl_o 1 4 1 1880 -310n
-preplace netloc tekenen_balletje_pixel_value_o 1 4 1 1890 -390n
-preplace netloc tekenen_balletje_vpxl_o 1 4 1 1890 -330n
-preplace netloc util_vector_logic_0_Res 1 2 7 1070 560 1370 490 N 490 N 490 NJ 490 N 490 N
-levelinfo -pg 1 -350 50 740 1220 1694 2186 2650 3050 3470 3640
+preplace netloc sys_clock_1 1 0 1 -330 180n
+preplace netloc tekenen_balletje_HSYNC_o 1 4 1 1920 -380n
+preplace netloc tekenen_balletje_VSYNC_o 1 4 1 1920 -360n
+preplace netloc tekenen_balletje_hpxl_o 1 4 1 1920 -310n
+preplace netloc tekenen_balletje_pixel_value_o 1 4 1 1930 -390n
+preplace netloc tekenen_balletje_vpxl_o 1 4 1 1930 -330n
+preplace netloc util_vector_logic_0_Res 1 2 7 1240 560 1630 490 N 490 N 490 NJ 490 N 490 N
+preplace netloc reset_hw_1 1 0 1 -100 90n
+preplace netloc util_vector_logic_1_Res 1 2 2 1250 180 1550
+preplace netloc score_counter_0_reset_score 1 2 6 1250 210 NJ 210 NJ 210 NJ 210 NJ 210 3200
+levelinfo -pg 1 -350 50 900 1400 1760 2186 2650 3050 3470 3640
 pagesize -pg 1 -db -bbox -sgen -620 -850 4680 1260
 "
 }

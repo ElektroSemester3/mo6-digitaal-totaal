@@ -1,5 +1,7 @@
 set_property PACKAGE_PIN L19 [get_ports reset]
+set_property PACKAGE_PIN L20 [get_ports reset_hw]
 set_property IOSTANDARD LVCMOS33 [get_ports reset]
+set_property IOSTANDARD LVCMOS33 [get_ports reset_hw]
 
 set_property IOSTANDARD LVCMOS33 [get_ports enable]
 set_property PACKAGE_PIN M19 [get_ports enable]

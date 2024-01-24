@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 24 16:21:12 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 24 17:24:13 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -10,16 +10,15 @@
         <CONNECTION INSTANCE="ontvangen_controllers_controller_inductief_0" PORT="reset"/>
         <CONNECTION INSTANCE="ontvangen_controllers_clk_divider_0" PORT="reset"/>
         <CONNECTION INSTANCE="ontvangen_controllers_controller_ultrasoon_0" PORT="reset"/>
-        <CONNECTION INSTANCE="clk_divider_0" PORT="reset"/>
         <CONNECTION INSTANCE="beeld_generator_0" PORT="RST"/>
         <CONNECTION INSTANCE="score_counter_0" PORT="reset"/>
-        <CONNECTION INSTANCE="positie_balletje_0" PORT="reset"/>
+        <CONNECTION INSTANCE="Reset_score_OR_gate" PORT="Op2"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="External_Ports_enable">
       <CONNECTIONS>
         <CONNECTION INSTANCE="ontvangen_controllers_controller_interconn_0" PORT="enable"/>
-        <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op1"/>
+        <CONNECTION INSTANCE="Running_AND_gate" PORT="Op1"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="1" NAME="controllers_choice_1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_controllers_choice_1">
@@ -62,9 +61,9 @@
         <CONNECTION INSTANCE="ontvangen_controllers_controller_ultrasoon_0" PORT="trigger"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="0" NAME="status_running" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
+    <PORT DIR="O" LEFT="0" NAME="status_running" RIGHT="0" SIGIS="undef" SIGNAME="Running_AND_gate_Res">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
+        <CONNECTION INSTANCE="Running_AND_gate" PORT="Res"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="display_B" SIGIS="undef" SIGNAME="score_tekenen_0_pixel_value_o">
@@ -95,6 +94,12 @@
     <PORT CLKFREQUENCY="125000000" DIR="I" NAME="sys_clock" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="reset_hw" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset_hw">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_divider_0" PORT="reset"/>
+        <CONNECTION INSTANCE="clk_wiz_0" PORT="reset"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -282,6 +287,63 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/Reset_score_OR_gate" HWVERSION="2.0" INSTANCE="Reset_score_OR_gate" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="or"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_util_vector_logic_1_0"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_orgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="undef" SIGNAME="score_counter_0_reset_score">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="score_counter_0" PORT="reset_score"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="Op2" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="undef" SIGNAME="Reset_score_OR_gate_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="positie_balletje_0" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/Running_AND_gate" HWVERSION="2.0" INSTANCE="Running_AND_gate" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="and"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_util_vector_logic_0_0"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_andgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="Op2" RIGHT="0" SIGIS="undef" SIGNAME="ontvangen_controllers_controller_interconn_0_active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ontvangen_controllers_controller_interconn_0" PORT="active"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="Running_AND_gate_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="status_running"/>
+            <CONNECTION INSTANCE="positie_balletje_0" PORT="running"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/aanraking_herkennen_0" HWVERSION="1.0" INSTANCE="aanraking_herkennen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="aanraking_herkennen" VLNV="xilinx.com:module_ref:aanraking_herkennen:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -432,9 +494,9 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_system"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset">
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset_hw">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset_hw"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="clk_out" SIGIS="undef" SIGNAME="clk_divider_0_clk_out">
@@ -503,7 +565,7 @@
         <PARAMETER NAME="C_PHASESHIFT_MODE" VALUE="WAVEFORM"/>
         <PARAMETER NAME="C_SECONDARY_SOURCE" VALUE="Single_ended_clock_capable_pin"/>
         <PARAMETER NAME="C_CLKFB_IN_SIGNALING" VALUE="SINGLE"/>
-        <PARAMETER NAME="C_USE_RESET" VALUE="0"/>
+        <PARAMETER NAME="C_USE_RESET" VALUE="1"/>
         <PARAMETER NAME="C_RESET_LOW" VALUE="0"/>
         <PARAMETER NAME="C_USE_LOCKED" VALUE="0"/>
         <PARAMETER NAME="C_USE_INCLK_STOPPED" VALUE="0"/>
@@ -894,7 +956,7 @@
         <PARAMETER NAME="SUMMARY_STRINGS" VALUE="empty"/>
         <PARAMETER NAME="USE_LOCKED" VALUE="false"/>
         <PARAMETER NAME="CALC_DONE" VALUE="empty"/>
-        <PARAMETER NAME="USE_RESET" VALUE="false"/>
+        <PARAMETER NAME="USE_RESET" VALUE="true"/>
         <PARAMETER NAME="USE_POWER_DOWN" VALUE="false"/>
         <PARAMETER NAME="USE_STATUS" VALUE="false"/>
         <PARAMETER NAME="USE_FREEZE" VALUE="false"/>
@@ -1026,6 +1088,11 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset_hw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset_hw"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk_in1" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="sys_clock"/>
@@ -1077,8 +1144,8 @@
       <PORTS>
         <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="constants_max_score_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="score_counter_0" PORT="max_score"/>
             <CONNECTION INSTANCE="score_tekenen_0" PORT="max_score"/>
+            <CONNECTION INSTANCE="score_counter_0" PORT="max_score"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1153,10 +1220,10 @@
         <PORT DIR="O" LEFT="9" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="constants_scherm_breedte_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="lijn_tekenen_0" PORT="screen_x"/>
-            <CONNECTION INSTANCE="score_counter_0" PORT="screen_width"/>
-            <CONNECTION INSTANCE="positie_balletje_0" PORT="screen_width"/>
             <CONNECTION INSTANCE="score_tekenen_0" PORT="screen_width_i"/>
             <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="breedte_scherm"/>
+            <CONNECTION INSTANCE="score_counter_0" PORT="screen_width"/>
+            <CONNECTION INSTANCE="positie_balletje_0" PORT="screen_width"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1174,9 +1241,9 @@
         <PORT DIR="O" LEFT="8" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="constants_scherm_hoogte_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="lijn_tekenen_0" PORT="screen_y"/>
-            <CONNECTION INSTANCE="positie_balletje_0" PORT="screen_heigth"/>
             <CONNECTION INSTANCE="score_tekenen_0" PORT="screen_height_i"/>
             <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="hoogte_scherm"/>
+            <CONNECTION INSTANCE="positie_balletje_0" PORT="screen_heigth"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1429,7 +1496,7 @@
         </PORT>
         <PORT DIR="O" NAME="active" SIGIS="undef" SIGNAME="ontvangen_controllers_controller_interconn_0_active">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op2"/>
+            <CONNECTION INSTANCE="Running_AND_gate" PORT="Op2"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1484,7 +1551,7 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="step_x" VALUE="1"/>
-        <PARAMETER NAME="step_y" VALUE="2"/>
+        <PARAMETER NAME="step_y" VALUE="1"/>
         <PARAMETER NAME="angle_1" VALUE="2"/>
         <PARAMETER NAME="angle_2" VALUE="1"/>
         <PARAMETER NAME="angle_3" VALUE="0"/>
@@ -1493,9 +1560,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset">
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="Reset_score_OR_gate_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+            <CONNECTION INSTANCE="Reset_score_OR_gate" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="9" NAME="screen_width" RIGHT="0" SIGIS="undef" SIGNAME="constants_scherm_breedte_dout">
@@ -1518,9 +1585,9 @@
             <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="aanraking_balletje_peddel_zone"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="running" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
+        <PORT DIR="I" NAME="running" SIGIS="undef" SIGNAME="Running_AND_gate_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
+            <CONNECTION INSTANCE="Running_AND_gate" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="peddel_touch" SIGIS="undef" SIGNAME="aanraking_herkennen_0_aanraking_balletje_peddel">
@@ -1541,8 +1608,8 @@
         <PORT DIR="O" LEFT="9" NAME="pos_x_out" RIGHT="0" SIGIS="undef" SIGNAME="positie_balletje_0_pos_x_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="tekenen_balletje" PORT="pos_x"/>
-            <CONNECTION INSTANCE="score_counter_0" PORT="pos_x"/>
             <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="x_positie_balletje"/>
+            <CONNECTION INSTANCE="score_counter_0" PORT="pos_x"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="8" NAME="pos_y_out" RIGHT="0" SIGIS="undef" SIGNAME="positie_balletje_0_pos_y_out">
@@ -1599,6 +1666,11 @@
         <PORT DIR="O" LEFT="3" NAME="score_right" RIGHT="0" SIGIS="undef" SIGNAME="score_counter_0_score_right">
           <CONNECTIONS>
             <CONNECTION INSTANCE="score_tekenen_0" PORT="score_r_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="reset_score" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="score_counter_0_reset_score">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Reset_score_OR_gate" PORT="Op1"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1772,35 +1844,6 @@
         <PORT DIR="O" LEFT="9" NAME="hpxl_o" RIGHT="0" SIGIS="undef" SIGNAME="tekenen_balletje_hpxl_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Coor_PixelL_0" PORT="HPixel"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/util_vector_logic_0" HWVERSION="2.0" INSTANCE="util_vector_logic_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="C_OPERATION" VALUE="and"/>
-        <PARAMETER NAME="C_SIZE" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_util_vector_logic_0_0"/>
-        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_andgate.png"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_enable">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="enable"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="Op2" RIGHT="0" SIGIS="undef" SIGNAME="ontvangen_controllers_controller_interconn_0_active">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ontvangen_controllers_controller_interconn_0" PORT="active"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="status_running"/>
-            <CONNECTION INSTANCE="positie_balletje_0" PORT="running"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

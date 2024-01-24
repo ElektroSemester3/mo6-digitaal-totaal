@@ -61,6 +61,11 @@ vcom -work xil_defaultlib  -93  \
 "../../../bd/design_1/ip/design_1_positie_balletje_0_0/sim/design_1_positie_balletje_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_Coor_PixelL_0_0/sim/design_1_Coor_PixelL_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_score_tekenen_0_0/sim/design_1_score_tekenen_0_0.vhd" \
+
+vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1/ipshared/30ef" \
+"../../../bd/design_1/ip/design_1_util_vector_logic_1_0/sim/design_1_util_vector_logic_1_0.v" \
+
+vcom -work xil_defaultlib  -93  \
 "../../../bd/design_1/sim/design_1.vhd" \
 
 vlog -work xil_defaultlib \

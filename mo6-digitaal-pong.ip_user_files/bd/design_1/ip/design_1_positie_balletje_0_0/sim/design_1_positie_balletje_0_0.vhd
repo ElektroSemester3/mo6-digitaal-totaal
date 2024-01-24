@@ -103,7 +103,7 @@ BEGIN
   U0 : positie_balletje
     GENERIC MAP (
       step_x => 1,
-      step_y => 2,
+      step_y => 1,
       angle_1 => 2,
       angle_2 => 1,
       angle_3 => 0,

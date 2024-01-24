@@ -52,7 +52,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:677fdb34</spirit:value>
+            <spirit:value>9:d2e3000b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -64,7 +64,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6cfa9cf9</spirit:value>
+            <spirit:value>9:e872ffb1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -75,7 +75,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6cfa9cf9</spirit:value>
+            <spirit:value>9:e872ffb1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -91,11 +91,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 24 14:07:10 UTC 2024</spirit:value>
+            <spirit:value>Wed Jan 24 16:16:38 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:677fdb34</spirit:value>
+            <spirit:value>9:d2e3000b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -111,11 +111,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 24 14:07:10 UTC 2024</spirit:value>
+            <spirit:value>Wed Jan 24 16:16:38 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6cfa9cf9</spirit:value>
+            <spirit:value>9:e872ffb1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -294,7 +294,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>step_y</spirit:name>
         <spirit:displayName>Step Y</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.step_y">2</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.step_y">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>angle_1</spirit:name>
@@ -346,7 +346,7 @@
     <spirit:parameter>
       <spirit:name>step_y</spirit:name>
       <spirit:displayName>Step Y</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.step_y">2</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.step_y">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>angle_1</spirit:name>

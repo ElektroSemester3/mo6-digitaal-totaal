@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x26718C0AAE704DB9",
+      "boundary_crc": "0x855C4C69F066A162",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -19,7 +19,7 @@
         "controller_ultrasoon_0": ""
       },
       "clk_divider_0": "",
-      "util_vector_logic_0": "",
+      "Running_AND_gate": "",
       "beeld_generator_0": "",
       "constants": {
         "peddels_hoogte": "",
@@ -32,13 +32,14 @@
       },
       "lijn_tekenen_0": "",
       "tekenen_balletje": "",
-      "score_counter_0": "",
       "clk_wiz_0": "",
       "Coor_PixelR_0": "",
-      "positie_balletje_0": "",
       "Coor_PixelL_0": "",
       "score_tekenen_0": "",
-      "aanraking_herkennen_0": ""
+      "aanraking_herkennen_0": "",
+      "score_counter_0": "",
+      "Reset_score_OR_gate": "",
+      "positie_balletje_0": ""
     },
     "ports": {
       "reset": {
@@ -146,6 +147,19 @@
           },
           "PHASE": {
             "value": "0.0"
+          }
+        }
+      },
+      "reset_hw": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
           }
         }
       }
@@ -674,11 +688,11 @@
           }
         }
       },
-      "util_vector_logic_0": {
+      "Running_AND_gate": {
         "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
         "xci_name": "design_1_util_vector_logic_0_0",
         "xci_path": "ip\\design_1_util_vector_logic_0_0\\design_1_util_vector_logic_0_0.xci",
-        "inst_hier_path": "util_vector_logic_0",
+        "inst_hier_path": "Running_AND_gate",
         "parameters": {
           "C_SIZE": {
             "value": "1"
@@ -1083,59 +1097,6 @@
           }
         }
       },
-      "score_counter_0": {
-        "vlnv": "xilinx.com:module_ref:score_counter:1.0",
-        "xci_name": "design_1_score_counter_0_0",
-        "xci_path": "ip\\design_1_score_counter_0_0\\design_1_score_counter_0_0.xci",
-        "inst_hier_path": "score_counter_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "score_counter",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "reset": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH"
-              }
-            }
-          },
-          "clk_slow": {
-            "direction": "I"
-          },
-          "side_touch": {
-            "direction": "I"
-          },
-          "pos_x": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "screen_width": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "max_score": {
-            "direction": "I",
-            "left": "3",
-            "right": "0"
-          },
-          "score_left": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "score_right": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          }
-        }
-      },
       "clk_wiz_0": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "xci_name": "design_1_clk_wiz_0_0",
@@ -1176,7 +1137,7 @@
             "value": "false"
           },
           "USE_RESET": {
-            "value": "false"
+            "value": "true"
           }
         }
       },
@@ -1255,83 +1216,6 @@
           "HPixel_out": {
             "direction": "O",
             "left": "9",
-            "right": "0"
-          }
-        }
-      },
-      "positie_balletje_0": {
-        "vlnv": "xilinx.com:module_ref:positie_balletje:1.0",
-        "xci_name": "design_1_positie_balletje_0_0",
-        "xci_path": "ip\\design_1_positie_balletje_0_0\\design_1_positie_balletje_0_0.xci",
-        "inst_hier_path": "positie_balletje_0",
-        "parameters": {
-          "step_y": {
-            "value": "2"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "positie_balletje",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "reset": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH"
-              }
-            }
-          },
-          "screen_width": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "screen_heigth": {
-            "direction": "I",
-            "left": "8",
-            "right": "0"
-          },
-          "clk_slow": {
-            "direction": "I"
-          },
-          "angle_index": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "running": {
-            "direction": "I",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "peddel_touch": {
-            "direction": "I"
-          },
-          "side_touch": {
-            "direction": "I"
-          },
-          "top_bottom_touch": {
-            "direction": "I"
-          },
-          "pos_x_out": {
-            "direction": "O",
-            "left": "9",
-            "right": "0"
-          },
-          "pos_y_out": {
-            "direction": "O",
-            "left": "8",
             "right": "0"
           }
         }
@@ -1581,6 +1465,159 @@
             "direction": "O"
           }
         }
+      },
+      "score_counter_0": {
+        "vlnv": "xilinx.com:module_ref:score_counter:1.0",
+        "xci_name": "design_1_score_counter_0_0",
+        "xci_path": "ip\\design_1_score_counter_0_0\\design_1_score_counter_0_0.xci",
+        "inst_hier_path": "score_counter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "score_counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "clk_slow": {
+            "direction": "I"
+          },
+          "side_touch": {
+            "direction": "I"
+          },
+          "pos_x": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "screen_width": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "max_score": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "score_left": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "score_right": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "reset_score": {
+            "type": "rst",
+            "direction": "O",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          }
+        }
+      },
+      "Reset_score_OR_gate": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "design_1_util_vector_logic_1_0",
+        "xci_path": "ip\\design_1_util_vector_logic_1_0\\design_1_util_vector_logic_1_0.xci",
+        "inst_hier_path": "Reset_score_OR_gate",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "or"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "positie_balletje_0": {
+        "vlnv": "xilinx.com:module_ref:positie_balletje:1.0",
+        "xci_name": "design_1_positie_balletje_0_0",
+        "xci_path": "ip\\design_1_positie_balletje_0_0\\design_1_positie_balletje_0_0.xci",
+        "inst_hier_path": "positie_balletje_0",
+        "parameters": {
+          "step_y": {
+            "value": "1"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "positie_balletje",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "screen_width": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "screen_heigth": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "clk_slow": {
+            "direction": "I"
+          },
+          "angle_index": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "running": {
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "peddel_touch": {
+            "direction": "I"
+          },
+          "side_touch": {
+            "direction": "I"
+          },
+          "top_bottom_touch": {
+            "direction": "I"
+          },
+          "pos_x_out": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "pos_y_out": {
+            "direction": "O",
+            "left": "8",
+            "right": "0"
+          }
+        }
       }
     },
     "nets": {
@@ -1789,33 +1826,33 @@
         "ports": [
           "constants/scherm_breedte",
           "lijn_tekenen_0/screen_x",
-          "score_counter_0/screen_width",
-          "positie_balletje_0/screen_width",
           "score_tekenen_0/screen_width_i",
-          "aanraking_herkennen_0/breedte_scherm"
+          "aanraking_herkennen_0/breedte_scherm",
+          "score_counter_0/screen_width",
+          "positie_balletje_0/screen_width"
         ]
       },
       "constants_dout5": {
         "ports": [
           "constants/scherm_hoogte",
           "lijn_tekenen_0/screen_y",
-          "positie_balletje_0/screen_heigth",
           "score_tekenen_0/screen_height_i",
-          "aanraking_herkennen_0/hoogte_scherm"
+          "aanraking_herkennen_0/hoogte_scherm",
+          "positie_balletje_0/screen_heigth"
         ]
       },
       "constants_max_score": {
         "ports": [
           "constants/max_score",
-          "score_counter_0/max_score",
-          "score_tekenen_0/max_score"
+          "score_tekenen_0/max_score",
+          "score_counter_0/max_score"
         ]
       },
       "enable_0_1": {
         "ports": [
           "enable",
           "ontvangen_controllers/enable_0",
-          "util_vector_logic_0/Op1"
+          "Running_AND_gate/Op1"
         ]
       },
       "freq_in_0_1": {
@@ -1857,7 +1894,7 @@
       "ontvangen_controllers_active": {
         "ports": [
           "ontvangen_controllers/active",
-          "util_vector_logic_0/Op2"
+          "Running_AND_gate/Op2"
         ]
       },
       "ontvangen_controllers_controller_output_1": {
@@ -1882,8 +1919,8 @@
         "ports": [
           "positie_balletje_0/pos_x_out",
           "tekenen_balletje/pos_x",
-          "score_counter_0/pos_x",
-          "aanraking_herkennen_0/x_positie_balletje"
+          "aanraking_herkennen_0/x_positie_balletje",
+          "score_counter_0/pos_x"
         ]
       },
       "positie_balletje_0_pos_y_out": {
@@ -1893,14 +1930,26 @@
           "aanraking_herkennen_0/y_positie_balletje"
         ]
       },
+      "reset_hw_1": {
+        "ports": [
+          "reset_hw",
+          "clk_divider_0/reset",
+          "clk_wiz_0/reset"
+        ]
+      },
       "reset_rtl_1": {
         "ports": [
           "reset",
           "ontvangen_controllers/reset",
-          "clk_divider_0/reset",
           "beeld_generator_0/RST",
           "score_counter_0/reset",
-          "positie_balletje_0/reset"
+          "Reset_score_OR_gate/Op2"
+        ]
+      },
+      "score_counter_0_reset_score": {
+        "ports": [
+          "score_counter_0/reset_score",
+          "Reset_score_OR_gate/Op1"
         ]
       },
       "score_counter_0_score_left": {
@@ -1997,9 +2046,15 @@
       },
       "util_vector_logic_0_Res": {
         "ports": [
-          "util_vector_logic_0/Res",
+          "Running_AND_gate/Res",
           "status_running",
           "positie_balletje_0/running"
+        ]
+      },
+      "util_vector_logic_1_Res": {
+        "ports": [
+          "Reset_score_OR_gate/Res",
+          "positie_balletje_0/reset"
         ]
       }
     }

@@ -62,7 +62,8 @@ ENTITY design_1_score_counter_0_0 IS
     screen_width : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     max_score : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     score_left : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    score_right : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+    score_right : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    reset_score : OUT STD_LOGIC
   );
 END design_1_score_counter_0_0;
 
@@ -78,13 +79,16 @@ ARCHITECTURE design_1_score_counter_0_0_arch OF design_1_score_counter_0_0 IS
       screen_width : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       max_score : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       score_left : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      score_right : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+      score_right : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      reset_score : OUT STD_LOGIC
     );
   END COMPONENT score_counter;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF reset: SIGNAL IS "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF reset: SIGNAL IS "xilinx.com:signal:reset:1.0 reset RST";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF reset_score: SIGNAL IS "XIL_INTERFACENAME reset_score, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF reset_score: SIGNAL IS "xilinx.com:signal:reset:1.0 reset_score RST";
 BEGIN
   U0 : score_counter
     PORT MAP (
@@ -95,6 +99,7 @@ BEGIN
       screen_width => screen_width,
       max_score => max_score,
       score_left => score_left,
-      score_right => score_right
+      score_right => score_right,
+      reset_score => reset_score
     );
 END design_1_score_counter_0_0_arch;

@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Wed Jan 24 16:21:11 2024
+--Date        : Wed Jan 24 17:24:13 2024
 --Host        : XPS-Tommy running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -29,6 +29,7 @@ entity design_1_wrapper is
     display_VSYNC : out STD_LOGIC;
     enable : in STD_LOGIC;
     reset : in STD_LOGIC;
+    reset_hw : in STD_LOGIC;
     status_running : out STD_LOGIC_VECTOR ( 0 to 0 );
     sys_clock : in STD_LOGIC
   );
@@ -53,7 +54,8 @@ architecture STRUCTURE of design_1_wrapper is
     display_R : out STD_LOGIC;
     display_HSYNC : out STD_LOGIC;
     display_VSYNC : out STD_LOGIC;
-    sys_clock : in STD_LOGIC
+    sys_clock : in STD_LOGIC;
+    reset_hw : in STD_LOGIC
   );
   end component design_1;
 begin
@@ -74,6 +76,7 @@ design_1_i: component design_1
       display_VSYNC => display_VSYNC,
       enable => enable,
       reset => reset,
+      reset_hw => reset_hw,
       status_running(0) => status_running(0),
       sys_clock => sys_clock
     );

@@ -11,7 +11,8 @@ entity score_counter is
         screen_width    : in std_logic_vector(9 downto 0);
         max_score       : in std_logic_vector(3 downto 0);
         score_left      : out std_logic_vector(3 downto 0);
-        score_right     : out std_logic_vector(3 downto 0)
+        score_right     : out std_logic_vector(3 downto 0);
+        reset_score     : out std_logic
     );
 end score_counter;
 
@@ -20,10 +21,19 @@ architecture Behavioral of score_counter is
     signal score_right_u  : unsigned(score_right'length - 1 downto 0) := (others => '0');
 
     signal side_touch_r   : std_logic := '0';
+
+    signal reset_score_s  : std_logic := '0';
 begin
     process(reset, clk_slow)
     begin
         if rising_edge(clk_slow) then
+            if reset_score_s = '1' then
+                reset_score_s <= '0';
+                reset_score <= '1';
+            else
+                reset_score <= '0';
+            end if;
+
             if reset = '1' then
                 -- reset score counters
                 score_left_u <= (others => '0');
@@ -35,6 +45,7 @@ begin
                         -- reset score counters
                         score_left_u <= (others => '0');
                         score_right_u <= (others => '0');
+                        reset_score_s <= '1';
                     else
                         -- increase score of left player
                         score_left_u <= score_left_u + 1;
@@ -44,6 +55,7 @@ begin
                         -- reset score counters
                         score_left_u <= (others => '0');
                         score_right_u <= (others => '0');
+                        reset_score_s <= '1';
                     else
                         -- increase score of right player
                         score_right_u <= score_right_u + 1;

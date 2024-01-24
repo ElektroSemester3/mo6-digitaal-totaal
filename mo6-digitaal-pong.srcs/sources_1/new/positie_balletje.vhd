@@ -54,7 +54,7 @@ architecture Behavioral of positie_balletje is
     signal top_bottom_touch_r   : std_logic := '0';
 
 begin
-    process(clk_slow)
+    process(clk_slow, reset)
     begin
         if reset = '1' then
             x_pos <= x_start;
