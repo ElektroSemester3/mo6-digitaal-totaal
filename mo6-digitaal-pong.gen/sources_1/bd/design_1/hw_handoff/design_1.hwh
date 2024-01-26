@@ -1,15 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 24 17:24:13 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jan 26 15:37:45 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="ontvangen_controllers_controller_draadloos_0" PORT="reset"/>
         <CONNECTION INSTANCE="ontvangen_controllers_controller_inductief_0" PORT="reset"/>
         <CONNECTION INSTANCE="ontvangen_controllers_clk_divider_0" PORT="reset"/>
         <CONNECTION INSTANCE="ontvangen_controllers_controller_ultrasoon_0" PORT="reset"/>
+        <CONNECTION INSTANCE="ontvangen_controllers_frequency_to_number_0" PORT="reset"/>
+        <CONNECTION INSTANCE="ontvangen_controllers_controller_draadloos_0" PORT="reset"/>
         <CONNECTION INSTANCE="beeld_generator_0" PORT="RST"/>
         <CONNECTION INSTANCE="score_counter_0" PORT="reset"/>
         <CONNECTION INSTANCE="Reset_score_OR_gate" PORT="Op2"/>
@@ -29,21 +30,6 @@
     <PORT DIR="I" LEFT="1" NAME="controllers_choice_2" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_controllers_choice_2">
       <CONNECTIONS>
         <CONNECTION INSTANCE="ontvangen_controllers_controller_interconn_0" PORT="choice_2"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="controller_draadloos_connected" SIGIS="undef" SIGNAME="External_Ports_controller_draadloos_connected">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="ontvangen_controllers_controller_draadloos_0" PORT="signal_connected"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="controller_draadloos_up" SIGIS="undef" SIGNAME="External_Ports_controller_draadloos_up">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="ontvangen_controllers_controller_draadloos_0" PORT="signal_up"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="controller_draadloos_down" SIGIS="undef" SIGNAME="External_Ports_controller_draadloos_down">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="ontvangen_controllers_controller_draadloos_0" PORT="signal_down"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="controller_inductief_in" SIGIS="undef" SIGNAME="External_Ports_controller_inductief_in">
@@ -100,6 +86,11 @@
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_divider_0" PORT="reset"/>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="reset"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="controller_draadloos_in" SIGIS="undef" SIGNAME="External_Ports_controller_draadloos_in">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ontvangen_controllers_frequency_to_number_0" PORT="signal_in"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -447,8 +438,8 @@
             <CONNECTION INSTANCE="lijn_tekenen_0" PORT="pxlCLK_i"/>
             <CONNECTION INSTANCE="tekenen_balletje" PORT="pxlCLK_i"/>
             <CONNECTION INSTANCE="Coor_PixelR_0" PORT="PixelClock"/>
-            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="PixelClock"/>
             <CONNECTION INSTANCE="score_tekenen_0" PORT="pxlCLK_i"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="PixelClock"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="HSYNC" SIGIS="undef" SIGNAME="beeld_generator_0_HSYNC">
@@ -1103,6 +1094,7 @@
             <CONNECTION INSTANCE="ontvangen_controllers_controller_inductief_0" PORT="clk"/>
             <CONNECTION INSTANCE="ontvangen_controllers_clk_divider_0" PORT="clk_in"/>
             <CONNECTION INSTANCE="ontvangen_controllers_controller_ultrasoon_0" PORT="clk"/>
+            <CONNECTION INSTANCE="ontvangen_controllers_frequency_to_number_0" PORT="clk"/>
             <CONNECTION INSTANCE="clk_divider_0" PORT="clk_in"/>
           </CONNECTIONS>
         </PORT>
@@ -1163,8 +1155,8 @@
         <PORT DIR="O" LEFT="9" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="constants_peddels_breedte_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Coor_PixelR_0" PORT="BreetePeddels"/>
-            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="BreetePeddels"/>
             <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="breedte_peddels"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="BreetePeddels"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1182,8 +1174,8 @@
         <PORT DIR="O" LEFT="8" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="constants_peddels_hoogte_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Coor_PixelR_0" PORT="HoogtePeddels"/>
-            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="HoogtePeddels"/>
             <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="hoogte_peddels"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="HoogtePeddels"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1201,8 +1193,8 @@
         <PORT DIR="O" LEFT="8" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="constants_peddels_x_offset_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Coor_PixelR_0" PORT="Offcet"/>
-            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="Offcet"/>
             <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="offset_peddels"/>
+            <CONNECTION INSTANCE="Coor_PixelL_0" PORT="Offcet"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1374,19 +1366,9 @@
             <CONNECTION INSTANCE="ontvangen_controllers_controller_interconn_0" PORT="controller_enable_3"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="signal_connected" SIGIS="undef" SIGNAME="External_Ports_controller_draadloos_connected">
+        <PORT DIR="I" LEFT="8" NAME="frequency_value_in" RIGHT="0" SIGIS="undef" SIGNAME="ontvangen_controllers_frequency_to_number_0_value_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="controller_draadloos_connected"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="signal_up" SIGIS="undef" SIGNAME="External_Ports_controller_draadloos_up">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="controller_draadloos_up"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="signal_down" SIGIS="undef" SIGNAME="External_Ports_controller_draadloos_down">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="controller_draadloos_down"/>
+            <CONNECTION INSTANCE="ontvangen_controllers_frequency_to_number_0" PORT="value_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="8" NAME="value_out" RIGHT="0" SIGIS="undef" SIGNAME="ontvangen_controllers_controller_draadloos_0_value_out">
@@ -1481,6 +1463,7 @@
         </PORT>
         <PORT DIR="O" NAME="controller_enable_3" SIGIS="undef" SIGNAME="ontvangen_controllers_controller_interconn_0_controller_enable_3">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="ontvangen_controllers_frequency_to_number_0" PORT="enable"/>
             <CONNECTION INSTANCE="ontvangen_controllers_controller_draadloos_0" PORT="enable"/>
           </CONNECTIONS>
         </PORT>
@@ -1542,6 +1525,41 @@
         <PORT DIR="O" NAME="trigger" SIGIS="undef" SIGNAME="ontvangen_controllers_controller_ultrasoon_0_trigger">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="controller_ultrasoon_trigger"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ontvangen_controllers/frequency_to_number_0" HWVERSION="1.0" INSTANCE="ontvangen_controllers_frequency_to_number_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="frequency_to_number" VLNV="xilinx.com:module_ref:frequency_to_number:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_frequency_to_number_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_system">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_system"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="ontvangen_controllers_controller_interconn_0_controller_enable_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ontvangen_controllers_controller_interconn_0" PORT="controller_enable_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="signal_in" SIGIS="undef" SIGNAME="External_Ports_controller_draadloos_in">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="controller_draadloos_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="value_out" RIGHT="0" SIGIS="undef" SIGNAME="ontvangen_controllers_frequency_to_number_0_value_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ontvangen_controllers_controller_draadloos_0" PORT="frequency_value_in"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

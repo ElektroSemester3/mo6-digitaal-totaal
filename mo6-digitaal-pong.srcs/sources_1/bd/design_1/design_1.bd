@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x855C4C69F066A162",
+      "boundary_crc": "0x1C96D71B221E5F01",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -14,9 +14,10 @@
       "ontvangen_controllers": {
         "controller_interconn_0": "",
         "controller_inductief_0": "",
-        "controller_draadloos_0": "",
         "clk_divider_0": "",
-        "controller_ultrasoon_0": ""
+        "controller_ultrasoon_0": "",
+        "frequency_to_number_0": "",
+        "controller_draadloos_0": ""
       },
       "clk_divider_0": "",
       "Running_AND_gate": "",
@@ -34,12 +35,12 @@
       "tekenen_balletje": "",
       "clk_wiz_0": "",
       "Coor_PixelR_0": "",
-      "Coor_PixelL_0": "",
       "score_tekenen_0": "",
       "aanraking_herkennen_0": "",
       "score_counter_0": "",
       "Reset_score_OR_gate": "",
-      "positie_balletje_0": ""
+      "positie_balletje_0": "",
+      "Coor_PixelL_0": ""
     },
     "ports": {
       "reset": {
@@ -77,15 +78,6 @@
         "direction": "I",
         "left": "1",
         "right": "0"
-      },
-      "controller_draadloos_connected": {
-        "direction": "I"
-      },
-      "controller_draadloos_up": {
-        "direction": "I"
-      },
-      "controller_draadloos_down": {
-        "direction": "I"
       },
       "controller_inductief_in": {
         "direction": "I"
@@ -162,6 +154,9 @@
             "value": "ACTIVE_HIGH"
           }
         }
+      },
+      "controller_draadloos_in": {
+        "direction": "I"
       }
     },
     "components": {
@@ -188,15 +183,6 @@
             "left": "1",
             "right": "0"
           },
-          "signal_connected_0": {
-            "direction": "I"
-          },
-          "signal_up_0": {
-            "direction": "I"
-          },
-          "signal_down_0": {
-            "direction": "I"
-          },
           "freq_in_0": {
             "direction": "I"
           },
@@ -218,6 +204,9 @@
           },
           "active": {
             "direction": "O"
+          },
+          "signal_in_0": {
+            "direction": "I"
           }
         },
         "components": {
@@ -359,48 +348,6 @@
               }
             }
           },
-          "controller_draadloos_0": {
-            "vlnv": "xilinx.com:module_ref:controller_draadloos:1.0",
-            "xci_name": "design_1_controller_draadloos_0_0",
-            "xci_path": "ip\\design_1_controller_draadloos_0_0\\design_1_controller_draadloos_0_0.xci",
-            "inst_hier_path": "ontvangen_controllers/controller_draadloos_0",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "controller_draadloos",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk_slow": {
-                "direction": "I"
-              },
-              "reset": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_HIGH"
-                  }
-                }
-              },
-              "enable": {
-                "direction": "I"
-              },
-              "signal_connected": {
-                "direction": "I"
-              },
-              "signal_up": {
-                "direction": "I"
-              },
-              "signal_down": {
-                "direction": "I"
-              },
-              "value_out": {
-                "direction": "O",
-                "left": "8",
-                "right": "0"
-              }
-            }
-          },
           "clk_divider_0": {
             "vlnv": "xilinx.com:module_ref:clk_divider:1.0",
             "xci_name": "design_1_clk_divider_0_0",
@@ -505,16 +452,110 @@
                 "direction": "O"
               }
             }
+          },
+          "frequency_to_number_0": {
+            "vlnv": "xilinx.com:module_ref:frequency_to_number:1.0",
+            "xci_name": "design_1_frequency_to_number_0_0",
+            "xci_path": "ip\\design_1_frequency_to_number_0_0\\design_1_frequency_to_number_0_0.xci",
+            "inst_hier_path": "ontvangen_controllers/frequency_to_number_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "frequency_to_number",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_RESET": {
+                    "value": "reset",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "ip_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "ip_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "/clk_wiz_0_clk_out1",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "reset": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "enable": {
+                "direction": "I"
+              },
+              "signal_in": {
+                "direction": "I"
+              },
+              "value_out": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              }
+            }
+          },
+          "controller_draadloos_0": {
+            "vlnv": "xilinx.com:module_ref:controller_draadloos:1.0",
+            "xci_name": "design_1_controller_draadloos_0_0",
+            "xci_path": "ip\\design_1_controller_draadloos_0_0\\design_1_controller_draadloos_0_0.xci",
+            "inst_hier_path": "ontvangen_controllers/controller_draadloos_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "controller_draadloos",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk_slow": {
+                "direction": "I"
+              },
+              "reset": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "enable": {
+                "direction": "I"
+              },
+              "frequency_value_in": {
+                "direction": "I",
+                "left": "8",
+                "right": "0"
+              },
+              "value_out": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              }
+            }
           }
         },
         "nets": {
           "Net": {
             "ports": [
               "reset",
-              "controller_draadloos_0/reset",
               "controller_inductief_0/reset",
               "clk_divider_0/reset",
-              "controller_ultrasoon_0/reset"
+              "controller_ultrasoon_0/reset",
+              "frequency_to_number_0/reset",
+              "controller_draadloos_0/reset"
             ]
           },
           "Net1": {
@@ -522,7 +563,8 @@
               "clk",
               "controller_inductief_0/clk",
               "clk_divider_0/clk_in",
-              "controller_ultrasoon_0/clk"
+              "controller_ultrasoon_0/clk",
+              "frequency_to_number_0/clk"
             ]
           },
           "choice_1_0_1": {
@@ -576,6 +618,7 @@
           "controller_interconn_0_controller_enable_3": {
             "ports": [
               "controller_interconn_0/controller_enable_3",
+              "frequency_to_number_0/enable",
               "controller_draadloos_0/enable"
             ]
           },
@@ -615,28 +658,22 @@
               "controller_inductief_0/freq_in"
             ]
           },
+          "frequency_to_number_0_value_out": {
+            "ports": [
+              "frequency_to_number_0/value_out",
+              "controller_draadloos_0/frequency_value_in"
+            ]
+          },
           "sensor_0_1": {
             "ports": [
               "sensor_0",
               "controller_ultrasoon_0/sensor"
             ]
           },
-          "signal_connected_0_1": {
+          "signal_in_0_1": {
             "ports": [
-              "signal_connected_0",
-              "controller_draadloos_0/signal_connected"
-            ]
-          },
-          "signal_down_0_1": {
-            "ports": [
-              "signal_down_0",
-              "controller_draadloos_0/signal_down"
-            ]
-          },
-          "signal_up_0_1": {
-            "ports": [
-              "signal_up_0",
-              "controller_draadloos_0/signal_up"
+              "signal_in_0",
+              "frequency_to_number_0/signal_in"
             ]
           }
         }
@@ -1220,85 +1257,6 @@
           }
         }
       },
-      "Coor_PixelL_0": {
-        "vlnv": "xilinx.com:module_ref:Coor_PixelL:1.0",
-        "xci_name": "design_1_Coor_PixelL_0_0",
-        "xci_path": "ip\\design_1_Coor_PixelL_0_0\\design_1_Coor_PixelL_0_0.xci",
-        "inst_hier_path": "Coor_PixelL_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Coor_PixelL",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "PixelClock": {
-            "direction": "I"
-          },
-          "HSYNC_i": {
-            "direction": "I"
-          },
-          "VSYNC_i": {
-            "direction": "I"
-          },
-          "PixelSig_in": {
-            "direction": "I"
-          },
-          "VPixel": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "HPixel": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "CL_in": {
-            "direction": "I",
-            "left": "8",
-            "right": "0"
-          },
-          "BreetePeddels": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "HoogtePeddels": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "Offcet": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "CoorL_yboven_out": {
-            "direction": "O",
-            "left": "9",
-            "right": "0"
-          },
-          "PixelSig_out": {
-            "direction": "O"
-          },
-          "HSYNC_o": {
-            "direction": "O"
-          },
-          "VSYNC_o": {
-            "direction": "O"
-          },
-          "VPixel_out": {
-            "direction": "O",
-            "left": "9",
-            "right": "0"
-          },
-          "HPixel_out": {
-            "direction": "O",
-            "left": "9",
-            "right": "0"
-          }
-        }
-      },
       "score_tekenen_0": {
         "vlnv": "xilinx.com:module_ref:score_tekenen:1.0",
         "xci_name": "design_1_score_tekenen_0_0",
@@ -1618,6 +1576,85 @@
             "right": "0"
           }
         }
+      },
+      "Coor_PixelL_0": {
+        "vlnv": "xilinx.com:module_ref:Coor_PixelL:1.0",
+        "xci_name": "design_1_Coor_PixelL_0_0",
+        "xci_path": "ip\\design_1_Coor_PixelL_0_0\\design_1_Coor_PixelL_0_0.xci",
+        "inst_hier_path": "Coor_PixelL_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Coor_PixelL",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "PixelClock": {
+            "direction": "I"
+          },
+          "HSYNC_i": {
+            "direction": "I"
+          },
+          "VSYNC_i": {
+            "direction": "I"
+          },
+          "PixelSig_in": {
+            "direction": "I"
+          },
+          "VPixel": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "HPixel": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "CL_in": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "BreetePeddels": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "HoogtePeddels": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "Offcet": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "CoorL_yboven_out": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "PixelSig_out": {
+            "direction": "O"
+          },
+          "HSYNC_o": {
+            "direction": "O"
+          },
+          "VSYNC_o": {
+            "direction": "O"
+          },
+          "VPixel_out": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "HPixel_out": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          }
+        }
       }
     },
     "nets": {
@@ -1748,8 +1785,8 @@
           "lijn_tekenen_0/pxlCLK_i",
           "tekenen_balletje/pxlCLK_i",
           "Coor_PixelR_0/PixelClock",
-          "Coor_PixelL_0/PixelClock",
-          "score_tekenen_0/pxlCLK_i"
+          "score_tekenen_0/pxlCLK_i",
+          "Coor_PixelL_0/PixelClock"
         ]
       },
       "beeld_generator_0_vpxl": {
@@ -1802,24 +1839,24 @@
         "ports": [
           "constants/peddels_breedte",
           "Coor_PixelR_0/BreetePeddels",
-          "Coor_PixelL_0/BreetePeddels",
-          "aanraking_herkennen_0/breedte_peddels"
+          "aanraking_herkennen_0/breedte_peddels",
+          "Coor_PixelL_0/BreetePeddels"
         ]
       },
       "constants_dout2": {
         "ports": [
           "constants/peddels_hoogte",
           "Coor_PixelR_0/HoogtePeddels",
-          "Coor_PixelL_0/HoogtePeddels",
-          "aanraking_herkennen_0/hoogte_peddels"
+          "aanraking_herkennen_0/hoogte_peddels",
+          "Coor_PixelL_0/HoogtePeddels"
         ]
       },
       "constants_dout3": {
         "ports": [
           "constants/peddels_x_offset",
           "Coor_PixelR_0/Offcet",
-          "Coor_PixelL_0/Offcet",
-          "aanraking_herkennen_0/offset_peddels"
+          "aanraking_herkennen_0/offset_peddels",
+          "Coor_PixelL_0/Offcet"
         ]
       },
       "constants_dout4": {
@@ -1990,22 +2027,10 @@
           "ontvangen_controllers/sensor_0"
         ]
       },
-      "signal_connected_0_1": {
+      "signal_in_0_1": {
         "ports": [
-          "controller_draadloos_connected",
-          "ontvangen_controllers/signal_connected_0"
-        ]
-      },
-      "signal_down_0_1": {
-        "ports": [
-          "controller_draadloos_down",
-          "ontvangen_controllers/signal_down_0"
-        ]
-      },
-      "signal_up_0_1": {
-        "ports": [
-          "controller_draadloos_up",
-          "ontvangen_controllers/signal_up_0"
+          "controller_draadloos_in",
+          "ontvangen_controllers/signal_in_0"
         ]
       },
       "sys_clock_1": {

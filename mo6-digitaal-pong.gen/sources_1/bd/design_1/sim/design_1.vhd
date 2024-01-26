@@ -2,8 +2,8 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Wed Jan 24 17:24:13 2024
---Host        : XPS-Tommy running 64-bit major release  (build 9200)
+--Date        : Fri Jan 26 15:37:38 2024
+--Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
 --Purpose     : IP block netlist
@@ -120,9 +120,7 @@ entity ontvangen_controllers_imp_RFQXIP is
     freq_in_0 : in STD_LOGIC;
     reset : in STD_LOGIC;
     sensor_0 : in STD_LOGIC;
-    signal_connected_0 : in STD_LOGIC;
-    signal_down_0 : in STD_LOGIC;
-    signal_up_0 : in STD_LOGIC;
+    signal_in_0 : in STD_LOGIC;
     trigger_0 : out STD_LOGIC
   );
 end ontvangen_controllers_imp_RFQXIP;
@@ -153,17 +151,6 @@ architecture STRUCTURE of ontvangen_controllers_imp_RFQXIP is
     value_out : out STD_LOGIC_VECTOR ( 8 downto 0 )
   );
   end component design_1_controller_inductief_0_0;
-  component design_1_controller_draadloos_0_0 is
-  port (
-    clk_slow : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    enable : in STD_LOGIC;
-    signal_connected : in STD_LOGIC;
-    signal_up : in STD_LOGIC;
-    signal_down : in STD_LOGIC;
-    value_out : out STD_LOGIC_VECTOR ( 8 downto 0 )
-  );
-  end component design_1_controller_draadloos_0_0;
   component design_1_clk_divider_0_0 is
   port (
     clk_in : in STD_LOGIC;
@@ -181,6 +168,24 @@ architecture STRUCTURE of ontvangen_controllers_imp_RFQXIP is
     trigger : out STD_LOGIC
   );
   end component design_1_controller_ultrasoon_0_0;
+  component design_1_frequency_to_number_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    signal_in : in STD_LOGIC;
+    value_out : out STD_LOGIC_VECTOR ( 8 downto 0 )
+  );
+  end component design_1_frequency_to_number_0_0;
+  component design_1_controller_draadloos_0_0 is
+  port (
+    clk_slow : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    frequency_value_in : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    value_out : out STD_LOGIC_VECTOR ( 8 downto 0 )
+  );
+  end component design_1_controller_draadloos_0_0;
   signal Net : STD_LOGIC;
   signal Net1 : STD_LOGIC;
   signal choice_1_0_1 : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -198,10 +203,9 @@ architecture STRUCTURE of ontvangen_controllers_imp_RFQXIP is
   signal controller_ultrasoon_0_value : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal enable_0_1 : STD_LOGIC;
   signal freq_in_0_1 : STD_LOGIC;
+  signal frequency_to_number_0_value_out : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal sensor_0_1 : STD_LOGIC;
-  signal signal_connected_0_1 : STD_LOGIC;
-  signal signal_down_0_1 : STD_LOGIC;
-  signal signal_up_0_1 : STD_LOGIC;
+  signal signal_in_0_1 : STD_LOGIC;
 begin
   Net <= reset;
   Net1 <= clk;
@@ -213,9 +217,7 @@ begin
   enable_0_1 <= enable_0;
   freq_in_0_1 <= freq_in_0;
   sensor_0_1 <= sensor_0;
-  signal_connected_0_1 <= signal_connected_0;
-  signal_down_0_1 <= signal_down_0;
-  signal_up_0_1 <= signal_up_0;
+  signal_in_0_1 <= signal_in_0;
   trigger_0 <= controller_ultrasoon_0_trigger;
 clk_divider_0: component design_1_clk_divider_0_0
      port map (
@@ -227,10 +229,8 @@ controller_draadloos_0: component design_1_controller_draadloos_0_0
      port map (
       clk_slow => clk_divider_0_clk_out,
       enable => controller_interconn_0_controller_enable_3,
+      frequency_value_in(8 downto 0) => frequency_to_number_0_value_out(8 downto 0),
       reset => Net,
-      signal_connected => signal_connected_0_1,
-      signal_down => signal_down_0_1,
-      signal_up => signal_up_0_1,
       value_out(8 downto 0) => controller_draadloos_0_value_out(8 downto 0)
     );
 controller_inductief_0: component design_1_controller_inductief_0_0
@@ -265,6 +265,14 @@ controller_ultrasoon_0: component design_1_controller_ultrasoon_0_0
       trigger => controller_ultrasoon_0_trigger,
       value(8 downto 0) => controller_ultrasoon_0_value(8 downto 0)
     );
+frequency_to_number_0: component design_1_frequency_to_number_0_0
+     port map (
+      clk => Net1,
+      enable => controller_interconn_0_controller_enable_3,
+      reset => Net,
+      signal_in => signal_in_0_1,
+      value_out(8 downto 0) => frequency_to_number_0_value_out(8 downto 0)
+    );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -272,9 +280,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1 is
   port (
-    controller_draadloos_connected : in STD_LOGIC;
-    controller_draadloos_down : in STD_LOGIC;
-    controller_draadloos_up : in STD_LOGIC;
+    controller_draadloos_in : in STD_LOGIC;
     controller_inductief_in : in STD_LOGIC;
     controller_ultrasoon_in : in STD_LOGIC;
     controller_ultrasoon_trigger : out STD_LOGIC;
@@ -292,7 +298,7 @@ entity design_1 is
     sys_clock : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=27,numReposBlks=25,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=15,numPkgbdBlks=0,bdsource=USER,da_board_cnt=3,da_ps7_cnt=1,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=28,numReposBlks=26,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=16,numPkgbdBlks=0,bdsource=USER,da_board_cnt=3,da_ps7_cnt=1,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -390,26 +396,6 @@ architecture STRUCTURE of design_1 is
     HPixel_out : out STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   end component design_1_Coor_PixelR_0_0;
-  component design_1_Coor_PixelL_0_0 is
-  port (
-    PixelClock : in STD_LOGIC;
-    HSYNC_i : in STD_LOGIC;
-    VSYNC_i : in STD_LOGIC;
-    PixelSig_in : in STD_LOGIC;
-    VPixel : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    HPixel : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    CL_in : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    BreetePeddels : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    HoogtePeddels : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    Offcet : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    CoorL_yboven_out : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    PixelSig_out : out STD_LOGIC;
-    HSYNC_o : out STD_LOGIC;
-    VSYNC_o : out STD_LOGIC;
-    VPixel_out : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    HPixel_out : out STD_LOGIC_VECTOR ( 9 downto 0 )
-  );
-  end component design_1_Coor_PixelL_0_0;
   component design_1_score_tekenen_0_0 is
   port (
     pixel_value_i : in STD_LOGIC;
@@ -483,6 +469,26 @@ architecture STRUCTURE of design_1 is
     pos_y_out : out STD_LOGIC_VECTOR ( 8 downto 0 )
   );
   end component design_1_positie_balletje_0_0;
+  component design_1_Coor_PixelL_0_0 is
+  port (
+    PixelClock : in STD_LOGIC;
+    HSYNC_i : in STD_LOGIC;
+    VSYNC_i : in STD_LOGIC;
+    PixelSig_in : in STD_LOGIC;
+    VPixel : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    HPixel : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    CL_in : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    BreetePeddels : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    HoogtePeddels : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    Offcet : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    CoorL_yboven_out : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    PixelSig_out : out STD_LOGIC;
+    HSYNC_o : out STD_LOGIC;
+    VSYNC_o : out STD_LOGIC;
+    VPixel_out : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    HPixel_out : out STD_LOGIC_VECTOR ( 9 downto 0 )
+  );
+  end component design_1_Coor_PixelL_0_0;
   signal Coor_PixelL_0_CoorL_yboven_out : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal Coor_PixelL_0_HPixel_out : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal Coor_PixelL_0_HSYNC_o : STD_LOGIC;
@@ -539,9 +545,7 @@ architecture STRUCTURE of design_1 is
   signal score_tekenen_0_VSYNC_o : STD_LOGIC;
   signal score_tekenen_0_pixel_value_o : STD_LOGIC;
   signal sensor_0_1 : STD_LOGIC;
-  signal signal_connected_0_1 : STD_LOGIC;
-  signal signal_down_0_1 : STD_LOGIC;
-  signal signal_up_0_1 : STD_LOGIC;
+  signal signal_in_0_1 : STD_LOGIC;
   signal sys_clock_1 : STD_LOGIC;
   signal tekenen_balletje_HSYNC_o : STD_LOGIC;
   signal tekenen_balletje_VSYNC_o : STD_LOGIC;
@@ -576,9 +580,7 @@ begin
   reset_hw_1 <= reset_hw;
   reset_rtl_1 <= reset;
   sensor_0_1 <= controller_ultrasoon_in;
-  signal_connected_0_1 <= controller_draadloos_connected;
-  signal_down_0_1 <= controller_draadloos_down;
-  signal_up_0_1 <= controller_draadloos_up;
+  signal_in_0_1 <= controller_draadloos_in;
   status_running(0) <= util_vector_logic_0_Res(0);
   sys_clock_1 <= sys_clock;
 Coor_PixelL_0: component design_1_Coor_PixelL_0_0
@@ -716,9 +718,7 @@ ontvangen_controllers: entity work.ontvangen_controllers_imp_RFQXIP
       freq_in_0 => freq_in_0_1,
       reset => reset_rtl_1,
       sensor_0 => sensor_0_1,
-      signal_connected_0 => signal_connected_0_1,
-      signal_down_0 => signal_down_0_1,
-      signal_up_0 => signal_up_0_1,
+      signal_in_0 => signal_in_0_1,
       trigger_0 => ontvangen_controllers_trigger_0
     );
 positie_balletje_0: component design_1_positie_balletje_0_0

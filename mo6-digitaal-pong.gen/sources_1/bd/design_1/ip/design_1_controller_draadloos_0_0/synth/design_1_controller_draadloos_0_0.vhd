@@ -58,9 +58,7 @@ ENTITY design_1_controller_draadloos_0_0 IS
     clk_slow : IN STD_LOGIC;
     reset : IN STD_LOGIC;
     enable : IN STD_LOGIC;
-    signal_connected : IN STD_LOGIC;
-    signal_up : IN STD_LOGIC;
-    signal_down : IN STD_LOGIC;
+    frequency_value_in : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
     value_out : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
   );
 END design_1_controller_draadloos_0_0;
@@ -73,9 +71,7 @@ ARCHITECTURE design_1_controller_draadloos_0_0_arch OF design_1_controller_draad
       clk_slow : IN STD_LOGIC;
       reset : IN STD_LOGIC;
       enable : IN STD_LOGIC;
-      signal_connected : IN STD_LOGIC;
-      signal_up : IN STD_LOGIC;
-      signal_down : IN STD_LOGIC;
+      frequency_value_in : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
       value_out : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
     );
   END COMPONENT controller_draadloos;
@@ -97,9 +93,7 @@ BEGIN
       clk_slow => clk_slow,
       reset => reset,
       enable => enable,
-      signal_connected => signal_connected,
-      signal_up => signal_up,
-      signal_down => signal_down,
+      frequency_value_in => frequency_value_in,
       value_out => value_out
     );
 END design_1_controller_draadloos_0_0_arch;
