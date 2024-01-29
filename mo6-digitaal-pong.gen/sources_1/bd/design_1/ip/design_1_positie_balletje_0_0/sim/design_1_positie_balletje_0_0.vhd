@@ -56,11 +56,12 @@ USE ieee.numeric_std.ALL;
 ENTITY design_1_positie_balletje_0_0 IS
   PORT (
     reset : IN STD_LOGIC;
+    clk_slow : IN STD_LOGIC;
     screen_width : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     screen_heigth : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
-    clk_slow : IN STD_LOGIC;
     angle_index : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     running : IN STD_LOGIC;
+    size : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
     peddel_touch : IN STD_LOGIC;
     side_touch : IN STD_LOGIC;
     top_bottom_touch : IN STD_LOGIC;
@@ -83,11 +84,12 @@ ARCHITECTURE design_1_positie_balletje_0_0_arch OF design_1_positie_balletje_0_0
     );
     PORT (
       reset : IN STD_LOGIC;
+      clk_slow : IN STD_LOGIC;
       screen_width : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
       screen_heigth : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
-      clk_slow : IN STD_LOGIC;
       angle_index : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       running : IN STD_LOGIC;
+      size : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
       peddel_touch : IN STD_LOGIC;
       side_touch : IN STD_LOGIC;
       top_bottom_touch : IN STD_LOGIC;
@@ -111,11 +113,12 @@ BEGIN
     )
     PORT MAP (
       reset => reset,
+      clk_slow => clk_slow,
       screen_width => screen_width,
       screen_heigth => screen_heigth,
-      clk_slow => clk_slow,
       angle_index => angle_index,
       running => running,
+      size => size,
       peddel_touch => peddel_touch,
       side_touch => side_touch,
       top_bottom_touch => top_bottom_touch,

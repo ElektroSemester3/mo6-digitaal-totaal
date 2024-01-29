@@ -12,14 +12,17 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_co
 # IP: bd/design_1/ip/design_1_controller_inductief_0_0/design_1_controller_inductief_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_controller_inductief_0_0 || ORIG_REF_NAME==design_1_controller_inductief_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_controller_draadloos_0_0/design_1_controller_draadloos_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_controller_draadloos_0_0 || ORIG_REF_NAME==design_1_controller_draadloos_0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_clk_divider_0_0/design_1_clk_divider_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_clk_divider_0_0 || ORIG_REF_NAME==design_1_clk_divider_0_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_controller_ultrasoon_0_0/design_1_controller_ultrasoon_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_controller_ultrasoon_0_0 || ORIG_REF_NAME==design_1_controller_ultrasoon_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_frequency_to_number_0_0/design_1_frequency_to_number_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_frequency_to_number_0_0 || ORIG_REF_NAME==design_1_frequency_to_number_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_controller_draadloos_0_0/design_1_controller_draadloos_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_controller_draadloos_0_0 || ORIG_REF_NAME==design_1_controller_draadloos_0_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_clk_divider_0_1/design_1_clk_divider_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_clk_divider_0_1 || ORIG_REF_NAME==design_1_clk_divider_0_1} -quiet] -quiet
@@ -63,9 +66,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_cl
 # IP: bd/design_1/ip/design_1_Coor_PixelR_0_0/design_1_Coor_PixelR_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_Coor_PixelR_0_0 || ORIG_REF_NAME==design_1_Coor_PixelR_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_Coor_PixelL_0_0/design_1_Coor_PixelL_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_Coor_PixelL_0_0 || ORIG_REF_NAME==design_1_Coor_PixelL_0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_score_tekenen_0_0/design_1_score_tekenen_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_score_tekenen_0_0 || ORIG_REF_NAME==design_1_score_tekenen_0_0} -quiet] -quiet
 
@@ -81,15 +81,15 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ut
 # IP: bd/design_1/ip/design_1_positie_balletje_0_0/design_1_positie_balletje_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_positie_balletje_0_0 || ORIG_REF_NAME==design_1_positie_balletje_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_frequency_to_number_0_0/design_1_frequency_to_number_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_frequency_to_number_0_0 || ORIG_REF_NAME==design_1_frequency_to_number_0_0} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_Coor_PixelL_0_0/design_1_Coor_PixelL_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_Coor_PixelL_0_0 || ORIG_REF_NAME==design_1_Coor_PixelL_0_0} -quiet] -quiet
 
-# XDC: d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc
+# XDC: d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_0_0 || ORIG_REF_NAME==design_1_clk_wiz_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# XDC: d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc
+# XDC: d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_0_0 || ORIG_REF_NAME==design_1_clk_wiz_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# XDC: d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc
+# XDC: d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc
 
-# XDC: d:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/design_1_ooc.xdc
+# XDC: d:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.gen/sources_1/bd/design_1/design_1_ooc.xdc

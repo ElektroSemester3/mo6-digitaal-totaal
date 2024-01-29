@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jan 26 15:37:45 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jan 29 14:21:49 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -9,8 +9,8 @@
         <CONNECTION INSTANCE="ontvangen_controllers_controller_inductief_0" PORT="reset"/>
         <CONNECTION INSTANCE="ontvangen_controllers_clk_divider_0" PORT="reset"/>
         <CONNECTION INSTANCE="ontvangen_controllers_controller_ultrasoon_0" PORT="reset"/>
-        <CONNECTION INSTANCE="ontvangen_controllers_frequency_to_number_0" PORT="reset"/>
         <CONNECTION INSTANCE="ontvangen_controllers_controller_draadloos_0" PORT="reset"/>
+        <CONNECTION INSTANCE="ontvangen_controllers_frequency_to_number_0" PORT="reset"/>
         <CONNECTION INSTANCE="beeld_generator_0" PORT="RST"/>
         <CONNECTION INSTANCE="score_counter_0" PORT="reset"/>
         <CONNECTION INSTANCE="Reset_score_OR_gate" PORT="Op2"/>
@@ -1120,6 +1120,7 @@
             <CONNECTION INSTANCE="tekenen_balletje" PORT="size_x"/>
             <CONNECTION INSTANCE="tekenen_balletje" PORT="size_y"/>
             <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="grootte_balletje"/>
+            <CONNECTION INSTANCE="positie_balletje_0" PORT="size"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1463,8 +1464,8 @@
         </PORT>
         <PORT DIR="O" NAME="controller_enable_3" SIGIS="undef" SIGNAME="ontvangen_controllers_controller_interconn_0_controller_enable_3">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ontvangen_controllers_frequency_to_number_0" PORT="enable"/>
             <CONNECTION INSTANCE="ontvangen_controllers_controller_draadloos_0" PORT="enable"/>
+            <CONNECTION INSTANCE="ontvangen_controllers_frequency_to_number_0" PORT="enable"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="8" NAME="controller_output_1" RIGHT="0" SIGIS="undef" SIGNAME="ontvangen_controllers_controller_interconn_0_controller_output_1">
@@ -1583,6 +1584,11 @@
             <CONNECTION INSTANCE="Reset_score_OR_gate" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="clk_slow" SIGIS="undef" SIGNAME="clk_divider_0_clk_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_divider_0" PORT="clk_out"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="9" NAME="screen_width" RIGHT="0" SIGIS="undef" SIGNAME="constants_scherm_breedte_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="constants_scherm_breedte" PORT="dout"/>
@@ -1593,11 +1599,6 @@
             <CONNECTION INSTANCE="constants_scherm_hoogte" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="clk_slow" SIGIS="undef" SIGNAME="clk_divider_0_clk_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_divider_0" PORT="clk_out"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="1" NAME="angle_index" RIGHT="0" SIGIS="undef" SIGNAME="aanraking_herkennen_0_aanraking_balletje_peddel_zone">
           <CONNECTIONS>
             <CONNECTION INSTANCE="aanraking_herkennen_0" PORT="aanraking_balletje_peddel_zone"/>
@@ -1606,6 +1607,11 @@
         <PORT DIR="I" NAME="running" SIGIS="undef" SIGNAME="Running_AND_gate_Res">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Running_AND_gate" PORT="Res"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="size" RIGHT="0" SIGIS="undef" SIGNAME="constants_balletje_grootte_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="constants_balletje_grootte" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="peddel_touch" SIGIS="undef" SIGNAME="aanraking_herkennen_0_aanraking_balletje_peddel">

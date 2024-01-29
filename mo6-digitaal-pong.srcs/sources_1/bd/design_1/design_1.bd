@@ -16,8 +16,8 @@
         "controller_inductief_0": "",
         "clk_divider_0": "",
         "controller_ultrasoon_0": "",
-        "frequency_to_number_0": "",
-        "controller_draadloos_0": ""
+        "controller_draadloos_0": "",
+        "frequency_to_number_0": ""
       },
       "clk_divider_0": "",
       "Running_AND_gate": "",
@@ -39,8 +39,8 @@
       "aanraking_herkennen_0": "",
       "score_counter_0": "",
       "Reset_score_OR_gate": "",
-      "positie_balletje_0": "",
-      "Coor_PixelL_0": ""
+      "Coor_PixelL_0": "",
+      "positie_balletje_0": ""
     },
     "ports": {
       "reset": {
@@ -453,6 +453,44 @@
               }
             }
           },
+          "controller_draadloos_0": {
+            "vlnv": "xilinx.com:module_ref:controller_draadloos:1.0",
+            "xci_name": "design_1_controller_draadloos_0_0",
+            "xci_path": "ip\\design_1_controller_draadloos_0_0\\design_1_controller_draadloos_0_0.xci",
+            "inst_hier_path": "ontvangen_controllers/controller_draadloos_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "controller_draadloos",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk_slow": {
+                "direction": "I"
+              },
+              "reset": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "enable": {
+                "direction": "I"
+              },
+              "frequency_value_in": {
+                "direction": "I",
+                "left": "8",
+                "right": "0"
+              },
+              "value_out": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              }
+            }
+          },
           "frequency_to_number_0": {
             "vlnv": "xilinx.com:module_ref:frequency_to_number:1.0",
             "xci_name": "design_1_frequency_to_number_0_0",
@@ -507,44 +545,6 @@
                 "right": "0"
               }
             }
-          },
-          "controller_draadloos_0": {
-            "vlnv": "xilinx.com:module_ref:controller_draadloos:1.0",
-            "xci_name": "design_1_controller_draadloos_0_0",
-            "xci_path": "ip\\design_1_controller_draadloos_0_0\\design_1_controller_draadloos_0_0.xci",
-            "inst_hier_path": "ontvangen_controllers/controller_draadloos_0",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "controller_draadloos",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk_slow": {
-                "direction": "I"
-              },
-              "reset": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_HIGH"
-                  }
-                }
-              },
-              "enable": {
-                "direction": "I"
-              },
-              "frequency_value_in": {
-                "direction": "I",
-                "left": "8",
-                "right": "0"
-              },
-              "value_out": {
-                "direction": "O",
-                "left": "8",
-                "right": "0"
-              }
-            }
           }
         },
         "nets": {
@@ -554,8 +554,8 @@
               "controller_inductief_0/reset",
               "clk_divider_0/reset",
               "controller_ultrasoon_0/reset",
-              "frequency_to_number_0/reset",
-              "controller_draadloos_0/reset"
+              "controller_draadloos_0/reset",
+              "frequency_to_number_0/reset"
             ]
           },
           "Net1": {
@@ -618,8 +618,8 @@
           "controller_interconn_0_controller_enable_3": {
             "ports": [
               "controller_interconn_0/controller_enable_3",
-              "frequency_to_number_0/enable",
-              "controller_draadloos_0/enable"
+              "controller_draadloos_0/enable",
+              "frequency_to_number_0/enable"
             ]
           },
           "controller_interconn_0_controller_output_1": {
@@ -1500,83 +1500,6 @@
           }
         }
       },
-      "positie_balletje_0": {
-        "vlnv": "xilinx.com:module_ref:positie_balletje:1.0",
-        "xci_name": "design_1_positie_balletje_0_0",
-        "xci_path": "ip\\design_1_positie_balletje_0_0\\design_1_positie_balletje_0_0.xci",
-        "inst_hier_path": "positie_balletje_0",
-        "parameters": {
-          "step_y": {
-            "value": "1"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "positie_balletje",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "reset": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH"
-              }
-            }
-          },
-          "screen_width": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "screen_heigth": {
-            "direction": "I",
-            "left": "8",
-            "right": "0"
-          },
-          "clk_slow": {
-            "direction": "I"
-          },
-          "angle_index": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "running": {
-            "direction": "I",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "peddel_touch": {
-            "direction": "I"
-          },
-          "side_touch": {
-            "direction": "I"
-          },
-          "top_bottom_touch": {
-            "direction": "I"
-          },
-          "pos_x_out": {
-            "direction": "O",
-            "left": "9",
-            "right": "0"
-          },
-          "pos_y_out": {
-            "direction": "O",
-            "left": "8",
-            "right": "0"
-          }
-        }
-      },
       "Coor_PixelL_0": {
         "vlnv": "xilinx.com:module_ref:Coor_PixelL:1.0",
         "xci_name": "design_1_Coor_PixelL_0_0",
@@ -1652,6 +1575,88 @@
           "HPixel_out": {
             "direction": "O",
             "left": "9",
+            "right": "0"
+          }
+        }
+      },
+      "positie_balletje_0": {
+        "vlnv": "xilinx.com:module_ref:positie_balletje:1.0",
+        "xci_name": "design_1_positie_balletje_0_0",
+        "xci_path": "ip\\design_1_positie_balletje_0_0\\design_1_positie_balletje_0_0.xci",
+        "inst_hier_path": "positie_balletje_0",
+        "parameters": {
+          "step_y": {
+            "value": "1"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "positie_balletje",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "clk_slow": {
+            "direction": "I"
+          },
+          "screen_width": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "screen_heigth": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "angle_index": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "running": {
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "size": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "peddel_touch": {
+            "direction": "I"
+          },
+          "side_touch": {
+            "direction": "I"
+          },
+          "top_bottom_touch": {
+            "direction": "I"
+          },
+          "pos_x_out": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "pos_y_out": {
+            "direction": "O",
+            "left": "8",
             "right": "0"
           }
         }
@@ -1832,7 +1837,8 @@
           "constants/balletje_grootte",
           "tekenen_balletje/size_x",
           "tekenen_balletje/size_y",
-          "aanraking_herkennen_0/grootte_balletje"
+          "aanraking_herkennen_0/grootte_balletje",
+          "positie_balletje_0/size"
         ]
       },
       "constants_dout1": {

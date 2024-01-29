@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "design_1_frequency_to_number_0_0",
-    "cell_name": "ontvangen_controllers/frequency_to_number_0",
+    "cell_name": "frequency_to_number_0",
     "component_reference": "xilinx.com:module_ref:frequency_to_number:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../mo6-digitaal-pong.gen/sources_1/bd/design_1/ip/design_1_frequency_to_number_0_0",

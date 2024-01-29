@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Fri Jan 26 15:40:57 2024
-| Host         : Lenovo-Jochem running 64-bit major release  (build 9200)
+| Date         : Mon Jan 29 14:24:14 2024
+| Host         : XPS-Tommy running 64-bit major release  (build 9200)
 | Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 | Design       : design_1_wrapper
 | Device       : xc7z020clg400-1
@@ -1853,17 +1853,17 @@ Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell design_1_i/Reset_score_OR_gate/Res[0]_INST_0, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/positie_balletje_0/U0/x_pos_reg[5]/CLR,
-design_1_i/positie_balletje_0/U0/x_pos_reg[6]/PRE,
+LUT cell design_1_i/Reset_score_OR_gate/Res[0]_INST_0, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/positie_balletje_0/U0/x_pos_reg[5]/PRE,
+design_1_i/positie_balletje_0/U0/x_pos_reg[6]/CLR,
 design_1_i/positie_balletje_0/U0/x_pos_reg[7]/CLR,
 design_1_i/positie_balletje_0/U0/x_pos_reg[8]/PRE,
 design_1_i/positie_balletje_0/U0/x_pos_reg[9]/CLR,
 design_1_i/positie_balletje_0/U0/y_dir_reg/PRE,
 design_1_i/positie_balletje_0/U0/y_pos_reg[0]/CLR,
 design_1_i/positie_balletje_0/U0/y_pos_reg[1]/CLR,
-design_1_i/positie_balletje_0/U0/y_pos_reg[2]/CLR,
-design_1_i/positie_balletje_0/U0/y_pos_reg[3]/CLR,
-design_1_i/positie_balletje_0/U0/y_pos_reg[4]/PRE,
+design_1_i/positie_balletje_0/U0/y_pos_reg[2]/PRE,
+design_1_i/positie_balletje_0/U0/y_pos_reg[3]/PRE,
+design_1_i/positie_balletje_0/U0/y_pos_reg[4]/CLR,
 design_1_i/positie_balletje_0/U0/y_pos_reg[5]/PRE,
 design_1_i/positie_balletje_0/U0/y_pos_reg[6]/PRE,
 design_1_i/positie_balletje_0/U0/y_pos_reg[7]/PRE,

@@ -15,11 +15,12 @@ entity positie_balletje is
     );
     Port ( 
         reset               : in STD_LOGIC;
+        clk_slow            : in STD_LOGIC;
         screen_width        : in STD_LOGIC_VECTOR (9 downto 0);
         screen_heigth       : in STD_LOGIC_VECTOR (8 downto 0);
-        clk_slow            : in STD_LOGIC;
         angle_index         : in STD_LOGIC_VECTOR (1 downto 0);
         running             : in STD_LOGIC;
+        size                : in STD_LOGIC_VECTOR (8 downto 0);
         peddel_touch        : in STD_LOGIC;
         side_touch          : in STD_LOGIC;
         top_bottom_touch    : in STD_LOGIC;
@@ -36,8 +37,8 @@ architecture Behavioral of positie_balletje is
     signal y_dir : y_direction := down;
     
     -- Start position
-    signal x_start : unsigned(9 downto 0) := unsigned(screen_width) / to_unsigned(2, 10);
-    signal y_start : unsigned(8 downto 0) := unsigned(screen_heigth) / to_unsigned(2, 9);
+    signal x_start : unsigned(9 downto 0) := (unsigned(screen_width) - unsigned(size)) / to_unsigned(2, 10);
+    signal y_start : unsigned(8 downto 0) := (unsigned(screen_heigth) - unsigned(size)) / to_unsigned(2, 9);
     
     -- Position of the ball storage
     signal x_pos : unsigned(9 downto 0) := x_start;

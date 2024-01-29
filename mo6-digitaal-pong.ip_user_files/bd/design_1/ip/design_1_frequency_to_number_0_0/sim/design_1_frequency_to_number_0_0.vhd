@@ -46,46 +46,48 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 
--- IP VLNV: xilinx.com:module_ref:controller_draadloos:1.0
+-- IP VLNV: xilinx.com:module_ref:frequency_to_number:1.0
 -- IP Revision: 1
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY design_1_controller_draadloos_0_0 IS
+ENTITY design_1_frequency_to_number_0_0 IS
   PORT (
-    clk_slow : IN STD_LOGIC;
+    clk : IN STD_LOGIC;
     reset : IN STD_LOGIC;
     enable : IN STD_LOGIC;
-    frequency_value_in : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+    signal_in : IN STD_LOGIC;
     value_out : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
   );
-END design_1_controller_draadloos_0_0;
+END design_1_frequency_to_number_0_0;
 
-ARCHITECTURE design_1_controller_draadloos_0_0_arch OF design_1_controller_draadloos_0_0 IS
+ARCHITECTURE design_1_frequency_to_number_0_0_arch OF design_1_frequency_to_number_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
-  ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_1_controller_draadloos_0_0_arch: ARCHITECTURE IS "yes";
-  COMPONENT controller_draadloos IS
+  ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_1_frequency_to_number_0_0_arch: ARCHITECTURE IS "yes";
+  COMPONENT frequency_to_number IS
     PORT (
-      clk_slow : IN STD_LOGIC;
+      clk : IN STD_LOGIC;
       reset : IN STD_LOGIC;
       enable : IN STD_LOGIC;
-      frequency_value_in : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+      signal_in : IN STD_LOGIC;
       value_out : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
     );
-  END COMPONENT controller_draadloos;
+  END COMPONENT frequency_to_number;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
+  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
   ATTRIBUTE X_INTERFACE_PARAMETER OF reset: SIGNAL IS "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF reset: SIGNAL IS "xilinx.com:signal:reset:1.0 reset RST";
 BEGIN
-  U0 : controller_draadloos
+  U0 : frequency_to_number
     PORT MAP (
-      clk_slow => clk_slow,
+      clk => clk,
       reset => reset,
       enable => enable,
-      frequency_value_in => frequency_value_in,
+      signal_in => signal_in,
       value_out => value_out
     );
-END design_1_controller_draadloos_0_0_arch;
+END design_1_frequency_to_number_0_0_arch;

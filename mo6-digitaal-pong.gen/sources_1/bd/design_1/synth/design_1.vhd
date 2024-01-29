@@ -2,8 +2,8 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Fri Jan 26 15:37:38 2024
---Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
+--Date        : Mon Jan 29 14:21:48 2024
+--Host        : XPS-Tommy running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
 --Purpose     : IP block netlist
@@ -168,15 +168,6 @@ architecture STRUCTURE of ontvangen_controllers_imp_RFQXIP is
     trigger : out STD_LOGIC
   );
   end component design_1_controller_ultrasoon_0_0;
-  component design_1_frequency_to_number_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    enable : in STD_LOGIC;
-    signal_in : in STD_LOGIC;
-    value_out : out STD_LOGIC_VECTOR ( 8 downto 0 )
-  );
-  end component design_1_frequency_to_number_0_0;
   component design_1_controller_draadloos_0_0 is
   port (
     clk_slow : in STD_LOGIC;
@@ -186,6 +177,15 @@ architecture STRUCTURE of ontvangen_controllers_imp_RFQXIP is
     value_out : out STD_LOGIC_VECTOR ( 8 downto 0 )
   );
   end component design_1_controller_draadloos_0_0;
+  component design_1_frequency_to_number_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    signal_in : in STD_LOGIC;
+    value_out : out STD_LOGIC_VECTOR ( 8 downto 0 )
+  );
+  end component design_1_frequency_to_number_0_0;
   signal Net : STD_LOGIC;
   signal Net1 : STD_LOGIC;
   signal choice_1_0_1 : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -454,21 +454,6 @@ architecture STRUCTURE of design_1 is
     Res : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_util_vector_logic_1_0;
-  component design_1_positie_balletje_0_0 is
-  port (
-    reset : in STD_LOGIC;
-    screen_width : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    screen_heigth : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    clk_slow : in STD_LOGIC;
-    angle_index : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    running : in STD_LOGIC;
-    peddel_touch : in STD_LOGIC;
-    side_touch : in STD_LOGIC;
-    top_bottom_touch : in STD_LOGIC;
-    pos_x_out : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    pos_y_out : out STD_LOGIC_VECTOR ( 8 downto 0 )
-  );
-  end component design_1_positie_balletje_0_0;
   component design_1_Coor_PixelL_0_0 is
   port (
     PixelClock : in STD_LOGIC;
@@ -489,6 +474,22 @@ architecture STRUCTURE of design_1 is
     HPixel_out : out STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   end component design_1_Coor_PixelL_0_0;
+  component design_1_positie_balletje_0_0 is
+  port (
+    reset : in STD_LOGIC;
+    clk_slow : in STD_LOGIC;
+    screen_width : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    screen_heigth : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    angle_index : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    running : in STD_LOGIC;
+    size : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    peddel_touch : in STD_LOGIC;
+    side_touch : in STD_LOGIC;
+    top_bottom_touch : in STD_LOGIC;
+    pos_x_out : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    pos_y_out : out STD_LOGIC_VECTOR ( 8 downto 0 )
+  );
+  end component design_1_positie_balletje_0_0;
   signal Coor_PixelL_0_CoorL_yboven_out : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal Coor_PixelL_0_HPixel_out : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal Coor_PixelL_0_HSYNC_o : STD_LOGIC;
@@ -733,6 +734,7 @@ positie_balletje_0: component design_1_positie_balletje_0_0
       screen_heigth(8 downto 0) => constants_dout5(8 downto 0),
       screen_width(9 downto 0) => constants_dout4(9 downto 0),
       side_touch => aanraking_herkennen_0_aanraking_balletje_zijkant,
+      size(8 downto 0) => constants_dout(8 downto 0),
       top_bottom_touch => aanraking_herkennen_0_aanraking_balletje_bovenonder
     );
 score_counter_0: component design_1_score_counter_0_0

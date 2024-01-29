@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri Jan 26 15:39:26 2024
-# Process ID: 6876
-# Current directory: D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/impl_1
+# Start of session at: Mon Jan 29 14:23:04 2024
+# Process ID: 49376
+# Current directory: D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/impl_1
 # Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
-# Log file: D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/impl_1/design_1_wrapper.vdi
-# Journal file: D:/Vivado/mo6-digitaal-totaal/mo6-digitaal-pong.runs/impl_1\vivado.jou
-# Running On: Lenovo-Jochem, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 4, Host memory: 17041 MB
+# Log file: D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/impl_1/design_1_wrapper.vdi
+# Journal file: D:/_code/Git/Fontys/Jaar_2/mo6-digitaal-totaal/mo6-digitaal-pong.runs/impl_1\vivado.jou
+# Running On: XPS-Tommy, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 14, Host memory: 34029 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace

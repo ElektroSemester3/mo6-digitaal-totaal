@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Fri Jan 26 15:40:58 2024
-| Host             : Lenovo-Jochem running 64-bit major release  (build 9200)
+| Date             : Mon Jan 29 14:24:16 2024
+| Host             : XPS-Tommy running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
 | Device           : xc7z020clg400-1
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.258        |
+| Total On-Chip Power (W)  | 0.259        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.150        |
@@ -54,18 +54,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.004 |        6 |       --- |             --- |
 | Slice Logic    |     0.020 |     4123 |       --- |             --- |
-|   LUT as Logic |     0.018 |     2108 |     53200 |            3.96 |
+|   LUT as Logic |     0.018 |     2109 |     53200 |            3.96 |
 |   CARRY4       |     0.002 |      532 |     13300 |            4.00 |
 |   Register     |    <0.001 |      580 |    106400 |            0.55 |
 |   BUFG         |    <0.001 |        2 |        32 |            6.25 |
 |   F7/F8 Muxes  |    <0.001 |        6 |     53200 |            0.01 |
 |   Others       |     0.000 |       37 |       --- |             --- |
-| Signals        |     0.016 |     3232 |       --- |             --- |
+| Signals        |     0.016 |     3230 |       --- |             --- |
 | MMCM           |     0.106 |        1 |         4 |           25.00 |
 | DSPs           |     0.002 |        5 |       220 |            2.27 |
 | I/O            |     0.003 |       18 |       125 |           14.40 |
 | Static Power   |     0.108 |          |           |                 |
-| Total          |     0.258 |          |           |                 |
+| Total          |     0.259 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -163,9 +163,9 @@ Table of Contents
 |     clk_wiz_0                |     0.107 |
 |       inst                   |     0.107 |
 |     ontvangen_controllers    |     0.032 |
-|       controller_ultrasoon_0 |     0.030 |
-|     score_tekenen_0          |     0.003 |
-|       U0                     |     0.003 |
+|       controller_ultrasoon_0 |     0.031 |
+|     score_tekenen_0          |     0.002 |
+|       U0                     |     0.002 |
 +------------------------------+-----------+
 
 
