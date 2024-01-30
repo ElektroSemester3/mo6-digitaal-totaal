@@ -21,7 +21,7 @@ architecture Behavioral of controller_inductief is
     signal rising_edge_count : unsigned (9 downto 0) := (others => '0');
     signal rising_edge_count_final : unsigned (9 downto 0) := (others => '0');
     signal reset_rising_edge_count : STD_LOGIC := '0';
-    signal timing_count : unsigned (9 downto 0) := (others => '0');
+    signal timing_count : unsigned (16 downto 0) := (others => '0');
     signal value : unsigned (19 downto 0);
 
 begin
@@ -42,7 +42,7 @@ begin
             if (reset = '1' or enable = '0') then
                 timing_count <= (others => '0');
             else
-                if (timing_count = 1000) then
+                if (timing_count = 10000) then
                     timing_count <= (others => '0');
                     rising_edge_count_final <= rising_edge_count;
                     reset_rising_edge_count <= '1';
@@ -72,7 +72,7 @@ begin
     calculator: process(rising_edge_count_final, enable)
     begin
         if (enable = '1') then
-            value <= (rising_edge_count_final - 1) * 511 / 99;
+            value <= (rising_edge_count_final - 10) * 511 / 90;
             value_out <= std_logic_vector(value (8 downto 0));
         else
             value_out <= (others => '0');

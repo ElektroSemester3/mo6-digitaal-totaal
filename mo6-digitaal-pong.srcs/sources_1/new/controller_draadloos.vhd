@@ -25,7 +25,7 @@ architecture Behavioral of controller_draadloos is
 begin
 
     frequency_value <= unsigned(frequency_value_in);
-    connected <= '1' when ((frequency_value > to_unsigned(200, 9)) AND (frequency_value < to_unsigned(250, 9))) OR (up = '1') OR (down = '1') else '0';
+    connected <= '1' when ((frequency_value > to_unsigned(100, 9)) AND (frequency_value < to_unsigned(150, 9))) OR (up = '1') OR (down = '1') else '0';
     up <= '1' when (frequency_value > to_unsigned(300, 9)) AND (frequency_value < to_unsigned(350, 9)) else '0';
     down <= '1' when frequency_value < to_unsigned(50, 9) else '0';
 
